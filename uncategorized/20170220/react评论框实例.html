@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>react评论框实例 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我们将建立一个你可以放进博客的简单却真实的评论框，一个 Disqus、LiveFyre 或 Facebook comments 提供的实时评论的基础版本。
+我们将提供：
+一个所有评论的视图一个用于提交评论的表单为你提供制定后台的挂钩(Hooks)同时也会有一些简洁的功能：
+优化的评论： 评论在它们保存到服务器之前就显示在列表里,所以感觉很快。实时更新： 其他用户的评论被实时浮现到评论中。Markd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react评论框实例">
+<meta property="og:url" content="/uncategorized/20170220/react评论框实例.html">
+<meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:description" content="我们将建立一个你可以放进博客的简单却真实的评论框，一个 Disqus、LiveFyre 或 Facebook comments 提供的实时评论的基础版本。
+我们将提供：
+一个所有评论的视图一个用于提交评论的表单为你提供制定后台的挂钩(Hooks)同时也会有一些简洁的功能：
+优化的评论： 评论在它们保存到服务器之前就显示在列表里,所以感觉很快。实时更新： 其他用户的评论被实时浮现到评论中。Markd">
+<meta property="og:updated_time" content="2017-02-21T01:39:11.354Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react评论框实例">
+<meta name="twitter:description" content="我们将建立一个你可以放进博客的简单却真实的评论框，一个 Disqus、LiveFyre 或 Facebook comments 提供的实时评论的基础版本。
+我们将提供：
+一个所有评论的视图一个用于提交评论的表单为你提供制定后台的挂钩(Hooks)同时也会有一些简洁的功能：
+优化的评论： 评论在它们保存到服务器之前就显示在列表里,所以感觉很快。实时更新： 其他用户的评论被实时浮现到评论中。Markd">
+  
+    <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
+    
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+     		保持学习的习惯，努力的姿态！<br/>
+     		享受生命的成长过程，创造美好未来送给自己<br/>
+     		人生仅此一次，唯努力过方无悔
+      
+        <h2 id="subtitle-wrap" style="display: none;">
+          <a href="/" id="subtitle">前端的那点事 前端笔记 es6 javascript es6 基础 react</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/categories/conding">学无止境</a>
+        
+          <a class="main-nav-link" href="/categories/life">碎言碎语</a>
+        
+          <a class="main-nav-link" href="/about">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react评论框实例" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react评论框实例
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/uncategorized/20170220/react评论框实例.html" class="article-date">
+  <time datetime="2017-02-20T13:58:41.000Z" itemprop="datePublished">2017-02-20</time>
+</a>
+    
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <p>我们将建立一个你可以放进博客的简单却真实的评论框，一个 Disqus、LiveFyre 或 Facebook comments 提供的实时评论的基础版本。</p>
+<p>我们将提供：</p>
+<p>一个所有评论的视图<br>一个用于提交评论的表单<br>为你提供制定后台的挂钩(Hooks)<br>同时也会有一些简洁的功能：</p>
+<p>优化的评论： 评论在它们保存到服务器之前就显示在列表里,所以感觉很快。<br>实时更新： 其他用户的评论被实时浮现到评论中。<br>Markdown格式化： 用户可以用Markdown格式化它们的文字。<br>想要跳过所有内容，只查看源代码？<br>全在 GitHub .</p>
+<p>运行服务器<br>为了开始本教程，我们将要需要一个运行着的服务器。这将是我们纯粹用来获取和保存数据的伺服终端。为了让这尽可能的容易，我们已经用许多不同的语言编写了简单的服务器，它正好完成我们需要的事。 你可以查看源代码 或者 下载 zip 文件 包括了所有你开始学习需要的东西</p>
+<p>为了简单起见，我们将要运行的服务器使用 JSON 文件作为数据库。你不会在生产环境运行这个，但是它让我们更容易模拟使用一个API时你可能会做的事。一旦你启动服务器，它将会支持我们的API终端,同时也将伺服我们需要的静态页面。</p>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>对于此教程,我们将使它尽可能的容易。被包括在上面讨论的服务器包里的是一个我们将在其中工作的 HTML 文件。在你最喜欢的编辑器里打开 public/index.html。它应该看起来像这样 （可能有一些小的不同，稍后我们将添加一个额外的 <code> script </code> 标签）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- index.html --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>React Tutorial<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/react@15.3.1/dist/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/babel-core@5.8.38/browser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span> <span class="attr">src</span>=<span class="string">"scripts/example.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="javascript"></span></div><div class="line">      <span class="comment">// To get started with this tutorial running your own code, simply remove</span></div><div class="line">      <span class="comment">// the script tag loading scripts/example.js and start writing code here.</span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在本教程剩余的部分，我们将在此 script 标签中编写我们的 JavaScript 代码。我们没有任何高级的实时加载所以在保存以后你需要刷新你的浏览器来观察更新。通过在浏览器打开 <a href="http://localhost:3000" target="_blank" rel="external">http://localhost:3000</a> 关注你的进展。当你没有任何修改第一次加载时，你将看到我们将要准备建立的已经完成的产品。当你准备开始工作，请删除前面的 <script> 标签然后你就可以继续了。</p>
+<p>注意：<br>我们在这里引入 jQuery 是因为我们想简化我们未来的 ajax 请求，但这对React的正常工作 不是 必要的。</p>
+</script></p>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/uncategorized/20170220/react评论框实例.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+ 
+     
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/conding/npm/20170220/npm常用命令及npm-install-报的那些错.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          npm常用命令及npm-install-报的那些错
+        
+      </div>
+    </a>
+  
+  
+    <a href="/conding/JavaScript/20170218/JS作用域和闭包.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">JS作用域和闭包</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-react评论框实例" data-title="react评论框实例" data-url="/uncategorized/20170220/react评论框实例.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类 ● category</h3>
+    <div class="widget tag">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">45</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云 ● Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 14px; color: #258fb8">CSS</a> <a href="/tags/CSS3/" style="font-size: 16px; color: #6e86a3">CSS3</a> <a href="/tags/D3/" style="font-size: 14px; color: #258fb8">D3</a> <a href="/tags/D3-js/" style="font-size: 18px; color: #b67c8e">D3.js</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Enter/" style="font-size: 14px; color: #258fb8">Enter</a> <a href="/tags/Exit/" style="font-size: 14px; color: #258fb8">Exit</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 16px; color: #6e86a3">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #6e86a3">JavaScript</a> <a href="/tags/Update/" style="font-size: 14px; color: #258fb8">Update</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/clip-path/" style="font-size: 14px; color: #258fb8">clip-path</a> <a href="/tags/data/" style="font-size: 14px; color: #258fb8">data</a> <a href="/tags/datum/" style="font-size: 14px; color: #258fb8">datum</a> <a href="/tags/github/" style="font-size: 14px; color: #258fb8">github</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/position/" style="font-size: 14px; color: #258fb8">position</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/react-router/" style="font-size: 14px; color: #258fb8">react-router</a> <a href="/tags/人在囧途/" style="font-size: 14px; color: #258fb8">人在囧途</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/值传递/" style="font-size: 14px; color: #258fb8">值传递</a> <a href="/tags/内存管理/" style="font-size: 14px; color: #258fb8">内存管理</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/地图/" style="font-size: 14px; color: #258fb8">地图</a> <a href="/tags/年总结/" style="font-size: 14px; color: #258fb8">年总结</a> <a href="/tags/循环遍历/" style="font-size: 18px; color: #b67c8e">循环遍历</a> <a href="/tags/旅途/" style="font-size: 16px; color: #6e86a3">旅途</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 16px; color: #6e86a3">闭包</a> <a href="/tags/面试/" style="font-size: 14px; color: #258fb8">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档 ● archive</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章 ● Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/conding/JavaScript/20170223/安装MongoDB.html">安装MongoDB</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170221/react-router实例.html">react-router实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/npm/20170220/npm常用命令及npm-install-报的那些错.html">npm常用命令及npm-install-报的那些错</a>
+          </li>
+        
+          <li>
+            <a href="/uncategorized/20170220/react评论框实例.html">react评论框实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20170218/JS作用域和闭包.html">JS作用域和闭包</a>
+          </li>
+        
+          <li>
+            <a href="/conding/CSS/20170218/CSS3中的clip-path使用攻略.html">CSS3中的clip-path使用攻略</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20170210/JS循环遍历.html">JS循环遍历</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170109/D3-理解-Update、Enter、Exit.html">D3-理解 Update、Enter、Exit</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170109/D3-数据绑定.html">D3-选择元素和绑定数据</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170108/D3基础.html">D3基础部分</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接 ● Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://baizn.github.io" target="_BLANK">●&emsp;baizn</a></li>
+    
+    <li><a href="http://init.funlee.cn" target="_BLANK">●&emsp;ClassRun</a></li>
+    
+    <li><a href="https://wxxtqk.github.io" target="_BLANK">●&emsp;tangqk</a></li>
+    
+    <li><a href="undefined" target="_BLANK">●&emsp;zy380196088</a></li>
+    
+  </ul>
+</div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zillah<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>
+
+    </div>
+  </div>
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?204bdccab804777b4dcd9eefa8ceb91b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/categories/conding" class="mobile-nav-link">学无止境</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">碎言碎语</a>
+  
+    <a href="/about" class="mobile-nav-link">关于我</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jody';
+  
+  var disqus_url = '/uncategorized/20170220/react评论框实例.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+<script src="/js/totop.js"></script>
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:999; display:none">
+<a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!--- Baidu Share End --->
+
+
+
+
+
+
+  </div>
+</body>
+</html>
