@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>linear比例尺及ordinal比例尺的使用 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <title>git常用命令 | 小乔的博客[学习笔记]|[生活随笔]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态
-写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码">
+  <meta name="description" content="隔一断时间不提交代码就忘记命名了，好记性不如敲敲键盘，做做笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linear比例尺及ordinal比例尺的使用">
-<meta property="og:url" content="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="/conding/Git/20160611/git常用命令.html">
 <meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
-<meta property="og:description" content="在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态
-写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码">
-<meta property="og:updated_time" content="2017-02-28T03:12:16.195Z">
+<meta property="og:description" content="隔一断时间不提交代码就忘记命名了，好记性不如敲敲键盘，做做笔记">
+<meta property="og:updated_time" content="2017-03-03T10:00:51.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linear比例尺及ordinal比例尺的使用">
-<meta name="twitter:description" content="在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态
-写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="隔一断时间不提交代码就忘记命名了，好记性不如敲敲键盘，做做笔记">
   
     <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
     
@@ -75,7 +72,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-linear比例尺及ordinal比例尺的使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
 
@@ -86,19 +83,19 @@
         
   
     <h1 class="article-title" itemprop="name">
-      linear比例尺及ordinal比例尺的使用
+      git常用命令
     </h1>
   
 
       </header>
     
  <div class="article-meta">
-    <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html" class="article-date">
-  <time datetime="2017-02-28T03:05:42.000Z" itemprop="datePublished">2017-02-28</time>
+    <a href="/conding/Git/20160611/git常用命令.html" class="article-date">
+  <time datetime="2016-06-11T06:11:32.000Z" itemprop="datePublished">2016-06-11</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/D3-js/">D3.js</a>
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/Git/">Git</a>
   </div>
 
    
@@ -109,21 +106,25 @@
       	 
         <!-- Table of Contents -->
         
-        <p>在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态</p>
-<p>写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码<br><a id="more"></a><br>```javascript</p>
-<p>  var width = 500<br>  var height = 200<br>  //添加svg元素<br>  var svg = d3.select(‘body’)<br>    .append(‘svg’)<br>    .attr(‘width’, width)<br>    .attr(‘height’, height)<br>    .style(‘padding’, ‘40px’)</p>
-<p>  var data = [<br>    {<br>      name: ‘江北区’,<br>      value: 100<br>    },{<br>      name: ‘渝北区’,<br>      value: 80<br>    },{<br>      name: ‘九龙坡区’,<br>      value: 120<br>    },{<br>      name: ‘沙坪坝’,<br>      value: 182<br>    },{<br>      name: ‘渝中区’,<br>      value: 79<br>    }<br>  ]</p>
-<p>  var cfg = {<br>    itemStyle: {<br>      width: 20,<br>      color: ‘yellow’,<br>      padding: 50,<br>      min: 10<br>    }<br>  }</p>
-<p>  var dataset = []<br>  var xData = []<br>  //处理数据<br>  for(var i=0, len = data.length; i&lt;len; i++){<br>    dataset.push(data[i].value)<br>    xData.push(data[i].name)<br>  }</p>
-<p>  var min = d3.min(dataset)<br>  var max = d3.max(dataset)</p>
-<p>  //定义Y轴比例尺<br>  var yScale = d3.scale.linear()<br>        .domain([0, max])  //定义域<br>        .range([height, 0])  //值域(可用范围)</p>
-<p>  //定义Y轴<br>  var yAxis = d3.svg.axis()<br>       .scale(yScale)      //指定比例尺<br>       .orient(‘left’)   //指定刻度的方向</p>
-<p>  //添加Y轴<br>  svg.append(“g”)<br>    .attr(‘class’, ‘axis-y’)<br>    .call(yAxis)</p>
-<p>  //定义X轴比例尺(序数比例尺) 因为X轴要显示文字，因此此处使用序数比例尺<br>  var xScale = d3.scale.ordinal()<br>    .domain(xData)<br>    .rangeRoundBands([0, width]);  </p>
-<p>  //定义X轴<br>  var xAxis = d3.svg.axis()<br>      .scale(xScale)      //指定比例尺<br>      .orient(‘bottom’)   //指定刻度的方向</p>
-<p>  //添加X轴<br>  svg.append(“g”)<br>    .attr(‘class’, ‘axis-x’)<br>    .call(xAxis)<br>    .attr(‘transform’, ‘translate(‘ + 0 + ‘,’ + height + ‘)’)</p>
-<p>  var itemStyle = cfg.itemStyle  </p>
-<p>  //x轴的比例尺 添加rect时需要算一个x的位置，再定义一个x比例尺<br>  var xScale2 = d3.scale.ordinal()<br>      .domain(d3.range(dataset.length))<br>      .rangeRoundBands([0, width]);<br>  //添加bar<br>  svg.selectAll(‘.rect’)<br>    .data(dataset)<br>    .enter()<br>    .append(‘rect’)<br>    .attr(‘class’, ‘rect’)<br>    .attr(‘width’, itemStyle.width)<br>    .attr(‘height’, function(d, i){<br>      var h = yScale(d)<br>      if(h&lt;=0){<br>        h = itemStyle.min<br>      }<br>      return h<br>    })<br>    .attr(“x”, function(d, i){<br>        return xScale2(i) + itemStyle.width/2 + itemStyle.padding/2<br>    } )<br>    .attr(“y”,function(d, i){<br>      var y = height - yScale(d)<br>      if(y==height){<br>        y = y - itemStyle.min<br>      }<br>      return y<br>    })<br>``</p>
+        <p>隔一断时间不提交代码就忘记命名了，<br>好记性不如敲敲键盘，做做笔记<br><a id="more"></a></p>
+<h4 id="本地项目托管到github服务器-这几个常用的，先记到前面吧"><a href="#本地项目托管到github服务器-这几个常用的，先记到前面吧" class="headerlink" title="本地项目托管到github服务器 这几个常用的，先记到前面吧"></a>本地项目托管到github服务器 这几个常用的，先记到前面吧</h4><p>git init<br>git add .<br>git commit -m “first commit”<br>git remote add origin <a href="https://github.com/yourId/repoName.git" target="_blank" rel="external">https://github.com/yourId/repoName.git</a><br>git push -u origin master</p>
+<p>生成密钥<br>ssh-keygen -t rsa -C “user@domain”<br>id_rsa 密钥<br>id_rsa.pub 公钥</p>
+<p>初始化<br>git init</p>
+<p>克隆<br>git clone [url]<br>会在跟目录下创建一个 .git 的文件夹</p>
+<p>设置忽略文件<br>touch .gitignore  //创建一个 .gitignore 文件</p>
+<p>添加新文件到版本库<br>git add .  //添加到当前目录所有文件到版本库<br>git add *.txt //添加当前目录下所有 txt 格式的文件到版本库<br>git add so mefile.txt //添加单个文件到版本库</p>
+<p>git commit -am “本次修改内容，写上一个大概的意思” //将本次提交加入到本地环境<br>// branch 是版本分支名称<br>git pull origin [branch]  //获取服务器上最新的源码<br>git push origin [branch]  //将本地的 commit 推送到服务器 </p>
+<p>检测本地文件修改状态<br>git status</p>
+<p>分支管理<br>git branch  //查看本地分支 // 带 * 号的是当前分支名称<br>git branch -a  //查看所有分支<br>git branch -r //查看远程分支</p>
+<p>创建分支<br>git branch [branchName]</p>
+<p>切换分支<br>git checkout [branchName]</p>
+<p>删除远程分支<br>$ git push –delete origin [branchName]</p>
+<p>重命名本地分支<br>git branch -m [branchName] [new branchName]</p>
+<p>提交<br>git commit -am “some msg”  //提交所有修改<br>git commit -m “some msg” mefile.txt  //提交单个文件</p>
+<p>获取服务器最新数据<br>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;<br>git pull origin master</p>
+<p>推送本地最新数据到远程主机<br>git push &lt;远程主机名&gt; &lt;远程分支名&gt;<br>git push origin master</p>
+<p>日志<br>git log //查看所有提交日志<br>git log -n  //  只显示最前面的几行日至   n 是一个正整数</p>
+<p>显示修改的行数统计<br>git log –stat -n<br>git log -p -n      //同上，显示信息更全</p>
 
         
         
@@ -131,7 +132,7 @@
     </div>
     <footer class="article-footer">
     	
-        <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html#disqus_thread" class="article-comment-link">评论</a>
+        <a href="/conding/Git/20160611/git常用命令.html#disqus_thread" class="article-comment-link">评论</a>
       
 
       <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
@@ -139,7 +140,7 @@
       
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/比例尺/">比例尺</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 
  
      
@@ -149,10 +150,19 @@
     
 <nav id="article-nav">
   
+    <a href="/conding/Jquery/20160611/网页中常用Jquery效果.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          网页中常用Jquery效果
+        
+      </div>
+    </a>
   
-    <a href="/conding/MongoDB/20170223/安装MongoDB.html" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/conding/ES6/20160103/let和const命令(ES6).html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">安装MongoDB</div>
+      <div class="article-nav-title">let和const命令(ES6)</div>
     </a>
   
 </nav>
@@ -163,7 +173,7 @@
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-linear比例尺及ordinal比例尺的使用" data-title="linear比例尺及ordinal比例尺的使用" data-url="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html"></div>
+    <div class="ds-thread" data-thread-key="post-git常用命令" data-title="git常用命令" data-url="/conding/Git/20160611/git常用命令.html"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -329,7 +339,7 @@ var _hmt = _hmt || [];
 <script>
   var disqus_shortname = 'jody';
   
-  var disqus_url = '/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html';
+  var disqus_url = '/conding/Git/20160611/git常用命令.html';
   
   (function(){
     var dsq = document.createElement('script');

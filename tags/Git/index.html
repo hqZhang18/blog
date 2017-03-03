@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>linear比例尺及ordinal比例尺的使用 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <title>标签: Git | 小乔的博客[学习笔记]|[生活随笔]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态
-写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码">
-<meta property="og:type" content="article">
-<meta property="og:title" content="linear比例尺及ordinal比例尺的使用">
-<meta property="og:url" content="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html">
+  <meta name="description" content="前端的那点事 前端笔记 es6 javascript es6 基础 react">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:url" content="/tags/Git/index.html">
 <meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
-<meta property="og:description" content="在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态
-写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码">
-<meta property="og:updated_time" content="2017-02-28T03:12:16.195Z">
+<meta property="og:description" content="前端的那点事 前端笔记 es6 javascript es6 基础 react">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linear比例尺及ordinal比例尺的使用">
-<meta name="twitter:description" content="在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态
-写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码">
+<meta name="twitter:title" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta name="twitter:description" content="前端的那点事 前端笔记 es6 javascript es6 基础 react">
   
     <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
     
@@ -75,111 +71,41 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-linear比例尺及ordinal比例尺的使用" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      linear比例尺及ordinal比例尺的使用
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/conding/Git/20160611/git常用命令.html" class="archive-article-date">
+  <time datetime="2016-06-11T06:11:32.000Z" itemprop="datePublished">6月 11</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/conding/Git/20160611/git常用命令.html">git常用命令</a>
     </h1>
   
 
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html" class="article-date">
-  <time datetime="2017-02-28T03:05:42.000Z" itemprop="datePublished">2017-02-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/D3-js/">D3.js</a>
+    </header>
   </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <p>在使用D3.js画图比例尺的使用是必不可少的，但对linear与ordinal总是处于蒙圈的状态</p>
-<p>写了个实例，总算弄清楚两个分别时候使用比较合适了,废话少话，直接上源码<br><a id="more"></a><br>```javascript</p>
-<p>  var width = 500<br>  var height = 200<br>  //添加svg元素<br>  var svg = d3.select(‘body’)<br>    .append(‘svg’)<br>    .attr(‘width’, width)<br>    .attr(‘height’, height)<br>    .style(‘padding’, ‘40px’)</p>
-<p>  var data = [<br>    {<br>      name: ‘江北区’,<br>      value: 100<br>    },{<br>      name: ‘渝北区’,<br>      value: 80<br>    },{<br>      name: ‘九龙坡区’,<br>      value: 120<br>    },{<br>      name: ‘沙坪坝’,<br>      value: 182<br>    },{<br>      name: ‘渝中区’,<br>      value: 79<br>    }<br>  ]</p>
-<p>  var cfg = {<br>    itemStyle: {<br>      width: 20,<br>      color: ‘yellow’,<br>      padding: 50,<br>      min: 10<br>    }<br>  }</p>
-<p>  var dataset = []<br>  var xData = []<br>  //处理数据<br>  for(var i=0, len = data.length; i&lt;len; i++){<br>    dataset.push(data[i].value)<br>    xData.push(data[i].name)<br>  }</p>
-<p>  var min = d3.min(dataset)<br>  var max = d3.max(dataset)</p>
-<p>  //定义Y轴比例尺<br>  var yScale = d3.scale.linear()<br>        .domain([0, max])  //定义域<br>        .range([height, 0])  //值域(可用范围)</p>
-<p>  //定义Y轴<br>  var yAxis = d3.svg.axis()<br>       .scale(yScale)      //指定比例尺<br>       .orient(‘left’)   //指定刻度的方向</p>
-<p>  //添加Y轴<br>  svg.append(“g”)<br>    .attr(‘class’, ‘axis-y’)<br>    .call(yAxis)</p>
-<p>  //定义X轴比例尺(序数比例尺) 因为X轴要显示文字，因此此处使用序数比例尺<br>  var xScale = d3.scale.ordinal()<br>    .domain(xData)<br>    .rangeRoundBands([0, width]);  </p>
-<p>  //定义X轴<br>  var xAxis = d3.svg.axis()<br>      .scale(xScale)      //指定比例尺<br>      .orient(‘bottom’)   //指定刻度的方向</p>
-<p>  //添加X轴<br>  svg.append(“g”)<br>    .attr(‘class’, ‘axis-x’)<br>    .call(xAxis)<br>    .attr(‘transform’, ‘translate(‘ + 0 + ‘,’ + height + ‘)’)</p>
-<p>  var itemStyle = cfg.itemStyle  </p>
-<p>  //x轴的比例尺 添加rect时需要算一个x的位置，再定义一个x比例尺<br>  var xScale2 = d3.scale.ordinal()<br>      .domain(d3.range(dataset.length))<br>      .rangeRoundBands([0, width]);<br>  //添加bar<br>  svg.selectAll(‘.rect’)<br>    .data(dataset)<br>    .enter()<br>    .append(‘rect’)<br>    .attr(‘class’, ‘rect’)<br>    .attr(‘width’, itemStyle.width)<br>    .attr(‘height’, function(d, i){<br>      var h = yScale(d)<br>      if(h&lt;=0){<br>        h = itemStyle.min<br>      }<br>      return h<br>    })<br>    .attr(“x”, function(d, i){<br>        return xScale2(i) + itemStyle.width/2 + itemStyle.padding/2<br>    } )<br>    .attr(“y”,function(d, i){<br>      var y = height - yScale(d)<br>      if(y==height){<br>        y = y - itemStyle.min<br>      }<br>      return y<br>    })<br>``</p>
-
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/比例尺/">比例尺</a></li></ul>
-
- 
-     
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/conding/MongoDB/20170223/安装MongoDB.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">安装MongoDB</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-  <section id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-linear比例尺及ordinal比例尺的使用" data-title="linear比例尺及ordinal比例尺的使用" data-url="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'undefined'};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-    <!-- 多说公共JS代码 end -->
-  </section>
-  </section>
+</section>
         
           <aside id="sidebar">
   
@@ -329,13 +255,11 @@ var _hmt = _hmt || [];
 <script>
   var disqus_shortname = 'jody';
   
-  var disqus_url = '/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
