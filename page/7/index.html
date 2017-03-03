@@ -73,7 +73,7 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-react入门05-复合组件" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Webpack的安装与基本配置" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
 
@@ -84,19 +84,19 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/conding/React/20161217/react入门05-复合组件.html">react入门05-复合组件</a>
+      <a class="article-title" href="/conding/Webpack/20161217/Webpack的安装与基本配置.html">Webpack的安装与基本配置</a>
     </h1>
   
 
       </header>
     
  <div class="article-meta">
-    <a href="/conding/React/20161217/react入门05-复合组件.html" class="article-date">
-  <time datetime="2016-12-17T14:06:00.000Z" itemprop="datePublished">2016-12-17</time>
+    <a href="/conding/Webpack/20161217/Webpack的安装与基本配置.html" class="article-date">
+  <time datetime="2016-12-17T14:06:11.000Z" itemprop="datePublished">2016-12-17</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/React/">React</a>
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/Webpack/">Webpack</a>
   </div>
 
    
@@ -104,17 +104,33 @@
     <div class="article-entry article-all" itemprop="articleBody">
 
       
-        <p>复合组件也被称为组合组件，创建多个组件合成一个组件<br>定义一个组件WebShow。功能：输出网站的名字和网址，网址是一个可以点击的链接<br>分析：定义一个组件WebName负责输出网站名字，定义组件WebLink显示网站的网址，并且可以点击
+      	 
+        <!-- Table of Contents -->
         
+        <p>首先要安装 Node.js， Node.js 自带了软件包管理器 npm，Webpack 需要 Node.js v0.6 以上支持，建议使用最新版 Node.js。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>用 npm 安装 Webpack：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install webpack -g</div></pre></td></tr></table></figure>
+<p>此时 Webpack 已经安装到了全局环境下，可以通过命令行 webpack -h 试试。</p>
+<p>通常我们会将 Webpack 安装到项目的依赖中，这样就可以使用项目本地版本的 Webpack。</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>1.将 Webpack 安装到项目的依赖中，这样就可以使用项目本地版本的 Webpack。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev webpack</div></pre></td></tr></table></figure></p>
+<p>2.初始化一个新的项目<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init # (answer the questions)</div></pre></td></tr></table></figure></p>
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>Webpack 在执行的时候，除了在命令行传入参数，还可以通过指定的配置文件来执行。默认情况下，会搜索当前目录的 <code>webpack.config.js </code> 文件，这个文件是一个 node.js 模块，返回一个 json 格式的配置信息对象，或者通过 <code>–config</code> 选项来指定配置文件。</p>
+<p>修改根目录已经创建好的package.json 来添加 webpack 需要的依赖：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"name"</span>: <span class="string">"React-dome"</span>,</div><div class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="string">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="string">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"start"</span>: <span class="string">"webpack &amp;&amp; webpack-dev-server --hot --inline --port 3002"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"author"</span>: <span class="string">"zhanghongqiao"</span>,</div><div class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</div><div class="line">  <span class="string">"dependencies"</span>: &#123;</div><div class="line">    <span class="string">"babel-core"</span>: <span class="string">"^6.14.0"</span>,</div><div class="line">    <span class="string">"babel-loader"</span>: <span class="string">"^6.2.5"</span>,</div><div class="line">    <span class="string">"jquery"</span>: <span class="string">"^3.1.1"</span>,</div><div class="line">    <span class="string">"path"</span>: <span class="string">"^0.12.7"</span>,</div><div class="line">    <span class="string">"webpack"</span>: <span class="string">"^1.13.2"</span>,</div><div class="line">    <span class="string">"webpack-dev-server"</span>: <span class="string">"^1.16.1"</span>  <span class="comment">//启服务</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"devDependencies"</span>: &#123;</div><div class="line">    <span class="string">"babel-preset-es2015"</span>: <span class="string">"^6.14.0"</span>,</div><div class="line">    <span class="string">"babel-preset-react"</span>: <span class="string">"^6.11.1"</span>,</div><div class="line">    <span class="string">"babel-preset-react-hmre"</span>: <span class="string">"^1.1.1"</span>,</div><div class="line">    <span class="string">"webpack-hot-middleware"</span>: <span class="string">"^2.12.2"</span>   <span class="comment">//host loading</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>别忘了执行 npm install。</p>
+<p>然后创建一个配置文件 webpack.config.js：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">entry</span>: [</div><div class="line">        <span class="string">'webpack/hot/dev-server'</span>,</div><div class="line">        <span class="string">'./src/index.js'</span></div><div class="line">    ],</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">path</span>: path.join(__dirname, <span class="string">'build'</span>),</div><div class="line">        <span class="attr">filename</span>: <span class="string">'index.js'</span>,</div><div class="line">        <span class="attr">publicPath</span>: <span class="string">'/build/'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        <span class="attr">loaders</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.js?$/</span>,</div><div class="line">                <span class="attr">loader</span>: <span class="string">'babel'</span>,</div><div class="line">                <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">                <span class="attr">query</span>: &#123;</div><div class="line">                    <span class="string">'env'</span>: &#123;</div><div class="line">                        <span class="string">'development'</span>: &#123;</div><div class="line">                            <span class="string">'presets'</span>: [<span class="string">'react-hmre'</span>, <span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</div><div class="line">                <span class="attr">loader</span>: <span class="string">'style!css'</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在src目录下新建一个index.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">'jquery'</span>;</div><div class="line"></div><div class="line">$(<span class="string">'&lt;h1&gt;webpack test&lt;/h1&gt;'</span>).appendTo(<span class="string">'body'</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><p>在根目录新建一个index.html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"build/index.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后执行命令<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm start</div></pre></td></tr></table></figure></p>
+<p><a href="http://webpack.github.io/docs/usage.html" target="_blank" rel="external">http://webpack.github.io/docs/usage.html</a><br><a href="http://webpackdoc.com/install.html" target="_blank" rel="external">http://webpackdoc.com/install.html</a></p>
 
-    <a href="/conding/React/20161217/react入门05-复合组件.html#more" class="article-more-link">阅读全文</a>
-
+        
         
       
     </div>
     <footer class="article-footer">
     	
-        <a href="/conding/React/20161217/react入门05-复合组件.html#disqus_thread" class="article-comment-link">评论</a>
+        <a href="/conding/Webpack/20161217/Webpack的安装与基本配置.html#disqus_thread" class="article-comment-link">评论</a>
       
 
       <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
@@ -122,7 +138,7 @@
       
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
 
  
      
@@ -185,6 +201,126 @@
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/props/">props</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-react入门07-属性设置-children" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/React/20161217/react入门07-属性设置-children.html">react入门07-属性设置-children</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/React/20161217/react入门07-属性设置-children.html" class="article-date">
+  <time datetime="2016-12-17T14:06:00.000Z" itemprop="datePublished">2016-12-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/React/">React</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+        <p>this.props.children<br>children是一个例外，不是跟组件的属性对应的<br>表示组件的所有子节点<br>HTML中有一种标签：列表 &lt; ul &gt; &lt; ol &gt; &lt; li &gt;<br>定义一个列表组件，列表项中显示的内容，以及列表项的数量都由外部决定
+        
+
+    <a href="/conding/React/20161217/react入门07-属性设置-children.html#more" class="article-more-link">阅读全文</a>
+
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/React/20161217/react入门07-属性设置-children.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-react入门05-复合组件" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/React/20161217/react入门05-复合组件.html">react入门05-复合组件</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/React/20161217/react入门05-复合组件.html" class="article-date">
+  <time datetime="2016-12-17T14:06:00.000Z" itemprop="datePublished">2016-12-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/React/">React</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+        <p>复合组件也被称为组合组件，创建多个组件合成一个组件<br>定义一个组件WebShow。功能：输出网站的名字和网址，网址是一个可以点击的链接<br>分析：定义一个组件WebName负责输出网站名字，定义组件WebLink显示网站的网址，并且可以点击
+        
+
+    <a href="/conding/React/20161217/react入门05-复合组件.html#more" class="article-more-link">阅读全文</a>
+
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/React/20161217/react入门05-复合组件.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
 
  
      
@@ -318,127 +454,6 @@
 
 
   
-    <article id="post-js返回上一页并刷新的几种方法" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/JavaScript/20160720/js返回上一页并刷新的几种方法.html">js返回上一页并刷新的几种方法</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/JavaScript/20160720/js返回上一页并刷新的几种方法.html" class="article-date">
-  <time datetime="2016-07-20T13:58:16.000Z" itemprop="datePublished">2016-07-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">href=&quot;javascript:history.go(-1)&quot; 返回上一页</div><div class="line">href=&quot;javascript:location.reload()&quot; 刷新当前页面</div><div class="line">&lt;!-- more --&gt;</div><div class="line">href=&quot;javascript:&quot; onclick=&quot;history.go(-2); &quot; 返回前两页</div><div class="line">href=&quot;javascript:&quot; onclick=&quot;self.location=document.referrer;&quot; 返回上一页并刷新</div><div class="line">href=&quot;javascript:&quot; onclick=&quot;history.back(); &quot; 返回上一页</div></pre></td></tr></table></figure>
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/JavaScript/20160720/js返回上一页并刷新的几种方法.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS刷新/">JS刷新</a></li></ul>
-
- 
-     
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-apply call bind" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/JavaScript/20160628/apply call bind.html">apply call bind使用详解</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/JavaScript/20160628/apply call bind.html" class="article-date">
-  <time datetime="2016-06-28T13:58:16.000Z" itemprop="datePublished">2016-06-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">vvar obj = &#123;</div><div class="line">  <span class="string">"loca"</span> : <span class="string">"中国"</span>,</div><div class="line">  <span class="string">"tel"</span> : <span class="string">"小米"</span>,</div><div class="line">  <span class="string">"money"</span> : <span class="string">"100万"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></div><div class="line"></div><div class="line">function User(name,age)&#123;</div><div class="line">  this.name = name;</div><div class="line">  this.age = age;</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var user = new User("张三","20");</div><div class="line">console.log(user);</div><div class="line"></div><div class="line">function User2(name,age,sex)&#123;</div><div class="line">  //User.apply(this,[name,age]);</div><div class="line">  //this === obj</div><div class="line">  User.call(this,name,age);</div><div class="line">  this.sex = sex;</div><div class="line">  return this;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var user2 = new User2("李四","30","男");</div><div class="line">console.log(user2);</div><div class="line"></div><div class="line">// bind 会改变函数体中的 this 对象</div><div class="line">//变为你传递进去的对象</div><div class="line">var user3 = User2.bind(obj)("王五","40","男");</div><div class="line"></div><div class="line">console.log(user3);</div></pre></td></tr></table></figure>
-
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/JavaScript/20160628/apply call bind.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/循环遍历/">循环遍历</a></li></ul>
-
- 
-     
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -452,7 +467,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类 ● category</h3>
     <div class="widget tag">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">45</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">5</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">47</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -462,7 +477,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云 ● Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 14px; color: #258fb8">CSS</a> <a href="/tags/CSS3/" style="font-size: 16px; color: #6e86a3">CSS3</a> <a href="/tags/D3/" style="font-size: 14px; color: #258fb8">D3</a> <a href="/tags/D3-js/" style="font-size: 18px; color: #b67c8e">D3.js</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Enter/" style="font-size: 14px; color: #258fb8">Enter</a> <a href="/tags/Exit/" style="font-size: 14px; color: #258fb8">Exit</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 16px; color: #6e86a3">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #6e86a3">JavaScript</a> <a href="/tags/Update/" style="font-size: 14px; color: #258fb8">Update</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/clip-path/" style="font-size: 14px; color: #258fb8">clip-path</a> <a href="/tags/data/" style="font-size: 14px; color: #258fb8">data</a> <a href="/tags/datum/" style="font-size: 14px; color: #258fb8">datum</a> <a href="/tags/github/" style="font-size: 14px; color: #258fb8">github</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/position/" style="font-size: 14px; color: #258fb8">position</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/react-router/" style="font-size: 14px; color: #258fb8">react-router</a> <a href="/tags/人在囧途/" style="font-size: 14px; color: #258fb8">人在囧途</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/值传递/" style="font-size: 14px; color: #258fb8">值传递</a> <a href="/tags/内存管理/" style="font-size: 14px; color: #258fb8">内存管理</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/地图/" style="font-size: 14px; color: #258fb8">地图</a> <a href="/tags/年总结/" style="font-size: 14px; color: #258fb8">年总结</a> <a href="/tags/循环遍历/" style="font-size: 18px; color: #b67c8e">循环遍历</a> <a href="/tags/旅途/" style="font-size: 16px; color: #6e86a3">旅途</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 16px; color: #6e86a3">闭包</a> <a href="/tags/面试/" style="font-size: 14px; color: #258fb8">面试</a>
+      <a href="/tags/CSS/" style="font-size: 14px; color: #258fb8">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.5px; color: #5c88a8">CSS3</a> <a href="/tags/D3/" style="font-size: 14px; color: #258fb8">D3</a> <a href="/tags/D3-js/" style="font-size: 18.5px; color: #c97a89">D3.js</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Enter/" style="font-size: 14px; color: #258fb8">Enter</a> <a href="/tags/Exit/" style="font-size: 14px; color: #258fb8">Exit</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 15.5px; color: #5c88a8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 15.5px; color: #5c88a8">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/Update/" style="font-size: 14px; color: #258fb8">Update</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/clip-path/" style="font-size: 14px; color: #258fb8">clip-path</a> <a href="/tags/data/" style="font-size: 14px; color: #258fb8">data</a> <a href="/tags/datum/" style="font-size: 14px; color: #258fb8">datum</a> <a href="/tags/github/" style="font-size: 14px; color: #258fb8">github</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/position/" style="font-size: 14px; color: #258fb8">position</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/react-router/" style="font-size: 14px; color: #258fb8">react-router</a> <a href="/tags/人在囧途/" style="font-size: 14px; color: #258fb8">人在囧途</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/值传递/" style="font-size: 14px; color: #258fb8">值传递</a> <a href="/tags/内存管理/" style="font-size: 14px; color: #258fb8">内存管理</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/地图/" style="font-size: 14px; color: #258fb8">地图</a> <a href="/tags/年总结/" style="font-size: 14px; color: #258fb8">年总结</a> <a href="/tags/循环遍历/" style="font-size: 17px; color: #928199">循环遍历</a> <a href="/tags/旅途/" style="font-size: 15.5px; color: #5c88a8">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.5px; color: #5c88a8">闭包</a> <a href="/tags/面试/" style="font-size: 14px; color: #258fb8">面试</a>
     </div>
   </div>
 
@@ -471,7 +486,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档 ● archive</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -484,7 +499,15 @@
       <ul>
         
           <li>
-            <a href="/conding/JavaScript/20170223/安装MongoDB.html">安装MongoDB</a>
+            <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html">linear比例尺及ordinal比例尺的使用</a>
+          </li>
+        
+          <li>
+            <a href="/conding/MongoDB/20170223/安装MongoDB.html">安装MongoDB</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
           </li>
         
           <li>
@@ -513,14 +536,6 @@
         
           <li>
             <a href="/conding/D3-js/20170109/D3-理解-Update、Enter、Exit.html">D3-理解 Update、Enter、Exit</a>
-          </li>
-        
-          <li>
-            <a href="/conding/D3-js/20170109/D3-数据绑定.html">D3-选择元素和绑定数据</a>
-          </li>
-        
-          <li>
-            <a href="/conding/D3-js/20170108/D3基础.html">D3基础部分</a>
           </li>
         
       </ul>
