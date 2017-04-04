@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>D3基础部分 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、D3简介D3是什么？​    D3是一个javascript的函数库，用来做数据数据可视化的。
+D3的优势">
+<meta property="og:type" content="article">
+<meta property="og:title" content="D3基础部分">
+<meta property="og:url" content="/conding/D3-js/20170108/D3基础.html">
+<meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:description" content="一、D3简介D3是什么？​    D3是一个javascript的函数库，用来做数据数据可视化的。
+D3的优势">
+<meta property="og:image" content="/845855-20161020140040467-439041801.png">
+<meta property="og:updated_time" content="2017-04-04T00:23:59.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D3基础部分">
+<meta name="twitter:description" content="一、D3简介D3是什么？​    D3是一个javascript的函数库，用来做数据数据可视化的。
+D3的优势">
+<meta name="twitter:image" content="/845855-20161020140040467-439041801.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
+    
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+     		保持学习的习惯，努力的姿态！<br/>
+     		享受生命的成长过程，创造美好未来送给自己<br/>
+     		人生仅此一次，唯努力过方无悔
+      
+        <h2 id="subtitle-wrap" style="display: none;">
+          <a href="/" id="subtitle">前端的那点事 前端笔记 es6 javascript es6 基础 react</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/categories/conding">学无止境</a>
+        
+          <a class="main-nav-link" href="/categories/life">碎言碎语</a>
+        
+          <a class="main-nav-link" href="/about">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-D3基础" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      D3基础部分
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/D3-js/20170108/D3基础.html" class="article-date">
+  <time datetime="2017-01-08T14:29:28.000Z" itemprop="datePublished">2017-01-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/D3-js/">D3.js</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、D3简介"><span class="toc-number">1.</span> <span class="toc-text">一、D3简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#D3是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">D3是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D3的优势"><span class="toc-number">1.0.2.</span> <span class="toc-text">D3的优势</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、WEB前端开发基础"><span class="toc-number">2.</span> <span class="toc-text">二、WEB前端开发基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#浏览器"><span class="toc-number">2.0.1.</span> <span class="toc-text">浏览器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SVG"><span class="toc-number">2.0.2.</span> <span class="toc-text">SVG</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-矩形"><span class="toc-number">2.0.2.1.</span> <span class="toc-text">1. 矩形</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-圆形和椭圆形"><span class="toc-number">2.0.2.2.</span> <span class="toc-text">2. 圆形和椭圆形</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-线段"><span class="toc-number">2.0.2.3.</span> <span class="toc-text">3. 线段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-多边形和折线"><span class="toc-number">2.0.2.4.</span> <span class="toc-text">4. 多边形和折线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-路径"><span class="toc-number">2.0.2.5.</span> <span class="toc-text">5. 路径</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-1-绘制直线"><span class="toc-number">2.0.2.5.1.</span> <span class="toc-text">5.1 绘制直线</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-2-绘制三次贝塞尔曲线"><span class="toc-number">2.0.2.5.2.</span> <span class="toc-text">5.2 绘制三次贝塞尔曲线</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-3-绘制二次贝塞尔曲线"><span class="toc-number">2.0.2.5.3.</span> <span class="toc-text">5.3 绘制二次贝塞尔曲线</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-4-绘制弧线"><span class="toc-number">2.0.2.5.4.</span> <span class="toc-text">5.4 绘制弧线</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-文字"><span class="toc-number">2.0.2.6.</span> <span class="toc-text">6. 文字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-样式"><span class="toc-number">2.0.2.7.</span> <span class="toc-text">7. 样式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-标记"><span class="toc-number">2.0.2.8.</span> <span class="toc-text">8. 标记</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-滤镜"><span class="toc-number">2.0.2.9.</span> <span class="toc-text">9. 滤镜</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-渐变"><span class="toc-number">2.0.2.10.</span> <span class="toc-text">9. 渐变</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、安装和使用"><span class="toc-number">3.</span> <span class="toc-text">三、安装和使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一个程序"><span class="toc-number">3.0.1.</span> <span class="toc-text">第一个程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、选择元素和绑定数据"><span class="toc-number">4.</span> <span class="toc-text">四、选择元素和绑定数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#选择元素"><span class="toc-number">4.0.1.</span> <span class="toc-text">选择元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选择集"><span class="toc-number">4.0.2.</span> <span class="toc-text">选择集</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-查看状态"><span class="toc-number">4.0.2.1.</span> <span class="toc-text">1.查看状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-设定和获取属性"><span class="toc-number">4.0.2.2.</span> <span class="toc-text">2. 设定和获取属性</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加、插入和删除"><span class="toc-number">4.0.3.</span> <span class="toc-text">添加、插入和删除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据绑定"><span class="toc-number">4.0.4.</span> <span class="toc-text">数据绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-datum-的工作过程"><span class="toc-number">4.0.4.1.</span> <span class="toc-text">1. datum()的工作过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-data-的工作过程"><span class="toc-number">4.0.4.2.</span> <span class="toc-text">2. data()的工作过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-选择集的处理"><span class="toc-number">4.0.4.3.</span> <span class="toc-text">3. 选择集的处理</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#柱形的制作（见详细代码）"><span class="toc-number">4.0.5.</span> <span class="toc-text">柱形的制作（见详细代码）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、比例尺和坐标轴"><span class="toc-number">5.</span> <span class="toc-text">五、比例尺和坐标轴</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#比例尺"><span class="toc-number">5.0.1.</span> <span class="toc-text">比例尺</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-为什么需要比例尺？"><span class="toc-number">5.0.1.1.</span> <span class="toc-text">1. 为什么需要比例尺？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-有哪些比例尺？"><span class="toc-number">5.0.1.2.</span> <span class="toc-text">2. 有哪些比例尺？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-给柱形图添加比例尺（见详细代码）"><span class="toc-number">5.0.1.3.</span> <span class="toc-text">3.给柱形图添加比例尺（见详细代码）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#坐标轴"><span class="toc-number">5.0.2.</span> <span class="toc-text">坐标轴</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-坐标轴由什么构成"><span class="toc-number">5.0.2.1.</span> <span class="toc-text">1. 坐标轴由什么构成</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-定义坐标轴"><span class="toc-number">5.0.2.2.</span> <span class="toc-text">2. 定义坐标轴</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-在SVG中添加坐标轴"><span class="toc-number">5.0.2.3.</span> <span class="toc-text">3. 在SVG中添加坐标轴</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-设置坐标轴的样式和位置"><span class="toc-number">5.0.2.4.</span> <span class="toc-text">4. 设置坐标轴的样式和位置</span></a></li></ol></li></ol></li></ol></li></ol>
+        </div>
+        
+        <h2 id="一、D3简介"><a href="#一、D3简介" class="headerlink" title="一、D3简介"></a>一、D3简介</h2><h4 id="D3是什么？"><a href="#D3是什么？" class="headerlink" title="D3是什么？"></a>D3是什么？</h4><p>​    D3是一个javascript的函数库，用来做数据数据可视化的。</p>
+<h4 id="D3的优势"><a href="#D3的优势" class="headerlink" title="D3的优势"></a>D3的优势</h4><a id="more"></a>
+<ul>
+<li>数据能够与DOM绑定在一起</li>
+<li>数据转换和绘制是独立的</li>
+<li>代码简洁</li>
+<li>大量布局</li>
+<li>基于SVG，缩放不会损失精度</li>
+</ul>
+<h2 id="二、WEB前端开发基础"><a href="#二、WEB前端开发基础" class="headerlink" title="二、WEB前端开发基础"></a>二、WEB前端开发基础</h2><h4 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h4><p>D3对IE8及以下版本支持不好，建议使用高版本的浏览器。D3可运行于IE9+、firefox、Chrome、Safari、Opera等浏览器。</p>
+<h4 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h4><p>指可缩放矢量图形，是用于描述二维矢量图形的一种图形格式。SVG使用XML格式来定义图形，除了IE8之前的版本外，绝大部分浏览器都支持SVG，可将SVG文本直接嵌入HTML中显示。D3十分适合在SVG中绘制图形。</p>
+<p>添加一组<svg>标签：</svg></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>SVG中预定义了七种形状元素，分别为：矩形<rect></rect>、圆形<circle></circle>、椭圆<ellipse></ellipse>、线段<line></line>、折线<polyline></polyline>、多边形<polygon></polygon>、路径<path></path>。</p>
+<h5 id="1-矩形"><a href="#1-矩形" class="headerlink" title="1. 矩形"></a>1. 矩形</h5><p>矩形的参数有6个。</p>
+<ul>
+<li>x：矩形左上角的X坐标。</li>
+<li>y：矩形左上角的Y坐标。</li>
+<li>width：矩形的宽度。</li>
+<li>height：矩形的高度。</li>
+<li>rx；对于圆角矩形，指定椭圆在X方向的半径。</li>
+<li>ry：对于圆角矩形，指定椭圆在Y方向的半径。</li>
+</ul>
+<p>绘制一个直角矩形</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">"20"</span> <span class="attr">y</span>=<span class="string">"20"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">style</span>=<span class="string">"fill:steelblue; stroke:blue; stroke-width:4; opacity:0.5"</span>&gt;</span><span class="tag">&lt;/<span class="name">rect</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>绘制一个圆角矩形</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">"20"</span> <span class="attr">y</span>=<span class="string">"20"</span> <span class="attr">rx</span>=<span class="string">"20"</span> <span class="attr">ry</span>=<span class="string">"20"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">style</span>=<span class="string">"fill:steelblue; stroke:blue; stroke-width:4; opacity:0.5"</span>&gt;</span><span class="tag">&lt;/<span class="name">rect</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>代码解释：</p>
+<ul>
+<li><p>fill：定义矩形的填充颜色（rbg,颜色名或者16进制都可以）</p>
+</li>
+<li><p>stroke-width：矩形边框的宽度</p>
+</li>
+<li><p>stroke：矩形边框的颜色                 </p>
+</li>
+</ul>
+<h5 id="2-圆形和椭圆形"><a href="#2-圆形和椭圆形" class="headerlink" title="2. 圆形和椭圆形"></a>2. 圆形和椭圆形</h5><p>圆形的参数是3个。</p>
+<ul>
+<li>cx：圆心的X坐标。</li>
+<li>cy：圆心的Y坐标。</li>
+<li>r：圆的半径。</li>
+</ul>
+<p>椭圆的参数与圆形类似，只是半径分为水平半径和垂直半径。</p>
+<ul>
+<li>cx：圆心的X坐标。</li>
+<li>cy：圆心的Y坐标。</li>
+<li>rx：椭圆的水平半径。</li>
+<li>ry：椭圆的垂直半径。</li>
+</ul>
+<p>绘制圆形</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"50"</span> <span class="attr">cy</span>=<span class="string">"50"</span> <span class="attr">r</span>=<span class="string">"20"</span> <span class="attr">style</span>=<span class="string">"fill:yellow; stroke:black; stroke-width:4"</span>&gt;</span><span class="tag">&lt;/<span class="name">circle</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>绘制椭圆</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">"120"</span> <span class="attr">cy</span>=<span class="string">"100"</span> <span class="attr">rx</span>=<span class="string">"100"</span> <span class="attr">ry</span>=<span class="string">"80"</span> <span class="attr">style</span>=<span class="string">"fill:yellow; stroke:black; stroke-width:4"</span>&gt;</span><span class="tag">&lt;/<span class="name">ellipse</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="3-线段"><a href="#3-线段" class="headerlink" title="3. 线段"></a>3. 线段</h5><p>线段的参数是起点和终点的坐标。</p>
+<ul>
+<li>x1：起点的X坐标。</li>
+<li>y1：起点的Y坐标。</li>
+<li>x2：终点的X坐标。</li>
+<li>y2：终点的Y坐标。</li>
+</ul>
+<p>绘制线段</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">"120"</span> <span class="attr">y1</span>=<span class="string">"20"</span> <span class="attr">x2</span>=<span class="string">"100"</span> <span class="attr">y2</span>=<span class="string">"80"</span> <span class="attr">style</span>=<span class="string">"fill:yellow; stroke:black; stroke-width:4"</span>&gt;</span><span class="tag">&lt;/<span class="name">line</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="4-多边形和折线"><a href="#4-多边形和折线" class="headerlink" title="4. 多边形和折线"></a>4. 多边形和折线</h5><p>多边形和折线的参数是一样的，都只有一个points参数，这个参数的值是一系列的点坐标。不同之处是多边形会将终点和起点连接起来，而折线是不链接。</p>
+<p>绘制多边形</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">polygon</span> <span class="attr">points</span>=<span class="string">"100,20 20,90, 60,160 140,160 180,90"</span> <span class="attr">style</span>=<span class="string">"fill:lawngreen; stroke:black; stroke-width:3"</span>&gt;</span><span class="tag">&lt;/<span class="name">polygon</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>绘制折线</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">polyline</span> <span class="attr">points</span>=<span class="string">"100,20 20,90, 60,160 140,160 180,90"</span> <span class="attr">style</span>=<span class="string">"fill:white; stroke:black; stroke-width:3"</span>&gt;</span><span class="tag">&lt;/<span class="name">polyline</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="5-路径"><a href="#5-路径" class="headerlink" title="5. 路径"></a>5. 路径</h5><p><path></path>标签的功能最丰富，前面举的栗子都可以用路径绘制出来。与折现类似，也是通过给出一系列点坐标来绘制。在D3中绘制地图时，会经常用到此标签。其用法：给出一个坐标点，在坐标点的前面添加一个英文字母，表示如何运动到此坐标点的。</p>
+<h6 id="5-1-绘制直线"><a href="#5-1-绘制直线" class="headerlink" title="5.1 绘制直线"></a>5.1 绘制直线</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"500"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M100,100 H500</span></span></div><div class="line">               M300,100 V500</div><div class="line">               M100,500 H500</div><div class="line">               M200,200 L100,400</div><div class="line">               M150,300 L250,400</div><div class="line">               M450,200 L350,400</div><div class="line">               M400,300 L500,400"</div><div class="line">          <span class="attr">style</span>=<span class="string">"stroke:black; stroke-width:3"</span> /&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>英文字母按照功能可以分为5类，下面跟着栗子分别介绍。</p>
+<ul>
+<li><p>移动类</p>
+<p>M  将画笔移动到指定坐标。</p>
+</li>
+<li><p>直线类</p>
+<p>L  画直线到指定坐标。</p>
+<p>H  画水平直线到指定坐标。</p>
+<p>V  画垂直直线到指定坐标。</p>
+</li>
+</ul>
+<p>猜猜画出来是什么！</p>
+<h6 id="5-2-绘制三次贝塞尔曲线"><a href="#5-2-绘制三次贝塞尔曲线" class="headerlink" title="5.2 绘制三次贝塞尔曲线"></a>5.2 绘制三次贝塞尔曲线</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M30,100 C100,20 190,20 270,100 S400,180 450,100"</span> <span class="attr">style</span>=<span class="string">"stroke:green; fill:yellow; stroke-width:3"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>曲线类</p>
+<p>C  画3次贝塞尔曲线经两个指定控制点到达终点坐标。</p>
+<p>S  与前一条三次贝塞尔曲线相连，第一个控制点为前一条曲线第二个控制点的对称点，只需输入第二个控制点和终点，即可绘制一个三次贝塞尔曲线。</p>
+</li>
+</ul>
+<p>C后接三个坐标，分别为两个控制点和终点；S后面接两个坐标，分别为第二个控制点和终点。S会根据之前的曲线自动生成一个控制点。</p>
+<h6 id="5-3-绘制二次贝塞尔曲线"><a href="#5-3-绘制二次贝塞尔曲线" class="headerlink" title="5.3 绘制二次贝塞尔曲线"></a>5.3 绘制二次贝塞尔曲线</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M30,100 Q190,20 270,100 T450,100"</span> <span class="attr">style</span>=<span class="string">"stroke:green; fill:yellow; stroke-width:3"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>曲线类</p>
+<p>Q  画二次贝塞尔曲线经一个指定控制点到达终点坐标。</p>
+<p>T  与前一条二次贝塞尔曲线相连，控制点为前一条二次贝塞尔曲线控制点的对称点，只需输入终点，即可绘制一个二次贝塞尔曲线。</p>
+</li>
+</ul>
+<h6 id="5-4-绘制弧线"><a href="#5-4-绘制弧线" class="headerlink" title="5.4 绘制弧线"></a>5.4 绘制弧线</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"400"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M100,200 a200,150 0 1,0 150,-150 Z"</span> <span class="attr">style</span>=<span class="string">"stroke:green; fill:yellow; stroke-width:3"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>弧线类</p>
+<p>A  画椭圆曲线到指定坐标。弧线是根据椭圆来绘制的，参数比较多：</p>
+<p>A(rx（椭圆X方向的半轴大小）,ry（椭圆Y方向的半轴大小）x-axis-rotation（椭圆的X轴与水平轴顺时针方向的夹角）large-arc-flag（有两个值{1：大角度弧线 、0：小角度弧线},sweep-flag（有两个值{1：顺时针至终点、 0：逆时针至终点}）x（终点X坐标）,y（终点Y坐标）） )</p>
+</li>
+<li><p>闭合类</p>
+<p>Z  绘制一条直线连接终点和起点，用来封闭图形。</p>
+</li>
+</ul>
+<p>其中，用了小写a标示相对坐标，当前画笔位置为（100，200），那么终点位置就为（100+150，200-150）=（250，50）。</p>
+<p>以上命令用大写字母表示坐标系中的绝对坐标，小写字母写标识相对坐标（相对于当前画笔所在点）。</p>
+<h5 id="6-文字"><a href="#6-文字" class="headerlink" title="6. 文字"></a>6. 文字</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"500"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">text</span> <span class="attr">x</span>=<span class="string">"200"</span> <span class="attr">y</span>=<span class="string">"50"</span> <span class="attr">dx</span>=<span class="string">"-5"</span> <span class="attr">dy</span>=<span class="string">"5"</span> <span class="attr">rotate</span>=<span class="string">"180"</span> <span class="attr">textLength</span>=<span class="string">"70"</span> <span class="attr">style</span>=<span class="string">"fill:green; font-size:30px;"</span>&gt;</span>这是<span class="tag">&lt;<span class="name">tspan</span> <span class="attr">style</span>=<span class="string">"fill:yellow"</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">tspan</span>&gt;</span><span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>x：文字位置的X坐标</li>
+<li>y：文字位置的Y坐标</li>
+<li>dx：相对于当前位置在X方向上平移的距离（值为正则往右，负则往左）</li>
+<li>dy：相对于当前位置在Y方向上平移的距离（值为正则往下，负则往上）</li>
+<li>rotate：旋转角度（顺时针为正，逆时针为负）</li>
+<li>textLength：文字的显示长度（不足则拉长，足则压缩）</li>
+</ul>
+<h5 id="7-样式"><a href="#7-样式" class="headerlink" title="7. 样式"></a>7. 样式</h5><p>SVG支持使用CSS选择器给元素定义样式。</p>
+<ul>
+<li>fill：填充色（rbg,颜色名或者16进制都可以）</li>
+<li>stroke：边框的颜色 </li>
+<li>stroke-width：边框的宽度</li>
+<li>stroke-linecap：线头端点的样式，butt、round（圆角）、square（直角）。</li>
+<li>stroke-dasharray：虚线的样式，例如：stroke-dasharray=”10,10” stroke-dasharray=”15,15” stroke-dasharray=”20,10,5,5,5,15”。</li>
+</ul>
+<h5 id="8-标记"><a href="#8-标记" class="headerlink" title="8. 标记"></a>8. 标记</h5><p>标记（marker）是SVG中一个重要的概念，能帖服于<path></path>、<line></line>等元素上。标记<marker>写在<defs></defs>中，defs用于定义可重复利用的图形元素。</marker></p>
+<p><marker>标签的属性和意义：</marker></p>
+<ul>
+<li>viewBox：坐标系的区域。</li>
+<li>refX，refY：在viewBox内的基准点，绘制时此点在直线端点上。</li>
+<li>markerUnits：标记大小的基准，有两个值，即strokeWidth（线的宽度）和userSpaceOnUse（线前端的大小）。</li>
+<li>markerWidth，markerHeight：标识的大小。</li>
+<li>orient：绘制方向，可设定为auto（自动确认方向）和角度值。</li>
+<li>id：标识的id号。</li>
+</ul>
+<p>这是定位的属性如下：</p>
+<ul>
+<li>marker-start：路径起点处。</li>
+<li>marker-mid：路径中间端点处。</li>
+<li>marker-end：路径终点处。</li>
+</ul>
+<p>绘制带原点和箭头的直线</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"500"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line"></div><div class="line">      <span class="tag">&lt;<span class="name">defs</span>&gt;</span></div><div class="line">        //先定义一个圆点</div><div class="line">        <span class="tag">&lt;<span class="name">marker</span> <span class="attr">id</span>=<span class="string">"markerCircle"</span> <span class="attr">markerWidth</span>=<span class="string">"8"</span> <span class="attr">markerHeight</span>=<span class="string">"8"</span> <span class="attr">refx</span>=<span class="string">"5"</span> <span class="attr">refy</span>=<span class="string">"5"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"5"</span> <span class="attr">cy</span>=<span class="string">"5"</span> <span class="attr">r</span>=<span class="string">"3"</span> <span class="attr">style</span>=<span class="string">"stroke: none; fill:#000000;"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">marker</span>&gt;</span></div><div class="line">        //先定义一个箭头</div><div class="line">        <span class="tag">&lt;<span class="name">marker</span> <span class="attr">id</span>=<span class="string">"markerArrow"</span> <span class="attr">markerWidth</span>=<span class="string">"13"</span> <span class="attr">markerHeight</span>=<span class="string">"13"</span> <span class="attr">refx</span>=<span class="string">"2"</span> <span class="attr">refy</span>=<span class="string">"6"</span> <span class="attr">orient</span>=<span class="string">"auto"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M2,2 L2,11 L10,6 L2,2"</span> <span class="attr">style</span>=<span class="string">"fill: #000000;"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">marker</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">defs</span>&gt;</span></div><div class="line"></div><div class="line">      //然后画直线</div><div class="line">      <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">"0"</span> <span class="attr">y1</span>=<span class="string">"0"</span> <span class="attr">x2</span>=<span class="string">"100"</span> <span class="attr">y2</span>=<span class="string">"50"</span>  <span class="attr">stroke</span>=<span class="string">"red"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span> <span class="attr">marker-end</span>=<span class="string">"url(#markerArrow)"</span>  /&gt;</span></div><div class="line">      </div><div class="line">      <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M100,10 L150,10 L150,60"</span></span></div><div class="line">          <span class="attr">style</span>=<span class="string">"stroke: #6666ff; stroke-width: 1px; fill: none;</span></div><div class="line">                 marker-start: url(#markerCircle);</div><div class="line">                 marker-mid: url(#markerCircle);</div><div class="line">                 marker-end: url(#markerArrow) "</div><div class="line">          /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="9-滤镜"><a href="#9-滤镜" class="headerlink" title="9. 滤镜"></a>9. 滤镜</h5><p>滤镜（filter）能使图形更具有艺术效果。对源图形使用滤镜能修改其显示结果。但是，滤镜不会改变源图形的数学参数，只是将其渲染后传给显示设备。</p>
+<p>滤镜的标签为<filter>，和标记<marker>一样，也是在<defs>中定义的。滤镜的种类很多，例如：feMorphology、feGaussianBlur、feFlood等等，还有定义光源的滤镜feDistantLight、fePointLight、feSqotLight，都是以fe开头的。</defs></marker></filter></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"500"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">      //先定义一个滤镜</div><div class="line">      <span class="tag">&lt;<span class="name">defs</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">filter</span> <span class="attr">id</span>=<span class="string">"GaussianBlur"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">feGaussianBlur</span> <span class="attr">in</span>=<span class="string">"SourceGraphic"</span> <span class="attr">stdDeviation</span>=<span class="string">"2"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">defs</span>&gt;</span></div><div class="line">      //定义一个矩形</div><div class="line">      <span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">"300"</span> <span class="attr">y</span>=<span class="string">"100"</span> <span class="attr">width</span>=<span class="string">"150"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">style</span>=<span class="string">"fill:blue; filter:url(#GaussianBlur)"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>属性说明：</p>
+<ul>
+<li>in是使用滤镜的对象，此处是源图形SourceGraphic。</li>
+<li>stdDeviation是高斯模糊唯一的参数，数值越大，模糊程度越高。</li>
+</ul>
+<h5 id="9-渐变"><a href="#9-渐变" class="headerlink" title="9. 渐变"></a>9. 渐变</h5><p>SVG中有线性渐变<lineargradient>和放射性渐变<radialgradient>。渐变也是定义在<defs>标签中的。</defs></radialgradient></lineargradient></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">width</span>=<span class="string">"500"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></div><div class="line">        //先定义一个渐变</div><div class="line">        <span class="tag">&lt;<span class="name">defs</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">linearGradient</span> <span class="attr">id</span>=<span class="string">"Gradient"</span> <span class="attr">x1</span>=<span class="string">"0%"</span> <span class="attr">y1</span>=<span class="string">"0%"</span> <span class="attr">x2</span>=<span class="string">"100%"</span> <span class="attr">y2</span>=<span class="string">"0%"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">"0%"</span> <span class="attr">stop-color</span>=<span class="string">"#F00"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">"100%"</span> <span class="attr">stop-color</span>=<span class="string">"green"</span> /&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">linearGradient</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">defs</span>&gt;</span></div><div class="line">        //定义一个矩形</div><div class="line">        <span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">"300"</span> <span class="attr">y</span>=<span class="string">"100"</span> <span class="attr">width</span>=<span class="string">"150"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">style</span>=<span class="string">"fill:url(#Gradient)"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>x1、y1、x2、y2定义渐变的方向，此处是水平渐变。将x1、y1、x2、y2设置为0%、0%、0%、100%则是垂直渐变。offset定义渐变开始的位置，stop-color定义此位置的颜色。</p>
+<h2 id="三、安装和使用"><a href="#三、安装和使用" class="headerlink" title="三、安装和使用"></a>三、安装和使用</h2><p>D3是一个javascript函数库，所以并不需要安装，它只有一个文件，在HTML中引用即可。</p>
+<h4 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span> </div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span> </div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>用D3来更改hello world<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"d3.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">        <span class="keyword">var</span> span = d3.select(<span class="string">'body'</span>)</div><div class="line">                    .selectAll(<span class="string">'span'</span>)</div><div class="line">                    .text(<span class="string">'hello world'</span>)</div><div class="line"></div><div class="line">        <span class="comment">// 修改标签的颜色和字体大小</span></div><div class="line">        span.style(<span class="string">'color'</span>,<span class="string">'green'</span>)</div><div class="line">            .style(<span class="string">'font-size'</span>,<span class="string">'30px'</span>)</div><div class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面的代码是先将选中的元素赋值给变量span，然后通过变量span来改变样式，这样使代码更整洁。D3能够连续不断地调用函数（链式语法）。</p>
+<h2 id="四、选择元素和绑定数据"><a href="#四、选择元素和绑定数据" class="headerlink" title="四、选择元素和绑定数据"></a>四、选择元素和绑定数据</h2><h4 id="选择元素"><a href="#选择元素" class="headerlink" title="选择元素"></a>选择元素</h4><p>D3中，用于选择元素的函数有两个：</p>
+<ul>
+<li>d3.select()是选择所有指定元素的第一个</li>
+<li>d3.selectAll()是选择指定元素的全部</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">d3.select(<span class="string">"body"</span>) <span class="comment">//选择body元素</span></div><div class="line">d3.select(<span class="string">"#box"</span>)  <span class="comment">//选择id为box的元素</span></div><div class="line">d3.select(<span class="string">".content"</span>) <span class="comment">//选择类为content的元素</span></div><div class="line">d3.selectAll(<span class="string">"p"</span>)  <span class="comment">//选择所有的p元素</span></div><div class="line">d3.selectAll(<span class="string">".content"</span>)  <span class="comment">//选择类为content的所有元素</span></div><div class="line">d3.selectAll(<span class="string">"ul li"</span>) <span class="comment">//选择ul中所有的li元素</span></div></pre></td></tr></table></figure>
+<p>除了CSS选择器，还可以是已经被DOM选择的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text = <span class="built_in">document</span>.getElementById(<span class="string">"text"</span>)</div><div class="line">d3.select(text)</div><div class="line"><span class="comment">//但是有个问题：如果选择的元素是多个，将其作为select的参数，不能达到选择其中一个元素的效果。</span></div><div class="line"><span class="comment">//使用dom选择类为content的元素集</span></div><div class="line"><span class="keyword">var</span> content = <span class="built_in">document</span>.getElementsByClassName(<span class="string">"content"</span>)</div><div class="line">d3.select(content)  <span class="comment">//不能达到选择第一个元素的效果</span></div><div class="line">d3.selectAll(content)  <span class="comment">//正确的方法</span></div></pre></td></tr></table></figure>
+<p>使用getElementById选择的元素要用select；使用getElementsByClassName选择的元素要用selectAll。但是尽量使用CSS选择器作为参数。</p>
+<p>D3支持连续调用函数的方法（链式语法）。for example：d3.select(“body”).selectAll(“p”)</p>
+<h4 id="选择集"><a href="#选择集" class="headerlink" title="选择集"></a>选择集</h4><p>d3.select和d3.selectAll返回的对象称为选择集，添加、删除、设定网页中的元素，都得使用选择集。</p>
+<h5 id="1-查看状态"><a href="#1-查看状态" class="headerlink" title="1.查看状态"></a>1.查看状态</h5><ul>
+<li>selection.empty()如果选择集为空，则返回true，如果不为空，返回false</li>
+<li>selection.node()返回第一个非空元素，入股偶选择集为空则返回null</li>
+<li>selection.size()返回选择集中的元素个数</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> a = d3.select(<span class="string">'body'</span>)</div><div class="line">  		 .selectAll(<span class="string">'a'</span>)</div><div class="line">  <span class="built_in">console</span>.log(a.empty())   <span class="comment">//false</span></div><div class="line">  <span class="built_in">console</span>.log(a.node())    <span class="comment">//&lt;a&gt;1&lt;/a&gt;</span></div><div class="line">  <span class="built_in">console</span>.log(a.size())    <span class="comment">//3</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="2-设定和获取属性"><a href="#2-设定和获取属性" class="headerlink" title="2. 设定和获取属性"></a>2. 设定和获取属性</h5><ul>
+<li><p>selection.attr(‘name’,’value’)</p>
+<p>设置或获取选择集的属性，name是属性名，value是属性值，如果省略value，则返回当前属性值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"addCircle"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> svg = d3.select(<span class="string">'body'</span>)</div><div class="line">  .select(<span class="string">'#addCircle'</span>)</div><div class="line">  .append(<span class="string">'svg'</span>)</div><div class="line">  .attr(<span class="string">'width'</span>,<span class="string">'300'</span>)</div><div class="line">  .attr(<span class="string">'height'</span>,<span class="string">'100'</span>)</div><div class="line"></div><div class="line">  svg.append(<span class="string">'circle'</span>)</div><div class="line">    .attr(<span class="string">'class'</span>,<span class="string">'circle'</span>)</div><div class="line">    .attr(<span class="string">'cx'</span>,<span class="string">'50'</span>)</div><div class="line">    .attr(<span class="string">'cy'</span>,<span class="string">'50'</span>)</div><div class="line">    .attr(<span class="string">'r'</span>,<span class="string">'20'</span>)</div><div class="line">    .attr(<span class="string">'fill'</span>,<span class="string">'red'</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>slection.classed(‘name’,’value’)</p>
+<p>设定或获取选择集的CSS类，name是类名，value是一个布尔值。布尔值表示是否开启。当布尔值是true的时候，开启对应的类，元素标签添加class=”classname”，当布尔值为false时，标签中不会添加任何属性。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"addCircle"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> svg = d3.select(<span class="string">'body'</span>)</div><div class="line">  .select(<span class="string">'#addCircle'</span>)</div><div class="line">  .append(<span class="string">'svg'</span>)</div><div class="line">  .attr(<span class="string">'width'</span>,<span class="string">'300'</span>)</div><div class="line">  .attr(<span class="string">'height'</span>,<span class="string">'100'</span>)</div><div class="line"></div><div class="line">  svg.append(<span class="string">'circle'</span>)</div><div class="line">    .attr(<span class="string">'cx'</span>,<span class="string">'50'</span>)</div><div class="line">    .attr(<span class="string">'cy'</span>,<span class="string">'50'</span>)</div><div class="line">    .attr(<span class="string">'r'</span>,<span class="string">'20'</span>)</div><div class="line">    .attr(<span class="string">'fill'</span>,<span class="string">'red'</span>)</div><div class="line">    .attr(<span class="string">'class'</span>,<span class="string">'name size content'</span>)</div><div class="line">    .classed(<span class="string">'name'</span>,<span class="literal">true</span>)  <span class="comment">//开启name类</span></div><div class="line">    .classed(<span class="string">'size'</span>,<span class="literal">false</span>)  <span class="comment">//关闭size类</span></div><div class="line">    .classed(&#123;<span class="string">'name'</span>:<span class="literal">false</span>,<span class="string">'size'</span>:<span class="literal">true</span>&#125;)  <span class="comment">//也可以这样写在对象里面</span></div><div class="line">    .classed(<span class="string">'size content'</span>,<span class="literal">false</span>)  <span class="comment">//也可以用空格分开写在一起</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>selection.style(‘name’,’value’)</p>
+<p>设定或获取选择集的样式，name是样式名，value是样式值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>my name is h1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> svg = d3.select(<span class="string">'body'</span>)</div><div class="line">  .select(<span class="string">'h1'</span>)</div><div class="line">  .style(<span class="string">'color'</span>,<span class="string">'pink'</span>)</div><div class="line">  .style(<span class="string">'font-size'</span>,<span class="string">'35px'</span>)</div><div class="line">  .style(&#123;<span class="string">"text-decoration"</span>:<span class="string">"underline"</span>,<span class="string">"cursor"</span>:<span class="string">"pointer"</span>&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>selection.property(‘name’,’value’)</p>
+<p>设定或获取选择集的属性，name是属性名，value是属性值。有部分属性，不能用att()设定和获取，最典型的就是文本输入框的value属性，此属性值不会在不标签中显示。像复选框等，都需要用property()来获取属性。总之，不能用attr()来处理属性的，都可以考虑用property()。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"fullname"</span> <span class="attr">id</span>=<span class="string">"inputName"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> inputValue = d3.select(<span class="string">'body'</span>)</div><div class="line">  .select(<span class="string">'#inputName'</span>)</div><div class="line">  <span class="comment">// .property("value")  //返回值是你输入的值</span></div><div class="line">  .property(<span class="string">'value'</span>,<span class="string">'d3'</span>)  <span class="comment">//给文本框赋值 d3</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>selection.text(‘name’,’value’)</p>
+<p>设定或获取选择集的文本内容。文本内容相当于DOM的innerText，不包括元素内部的标签。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"pText"</span>&gt;</span>薛<span class="tag">&lt;<span class="name">span</span>&gt;</span>之<span class="tag">&lt;/<span class="name">span</span>&gt;</span>谦<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="built_in">console</span>.log(d3.select(<span class="string">'body'</span>).select(<span class="string">'#pText'</span>).text())   </div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>selection.html(value)</p>
+<p>设定或获取选择集的内部HTML内容，相当于DOM的innerHTML，包括元素内部的标签。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"pText"</span>&gt;</span>薛<span class="tag">&lt;<span class="name">span</span>&gt;</span>之<span class="tag">&lt;/<span class="name">span</span>&gt;</span>谦<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="built_in">console</span>.log(d3.select(<span class="string">'body'</span>).select(<span class="string">'#pText'</span>).html())        </div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="添加、插入和删除"><a href="#添加、插入和删除" class="headerlink" title="添加、插入和删除"></a>添加、插入和删除</h4><ul>
+<li><p>selection.append(name)</p>
+<p>在选择集的末尾添加一个元素，name为元素名称。</p>
+</li>
+<li><p>selection.insert(“name”,”#before”)</p>
+<p>在选择集中的指定元素之前插入一个元素，name是被插入的元素名称，before是CSS选择器名称。</p>
+</li>
+<li><p>selection.remove()</p>
+<p>删除选择集中的元素。</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"car"</span>&gt;</span>car<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"plane"</span>&gt;</span>plane<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"ship"</span>&gt;</span>ship<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> body = d3.select(<span class="string">'body'</span>)  <span class="comment">//选择body元素</span></div><div class="line">  body.append(<span class="string">'p'</span>).text(<span class="string">'train'</span>)  <span class="comment">//在body中所有元素的末尾添加一个P标签</span></div><div class="line">  body.insert(<span class="string">'p'</span>,<span class="string">'#car'</span>).text(<span class="string">'bike'</span>)  <span class="comment">//在car元素前面添加一个P标签</span></div><div class="line">  <span class="keyword">var</span> ship = d3.select(<span class="string">'#ship'</span>)</div><div class="line">  .remove()  <span class="comment">//删除ship</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h4><p>将数据绑定到DOM上是D3的特色。d3.select和d3.selectAll返回元素的选择集，选择集上是没有数据的。数据绑定，就是使被选择元素里面“含有”数据。相关函数有两个：</p>
+<ul>
+<li>selection.datum(value)选择集中的每一个元素都绑定相同的数据value。</li>
+<li>selection.data(value,key)选择集中的每一个元素分别绑定数组value的每一项。key是一个键函数，用于指定绑定数组时的对应规则。</li>
+</ul>
+<h5 id="1-datum-的工作过程"><a href="#1-datum-的工作过程" class="headerlink" title="1. datum()的工作过程"></a>1. datum()的工作过程</h5><p>datum()绑定数据的方法很简单，平时可能使用得比较少，但是某些时候还是能派上大用场的。直接上代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num"</span>&gt;</span>one<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num"</span>&gt;</span>two<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num"</span>&gt;</span>three<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> num = d3.select(<span class="string">'body'</span>)</div><div class="line">              .selectAll(<span class="string">'.num'</span>)</div><div class="line">  num.datum(<span class="number">666</span>)</div><div class="line">  <span class="built_in">console</span>.log(num)</div><div class="line">  <span class="built_in">console</span>.log(num.datum())  <span class="comment">//没有参数 就返回——data——的属性值</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>接下来我们去打望打望控制台。</p>
+<p>SO，datum()的工作过程就是对于选择集中的每一个元素，都增加一个—data—<em>属性，属性值为datum(value)的value值。如果参数是undefined和null，则不会创建</em>—data—属性。</p>
+<p>用绑定的数据替换原本的段落：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num1"</span>&gt;</span>原创歌手<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num1"</span>&gt;</span>段子手<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num1"</span>&gt;</span>深情的<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> num1 = d3.select(<span class="string">'body'</span>)</div><div class="line">  .selectAll(<span class="string">'.num1'</span>)</div><div class="line"></div><div class="line">  num1.datum(<span class="string">"薛之谦"</span>)</div><div class="line">    .append(<span class="string">'span'</span>)</div><div class="line">    .text(<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;  <span class="comment">//d代表数据 i代表index</span></div><div class="line">    <span class="keyword">return</span> <span class="string">"——"</span>+d+i+<span class="string">"号"</span></div><div class="line">  &#125;)</div><div class="line">  <span class="built_in">console</span>.log(num1)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>所以，在被绑定数据的选择集中添加元素后，新元素会继承该数据。</p>
+<h5 id="2-data-的工作过程"><a href="#2-data-的工作过程" class="headerlink" title="2. data()的工作过程"></a>2. data()的工作过程</h5><p>data()能将数组各项分别绑定到选择集的各元素上，并且能指定绑定的规则。当数组长度与元素数量不一致时，data()也能够处理。当数组长度大于元素数量时，为多余数据预留元素位置，以便将来插入新元素；当数组长度小于元素数量时，能获取多余元素的位置，以遍将来删除。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num2"</span>&gt;</span>演员<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num2"</span>&gt;</span>刚刚好<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"num2"</span>&gt;</span>认真的雪<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> num2 = d3.select(<span class="string">'body'</span>)</div><div class="line">  .selectAll(<span class="string">'.num2'</span>)</div><div class="line">  <span class="keyword">var</span> dataset = [<span class="string">"绅士"</span>,<span class="string">"初学者"</span>,<span class="string">"未完成的歌"</span>]</div><div class="line">  num2.data(dataset)</div><div class="line">  <span class="built_in">console</span>.log(num2)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面的数组长度和元素数量刚刚好，下面看看不等的情况。</p>
+<p>d3中，根据数组长度和元素数量的关系，分别把各种情况归纳如下：</p>
+<p>在读入数据进行可视化的过程中，被读入的数据都要绑定到选择集的元素上，没有绑定数据的元素是没有用的。</p>
+<ul>
+<li>update：数组长度=元素数量。（则绑定数据的元素即将被更新）</li>
+<li>enter：数组长度&gt;元素数量。（则部分还不存在的元素即将进入可视化）</li>
+<li>exit：数组长度&lt;元素数量。（则多余的元素即将退出可视化）</li>
+</ul>
+<p><img src="845855-20161020140040467-439041801.png" alt="845855-20161020140040467-439041801"></p>
+<p>data()返回一个对象，对象里包含update部分，还有两个方法：enter()返回enter部分；一个是exit()返回exit部分。 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"n"</span>&gt;</span>演员<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"n"</span>&gt;</span>刚刚好<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"n"</span>&gt;</span>认真的雪<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> n = d3.select(<span class="string">'body'</span>)</div><div class="line">  .selectAll(<span class="string">'.n'</span>)</div><div class="line">  <span class="keyword">var</span> dataset = [<span class="string">"《绅士》"</span>,<span class="string">"《初学者》"</span>,<span class="string">"《未完成的歌》"</span>,<span class="string">"《一半》"</span>,<span class="string">"《意外》"</span>]</div><div class="line"></div><div class="line">  <span class="keyword">var</span> update = n.data(dataset)</div><div class="line">  update.append(<span class="string">'span'</span>)</div><div class="line">    .text(<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;  <span class="comment">//d代表数据 i代表index</span></div><div class="line">    <span class="keyword">return</span> <span class="string">"——"</span>+d</div><div class="line">  &#125;)</div><div class="line">  <span class="built_in">console</span>.log(update)</div><div class="line">  <span class="built_in">console</span>.log(update.enter())</div><div class="line">  <span class="built_in">console</span>.log(update.exit())</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在控制台可以看到，d3已经为多余的数组“《一半》”和”《意外》”预留了位置，以备将来添加元素。enter部分仲，还有一个变量update，指向update部分。因为本次绑定中，没有多余的元素，所以exit部分没有内容。</p>
+<h5 id="3-选择集的处理"><a href="#3-选择集的处理" class="headerlink" title="3. 选择集的处理"></a>3. 选择集的处理</h5><ul>
+<li>enter的处理方法</li>
+</ul>
+<p>如果没有足够的元素，那么就添加元素。所以，通常从服务器读取数据后，网页中是没有与之对应的元素的。因此，有一个很常见的用法：选择一个空集，然后使用enter().append()的形式来添加足够数量的元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> dataset2 = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>,<span class="number">60</span>]</div><div class="line">  <span class="keyword">var</span> body = d3.select(<span class="string">'body'</span>)</div><div class="line">  body.selectAll(<span class="string">'b'</span>)  <span class="comment">//选择了一个空集</span></div><div class="line">    .data(dataset2)  <span class="comment">//绑定数据</span></div><div class="line">    .enter()  <span class="comment">//返回enter部分</span></div><div class="line">    .append(<span class="string">'p'</span>)  <span class="comment">//添加li标签</span></div><div class="line">    .text(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> d</div><div class="line">  &#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>exit的处理方法</li>
+</ul>
+<p>如果存在多余的元素，那就删除元素。使用remove()就可以删除元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"boxs"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> dataset2 = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>]</div><div class="line">  <span class="keyword">var</span> body = d3.select(<span class="string">'body'</span>)</div><div class="line">  body.select(<span class="string">'#boxs'</span>)  </div><div class="line">    .selectAll(<span class="string">'p'</span>)</div><div class="line">    .data(dataset2)  <span class="comment">//绑定数据</span></div><div class="line">    .text(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> d</div><div class="line">  &#125;)</div><div class="line">    .exit()  <span class="comment">//返回exit部分</span></div><div class="line">    .remove()  <span class="comment">//删除多余的2个P标签</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>此处省略“处理模板、过略器、选择集的顺序、each()的应用、call()的应用。</p>
+<h4 id="柱形的制作（见详细代码）"><a href="#柱形的制作（见详细代码）" class="headerlink" title="柱形的制作（见详细代码）"></a>柱形的制作（见详细代码）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>柱形图的制作<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"d3.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">      <span class="comment">//首先绘制SVG</span></div><div class="line">      <span class="keyword">var</span> width = <span class="number">600</span></div><div class="line">      <span class="keyword">var</span> height = <span class="number">200</span></div><div class="line">      <span class="keyword">var</span> svg = d3.select(<span class="string">'body'</span>)</div><div class="line">      .append(<span class="string">'svg'</span>)</div><div class="line">      .attr(<span class="string">'width'</span>,width)  <span class="comment">//设置svg的属性</span></div><div class="line">      .attr(<span class="string">'height'</span>,height)</div><div class="line">      <span class="comment">//然后定义3个变量</span></div><div class="line">      <span class="comment">//定义上下左右的边距</span></div><div class="line">      <span class="keyword">var</span> padding = &#123;</div><div class="line">        <span class="attr">top</span>: <span class="number">20</span>,</div><div class="line">        <span class="attr">right</span>: <span class="number">20</span>,</div><div class="line">        <span class="attr">bottom</span>: <span class="number">20</span>,</div><div class="line">        <span class="attr">left</span>: <span class="number">20</span></div><div class="line">      &#125;</div><div class="line">      <span class="comment">//矩形所占的宽度（包括空白）</span></div><div class="line">      <span class="keyword">var</span> rectStep = <span class="number">35</span></div><div class="line">      <span class="comment">//矩形所占的宽度（不包括空白）</span></div><div class="line">      <span class="keyword">var</span> rectWidth = <span class="number">30</span></div><div class="line"></div><div class="line">      <span class="comment">//定义数据</span></div><div class="line">      <span class="keyword">var</span> dataset = [<span class="number">60</span>,<span class="number">40</span>,<span class="number">120</span>,<span class="number">88</span>,<span class="number">22</span>,<span class="number">150</span>,<span class="number">60</span>,<span class="number">55</span>]</div><div class="line">      <span class="comment">//添加矩形</span></div><div class="line">      svg.selectAll(<span class="string">'rect'</span>)</div><div class="line">        .data(dataset)</div><div class="line">        .enter()</div><div class="line">        .append(<span class="string">'rect'</span>)</div><div class="line">        .attr(<span class="string">"x"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;  <span class="comment">//设置矩形的X坐标</span></div><div class="line">        <span class="keyword">return</span> padding.left + i * rectStep</div><div class="line">      &#125;)</div><div class="line">        .attr(<span class="string">'y'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;  <span class="comment">//设置矩形的Y坐标</span></div><div class="line">        <span class="keyword">return</span> height - padding.bottom - d</div><div class="line">      &#125;)</div><div class="line">        .attr(<span class="string">'width'</span>,rectWidth)  <span class="comment">//设置每个矩形的宽度</span></div><div class="line">        .attr(<span class="string">'height'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;  <span class="comment">//设置每个矩形的高度</span></div><div class="line">        <span class="keyword">return</span> d</div><div class="line">      &#125;)</div><div class="line">        .style(&#123;<span class="string">"fill"</span>:<span class="string">"yellow"</span>,<span class="string">"stroke"</span>:<span class="string">"green"</span>,<span class="string">"stroke-width"</span>:<span class="string">'3'</span>&#125;)</div><div class="line"></div><div class="line">      <span class="comment">//给矩形添加文字</span></div><div class="line">      <span class="keyword">var</span> text = svg.selectAll(<span class="string">'text'</span>)</div><div class="line">      .data(dataset)</div><div class="line">      .enter()</div><div class="line">      .append(<span class="string">'text'</span>)</div><div class="line">      .style(&#123;<span class="string">"fill"</span>:<span class="string">"#000"</span>,<span class="string">"font-size"</span>:<span class="string">"18px"</span>,<span class="string">"text-anchor"</span>:<span class="string">"middle"</span>&#125;)</div><div class="line">      .attr(<span class="string">'x'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> padding.left + i * rectStep</div><div class="line">      &#125;)</div><div class="line">      .attr(<span class="string">'y'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> height - padding.bottom - d</div><div class="line">      &#125;)</div><div class="line">      .attr(<span class="string">'dx'</span>,rectWidth/<span class="number">2</span>)</div><div class="line">      .attr(<span class="string">'dy'</span>,<span class="string">'20'</span>)</div><div class="line">      .text(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> d</div><div class="line">      &#125;)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="五、比例尺和坐标轴"><a href="#五、比例尺和坐标轴" class="headerlink" title="五、比例尺和坐标轴"></a>五、比例尺和坐标轴</h2><h4 id="比例尺"><a href="#比例尺" class="headerlink" title="比例尺"></a>比例尺</h4><h5 id="1-为什么需要比例尺？"><a href="#1-为什么需要比例尺？" class="headerlink" title="1. 为什么需要比例尺？"></a>1. 为什么需要比例尺？</h5><p>上面制作了一个柱状图，绘图时，直接使用150给矩形的高度赋值，即矩形的宽度就是250个像素。所以，如果过数值过大或者过小，就会造成太小看不到，太大没有这么大的画布来画。</p>
+<p>SO，我们需要一种计算关系，能够将：某一区域的值映射到另一区域，其大小关系不变。这就是比例尺。</p>
+<h5 id="2-有哪些比例尺？"><a href="#2-有哪些比例尺？" class="headerlink" title="2. 有哪些比例尺？"></a>2. 有哪些比例尺？</h5><p>比例尺，很像数学中的函数。例如，对于一个一元二次函数（y=2x+1），有 x 和 y 两个未知数，当 x 的值确定时，y 的值也就确定了。</p>
+<p>在数学中，x 的范围被称为<strong>定义域</strong>，y 的范围被称为<strong>值域</strong>。</p>
+<p>D3 中的比例尺，也有定义域和值域，分别被称为 domain 和 range。开发者需要指定 domain 和 range 的范围，如此即可得到一个计算关系。</p>
+<p>D3 提供了多种比例尺，下面介绍最常用的两种。</p>
+<ul>
+<li>线性比例尺</li>
+</ul>
+<p>线性比例尺，能将一个连续的区间，映射到另一区间。要解决柱形图宽度的问题，就需要线性比例尺。</p>
+<p>假设有以下数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dataset = [<span class="number">1.2</span>, <span class="number">2.3</span>, <span class="number">0.9</span>, <span class="number">1.5</span>, <span class="number">3.3</span>]</div></pre></td></tr></table></figure>
+<p>现有要求如下：</p>
+<p>将dataset中最小的值，映射成0；将最大的值，映射成300。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> min = d3.min(dataset)</div><div class="line"><span class="keyword">var</span> max = d3.max(dataset)</div><div class="line"><span class="keyword">var</span> linear = d3.scale.linear()</div><div class="line">               .domain([min,max])</div><div class="line">               .range([<span class="number">0</span>,<span class="number">300</span>])</div><div class="line">linear(<span class="number">0.9</span>)  <span class="comment">//返回0</span></div><div class="line">linear(<span class="number">2.3</span>)  <span class="comment">//返回175</span></div><div class="line">linear(<span class="number">3.3</span>)  <span class="comment">//返回300</span></div></pre></td></tr></table></figure>
+<p>其中，d3.scale.linear() 返回一个线性比例尺。domain() 和 range() 分别设定比例尺的定义域和值域。在这里还用到了两个函数，它们经常与比例尺一起出现：d3.max() 求数组的最大值；d3.min() 求数组最小值</p>
+<p>注意：d3.scale.linear() 的返回值，是可以当做函数来使用的。因此，才有这样的用法：linear(0.9)。</p>
+<ul>
+<li>序数比例尺</li>
+</ul>
+<p>有时候，定义域和值域不一定是连续的。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> index = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</div><div class="line"><span class="keyword">var</span> color = [<span class="string">"red"</span>,<span class="string">"blue"</span>,<span class="string">"green"</span>,<span class="string">"yellow"</span>,<span class="string">"black"</span>]</div></pre></td></tr></table></figure>
+<p>我们希望0对应颜色red，1对应blue…..</p>
+<p>但是，这些值都是散离的，线性比例尺不适合，需要用到序数比例尺。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ordinal = d3.scale.ordinal()</div><div class="line">                .domain(index)</div><div class="line">                .range(color)</div><div class="line">ordinal(<span class="number">0</span>)  <span class="comment">//返回red</span></div><div class="line">ordinal(<span class="number">2</span>)  <span class="comment">//返回green</span></div><div class="line">ordinal(<span class="number">4</span>)  <span class="comment">//返回black</span></div></pre></td></tr></table></figure>
+<h5 id="3-给柱形图添加比例尺（见详细代码）"><a href="#3-给柱形图添加比例尺（见详细代码）" class="headerlink" title="3.给柱形图添加比例尺（见详细代码）"></a>3.给柱形图添加比例尺（见详细代码）</h5><h4 id="坐标轴"><a href="#坐标轴" class="headerlink" title="坐标轴"></a>坐标轴</h4><h5 id="1-坐标轴由什么构成"><a href="#1-坐标轴由什么构成" class="headerlink" title="1. 坐标轴由什么构成"></a>1. 坐标轴由什么构成</h5><p>坐标轴在 SVG 中是没有现成的图形元素的，需要用其他的元素组合构成。D3 提供了坐标轴的组件，如此在 SVG 画布中绘制坐标轴变得像添加一个普通元素一样简单。最终使其变为类似以下的形式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 第一个刻度 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">line</span>&gt;</span><span class="tag">&lt;/<span class="name">line</span>&gt;</span>   <span class="comment">&lt;!-- 第一个刻度的直线 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">text</span>&gt;</span>   <span class="comment">&lt;!-- 第一个刻度的文字 --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 第二个刻度 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">line</span>&gt;</span><span class="tag">&lt;/<span class="name">line</span>&gt;</span>   <span class="comment">&lt;!-- 第二个刻度的直线 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span><span class="tag">&lt;/<span class="name">text</span>&gt;</span>   <span class="comment">&lt;!-- 第二个刻度的文字 --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span> </div><div class="line">...</div><div class="line"><span class="comment">&lt;!-- 坐标轴的轴线 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">path</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><g>标签是用于把相关元素进行组合的容器元素。如果需要手动添加这些元素就太麻烦了，为此，D3 提供了一个组件：d3.svg.axis()。</g></p>
+<h5 id="2-定义坐标轴"><a href="#2-定义坐标轴" class="headerlink" title="2. 定义坐标轴"></a>2. 定义坐标轴</h5><p>要生成坐标轴，需要用到比例尺，它们二者经常是一起使用的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//数据</span></div><div class="line"><span class="keyword">var</span> dataset = [ <span class="number">2.5</span> , <span class="number">2.1</span> , <span class="number">1.7</span> , <span class="number">1.3</span> , <span class="number">0.9</span> ];</div><div class="line"><span class="comment">//定义比例尺</span></div><div class="line"><span class="keyword">var</span> linear = d3.scale.linear()</div><div class="line">      .domain([<span class="number">0</span>, d3.max(dataset)])</div><div class="line">      .range([<span class="number">0</span>, <span class="number">250</span>]);</div><div class="line"></div><div class="line"><span class="keyword">var</span> axis = d3.svg.axis() <span class="comment">//D3 中坐标轴的组件，能够在 SVG 中生成组成坐标轴的元素</span></div><div class="line">     .scale(linear)      <span class="comment">//指定比例尺</span></div><div class="line">     .orient(<span class="string">"bottom"</span>)   <span class="comment">//指定刻度的方向 bottom 表示在坐标轴的下方显示</span></div><div class="line">     .ticks(<span class="number">7</span>);          <span class="comment">//指定刻度的数量</span></div></pre></td></tr></table></figure>
+<h5 id="3-在SVG中添加坐标轴"><a href="#3-在SVG中添加坐标轴" class="headerlink" title="3. 在SVG中添加坐标轴"></a>3. 在SVG中添加坐标轴</h5><p>定义了坐标轴之后，只需要在 SVG 中添加一个分组元素 ，再将坐标轴的其他元素添加到这个 里即可。代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svg.append(<span class="string">"g"</span>).call(axis)</div></pre></td></tr></table></figure>
+<p>上面有一个 <strong>call()</strong> 函数，其参数是前面定义的坐标轴 axis。</p>
+<p>在 D3 中，call() 的参数是一个函数。调用之后，将当前的选择集作为参数传递给此函数。也就是说，以下两段代码是相等的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">selection</span>) </span>&#123;</div><div class="line">  selection.attr(<span class="string">"name1"</span>, <span class="string">"value1"</span>)</div><div class="line">      .attr(<span class="string">"name2"</span>, <span class="string">"value2"</span>)</div><div class="line">&#125;</div><div class="line">foo(d3.selectAll(<span class="string">"div"</span>))</div><div class="line"><span class="comment">//上面的代码等于</span></div><div class="line">d3.selectAll(<span class="string">"div"</span>).call(foo)</div></pre></td></tr></table></figure>
+<p>所以，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">svg.append(<span class="string">"g"</span>).call(axis)</div><div class="line"><span class="comment">//等于</span></div><div class="line">axis(svg.append(g))</div></pre></td></tr></table></figure>
+<h5 id="4-设置坐标轴的样式和位置"><a href="#4-设置坐标轴的样式和位置" class="headerlink" title="4. 设置坐标轴的样式和位置"></a>4. 设置坐标轴的样式和位置</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.axis</span> <span class="selector-tag">path</span>,</div><div class="line"><span class="selector-class">.axis</span> <span class="selector-tag">line</span>&#123;</div><div class="line">    <span class="attribute">fill</span>: none;</div><div class="line">    <span class="attribute">stroke</span>: black;</div><div class="line">    <span class="attribute">shape-rendering</span>: crispEdges;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.axis</span> <span class="selector-tag">text</span> &#123;</div><div class="line">    <span class="attribute">font-family</span>: sans-serif;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">11px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>分别定义了类 axis 下的 path、line、text 元素的样式。接下来，只需要将坐标轴的类设定为 axis 即可。坐标轴的位置，可以通过 transform 属性来设定。通常在添加元素的时候就一并设定，写成如下形式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">svg.append(<span class="string">"g"</span>)</div><div class="line">  .attr(<span class="string">"class"</span>,<span class="string">"axis"</span>)</div><div class="line">  .attr(<span class="string">"transform"</span>,<span class="string">"translate(20,130)"</span>)</div><div class="line">  .call(axis)</div></pre></td></tr></table></figure>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/D3-js/20170108/D3基础.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/conding/D3-js/20170109/D3-数据绑定.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          D3-选择元素和绑定数据
+        
+      </div>
+    </a>
+  
+  
+    <a href="/conding/ES6/20170105/变量的解构赋值.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">变量的解构赋值</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-D3基础" data-title="D3基础部分" data-url="/conding/D3-js/20170108/D3基础.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类 ● category</h3>
+    <div class="widget tag">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">49</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章 ● Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/uncategorized/20170314/d3-js-地图实战.html">d3.js-地图实战</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170308/react遇到的那些问题.html">react遇到的那些问题</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html">linear比例尺及ordinal比例尺的使用</a>
+          </li>
+        
+          <li>
+            <a href="/conding/MongoDB/20170223/安装MongoDB.html">安装MongoDB</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170221/react-router实例.html">react-router实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/npm/20170220/npm常用命令及npm-install-报的那些错.html">npm常用命令及npm-install-报的那些错</a>
+          </li>
+        
+          <li>
+            <a href="/uncategorized/20170220/react评论框实例.html">react评论框实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20170218/JS作用域和闭包.html">JS作用域和闭包</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云 ● Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 15.5px; color: #5c88a8">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.5px; color: #5c88a8">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/D3-js/" style="font-size: 14px; color: #258fb8">D3.js</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.5px; color: #c97a89">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17px; color: #928199">React</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.5px; color: #5c88a8">友谊</a> <a href="/tags/循环遍历/" style="font-size: 17px; color: #928199">循环遍历</a> <a href="/tags/旅途/" style="font-size: 17px; color: #928199">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.5px; color: #5c88a8">闭包</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档 ● archive</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接 ● Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://baizn.github.io" target="_BLANK">●&emsp;baizn</a></li>
+    
+    <li><a href="http://init.funlee.cn" target="_BLANK">●&emsp;ClassRun</a></li>
+    
+    <li><a href="https://wxxtqk.github.io" target="_BLANK">●&emsp;tangqk</a></li>
+    
+    <li><a href="undefined" target="_BLANK">●&emsp;zy380196088</a></li>
+    
+  </ul>
+</div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zillah<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>
+
+    </div>
+  </div>
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?204bdccab804777b4dcd9eefa8ceb91b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/categories/conding" class="mobile-nav-link">学无止境</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">碎言碎语</a>
+  
+    <a href="/about" class="mobile-nav-link">关于我</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jody';
+  
+  var disqus_url = '/conding/D3-js/20170108/D3基础.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+<script src="/js/totop.js"></script>
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:999; display:none">
+<a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!--- Baidu Share End --->
+
+
+
+
+
+
+  </div>
+</body>
+</html>

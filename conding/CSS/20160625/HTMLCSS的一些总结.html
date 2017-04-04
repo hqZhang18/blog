@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTMLCSS的一些总结 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、什么是盒子模型？在网页中，一个元素占有空间的大小由四个部分构成
+其中包括元素的内容（content），元素的内边距（padding）元素的边框（border），元素的外边距（margin）四部分。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTMLCSS的一些总结">
+<meta property="og:url" content="/conding/CSS/20160625/HTMLCSS的一些总结.html">
+<meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:description" content="1、什么是盒子模型？在网页中，一个元素占有空间的大小由四个部分构成
+其中包括元素的内容（content），元素的内边距（padding）元素的边框（border），元素的外边距（margin）四部分。">
+<meta property="og:updated_time" content="2017-02-20T23:25:54.143Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTMLCSS的一些总结">
+<meta name="twitter:description" content="1、什么是盒子模型？在网页中，一个元素占有空间的大小由四个部分构成
+其中包括元素的内容（content），元素的内边距（padding）元素的边框（border），元素的外边距（margin）四部分。">
+  
+    <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
+    
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+     		保持学习的习惯，努力的姿态！<br/>
+     		享受生命的成长过程，创造美好未来送给自己<br/>
+     		人生仅此一次，唯努力过方无悔
+      
+        <h2 id="subtitle-wrap" style="display: none;">
+          <a href="/" id="subtitle">前端的那点事 前端笔记 es6 javascript es6 基础 react</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/categories/conding">学无止境</a>
+        
+          <a class="main-nav-link" href="/categories/life">碎言碎语</a>
+        
+          <a class="main-nav-link" href="/about">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-HTMLCSS的一些总结" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTMLCSS的一些总结
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/CSS/20160625/HTMLCSS的一些总结.html" class="article-date">
+  <time datetime="2016-06-25T13:58:16.000Z" itemprop="datePublished">2016-06-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/CSS/">CSS</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <h4 id="1、什么是盒子模型？"><a href="#1、什么是盒子模型？" class="headerlink" title="1、什么是盒子模型？"></a>1、什么是盒子模型？</h4><p>在网页中，一个元素占有空间的大小由四个部分构成</p>
+<p>其中包括元素的内容（content），元素的内边距（padding）元素的边框（border），元素的外边距（margin）四部分。<br><a id="more"></a><br>这四个部分占有的空间中，有的部分可以显示相应的内容，</p>
+<p>而有的部分只用来分隔相邻的区域或区域。4个部分一起构成了css中元素的盒模型。</p>
+<h4 id="2、行内元素有哪些？块级元素有哪些？-空-void-元素有那些？"><a href="#2、行内元素有哪些？块级元素有哪些？-空-void-元素有那些？" class="headerlink" title="2、行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？"></a>2、行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h4><p>行内元素：a、b、span、img、input、strong、select、label、em、button、textarea </p>
+<p>块级元素：div、ul、li、dl、dt、dd、p、h1-h6、blockquote </p>
+<p>空元素：即系没有内容的HTML元素，例如：br、meta、hr、link、input、img</p>
+<h4 id="3、CSS实现垂直水平居中"><a href="#3、CSS实现垂直水平居中" class="headerlink" title="3、CSS实现垂直水平居中"></a>3、CSS实现垂直水平居中</h4><p>HTML结构：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>CSS：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.wrapper&#123;</div><div class="line">  position:relative;</div><div class="line">&#125; </div><div class="line">.content&#123; </div><div class="line">  background-color:#6699FF; </div><div class="line">  width:200px; </div><div class="line">  height:200px;</div><div class="line">  position: absolute; //父元素需要相对定位</div><div class="line">  top: 50%; left: 50%; </div><div class="line">  margin-top:-100px ; //二分之一的</div><div class="line">  height，width margin-left: -100px; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="4、src与href的区别"><a href="#4、src与href的区别" class="headerlink" title="4、src与href的区别"></a>4、src与href的区别</h4><p>href 是指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，用于超链接。</p>
+<p>src是指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；</p>
+<p>在请求src资源时会将其指向的资源下载并应用到文档内，</p>
+<p>例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处理，</p>
+<p>直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。</p>
+<p>这也是为什么将js脚本放在底部而不是头部。</p>
+<h4 id="5、什么是CSS-Hack"><a href="#5、什么是CSS-Hack" class="headerlink" title="5、什么是CSS Hack?"></a>5、什么是CSS Hack?</h4><p>一般来说是针对不同的浏览器写不同的CSS,就是 CSS Hack。</p>
+<p>IE浏览器Hack一般又分为三种，条件Hack、属性级Hack、选择符Hack（详细参考CSS文档：css文档）。<br>例如：<br>// 1、条件Hack<br>&lt;!– &lt;!–[if IE]&gt;</p>
+<p><style><br>.test{color:red;}<br></style><br>&lt;![enfif]&gt; –&gt;</p>
+<p>// 2、属性Hack<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.test&#123; color:#090\9; / For IE8+ / </div><div class="line">color:#f00; / For IE7 and earlier / </div><div class="line">_color:#ff0; / For IE6 and earlier */</div></pre></td></tr></table></figure></p>
+<p>// 3、选择符Hack<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">html .test&#123; color:#090; &#125; / For IE6 and earlier / </div><div class="line">html .test&#123; color:#ff0; &#125; / For IE7</div></pre></td></tr></table></figure></p>
+<h4 id="6-同步和异步的区别"><a href="#6-同步和异步的区别" class="headerlink" title="6.同步和异步的区别"></a>6.同步和异步的区别</h4><p>同步是阻塞模式，异步是非阻塞模式。</p>
+<p>同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，<br>直到收到返回信息才继续执行下去；</p>
+<p>异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会通知进程进<br>行处理，这样可以提高执行的效率。</p>
+<h4 id="7、px和em的区别"><a href="#7、px和em的区别" class="headerlink" title="7、px和em的区别"></a>7、px和em的区别</h4><p>px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。</p>
+<p>em得值不是固定的，并且em会继承父级元素的字体大小。</p>
+<p>浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em</p>
+<h4 id="8、什么叫优雅降级和渐进增强？"><a href="#8、什么叫优雅降级和渐进增强？" class="headerlink" title="8、什么叫优雅降级和渐进增强？"></a>8、什么叫优雅降级和渐进增强？</h4><h5 id="渐进增强-progressive-enhancement："><a href="#渐进增强-progressive-enhancement：" class="headerlink" title="渐进增强 progressive enhancement："></a>渐进增强 progressive enhancement：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.transition</span>&#123;</div><div class="line">   <span class="attribute">transition</span>: all .<span class="number">5s</span>;          <span class="comment">/* 标准写法 */</span></div><div class="line">  <span class="attribute">-moz-transition</span>: all .<span class="number">5s</span>;     <span class="comment">/* firefox 内核 */</span></div><div class="line">  <span class="attribute">-webkit-transition</span>: all .<span class="number">5s</span>;  <span class="comment">/* webkit 内核 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到<br>更好的用户体验。</p>
+<h5 id="优雅降级-graceful-degradation："><a href="#优雅降级-graceful-degradation：" class="headerlink" title="优雅降级 graceful degradation："></a>优雅降级 graceful degradation：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.transition</span>&#123;</div><div class="line">    <span class="attribute">-webkit-transition</span>: all .<span class="number">5s</span>;  <span class="comment">/* webkit 内核 */</span></div><div class="line">    <span class="attribute">-moz-transition</span>: all .<span class="number">5s</span>;     <span class="comment">/* firefox 内核 */</span></div><div class="line">    <span class="attribute">transition</span>: all .<span class="number">5s</span>;          <span class="comment">/* 标准写法 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<p>区别：</p>
+<p>a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给</p>
+<p>b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要</p>
+<p>c. 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带</p>
+<h5 id="9、浏览器的内核分别有哪些"><a href="#9、浏览器的内核分别有哪些" class="headerlink" title="9、浏览器的内核分别有哪些?"></a>9、浏览器的内核分别有哪些?</h5><p>IE: trident内核 Firefox：<br>gecko内核 Safari：<br>webkit内核 Opera：以前是presto内核，Opera现已改用Google Chrome的Blink内核<br>Chrome：Blink(基于webkit，Google与Opera Software共同开发)</p>
+<h5 id="10、-moz、-ms、-webkit浏览器私有前缀详解"><a href="#10、-moz、-ms、-webkit浏览器私有前缀详解" class="headerlink" title="10、-moz、-ms、-webkit浏览器私有前缀详解"></a>10、-moz、-ms、-webkit浏览器私有前缀详解</h5><ul>
+<li>-moz 代表firefox浏览器私有属性</li>
+<li>-ms 代表IE浏览器私有属性</li>
+<li>-webkit 代表chrome、safari私有属性</li>
+</ul>
+<h5 id="11、如何理解CSS的display属性"><a href="#11、如何理解CSS的display属性" class="headerlink" title="11、如何理解CSS的display属性"></a>11、如何理解CSS的display属性</h5><p>在布局中，display属性是最重要的CSS属性之一。<br>其最常见的属性值有block,inline,none,table以及inline-block<br>最近的新宠为flex</p>
+<p>display: none;<br>将元素与其子元素从普通文档流中移除。这时文档的渲染就像元素从来没有存在过一样，<br>也就是说它所占据的空间被折叠了。元素的内容也会被屏幕阅读所忽略。</p>
+<p>display: inline;<br>该元素生成一个或多个行内框。就如名字般，行内级元素所占具的空间就是他的标签所定义的大小。<br>可以被视为对块级元素的补充。</p>
+<p>display: block;<br>该元素生成块级框。除特殊声明外，所有的块级元素开始于新的一行，延展到其容器的宽度。</p>
+<p>display: list-item;<br>元素被渲染为列表项呈现的方式，确切说就像是一个块级元素，但是会生成一个可以被list-style属性进行样式修饰的标记框。<br>只有<br>元素可以具有list-style的默认值。通常将<br>元素重置为默认行为。</p>
+<p>display: inline-block;<br>该元素生成一个块级别框，但是整个框的行为就像是一个内联元素。尝试在Codepen书写此示例，改变窗口的大小，这样会更有意义。</p>
+<p>display: flex;<br>引入flexbox布局模块或CSS弹性框，标志着我们第一次有了专门为浏览器内容进行布局的规范。<br>自从HTML被引入之后，网页内容布局已经演变了很多。<br>当设计者想要创建一些富有创意的设计时，使用的第一种方法就是嵌套的HTML表格，或者我们所说的基于表格的布局。</p>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/CSS/20160625/HTMLCSS的一些总结.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+ 
+     
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/conding/CSS/20160628/纯CSS样式美化.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          纯CSS样式美化(滚动条/checkbox)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/conding/Jquery/20160611/网页中常用Jquery效果.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">网页中常用Jquery效果</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-HTMLCSS的一些总结" data-title="HTMLCSS的一些总结" data-url="/conding/CSS/20160625/HTMLCSS的一些总结.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类 ● category</h3>
+    <div class="widget tag">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">49</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章 ● Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/uncategorized/20170314/d3-js-地图实战.html">d3.js-地图实战</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170308/react遇到的那些问题.html">react遇到的那些问题</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html">linear比例尺及ordinal比例尺的使用</a>
+          </li>
+        
+          <li>
+            <a href="/conding/MongoDB/20170223/安装MongoDB.html">安装MongoDB</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170221/react-router实例.html">react-router实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/npm/20170220/npm常用命令及npm-install-报的那些错.html">npm常用命令及npm-install-报的那些错</a>
+          </li>
+        
+          <li>
+            <a href="/uncategorized/20170220/react评论框实例.html">react评论框实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20170218/JS作用域和闭包.html">JS作用域和闭包</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云 ● Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 15.5px; color: #5c88a8">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.5px; color: #5c88a8">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/D3-js/" style="font-size: 14px; color: #258fb8">D3.js</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.5px; color: #c97a89">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17px; color: #928199">React</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.5px; color: #5c88a8">友谊</a> <a href="/tags/循环遍历/" style="font-size: 17px; color: #928199">循环遍历</a> <a href="/tags/旅途/" style="font-size: 17px; color: #928199">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.5px; color: #5c88a8">闭包</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档 ● archive</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接 ● Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://baizn.github.io" target="_BLANK">●&emsp;baizn</a></li>
+    
+    <li><a href="http://init.funlee.cn" target="_BLANK">●&emsp;ClassRun</a></li>
+    
+    <li><a href="https://wxxtqk.github.io" target="_BLANK">●&emsp;tangqk</a></li>
+    
+    <li><a href="undefined" target="_BLANK">●&emsp;zy380196088</a></li>
+    
+  </ul>
+</div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zillah<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>
+
+    </div>
+  </div>
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?204bdccab804777b4dcd9eefa8ceb91b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/categories/conding" class="mobile-nav-link">学无止境</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">碎言碎语</a>
+  
+    <a href="/about" class="mobile-nav-link">关于我</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jody';
+  
+  var disqus_url = '/conding/CSS/20160625/HTMLCSS的一些总结.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+<script src="/js/totop.js"></script>
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:999; display:none">
+<a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!--- Baidu Share End --->
+
+
+
+
+
+
+  </div>
+</body>
+</html>

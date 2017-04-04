@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>D3.js地图绘制 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用D3.js供绘制一个重庆地图；地图添加立体效果；地图上标注点；添加提示框；地图钻取。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="D3.js地图绘制">
+<meta property="og:url" content="/conding/D3-js/20161226/D3.js地图绘制.html">
+<meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:description" content="使用D3.js供绘制一个重庆地图；地图添加立体效果；地图上标注点；添加提示框；地图钻取。">
+<meta property="og:updated_time" content="2017-04-04T00:23:17.126Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D3.js地图绘制">
+<meta name="twitter:description" content="使用D3.js供绘制一个重庆地图；地图添加立体效果；地图上标注点；添加提示框；地图钻取。">
+  
+    <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
+    
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+     		保持学习的习惯，努力的姿态！<br/>
+     		享受生命的成长过程，创造美好未来送给自己<br/>
+     		人生仅此一次，唯努力过方无悔
+      
+        <h2 id="subtitle-wrap" style="display: none;">
+          <a href="/" id="subtitle">前端的那点事 前端笔记 es6 javascript es6 基础 react</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/categories/conding">学无止境</a>
+        
+          <a class="main-nav-link" href="/categories/life">碎言碎语</a>
+        
+          <a class="main-nav-link" href="/about">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-D3.js地图绘制" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      D3.js地图绘制
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/D3-js/20161226/D3.js地图绘制.html" class="article-date">
+  <time datetime="2016-12-26T13:29:38.000Z" itemprop="datePublished">2016-12-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/D3-js/">D3.js</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <p>使用D3.js供绘制一个重庆地图；地图添加立体效果；地图上标注点；添加提示框；地图钻取。</p>
+<a id="more"></a> 
+<h4 id="css代码"><a href="#css代码" class="headerlink" title="css代码"></a>css代码</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#mapWrap</span>&#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">width</span>: <span class="number">900px</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tooltip</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#040931</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.back</span>&#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">right</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"mapWrap"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tooltip"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"back"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/sea.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">seajs.use([<span class="string">'./js/map2'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">map</span>)</span>&#123;</div><div class="line">  map.init()</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div></pre></td><td class="code"><pre><div class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="built_in">require</span>(<span class="string">'./lib/d3'</span>)</div><div class="line">  <span class="built_in">require</span>(<span class="string">'./lib/util'</span>)</div><div class="line"></div><div class="line">  <span class="keyword">var</span> data = [</div><div class="line">    &#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"丰都县"</span>,</div><div class="line">    <span class="string">"geoCoord"</span>: [<span class="number">107.74845</span>, <span class="number">30.182199999999998</span>]</div><div class="line">    &#125;,&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"云阳县"</span>,</div><div class="line">    <span class="string">"geoCoord"</span>: [<span class="number">108.83034075456257</span>, <span class="number">31.009656231968137</span>]</div><div class="line">    &#125;,&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"酉阳县"</span>,</div><div class="line">    <span class="string">"geoCoord"</span>: [<span class="number">108.81187677218037</span>, <span class="number">28.867136105860993</span>]</div><div class="line">    &#125;,&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"万州区"</span>,</div><div class="line">    <span class="string">"geoCoord"</span>: [<span class="number">108.38606641491705</span>, <span class="number">30.701455057077226</span>]</div><div class="line">    &#125;</div><div class="line">  ]  </div><div class="line">  <span class="comment">//配置项</span></div><div class="line">  <span class="keyword">var</span> width = <span class="number">0</span></div><div class="line">  <span class="keyword">var</span> height = <span class="number">0</span></div><div class="line">  <span class="keyword">var</span> classname = <span class="string">''</span></div><div class="line">  <span class="keyword">var</span> container = <span class="string">''</span></div><div class="line">  <span class="keyword">var</span> cfg = &#123;&#125;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> _self = <span class="string">''</span></div><div class="line">  <span class="keyword">var</span> mapData = []</div><div class="line">  <span class="keyword">var</span> tooltip = d3.select(<span class="string">'.tooltip'</span>)</div><div class="line">  <span class="keyword">var</span> mapPath = <span class="string">'data/map/chongqing.json'</span></div><div class="line"></div><div class="line">  <span class="keyword">var</span> map = &#123;</div><div class="line"></div><div class="line">    <span class="attr">drawMap</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      mapData = data</div><div class="line">      _self = <span class="keyword">this</span></div><div class="line">      width = <span class="number">900</span></div><div class="line">      height = <span class="number">600</span></div><div class="line">      classname = <span class="string">'mapWrap'</span></div><div class="line">      container = <span class="string">'#mapWrap'</span>,</div><div class="line"></div><div class="line">      cfg = &#123;</div><div class="line">        <span class="attr">padding</span>: &#123;</div><div class="line">          <span class="attr">top</span>: <span class="number">40</span>,</div><div class="line">          <span class="attr">bottom</span>: <span class="number">40</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">mapStyle</span>: &#123;</div><div class="line">          <span class="attr">fill</span>: <span class="string">'#001e5a'</span>,</div><div class="line">          <span class="attr">stroke</span>: <span class="string">'#2fb9f8'</span>,</div><div class="line">          <span class="attr">strokeWidth</span>: <span class="number">1</span>,</div><div class="line">          <span class="attr">transform</span>: <span class="string">"perspective(1200px) rotateX(60deg) scale(1.2, 1.4) translateZ(0px)"</span>,</div><div class="line">          <span class="attr">transformOrigin</span>: <span class="string">"50% 50% 0px"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">hoverable</span>: &#123;</div><div class="line">          <span class="attr">fill</span>: <span class="string">'#04184b'</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">filter</span>: &#123;</div><div class="line">          <span class="attr">fill</span>: <span class="string">'#023ac0'</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      _self.mapJson(mapPath, mapData)    </div><div class="line">    &#125;, </div><div class="line"></div><div class="line">    <span class="attr">mapJson</span>: <span class="function"><span class="keyword">function</span>(<span class="params">mapPath, mapData</span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> _self = <span class="keyword">this</span></div><div class="line"></div><div class="line">    d3.select(<span class="string">'.'</span>+classname+<span class="string">''</span>).remove()</div><div class="line">    <span class="keyword">var</span> mapSvg = d3.select(container)</div><div class="line">    .append(<span class="string">"svg"</span>)</div><div class="line">    .attr(<span class="string">'class'</span>, classname)</div><div class="line">    .attr(<span class="string">"width"</span>, width)</div><div class="line">    .attr(<span class="string">"height"</span>, height)</div><div class="line">    .style(<span class="string">'padding-top'</span>, cfg.padding.top)</div><div class="line">    .style(<span class="string">'padding-bottom'</span>, cfg.padding.bottom)</div><div class="line">    <span class="comment">//.style('transform', cfg.mapStyle.transform)</span></div><div class="line">    <span class="comment">//.style('transform-origin', cfg.mapStyle.transformOrigin)</span></div><div class="line"></div><div class="line">    d3.json(mapPath, <span class="function"><span class="keyword">function</span>(<span class="params">error, root</span>)</span>&#123;</div><div class="line"></div><div class="line">      <span class="comment">//控制地图缩放的大小</span></div><div class="line">      <span class="keyword">var</span> features = root.features</div><div class="line">      <span class="keyword">var</span> scale = Util.getZoomScale(features, width, height),</div><div class="line">      center = Util.getCenters(features);</div><div class="line"></div><div class="line">      <span class="keyword">var</span> projection = d3.geo.mercator()</div><div class="line">      .scale(scale * <span class="number">50</span>)</div><div class="line">      .center(center)</div><div class="line">      .translate([width / <span class="number">2</span>, (height/<span class="number">2</span> )])</div><div class="line"></div><div class="line">      <span class="keyword">var</span> path = d3.geo.path().projection(projection);</div><div class="line"></div><div class="line">      <span class="keyword">var</span> wholeMap = mapSvg.append(<span class="string">'g'</span>)</div><div class="line">      .classed(<span class="string">'mainG'</span>, <span class="literal">true</span>)</div><div class="line"></div><div class="line">      <span class="comment">// _self.getCenters(features)</span></div><div class="line">      <span class="comment">//绘制地图</span></div><div class="line">      <span class="keyword">var</span> mainMap = wholeMap.selectAll(<span class="string">".mainMap"</span>)</div><div class="line">        .data(features)</div><div class="line">        .enter().append(<span class="string">"path"</span>)</div><div class="line">        .attr(<span class="string">"fill"</span>,cfg.mapStyle.fill)</div><div class="line">        .attr(<span class="string">"stroke"</span>,cfg.mapStyle.stroke)  </div><div class="line">        .attr(<span class="string">"stroke-width"</span>,cfg.mapStyle.strokeWidth)</div><div class="line">        .attr(<span class="string">"d"</span>, path )</div><div class="line">        .on(<span class="string">'mouseover'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> posi = path.centroid(d)</div><div class="line">        d3.select(<span class="keyword">this</span>)</div><div class="line">        .attr(<span class="string">"fill"</span>, cfg.hoverable.fill)  </div><div class="line">        .style(<span class="string">'cursor'</span>, <span class="string">'pointer'</span>)</div><div class="line">        tooltip</div><div class="line">        .style(<span class="string">'left'</span>, <span class="string">''</span>+(posi[<span class="number">0</span>]<span class="number">-60</span>)+<span class="string">'px'</span>)</div><div class="line">        .style(<span class="string">'top'</span>, <span class="string">''</span>+(posi[<span class="number">1</span>]<span class="number">-60</span>)+<span class="string">'px'</span>)</div><div class="line">        .style(<span class="string">'display'</span>, <span class="string">'block'</span>)  </div><div class="line">        .html(d.properties.MC)</div><div class="line">        &#125;)</div><div class="line">        .on(<span class="string">"mouseout"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">        d3.select(<span class="keyword">this</span>)</div><div class="line">        .attr(<span class="string">"fill"</span>, cfg.mapStyle.fill)  </div><div class="line">        tooltip.style(<span class="string">'display'</span>, <span class="string">'none'</span>)</div><div class="line">        &#125;)</div><div class="line">        .on(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">        tooltip.style(<span class="string">'display'</span>, <span class="string">'none'</span>)</div><div class="line">        <span class="keyword">var</span> id = d.properties.ZZJGDM</div><div class="line">        mapPath = <span class="string">'data/map/fenju/'</span> + id + <span class="string">'.json'</span></div><div class="line">        mapData = []</div><div class="line">        <span class="built_in">console</span>.log(mapPath)</div><div class="line">        _self.mapJson(mapPath, mapData)</div><div class="line">        d3.select(<span class="string">'.back'</span>).style(<span class="string">'display'</span>, <span class="string">'block'</span>)</div><div class="line"></div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="comment">//标注点</span></div><div class="line">    _self.markPoint(projection, mapData, <span class="string">".mapWrap"</span>)</div><div class="line"></div><div class="line">    <span class="comment">//添加滤镜效果（投影）</span></div><div class="line">    _self.filter(mapSvg,features,path)</div><div class="line">    &#125;)</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">    * 地图打点</div><div class="line">    *</div><div class="line">    * @param &#123;function&#125; projection 计算点位置的一个算法</div><div class="line">    * @param &#123;Object&#125; lacationData 点的经纬度数据</div><div class="line">    */</div><div class="line">    markPoint: <span class="function"><span class="keyword">function</span>(<span class="params">projection,lacationData,pId</span>)</span>&#123;</div><div class="line">      <span class="comment">//标注点</span></div><div class="line">      <span class="keyword">var</span> markPoint = d3.select(pId)</div><div class="line">      .insert(<span class="string">'g'</span>, <span class="string">'.mapWrap'</span>)</div><div class="line">      .attr(<span class="string">'class'</span>, <span class="string">'markPoint'</span>)</div><div class="line">      .attr(<span class="string">'width'</span>, width)</div><div class="line">      .attr(<span class="string">'height'</span>, height)</div><div class="line">      <span class="comment">//添加点</span></div><div class="line">      markPoint.selectAll(<span class="string">'.circle'</span>)</div><div class="line">      .data(lacationData)</div><div class="line">      .enter()</div><div class="line">      .append(<span class="string">'circle'</span>)</div><div class="line">      .attr(<span class="string">'fill'</span>, <span class="string">'#efe'</span>)</div><div class="line">      .attr(<span class="string">'r'</span>, <span class="number">10</span>)</div><div class="line">      .attr(<span class="string">"cx"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> coor = projection(d.geoCoord)</div><div class="line">      <span class="keyword">return</span> coor[<span class="number">0</span>]</div><div class="line">      &#125;)</div><div class="line">      .attr(<span class="string">"cy"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> coor = projection(d.geoCoord)</div><div class="line">      <span class="keyword">return</span> coor[<span class="number">1</span>]</div><div class="line">      &#125;)</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">    * 给地图添加滤镜效果</div><div class="line">    *</div><div class="line">    * @param &#123;Object&#125; mapSvg 存放地图的svg容器</div><div class="line">    * @param &#123;Object&#125; features 地图各区域块的数据</div><div class="line">    * @param &#123;function&#125; path 取得或设置地理投影,D3的一个方法函数</div><div class="line">    */</div><div class="line">    filter: <span class="function"><span class="keyword">function</span>(<span class="params">mapSvg,features,path</span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> filter = mapSvg.append(<span class="string">"defs"</span>).append(<span class="string">"filter"</span>)</div><div class="line">      .attr(<span class="string">"id"</span>, <span class="string">"gaussinaBlur"</span>)</div><div class="line">      .attr(<span class="string">'x'</span>, <span class="number">0</span>)</div><div class="line">      .attr(<span class="string">'y'</span>, <span class="number">0</span>)</div><div class="line">      .attr(<span class="string">'width'</span>, <span class="string">'200%'</span>)</div><div class="line">      .attr(<span class="string">'height'</span>, <span class="string">'200%'</span>)</div><div class="line"></div><div class="line">      filter.append(<span class="string">"feGaussianBlur"</span>)</div><div class="line">      .attr(<span class="string">"result"</span>, <span class="string">"blurOut"</span>)</div><div class="line">      .attr(<span class="string">"in"</span>, <span class="string">"offOut"</span>)</div><div class="line">      .attr(<span class="string">"stdDeviation"</span>, <span class="string">"8"</span>)</div><div class="line"></div><div class="line">      <span class="comment">//底部添加一个地图并加阴影效果</span></div><div class="line">      mapSvg.insert(<span class="string">'g'</span>, <span class="string">'.mainG'</span>)</div><div class="line">      .classed(<span class="string">"filterG2"</span>, <span class="literal">true</span>)</div><div class="line">      .selectAll(<span class="string">"path"</span>)</div><div class="line">      .data(features)  </div><div class="line">      .enter().append(<span class="string">"path"</span>)</div><div class="line">      .attr(<span class="string">"d"</span>, path)</div><div class="line">      .attr(<span class="string">"transform"</span>,<span class="string">"translate(0,24)"</span>)</div><div class="line">      .attr(<span class="string">"filter"</span>,<span class="string">"url(#gaussinaBlur)"</span>)</div><div class="line">      .attr(<span class="string">"fill"</span>, cfg.filter.fill)  </div><div class="line">      .attr(<span class="string">"opacity"</span>,<span class="number">0.4</span>)</div><div class="line"></div><div class="line">      <span class="keyword">var</span> filterG = mapSvg.insert(<span class="string">'g'</span>, <span class="string">'.mainG'</span>)</div><div class="line">      .classed(<span class="string">"filterG"</span>, <span class="literal">true</span>)</div><div class="line">      .selectAll(<span class="string">"path"</span>)</div><div class="line">      .data(features)  </div><div class="line">      .enter().append(<span class="string">"path"</span>)</div><div class="line">      .attr(<span class="string">"d"</span>, path)</div><div class="line">      .attr(<span class="string">"transform"</span>,<span class="string">"translate(0,12)"</span>)</div><div class="line">      .attr(<span class="string">"fill"</span>,<span class="string">"#0232af"</span>)</div><div class="line">      .attr(<span class="string">"stroke"</span>,<span class="string">"#011a53"</span>)  </div><div class="line">      .attr(<span class="string">"stroke-width"</span>,<span class="number">2</span>)  		</div><div class="line"></div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    <span class="comment">//获取地图中心点</span></div><div class="line">    getCenters: <span class="function"><span class="keyword">function</span>(<span class="params">features</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> longitudeMin = <span class="number">100000</span>;</div><div class="line">      <span class="keyword">var</span> latitudeMin = <span class="number">100000</span>;</div><div class="line">      <span class="keyword">var</span> longitudeMax = <span class="number">0</span>;</div><div class="line">      <span class="keyword">var</span> latitudeMax = <span class="number">0</span>;</div><div class="line">      features.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> a = d3.geo.bounds(e);</div><div class="line">      <span class="keyword">if</span> (a[<span class="number">0</span>][<span class="number">0</span>] &lt; longitudeMin) &#123;</div><div class="line">      longitudeMin = a[<span class="number">0</span>][<span class="number">0</span>];</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (a[<span class="number">0</span>][<span class="number">1</span>] &lt; latitudeMin) &#123;</div><div class="line">      latitudeMin = a[<span class="number">0</span>][<span class="number">1</span>];</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (a[<span class="number">1</span>][<span class="number">0</span>] &gt; longitudeMax) &#123;</div><div class="line">      longitudeMax = a[<span class="number">1</span>][<span class="number">0</span>];</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (a[<span class="number">1</span>][<span class="number">1</span>] &gt; latitudeMax) &#123;</div><div class="line">      latitudeMax = a[<span class="number">1</span>][<span class="number">1</span>];</div><div class="line">      &#125;</div><div class="line">      &#125;);</div><div class="line">      <span class="keyword">var</span> a = (longitudeMax + longitudeMin) / <span class="number">2</span>;</div><div class="line">      <span class="keyword">var</span> b = (latitudeMax + latitudeMin) / <span class="number">2</span>;</div><div class="line">      <span class="keyword">return</span> [a, b];</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">bindEvent</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> _self = <span class="keyword">this</span></div><div class="line">      d3.select(<span class="string">'.back'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">      d3.select(<span class="string">'.back'</span>).style(<span class="string">'display'</span>, <span class="string">'none'</span>)</div><div class="line">      mapPath = <span class="string">'data/map/chongqing.json'</span></div><div class="line">      <span class="keyword">var</span> dataUrl = <span class="string">'data/data.json'</span></div><div class="line">      _self.mapJson(mapPath, mapData)</div><div class="line">      &#125;)</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    <span class="attr">init</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">this</span>.drawMap()</div><div class="line">      <span class="keyword">this</span>.bindEvent()</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> map</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/D3-js/20161226/D3.js地图绘制.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/conding/JavaScript/20161227/js-判断键盘事件大全-兼容FireFox和IE（退格、制表、回车、空格、方向键、删除键等）.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          js 判断键盘事件大全 兼容FireFox和IE（退格、制表、回车、空格、方向键、删除键等）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/conding/CSS/20161224/px、em、rem-区别.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">px、em、rem 区别</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-D3.js地图绘制" data-title="D3.js地图绘制" data-url="/conding/D3-js/20161226/D3.js地图绘制.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类 ● category</h3>
+    <div class="widget tag">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">49</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章 ● Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/uncategorized/20170314/d3-js-地图实战.html">d3.js-地图实战</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170308/react遇到的那些问题.html">react遇到的那些问题</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170228/linear比例尺及ordinal比例尺的使用.html">linear比例尺及ordinal比例尺的使用</a>
+          </li>
+        
+          <li>
+            <a href="/conding/MongoDB/20170223/安装MongoDB.html">安装MongoDB</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
+          </li>
+        
+          <li>
+            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
+          </li>
+        
+          <li>
+            <a href="/conding/React/20170221/react-router实例.html">react-router实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/npm/20170220/npm常用命令及npm-install-报的那些错.html">npm常用命令及npm-install-报的那些错</a>
+          </li>
+        
+          <li>
+            <a href="/uncategorized/20170220/react评论框实例.html">react评论框实例</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20170218/JS作用域和闭包.html">JS作用域和闭包</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云 ● Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 15.5px; color: #5c88a8">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.5px; color: #5c88a8">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/D3-js/" style="font-size: 14px; color: #258fb8">D3.js</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.5px; color: #c97a89">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17px; color: #928199">React</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.5px; color: #5c88a8">友谊</a> <a href="/tags/循环遍历/" style="font-size: 17px; color: #928199">循环遍历</a> <a href="/tags/旅途/" style="font-size: 17px; color: #928199">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.5px; color: #5c88a8">闭包</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档 ● archive</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接 ● Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://baizn.github.io" target="_BLANK">●&emsp;baizn</a></li>
+    
+    <li><a href="http://init.funlee.cn" target="_BLANK">●&emsp;ClassRun</a></li>
+    
+    <li><a href="https://wxxtqk.github.io" target="_BLANK">●&emsp;tangqk</a></li>
+    
+    <li><a href="undefined" target="_BLANK">●&emsp;zy380196088</a></li>
+    
+  </ul>
+</div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zillah<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>
+
+    </div>
+  </div>
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?204bdccab804777b4dcd9eefa8ceb91b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/categories/conding" class="mobile-nav-link">学无止境</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">碎言碎语</a>
+  
+    <a href="/about" class="mobile-nav-link">关于我</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jody';
+  
+  var disqus_url = '/conding/D3-js/20161226/D3.js地图绘制.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+<script src="/js/totop.js"></script>
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:999; display:none">
+<a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!--- Baidu Share End --->
+
+
+
+
+
+
+  </div>
+</body>
+</html>
