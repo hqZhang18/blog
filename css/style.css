@@ -359,7 +359,7 @@ body {
 #header-title {
   position: absolute;
   top: 15%;
-  left: 40px;
+  left: 35px;
   color: #555553;
   text-shadow: 0 1px #fff;
   line-height: 34px;
@@ -411,10 +411,10 @@ body {
 .nav-icon {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   width: 14px;
   height: 14px;
-  padding: 20px 15px;
+  padding: 25px 15px;
   position: relative;
   cursor: pointer;
 }
