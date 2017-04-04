@@ -327,6 +327,69 @@
 
 
   
+    <article id="post-使用D3在项目中遇到的那些烦心事" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html" class="article-date">
+  <time datetime="2017-02-23T08:06:11.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/D3-js/">D3.js</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+        <h3 id="1-value-值存在0的时候，y轴出现小数据点"><a href="#1-value-值存在0的时候，y轴出现小数据点" class="headerlink" title="1. value 值存在0的时候，y轴出现小数据点"></a>1. value 值存在0的时候，y轴出现小数据点</h3><p>解决方案：</p>
+<p>//获取到最大值<br>var max = d3.max(dataset)</p>
+<p>//当最大值小于某个值的可能会出现小数点的时候，这里取最大值不能小于10，小于则重新定义标尺及轴线<br>if(max<10){
+  max = 10
+  ticks = 5
+}
+        
+
+    <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html#more" class="article-more-link">阅读全文</a>
+
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+ 
+     
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-项目中D3遇到的那些烦心事" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -392,69 +455,6 @@
 
 
   
-    <article id="post-使用D3在项目中遇到的那些烦心事" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html" class="article-date">
-  <time datetime="2017-02-23T08:06:11.000Z" itemprop="datePublished">2017-02-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/D3-js/">D3.js</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-        <h3 id="1-value-值存在0的时候，y轴出现小数据点"><a href="#1-value-值存在0的时候，y轴出现小数据点" class="headerlink" title="1. value 值存在0的时候，y轴出现小数据点"></a>1. value 值存在0的时候，y轴出现小数据点</h3><p>解决方案：</p>
-<p>//获取到最大值<br>var max = d3.max(dataset)</p>
-<p>//当最大值小于某个值的可能会出现小数点的时候，这里取最大值不能小于10，小于则重新定义标尺及轴线<br>if(max<10){
-  max = 10
-  ticks = 5
-}
-        
-
-    <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html#more" class="article-more-link">阅读全文</a>
-
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
- 
-     
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -497,11 +497,11 @@
           </li>
         
           <li>
-            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
+            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
           </li>
         
           <li>
-            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
+            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
           </li>
         
           <li>

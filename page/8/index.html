@@ -73,7 +73,7 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-react入门07-属性设置-children" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-react入门06-属性设置-props" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
 
@@ -84,14 +84,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/conding/React/20161217/react入门07-属性设置-children.html">react入门07-属性设置-children</a>
+      <a class="article-title" href="/conding/React/20161217/react入门06-属性设置-props.html">react入门06-属性设置(props)</a>
     </h1>
   
 
       </header>
     
  <div class="article-meta">
-    <a href="/conding/React/20161217/react入门07-属性设置-children.html" class="article-date">
+    <a href="/conding/React/20161217/react入门06-属性设置-props.html" class="article-date">
   <time datetime="2016-12-17T14:06:00.000Z" itemprop="datePublished">2016-12-17</time>
 </a>
     
@@ -104,17 +104,19 @@
     <div class="article-entry article-all" itemprop="articleBody">
 
       
-        <p>this.props.children<br>children是一个例外，不是跟组件的属性对应的<br>表示组件的所有子节点<br>HTML中有一种标签：列表 &lt; ul &gt; &lt; ol &gt; &lt; li &gt;<br>定义一个列表组件，列表项中显示的内容，以及列表项的数量都由外部决定
+        <p>props是组件自身的属性，一般用于嵌套的内外层组件中，负责传递信息（通常<br>是由父层组件向子层组件传递）<br>注意：props对象中的属性与组件的属性一一对应，不要直接去修改prpos中属性的值</p>
+<p>定义一个组件WebShow。功能：输出网站的名字和网址，网址是一个可以点击的链接<br>分析：定义一个组件WebName负责输出网站名字，定义组件WebLink显示网站的网址，并且可以点击</p>
+<p>思路：<br>1.给WebShow设置两个属性，wname,wlink<br>2.WebShow的props对象增加了两个属性值<br>3.WebName从WebShow的props对象中获取wname的值，即网站的名字，
         
 
-    <a href="/conding/React/20161217/react入门07-属性设置-children.html#more" class="article-more-link">阅读全文</a>
+    <a href="/conding/React/20161217/react入门06-属性设置-props.html#more" class="article-more-link">阅读全文</a>
 
         
       
     </div>
     <footer class="article-footer">
     	
-        <a href="/conding/React/20161217/react入门07-属性设置-children.html#disqus_thread" class="article-comment-link">评论</a>
+        <a href="/conding/React/20161217/react入门06-属性设置-props.html#disqus_thread" class="article-comment-link">评论</a>
       
 
       <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
@@ -122,7 +124,7 @@
       
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/props/">props</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
 
  
      
@@ -314,67 +316,6 @@
 
 
   
-    <article id="post-apply call bind使用详解" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/JavaScript/20160628/apply call bind使用详解.html">JS循环遍历</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/JavaScript/20160628/apply call bind使用详解.html" class="article-date">
-  <time datetime="2016-06-28T13:58:16.000Z" itemprop="datePublished">2016-06-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">vvar obj = &#123;</div><div class="line">  <span class="string">"loca"</span> : <span class="string">"中国"</span>,</div><div class="line">  <span class="string">"tel"</span> : <span class="string">"小米"</span>,</div><div class="line">  <span class="string">"money"</span> : <span class="string">"100万"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></div><div class="line"></div><div class="line">function User(name,age)&#123;</div><div class="line">  this.name = name;</div><div class="line">  this.age = age;</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var user = new User("张三","20");</div><div class="line">console.log(user);</div><div class="line"></div><div class="line">function User2(name,age,sex)&#123;</div><div class="line">  //User.apply(this,[name,age]);</div><div class="line">  //this === obj</div><div class="line">  User.call(this,name,age);</div><div class="line">  this.sex = sex;</div><div class="line">  return this;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var user2 = new User2("李四","30","男");</div><div class="line">console.log(user2);</div><div class="line"></div><div class="line">// bind 会改变函数体中的 this 对象</div><div class="line">//变为你传递进去的对象</div><div class="line">var user3 = User2.bind(obj)("王五","40","男");</div><div class="line"></div><div class="line">console.log(user3);</div></pre></td></tr></table></figure>
-
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/JavaScript/20160628/apply call bind使用详解.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/循环遍历/">循环遍历</a></li></ul>
-
- 
-     
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-apply call bind" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -436,6 +377,67 @@
 
 
   
+    <article id="post-apply call bind使用详解" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/JavaScript/20160628/apply call bind使用详解.html">JS循环遍历</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/JavaScript/20160628/apply call bind使用详解.html" class="article-date">
+  <time datetime="2016-06-28T13:58:16.000Z" itemprop="datePublished">2016-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">vvar obj = &#123;</div><div class="line">  <span class="string">"loca"</span> : <span class="string">"中国"</span>,</div><div class="line">  <span class="string">"tel"</span> : <span class="string">"小米"</span>,</div><div class="line">  <span class="string">"money"</span> : <span class="string">"100万"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></div><div class="line"></div><div class="line">function User(name,age)&#123;</div><div class="line">  this.name = name;</div><div class="line">  this.age = age;</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var user = new User("张三","20");</div><div class="line">console.log(user);</div><div class="line"></div><div class="line">function User2(name,age,sex)&#123;</div><div class="line">  //User.apply(this,[name,age]);</div><div class="line">  //this === obj</div><div class="line">  User.call(this,name,age);</div><div class="line">  this.sex = sex;</div><div class="line">  return this;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var user2 = new User2("李四","30","男");</div><div class="line">console.log(user2);</div><div class="line"></div><div class="line">// bind 会改变函数体中的 this 对象</div><div class="line">//变为你传递进去的对象</div><div class="line">var user3 = User2.bind(obj)("王五","40","男");</div><div class="line"></div><div class="line">console.log(user3);</div></pre></td></tr></table></figure>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/JavaScript/20160628/apply call bind使用详解.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/循环遍历/">循环遍历</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
@@ -478,11 +480,11 @@
           </li>
         
           <li>
-            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
+            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
           </li>
         
           <li>
-            <a href="/conding/D3-js/20170223/使用D3在项目中遇到的那些烦心事.html">使用D3在项目中遇到的那些烦心事</a>
+            <a href="/conding/D3-js/20170223/项目中D3遇到的那些烦心事.html">项目中D3遇到的那些烦心事</a>
           </li>
         
           <li>
