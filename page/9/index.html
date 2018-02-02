@@ -194,67 +194,6 @@
 
 
   
-    <article id="post-apply call bind" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/JavaScript/20160628/apply call bind.html">apply call bind使用详解</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/JavaScript/20160628/apply call bind.html" class="article-date">
-  <time datetime="2016-06-28T13:58:16.000Z" itemprop="datePublished">2016-06-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">vvar obj = &#123;</div><div class="line">  <span class="string">"loca"</span> : <span class="string">"中国"</span>,</div><div class="line">  <span class="string">"tel"</span> : <span class="string">"小米"</span>,</div><div class="line">  <span class="string">"money"</span> : <span class="string">"100万"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></div><div class="line"></div><div class="line">function User(name,age)&#123;</div><div class="line">  this.name = name;</div><div class="line">  this.age = age;</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var user = new User("张三","20");</div><div class="line">console.log(user);</div><div class="line"></div><div class="line">function User2(name,age,sex)&#123;</div><div class="line">  //User.apply(this,[name,age]);</div><div class="line">  //this === obj</div><div class="line">  User.call(this,name,age);</div><div class="line">  this.sex = sex;</div><div class="line">  return this;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var user2 = new User2("李四","30","男");</div><div class="line">console.log(user2);</div><div class="line"></div><div class="line">// bind 会改变函数体中的 this 对象</div><div class="line">//变为你传递进去的对象</div><div class="line">var user3 = User2.bind(obj)("王五","40","男");</div><div class="line"></div><div class="line">console.log(user3);</div></pre></td></tr></table></figure>
-
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/JavaScript/20160628/apply call bind.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/循环遍历/">循环遍历</a></li></ul>
-
- 
-     
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-apply call bind使用详解" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -298,6 +237,67 @@
     <footer class="article-footer">
     	
         <a href="/conding/JavaScript/20160628/apply call bind使用详解.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/循环遍历/">循环遍历</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-apply call bind" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/JavaScript/20160628/apply call bind.html">apply call bind使用详解</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/JavaScript/20160628/apply call bind.html" class="article-date">
+  <time datetime="2016-06-28T13:58:16.000Z" itemprop="datePublished">2016-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">vvar obj = &#123;</div><div class="line">  <span class="string">"loca"</span> : <span class="string">"中国"</span>,</div><div class="line">  <span class="string">"tel"</span> : <span class="string">"小米"</span>,</div><div class="line">  <span class="string">"money"</span> : <span class="string">"100万"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></div><div class="line"></div><div class="line">function User(name,age)&#123;</div><div class="line">  this.name = name;</div><div class="line">  this.age = age;</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var user = new User("张三","20");</div><div class="line">console.log(user);</div><div class="line"></div><div class="line">function User2(name,age,sex)&#123;</div><div class="line">  //User.apply(this,[name,age]);</div><div class="line">  //this === obj</div><div class="line">  User.call(this,name,age);</div><div class="line">  this.sex = sex;</div><div class="line">  return this;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var user2 = new User2("李四","30","男");</div><div class="line">console.log(user2);</div><div class="line"></div><div class="line">// bind 会改变函数体中的 this 对象</div><div class="line">//变为你传递进去的对象</div><div class="line">var user3 = User2.bind(obj)("王五","40","男");</div><div class="line"></div><div class="line">console.log(user3);</div></pre></td></tr></table></figure>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/JavaScript/20160628/apply call bind.html#disqus_thread" class="article-comment-link">评论</a>
       
 
       <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
