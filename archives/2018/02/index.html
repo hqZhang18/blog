@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CSS基础知识之position | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <title>归档: 2018/2 | 小乔的博客[学习笔记]|[生活随笔]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS定位机制标准文档流（Normal flow）浮动定位（Floats）">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS基础知识之position">
-<meta property="og:url" content="/conding/CSS/20161224/CSS基础知识之position.html">
+  <meta name="description" content="前端的那点事 前端笔记 es6 javascript es6 基础 react">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:url" content="/archives/2018/02/index.html">
 <meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
-<meta property="og:description" content="CSS定位机制标准文档流（Normal flow）浮动定位（Floats）">
-<meta property="og:updated_time" content="2017-04-25T04:22:52.643Z">
+<meta property="og:description" content="前端的那点事 前端笔记 es6 javascript es6 基础 react">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS基础知识之position">
-<meta name="twitter:description" content="CSS定位机制标准文档流（Normal flow）浮动定位（Floats）">
+<meta name="twitter:title" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta name="twitter:description" content="前端的那点事 前端笔记 es6 javascript es6 基础 react">
   
     <link rel="alternate" href="/atom.xml" title="小乔的博客[学习笔记]|[生活随笔]" type="application/atom+xml">
     
@@ -72,119 +71,41 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-CSS基础知识之position" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      CSS基础知识之position
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/conding/Git/20180202/TortoiseGit连接gitLab不用每次输入用户名和密码的方法.html" class="archive-article-date">
+  <time datetime="2018-02-02T09:15:28.000Z" itemprop="datePublished">2月 2</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/conding/Git/20180202/TortoiseGit连接gitLab不用每次输入用户名和密码的方法.html">TortoiseGit连接gitLab不用每次输入用户名和密码的方法&#39;</a>
     </h1>
   
 
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/CSS/20161224/CSS基础知识之position.html" class="article-date">
-  <time datetime="2016-12-24T13:50:58.000Z" itemprop="datePublished">2016-12-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/CSS/">CSS</a>
+    </header>
   </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <h3 id="CSS定位机制"><a href="#CSS定位机制" class="headerlink" title="CSS定位机制"></a>CSS定位机制</h3><p>标准文档流（Normal flow）<br>浮动定位（Floats）<a id="more"></a><br>绝对定位（Absolute positioning）</p>
-<h5 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h5><p>从上到下，从左到右，输出文档内容<br>由块级元素和行级元素组成</p>
-<h5 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h5><p>从左到右撑满页面，独占一行<br>触碰到页面边缘时，会自动换行<br>常见的标签有：div、ul、li、di、dt、p</p>
-<h5 id="行级元素"><a href="#行级元素" class="headerlink" title="行级元素"></a>行级元素</h5><p>能在同一行内显示<br>不会改变HTML文档结构<br>常见的标签有：input、span、label、strong、img</p>
-<h5 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h5><p>边框（border）<br>外边距（margin）<br>内边距（padding）<br>盒子中的内容（content）<br>盒子模型尺寸=边框+外边距+内边距+盒子中内容的尺寸</p>
-<h5 id="盒子3D模型"><a href="#盒子3D模型" class="headerlink" title="盒子3D模型"></a>盒子3D模型</h5><p>第一层：border<br>第二层：content + padding<br>第三层：background-image<br>第四层：background-color<br>第五层：margin</p>
-<h5 id="浮动定位"><a href="#浮动定位" class="headerlink" title="浮动定位"></a>浮动定位</h5><p>三个属性：left（左浮动）、right（右浮动）、none（不浮动）<br>元素会左移、或右移、直到碰到容器为止<br>虽然脱离了标准文档流，但情况有些特殊，详情见CSS基础知识之float</p>
-<h5 id="清除浮动的常用方法"><a href="#清除浮动的常用方法" class="headerlink" title="清除浮动的常用方法"></a>清除浮动的常用方法</h5><p>clear属性，常用clear:both;（当父包含块缩成一条时无效）<br>同时设置width:100%（或固定宽度）+overflow:hidden;</p>
-<h5 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h5><p>相对于自身原有位置进行偏移<br>仍处于标准文档流中<br>随即拥有偏移属性和z-index属性</p>
-<h5 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h5><p>建立了以包含块为基准的定位<br>完全脱离了标准文档流<br>随即拥有偏移属性和z-index属性</p>
-<h5 id="绝对定位-偏移参考基准"><a href="#绝对定位-偏移参考基准" class="headerlink" title="绝对定位-偏移参考基准"></a>绝对定位-偏移参考基准</h5><p>未设置偏移量时，无论是否存在已定位的祖先元素，都保持在元素初始位置<br>已设置偏移量时，无已定位祖先元素，以为偏移参考基准<br>已设置偏移量时，有已定位祖先元素，以距其最近的已定位祖先元素为偏移参考基准</p>
-<h5 id="绝对定位-常见问题"><a href="#绝对定位-常见问题" class="headerlink" title="绝对定位-常见问题"></a>绝对定位-常见问题</h5><p>没有设置宽度时，元素的宽度根据内容进行调节<br>左右布局时，柱子层的高度，一定要大于绝对定位元素的高度</p>
-<h5 id="固定定位（也属于绝对定位）"><a href="#固定定位（也属于绝对定位）" class="headerlink" title="固定定位（也属于绝对定位）"></a>固定定位（也属于绝对定位）</h5><p>位置固定，不会随滚动条变化<br>被他遮盖的元素，可以从其下层穿过</p>
-<h5 id="固定定位-偏移参考基准"><a href="#固定定位-偏移参考基准" class="headerlink" title="固定定位-偏移参考基准"></a>固定定位-偏移参考基准</h5><p>未设置偏移量时，无已定位祖先元素，以浏览器窗口为基准定位<br>未设置偏移量时，有已定位祖先元素，以祖先元素为基准定位<br>已设置偏移量时，无论是否存在已定位的祖先元素，均以浏览器窗口为基准定位</p>
-
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-    	
-        <a href="/conding/CSS/20161224/CSS基础知识之position.html#disqus_thread" class="article-comment-link">评论</a>
-      
-
-      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
- 
-     
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/conding/CSS/20161224/px、em、rem-区别.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          px、em、rem 区别
-        
-      </div>
-    </a>
-  
-  
-    <a href="/life/20161224/年终了，这一年都干了些啥！！.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">年终了，这一年都干了些啥！！</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-  <section id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-CSS基础知识之position" data-title="CSS基础知识之position" data-url="/conding/CSS/20161224/CSS基础知识之position.html"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'undefined'};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-    <!-- 多说公共JS代码 end -->
-  </section>
-  </section>
+</section>
         
           <aside id="sidebar">
   
@@ -334,13 +255,11 @@ var _hmt = _hmt || [];
 <script>
   var disqus_shortname = 'jody';
   
-  var disqus_url = '/conding/CSS/20161224/CSS基础知识之position.html';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
