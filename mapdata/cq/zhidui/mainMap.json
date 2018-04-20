@@ -1,0 +1,127 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": [
+        {
+            "troopsId": "da36006e-9731-4167-95b7-76aed71d654d",
+            "troopsName": "二十二支队（渝北区）",
+            "value": "0",
+            "areaId": "12",
+            "dists": [
+                {
+                    "id": "2257",
+                    "value": "渝北区"
+                }
+            ]
+        },
+        {
+            "troopsId": "4c600fc6-4b6f-413f-a114-d4ace7089840",
+            "troopsName": "二十三支队（巴南区）",
+            "value": "0",
+            "areaId": "13",
+            "dists": [
+                {
+                    "id": "2258",
+                    "value": "巴南区"
+                }
+            ]
+        },
+        {
+            "troopsId": "6488728a-468e-4971-9758-1e15149c5b47",
+            "troopsName": "二十支队（北碚区）",
+            "value": "0",
+            "areaId": "14",
+            "dists": [
+                {
+                    "id": "2256",
+                    "value": "北碚区"
+                }
+            ]
+        },
+
+        {
+            "troopsId": "3adec8e4-8129-4014-a48d-d1418f8af040",
+            "troopsName": "十八支队（九龙坡区）",
+            "value": "0",
+            "areaId": "15",
+            "dists": [
+                {
+                    "id": "2254",
+                    "value": "九龙坡区"
+                }
+            ]
+        },
+        {
+            "troopsId": "9b6b0759-ae5e-4b20-a3e3-549291e8bc58",
+            "troopsName": "十九支队（南岸区）",
+            "value": "0",
+            "areaId": "16",
+            "dists": [
+                {
+                    "id": "2255",
+                    "value": "南岸区"
+                }
+            ]
+        },
+        {
+            "troopsId": "96c51c7e-4e84-4294-aca6-ad86238c5edf",
+            "troopsName": "十六支队（江北区）",
+            "value": "0",
+            "areaId": "17",
+            "dists": [
+                {
+                    "id": "2253",
+                    "value": "江北区"
+                }
+            ]
+        },
+        {
+            "troopsId": "935e2a7b-0d63-478e-9a1c-3726ccfb4349",
+            "troopsName": "十七支队（沙坪坝区）",
+            "value": "0",
+            "areaId": "18",
+            "dists": [
+                {
+                    "id": "2249",
+                    "value": "沙坪坝区"
+                }
+            ]
+        },
+        {
+            "troopsId": "5865dfa4-a16a-4bd3-9bae-6c115a5d6eee",
+            "troopsName": "十四支队（渝中区）",
+            "value": "0",
+            "areaId": "19",
+            "dists": [
+                {
+                    "id": "2252",
+                    "value": "渝中区"
+                }
+            ]
+        },
+        {
+            "troopsId": "7069680e-3236-43cc-a2f6-b62006a6a293",
+            "troopsName": "十五支队（大渡口区）",
+            "areaId": "20",
+            "value": "0",
+            "dists": [
+                {
+                    "id": "2247",
+                    "value": "大渡口区"
+                }
+            ]
+        },
+        {
+            "troopsId": "e9231a82-ea51-4948-a762-867f9744adfc",
+            "troopsName": "二十五支队（两江新区）",
+            "value": "0",
+            "areaId": "21",
+            "dists": [
+                {
+                    "id": null,
+                    "value": "两江新区"
+                }
+            ]
+        }
+    ]
+}
