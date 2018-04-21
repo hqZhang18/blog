@@ -1,0 +1,204 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "total": 26349,
+        "map": [
+            {
+                "troopsId": "500237",
+                "name": "巫山县",
+                "value": 260
+            },
+            {
+                "troopsId": "500111",
+                "name": "双桥区",
+                "value": 497
+            },
+            {
+                "troopsId": "500109",
+                "name": "北碚区",
+                "value": 633
+            },
+            {
+                "troopsId": "500230",
+                "name": "丰都县",
+                "value": 452
+            },
+            {
+                "troopsId": "500228",
+                "name": "梁平县",
+                "value": 474
+            },
+            {
+                "troopsId": "500235",
+                "name": "云阳县",
+                "value": 572
+            },
+            {
+                "troopsId": "500236",
+                "name": "奉节县",
+                "value": 456
+            },
+            {
+                "troopsId": "500242",
+                "name": "酉阳土家族苗族自治县",
+                "value": 291
+            },
+            {
+                "troopsId": "500240",
+                "name": "石柱土家族自治县",
+                "value": 398
+            },
+            {
+                "troopsId": "500115",
+                "name": "长寿区",
+                "value": 610
+            },
+            {
+                "troopsId": "500106",
+                "name": "沙坪坝区",
+                "value": 1738
+            },
+            {
+                "troopsId": "500102",
+                "name": "涪陵区",
+                "value": 753
+            },
+            {
+                "troopsId": "500222",
+                "name": "綦江区",
+                "value": 175
+            },
+            {
+                "troopsId": "500105",
+                "name": "江北区",
+                "value": 2095
+            },
+            {
+                "troopsId": "500234",
+                "name": "开州区",
+                "value": 730
+            },
+            {
+                "troopsId": "500223",
+                "name": "潼南县",
+                "value": 256
+            },
+            {
+                "troopsId": "500238",
+                "name": "巫溪县",
+                "value": 159
+            },
+            {
+                "troopsId": "500114",
+                "name": "黔江区",
+                "value": 290
+            },
+            {
+                "troopsId": "500229",
+                "name": "城口县",
+                "value": 75
+            },
+            {
+                "troopsId": "500224",
+                "name": "铜梁区",
+                "value": 220
+            },
+            {
+                "troopsId": "500110",
+                "name": "万盛区",
+                "value": 779
+            },
+            {
+                "troopsId": "500241",
+                "name": "秀山土家族苗族自治县",
+                "value": 373
+            },
+            {
+                "troopsId": "500227",
+                "name": "璧山区",
+                "value": 257
+            },
+            {
+                "troopsId": "500117",
+                "name": "合川区",
+                "value": 983
+            },
+            {
+                "troopsId": "500104",
+                "name": "大渡口区",
+                "value": 420
+            },
+            {
+                "troopsId": "500108",
+                "name": "南岸区",
+                "value": 1787
+            },
+            {
+                "troopsId": "500226",
+                "name": "荣昌县",
+                "value": 383
+            },
+            {
+                "troopsId": "500243",
+                "name": "彭水苗族土家族自治县",
+                "value": 228
+            },
+            {
+                "troopsId": "500113",
+                "name": "巴南区",
+                "value": 1218
+            },
+            {
+                "troopsId": "500232",
+                "name": "武隆区",
+                "value": 170
+            },
+            {
+                "troopsId": "500112",
+                "name": "渝北区",
+                "value": 1701
+            },
+            {
+                "troopsId": "500199",
+                "name": "北部新区",
+                "value": 39
+            },
+            {
+                "troopsId": "500103",
+                "name": "渝中区",
+                "value": 1640
+            },
+            {
+                "troopsId": "500101",
+                "name": "万州区",
+                "value": 1179
+            },
+            {
+                "troopsId": "500116",
+                "name": "江津区",
+                "value": 964
+            },
+            {
+                "troopsId": "500231",
+                "name": "垫江县",
+                "value": 389
+            },
+            {
+                "troopsId": "500107",
+                "name": "九龙坡区",
+                "value": 2133
+            },
+            {
+                "troopsId": "500225",
+                "name": "大足区",
+                "value": 311
+            },
+            {
+                "troopsId": "500233",
+                "name": "忠县",
+                "value": 261
+            }
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "total": 19071,
+        "map": [
+            {
+                "troopsId": "500109",
+                "name": "北碚区",
+                "value": 857
+            },
+            {
+                "troopsId": "500105",
+                "name": "江北区",
+                "value": 3131
+            },
+            {
+                "troopsId": "500106",
+                "name": "沙坪坝区",
+                "value": 2432
+            },
+            {
+                "troopsId": "500104",
+                "name": "大渡口区",
+                "value": 585
+            },
+            {
+                "troopsId": "500112",
+                "name": "渝北区",
+                "value": 2430
+            },
+            {
+                "troopsId": "500113",
+                "name": "巴南区",
+                "value": 1609
+            },
+            {
+                "troopsId": "500108",
+                "name": "南岸区",
+                "value": 2613
+            },
+            {
+                "troopsId": "500199",
+                "name": "北部新区",
+                "value": 53
+            },
+            {
+                "troopsId": "500107",
+                "name": "九龙坡区",
+                "value": 3013
+            },
+            {
+                "troopsId": "500103",
+                "name": "渝中区",
+                "value": 2348
+            }
+        ]
+    }
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<title>汉阳警务云</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/leftBody.css">
+	<link rel="stylesheet"  href="css/radarCharts.css"/>
+	<link rel="stylesheet" href="css/rightEcharts.css">
+	<style>
+		body{
+			font-family: "微软雅黑";
+		}
+		.left{
+		width: 22%;
+		height: 800px;
+	    padding-left: 20px;
+	    float: left;
+	    color: red;
+	    overflow-y: auto;
+		}
+		.wrap p{
+			line-height: 52px;
+			 font-size: 34px;
+		}
+		.wrap b{
+			font-weight: bold
+		}
+		.right{
+			width: 22%;
+		    height: 800px;
+		    float: left;
+		   color: #fbe84c;
+		    font-size: 24px;
+		    overflow-y: auto;
+		   
+		}
+		.center{
+			margin-left: 25px;
+			height: 920px;
+		}
+		#legend{
+			width: 1891px;
+			font-size: 35px;
+			height: 77px;
+			bottom: -48px;
+			line-height: 77px;
+		}
+		#legend #yearS i,
+		#legend #yearE i{
+			margin: 30px 5px 0;    
+			width: 20px;
+   			height: 20px;
+		}
+		.legend-fixed i{
+			width: 24px;
+			height: 24px;
+			margin: 30px 5px 0;
+		}
+		.notesTooltip{
+			min-height: 100px;
+			font-size: 35px;
+			color: #fff;
+			background: rgba(47,113,208, 0.5);
+			width: 300px;
+			position: absolute;
+			padding: 0 10px;
+			line-height: 100px;
+			border-radius: 2px;
+			display: none;
+		}
+		.legend-fixed a{
+			width: 290px;
+		}
+		.topbutton{
+			color:#fff;
+			font-size: 36px;
+		}
+		#canvas{
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			width: 2688px;
+			height: 1080px;
+			background: none;
+		}
+		.ie8{
+			width: 773px;
+			height: 410px;
+			background: url(image/ie8.jpg) no-repeat;
+			background-size: 100% 100%;
+		}
+		body{
+		background: url(image/GIF.gif) no-repeat;
+	    background-size: 100% 100%
+		}
+	</style>
+</head>
+<body>
+	<div class="ie8">
+		
+	</div>
+	<div class="ie9">
+	<!-- 头部 -->
+	<div class="header">
+		<div id="showClick" class="showClick"> <a href="index.html" class="topbutton" target="_blank"> 查看详情 </a></div>
+		<div class="title">警情雷达图
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="left"></div>
+		<!-- 左边 -->
+		<!-- 中间雷达图S -->
+		<div class="center">
+			<div class="radar-wrap">
+				<div class="alarmPrompt">
+					<div class="baoj jingqBj ">报警</div>
+					<div class="yuj jingqYj">预警</div>
+					<div class="baoj zaxzBj">报警</div>
+					<div class="yuj zaxzYj">预警</div>
+					<div class="baoj xingjBj ">报警</div>
+					<div class="yuj xingjYj">预警</div>
+					<div class="baoj qjBj ">报警</div>
+					<div class="yuj qjYj">预警</div>
+					<div class="baoj paBj ">报警</div>
+					<div class="yuj paYj">预警</div>
+					
+				</div>
+				
+				<div class="rotateBg" id="rotate"></div>
+				<div id="radarChart" class="radarChart">
+					<div class="warTooltip" style="overflow-y:auto">
+							<div class="warCont"></div>
+					</div>
+					<div class="yujTooltip" style="overflow-y:auto">
+							<div class="warCont"></div>
+					</div>
+			</div>
+			<div class="notesTooltip"></div>
+			</div>
+			<!--图例S-->
+			<div id="legend" class="legend">
+				<div class="legend-dynamic">
+					<a id="yearS"><i class="icon-c1"></i><span></span></a>
+					<a id="yearE"><i class="icon-c2"></i><span></span></a>
+				</div>
+				<div class="legend-fixed">
+					<a><i class="icon-c3"></i>最高峰值1.5倍</a>
+					<a><i class="icon-c4"></i>分局历史最高值</a>
+					<a style="width: 400px;"><i class="icon-c5"></i>全市中心城区平均水平</a>
+					<a><i class="icon-c6"></i>近三年平均水平</a>
+					<a><i class="icon-c7"></i>分局历史最低值</a>
+				</div>
+			</div>
+			<!--图例E-->
+		</div>
+			<div class="right"></div>
+		<!-- 中间雷达图E -->
+		<!-- 右侧三个列表 -->
+	<div class="clear"></div>		
+	</div>
+	<!--数据加载中的滚动条-->
+	<div class="loading">
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+		<p class="loadingText">加载中... 请稍等</p>
+	</div>
+		<div class="star"></div>
+	</div>
+	<!-- 	<canvas id="canvas"></canvas> -->
+
+</body>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.xdomainrequest.min.js"></script>
+	<script src="js/lib/jQueryRotate.js"></script> 
+	<script>
+	var browser=navigator.appName 
+	var b_version=navigator.appVersion 
+	var version=b_version.split(";"); 
+	var trim_Version=version[1].replace(/[ ]/g,""); 
+	if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
+	{ 
+	setbackground()
+	} 
+	else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+	{ 
+	setbackground()
+	} 
+	else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
+	{ 
+	setbackground()
+	} 
+	else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") 
+	{ 
+	    $(".ie8").css("display","none")
+	    ie8BUG()
+	} else{
+		$(".ie8").css("display","none")
+		ie8BUG()
+	}
+	function setbackground(){
+		$("body").css("background","none")
+		$("body").css("background-color","red")
+		$(".ie9").css("display","none")
+		$("body").css({
+			"width":"773px",
+			"height":"410px",
+			"background":"none"
+		})
+	}
+	$(".ie8").click(function(){
+		alert("请下载谷歌浏览器")
+	})
+	function ie8BUG(){
+		var x2 = 0
+		var y2 = 0
+		var a = 0
+		var b = 0
+		window.onresize=function(){
+			//页面初始化时两侧显示
+		    scale()
+		};  
+	    var scale=function(){
+	    	var x=window.innerWidth/2688
+	    	var y=window.innerHeight/1080
+	    	$("body").css("webkitTransform",'scale('+x+','+y+')')   /* for Chrome || Safari */
+	    	$("body").css("msTransform",'scale('+x+','+y+')')       /* for Firefox */
+	    	$("body").css("mozTransform",'scale('+x+','+y+')')      /* for IE */
+	    	$("body").css("oTransform",'scale('+x+','+y+')')        /* for Opera */	 
+	    	if(x2!=x){
+	    	  a=1;
+          b=x/y;
+	    	}
+	    	if(y2!=y ){
+	    	  a=y/x*0.8 ;
+          b=1*0.8 ;
+	    	}
+	    	x2 = x
+	    	y2 = y
+	    	//雷达图圆形缩放
+	    	$(".radar-wrap").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$(".radar-wrap").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$(".radar-wrap").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$(".radar-wrap").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+	    	
+	    	//图例圆形缩放
+	    	$("#legend").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$("#legend").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$("#legend").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$("#legend").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+	    	
+	    	//饼图圆形缩放
+	    	$(".box").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$(".box").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$(".box").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$(".box").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+
+	    }
+		 scale()
+		var showAll =false;
+		//雷达图旋转 兼容ie9
+		var angle = 0;
+		setInterval(function(){
+		    angle +=1;
+		    $('#rotate').rotate(angle);
+		}, 180);
+		$(document).on('click','#closeId1', function(e){
+			$('.warTooltip').css('display', 'none')
+		})
+		$(document).on('click','#closeId2', function(e){
+			$('.yujTooltip').css('display', 'none')
+		})
+	}
+	
+	</script>
+<!--[if !IE]><!--> 
+	<script src="js/config.js"></script>
+	<script src="js/lib/d3.v3.min.js"></script>
+	<script src="js/iframeRadarChart.js"></script>
+	<script src="js/iframeRadar.js"></script>
+	<script src="js/scroll.js"></script>
+<!--<![endif]-->
+
+<!--[if gte IE 9]>
+	<script src="js/config.js"></script>
+	<script src="js/lib/d3.v3.min.js"></script>
+	<script src="js/iframeRadarChart.js"></script>
+	<script src="js/iframeRadar.js"></script>
+	<script src="js/scroll.js"></script>
+<![endif]-->
+</html>

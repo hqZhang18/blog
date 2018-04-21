@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>视频设备信息</title>
+
+        <link rel="stylesheet" type="text/css" href="../../styles/sheqing/xinjiang.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/qinqing/equipment/index.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/common/common.css">
+    </head>
+    <body>
+        <!--HTML结构开始-->
+        <div class="box-model">
+            <div class="equip-banner">
+                <div class="bayonet-box">
+                    <div class="text-tap">
+                        <span class="text-num">33,4658</span>
+                        <span class="text-text">卡口总数</span>
+                    </div>
+                    <div class="text-tap">
+                        <span class="text-num">32,1365</span>
+                        <span class="text-text">视频总数</span>
+                    </div>
+                </div>
+                <div class="visitor-box">
+                    <div class="title-sp"><span>视频访问次数:</span><span class="title-num">3588</span></div>
+                    <div id="visit-char"></div>
+                </div>
+                <div class="source-box">
+                    <div class="item-box">
+                        <div class="title-sp"><span class="left-line">视频设备来源</span></div>
+                        <div class="rotate-bg"></div>
+                        <!-- <div class="legend">
+                            <span><i></i>应指</span>
+                            <span><i></i>交巡警</span>
+                        </div> -->
+                        <div id="equip-source"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="title-sp"><span class="left-line">视频设备品牌类型</span></div> 
+                        <div class="rotate-bg"></div>
+                        <!-- <div class="legend">
+                            <span><i></i>应指</span>
+                            <span><i></i>交巡警</span>
+                        </div> -->
+                        <div id="equip-brand"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equip-banner">
+                <div class="spread-box">
+                    <div class="title-sp"><span class="left-line">设备所在地区分布情况</span></div>
+                    <div id="area-char"></div>
+                </div>
+            </div>
+        </div>
+        <!--HTML结构开始结束-->
+        <!-- 错误提示 -->
+        <div class="error-dialog"></div>
+        <!--引入JS文件，并且页面上最多只引入这三个JS文件，sea-text可根据实际情况而定，当需要解析handlebars模板时才需引入-->
+        <script type="text/javascript" src='../../sea-modules/sea.js'></script>
+        <script type="text/javascript" src='../../sea-modules/sea-text.js'></script>
+        <script type="text/javascript" src='../../seajs.config.js'></script>
+        <script type="text/javascript">
+            seajs.use(['../../scripts/qinqing/equipment/index.js'], function(home){
+                home.init()
+            })
+        </script>
+    </body>
+</html>

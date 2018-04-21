@@ -1,0 +1,18 @@
+{
+  "status": true,
+  "message": "调用成功",
+  "data": [
+    {
+      "lymc": "ALL",
+      "ssb": "全部"
+    },
+    {
+      "lymc": "LPROMIS.T_LPROMIS_XXGL_JBXX",
+      "ssb": "动态"
+    },
+    {
+      "lymc": "DSECS_CXK.T_SJD",
+      "ssb": "接处警"
+    }
+  ]
+}

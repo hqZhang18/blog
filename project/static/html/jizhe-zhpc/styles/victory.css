@@ -1,0 +1,603 @@
+
+/*body{
+    background: url(../images/victorybg.png) no-repeat;    
+    width: 3360px;
+    height: 1856px;              
+    background-size: 100% 100%;              
+    transform-origin: 0px 0px 0px;   
+    -ms-transform-origin:0 0;    
+    overflow: hidden; 
+}*/
+.history-record{
+  background: url(../images/historybg.png) no-repeat;
+  width: 180px;
+  position: absolute;
+  height: 1633px;
+  left: 5px;
+  top: 0px;
+}
+.history-record-btn{
+  width: 180px;
+  height: 450px;
+  position: absolute;
+  top: 500px;
+  left: 20px;
+  cursor: pointer;
+  
+}
+.history-record-btn:hover{
+  background: url(../images/hoverbg.png) no-repeat;
+  background-position: -381px -136px;
+}
+.page-left .content .victory-map{
+  left: 450px;
+  width: 2055px;
+  height: 1510px;
+  top: 50px;
+}
+.page-left .content .victory-map .rotatebg{
+  top: 205px;
+  left: 497px
+}
+.history-modal-dialog .list-content {
+  position: absolute;
+  width: 1398px;
+  height: 1726px;
+  left: 50%;
+  margin-left: -699px;
+  top: 50%;
+  margin-top: -863px;
+  background: url(../images/history-content-bg.png) no-repeat;
+}
+
+.history-modal-dialog .list-content .header {
+  position: absolute;
+  width: 1200px;
+  height: 224px;
+  left: 94px;
+  top: 74px;
+}
+
+.history-modal-dialog .list-content .header .btn-group {
+  position: absolute;
+  width: 180px;
+  height: 97px;
+  top: 120px;
+  right: 30px;
+  background: url(../images/switch-bnt1.png) no-repeat;
+}
+.history-modal-dialog .list-content .header .btn-cur{
+  background: url(../images/switch-bnt2.png) no-repeat;
+}
+
+.history-modal-dialog .list-content .header .btn-group .btn-detail {
+  width: 80px;
+  height: 80px;
+  float: right;
+}
+
+.history-modal-dialog .list-content .header .btn-group .btn-list {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.history-modal-dialog .list-content .header .btn-group .btn:hover {
+  cursor: pointer;
+}
+
+.history-modal-dialog .list-content .sub-content {
+  position: absolute;
+  width: 1200px;
+  height: 1352px;
+  left: 94px;
+  top: 298px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.history-modal-dialog .list-content .sub-content.list .item {
+  width: 1200px;
+  height: 278px;
+  margin-top: 49px;
+  position: relative;
+}
+
+.history-modal-dialog .list-content .sub-content .item::after {
+  content: '';
+  background: url(../images/circle-icon.png) no-repeat;
+  width: 56px;
+  height: 53px;
+  position: absolute;
+  left: 243px;
+  top: 0px;
+}
+
+.history-modal-dialog .list-content .sub-content .item::before {
+  content: '';
+  width: 5px;
+  height: 125%;
+  background: #56586c;
+  position: absolute;
+  left: 269px;
+  top: 18px;
+}
+
+.history-modal-dialog .list-content .sub-content .item .time{
+    /*position: absolute;*/
+    width: 228px;
+    height: 100px;
+    color: white;
+    font-size: 34px;
+    text-align: right;
+}
+
+.history-modal-dialog .list-content .sub-content .item .zhidui-name{
+    /*position: absolute;*/
+   /* width: 220px;*/
+    height: 52px;
+    font-size: 34px;
+    background: white;
+    border-radius: 40px;
+    /*text-align: center;*/
+    padding: 0 20px;
+    line-height: 52px;
+    /*left: 320px;*/
+    color: black;
+    float: left;
+    margin-top: -95px;
+    margin-left: 320px;
+}
+
+.history-modal-dialog .list-content .sub-content .item .detail-content {
+    /*position: absolute;
+    left: 320px;
+    top: 80px;*/
+    font-size: 32px;
+    color: #d5d5d5;
+    float: left;
+    margin-left: 320px;
+    margin-top: -20px;
+    line-height: 52px;
+}
+
+.history-modal-dialog .list-content .sub-content .item tr:nth-child(even) {
+    color: white;
+    height: 68px;
+    font-weight: bold;
+}
+.history-modal-dialog .list-content .sub-content .item td {
+    width: 285px;
+}
+
+/*按详情显示的先隐藏*/
+.history-modal-dialog .list-content .sub-content.detail {
+  display: none;
+}
+
+.history-modal-dialog .list-content .sub-content.detail .item {
+  width: 1200px;
+  margin-top: 49px;
+  float: left;
+  position: relative;
+}
+
+.history-modal-dialog .list-content .sub-content.detail .item::after {
+  content: '';
+  background: url(../images/circle-icon.png) no-repeat;
+  width: 56px;
+  position: absolute;
+  left: 243px;
+  top: 0px;
+}
+
+.history-modal-dialog .list-content .sub-content.detail .item::before {
+  content: '';
+  width: 5px;
+  background: #56586c;
+  position: absolute;
+  left: 269px;
+  top: 18px;
+}
+
+/*选择时间*/
+.victory-select-time{
+  margin-top: 20px;
+  font-size: 36px;
+  color: #a0c6f7;
+  float: left;
+  width: 1000px;
+  position: absolute;
+  top: 115px;
+  left: 20px;
+}
+.victory-select-time li{
+  float: left;
+
+}
+.victory-select-time p{
+  float: left;
+}
+.victory-select-time span{
+  background: #a0c6f7;
+  display: inline-block;
+  color: #134aa4;
+  font-size: 36px;
+  float: left;
+  padding: 0 25px;
+  line-height: 48px;
+  height: 48px;
+  box-shadow: 0 0 3px #a0c6f7;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/*下拉列表框*/
+.victory-select-time .choose-box{
+  position: absolute;
+  top: 0;
+  left: 175px;
+  z-index: 10;
+  /*display: none;*/
+}
+.victory-select-time .start-year{
+  left: 6px;
+  top: 48px;
+  width: 105px;
+}
+.victory-select-time .start-month{
+  left: 157px;
+  top: 48px;
+  width: 60px;
+}
+.victory-select-time .start-day{
+  left: 266px;
+  top: 48px;
+  width: 61px;
+}
+
+.victory-select-time .end-year{
+  left: 389px;
+  top: 48px;
+  width: 102px;
+}
+.victory-select-time .end-month{
+  left: 540px;
+  top: 48px;
+  width: 59px;
+}
+.victory-select-time .end-day{
+  left: 647px;
+  top: 48px;
+  width: 62px;
+}
+
+.victory-select-time .choose-box .boxs{
+ /* width: 75px;*/
+  height: 130px;
+  background: #a0c6f7;
+  overflow: auto;
+  overflow-x: hidden;
+  display: none;
+}
+.victory-select-time .choose-box .boxs li{
+ 
+ color: #134aa4;
+  cursor: pointer;
+  padding: 5px;
+}
+.victory-select-time .choose-box .boxs li:hover{
+  background: #82afe9;
+}
+
+/*body {
+    background: url(../images/victorybg.png) no-repeat;    
+    width: 3360px;
+    height: 1856px;              
+    background-size: 100% 100%;              
+    transform-origin: 0px 0px 0px;   
+    -ms-transform-origin:0 0;    
+    overflow: hidden; 
+}*/
+.history-record {
+  background: url(../images/historybg.png) no-repeat;
+  width: 180px;
+  position: absolute;
+  height: 1633px;
+  left: 5px;
+  top: 0px;
+}
+.history-record-btn {
+  width: 180px;
+  height: 450px;
+  position: absolute;
+  top: 500px;
+  left: 20px;
+  cursor: pointer;
+  
+}
+.history-record-btn:hover {
+  background: url(../images/hoverbg.png) no-repeat;
+  background-position: -381px -136px;
+}
+.page-left .content .victory-map {
+  left: 450px;
+  width: 2055px;
+  height: 1510px;
+  top: 50px;
+}
+.page-left .content .victory-map .rotatebg {
+  top: 205px;
+  left: 497px
+}
+.history-modal-dialog .list-content {
+  position: absolute;
+  width: 1398px;
+  height: 1726px;
+  left: 50%;
+  margin-left: -699px;
+  top: 50%;
+  margin-top: -863px;
+  background: url(../images/history-content-bg.png) no-repeat;
+}
+
+.history-modal-dialog .list-content .header {
+  position: absolute;
+  width: 1200px;
+  height: 224px;
+  left: 94px;
+  top: 74px;
+}
+
+.history-modal-dialog .list-content .header .btn-group {
+  position: absolute;
+  width: 180px;
+  height: 97px;
+  top: 120px;
+  right: 30px;
+  background: url(../images/switch-bnt1.png) no-repeat;
+}
+.history-modal-dialog .list-content .header .btn-cur {
+  background: url(../images/switch-bnt2.png) no-repeat;
+}
+
+.history-modal-dialog .list-content .header .btn-group .btn-detail {
+  width: 80px;
+  height: 80px;
+  float: right;
+}
+
+.history-modal-dialog .list-content .header .btn-group .btn-list {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.history-modal-dialog .list-content .header .btn-group .btn:hover {
+  cursor: pointer;
+}
+
+.history-modal-dialog .list-content .sub-content {
+  position: absolute;
+  width: 1200px;
+  height: 1352px;
+  left: 94px;
+  top: 298px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.history-modal-dialog .list-content .sub-content.list .item {
+  width: 1200px;
+  height: 278px;
+  margin-top: 49px;
+  position: relative;
+}
+
+.history-modal-dialog .list-content .sub-content .item::after {
+  content: '';
+  background: url(../images/circle-icon.png) no-repeat;
+  width: 56px;
+  height: 53px;
+  position: absolute;
+  left: 243px;
+  top: 0px;
+}
+
+.history-modal-dialog .list-content .sub-content .item::before {
+  content: '';
+  width: 5px;
+  height: 125%;
+  background: #56586c;
+  position: absolute;
+  left: 269px;
+  top: 18px;
+}
+
+.history-modal-dialog .list-content .sub-content .item .time {
+    /*position: absolute;*/
+    width: 228px;
+    height: 100px;
+    color: white;
+    font-size: 34px;
+    text-align: right;
+}
+
+.history-modal-dialog .list-content .sub-content .item .zhidui-name {
+    /*position: absolute;*/
+   /* width: 220px;*/
+    height: 52px;
+    font-size: 34px;
+    background: white;
+    border-radius: 40px;
+    /*text-align: center;*/
+    padding: 0 20px;
+    line-height: 52px;
+    /*left: 320px;*/
+    color: black;
+    float: left;
+    margin-top: -95px;
+    margin-left: 320px;
+}
+
+.history-modal-dialog .list-content .sub-content .item .detail-content {
+    /*position: absolute;
+    left: 320px;
+    top: 80px;*/
+    font-size: 32px;
+    color: #d5d5d5;
+    float: left;
+    margin-left: 320px;
+    margin-top: -20px;
+    line-height: 52px;
+}
+
+.history-modal-dialog .list-content .sub-content .item tr:nth-child(even) {
+    color: white;
+    height: 68px;
+    font-weight: bold;
+}
+.history-modal-dialog .list-content .sub-content .item td {
+    width: 285px;
+}
+
+/*按详情显示的先隐藏*/
+.history-modal-dialog .list-content .sub-content.detail {
+  display: none;
+}
+
+.history-modal-dialog .list-content .sub-content.detail .item {
+  width: 1200px;
+  margin-top: 49px;
+  float: left;
+  position: relative;
+}
+
+.history-modal-dialog .list-content .sub-content.detail .item::after {
+  content: '';
+  background: url(../images/circle-icon.png) no-repeat;
+  width: 56px;
+  position: absolute;
+  left: 243px;
+  top: 0px;
+}
+
+.history-modal-dialog .list-content .sub-content.detail .item::before {
+  content: '';
+  width: 5px;
+  background: #56586c;
+  position: absolute;
+  left: 269px;
+  top: 18px;
+}
+
+/*选择时间*/
+.victory-select-time {
+  margin-top: 20px;
+  font-size: 36px;
+  color: #a0c6f7;
+  float: left;
+  width: 1000px;
+  position: absolute;
+  top: 115px;
+  left: 20px;
+}
+.victory-select-time li {
+  float: left;
+
+}
+.victory-select-time p {
+  float: left;
+}
+.victory-select-time span {
+  background: #a0c6f7;
+  display: inline-block;
+  color: #134aa4;
+  font-size: 36px;
+  float: left;
+  padding: 0 10px;
+  line-height: 48px;
+  height: 48px;
+  box-shadow: 0 0 3px #a0c6f7;
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.onDuty-selectTime-dialog .victory-select-time span{
+  padding: 5px 25px;
+}
+/*下拉列表框*/
+.victory-select-time .choose-box {
+  position: absolute;
+  top: 0;
+  left: 175px;
+  z-index: 10;
+  /*display: none;*/
+}
+.victory-select-time .start-year {
+  left: 11px;
+  top: 48px;
+  width: 105px;
+}
+.victory-select-time .start-month {
+  left: 171px;
+  top: 48px;
+  width: 60px;
+}
+.victory-select-time .start-day {
+  left: 289px;
+  top: 48px;
+  width: 61px;
+}
+
+.victory-select-time .end-year {
+  left: 425px;
+  top: 48px;
+  width: 102px;
+}
+.victory-select-time .end-month {
+  left: 584px;
+  top: 48px;
+  width: 59px;
+}
+.victory-select-time .end-day {
+  left: 702px;
+  top: 48px;
+  width: 62px;
+}
+
+.victory-select-time .choose-box .boxs {
+ /* width: 75px;*/
+  height: 130px;
+  background: #a0c6f7;
+  overflow: auto;
+  overflow-x: hidden;
+  display: none;
+}
+.victory-select-time .choose-box .boxs li {
+ 
+ color: #134aa4;
+  cursor: pointer;
+  padding: 5px;
+}
+.victory-select-time .choose-box .boxs li:hover {
+  background: #82afe9;
+}
+#onDutyDialog .victory-select-time .start-year {
+  left: 10px;
+  width: 133px;
+}
+#onDutyDialog .victory-select-time .start-month {
+  left: 200px;
+  width: 93px;
+}
+#onDutyDialog .victory-select-time .choose-box .boxs li{
+  padding: 5px 20px;
+}
+#onDutyDialog .victory-select-time span {
+  padding: 2px 25px;
+}

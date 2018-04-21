@@ -1,0 +1,226 @@
+{
+  "code": 1,
+  "msg": "success",
+  "result": [
+  {
+    "name": "全部",
+    "value": 140,
+    "type": "0000"
+  },
+  {
+    "name": "八类",
+    "value": 124,
+    "type": "1000",
+    "child": [
+      {
+        "name": "抢劫",
+        "value": 164,
+        "type": "1003"
+      },
+      {
+        "name": "故意伤害",
+        "value": 19,
+        "type": "1002"
+      },
+      {
+        "name": "杀人",
+        "value": 16,
+        "type": "1001"
+      },
+      {
+        "name": "强奸",
+        "value": 4,
+        "type": "1004"
+      },
+      {
+        "name": "绑架",
+        "value": 1,
+        "type": "1005"
+      },
+      {
+        "name": "爆炸",
+        "value": 0,
+        "type": "1006"
+      },
+      {
+        "name": "投毒",
+        "value": 0,
+        "type": "1008"
+      },
+      {
+        "name": "纵火",
+        "value": 0,
+        "type": "1007"
+      }
+    ]
+  },
+  {
+    "name": "侵财",
+    "value": 81,
+    "type": "2000",
+    "child": [
+      {
+        "name": "入室盗窃",
+        "value": 32,
+        "type": "2001"
+      },
+      {
+        "name": "电信诈骗",
+        "value": 113,
+        "type": "2002"
+      },
+      {
+        "name": "扒窃",
+        "value": 14,
+        "type": "2005"
+      },
+      {
+        "name": "盗窃车内物品",
+        "value": 14,
+        "type": "2004"
+      },
+      {
+        "name": "盗窃机动车",
+        "value": 8,
+        "type": "2003"
+      }
+    ]
+  },
+  {
+    "name": "毒品",
+    "value": 141,
+    "type": "3000",
+    "child": [
+      {
+        "name": "毒品-贩卖毒品",
+        "value": 236,
+        "type": "caseClass_86"
+      },
+      {
+        "name": "毒品-运输毒品",
+        "value": 26,
+        "type": "caseClass_87"
+      },
+      {
+        "name": "毒品-其他",
+        "value": 8,
+        "type": "caseClass_91"
+      },
+      {
+        "name": "毒品-制造毒品",
+        "value": 6,
+        "type": "caseClass_85"
+      },
+      {
+        "name": "毒品-持有毒品",
+        "value": 6,
+        "type": "caseClass_89"
+      },
+      {
+        "name": "毒品-走私毒品",
+        "value": 0,
+        "type": "caseClass_88"
+      }
+    ]
+  },
+  {
+    "name": "经济",
+    "value": 91,
+    "type": "4000",
+    "child": [
+      {
+        "name": "经济-其他",
+        "value": 46,
+        "type": "caseClass_84"
+      },
+      {
+        "name": "经济-非法经营",
+        "value": 40,
+        "type": "caseClass_68"
+      },
+      {
+        "name": "经济-贪污贿赂",
+        "value": 20,
+        "type": "caseClass_66"
+      },
+      {
+        "name": "经济-生产、销售伪劣产品",
+        "value": 18,
+        "type": "caseClass_72"
+      },
+      {
+        "name": "经济-非法出售增值税专用发票",
+        "value": 14,
+        "type": "caseClass_77"
+      },
+      {
+        "name": "经济-销售假冒注册商标的商品",
+        "value": 14,
+        "type": "caseClass_82"
+      },
+      {
+        "name": "经济-职务侵占",
+        "value": 8,
+        "type": "caseClass_75"
+      },
+      {
+        "name": "经济-挪用资金",
+        "value": 6,
+        "type": "caseClass_81"
+      },
+      {
+        "name": "经济-走私",
+        "value": 4,
+        "type": "caseClass_83"
+      },
+      {
+        "name": "经济-出售、购买、运输假币",
+        "value": 4,
+        "type": "caseClass_70"
+      },
+      {
+        "name": "经济-洗钱",
+        "value": 2,
+        "type": "caseClass_78"
+      },
+      {
+        "name": "经济-生产、销售有毒、有害食品",
+        "value": 2,
+        "type": "caseClass_80"
+      },
+      {
+        "name": "经济-利用职权实施侵犯公民人身权利",
+        "value": 2,
+        "type": "caseClass_79"
+      },
+      {
+        "name": "经济-传销",
+        "value": 2,
+        "type": "caseClass_67"
+      },
+      {
+        "name": "经济-生产、销售不符合卫生标准的食品",
+        "value": 0,
+        "type": "caseClass_76"
+      },
+      {
+        "name": "经济-合同诈骗",
+        "value": 0,
+        "type": "caseClass_74"
+      },
+      {
+        "name": "经济-集资诈骗",
+        "value": 0,
+        "type": "caseClass_71"
+      }
+    ]
+  },
+  {
+    "name": "其他",
+    "value": 43,
+    "type": "6000"
+  }
+]
+
+    
+}

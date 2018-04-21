@@ -1,0 +1,81 @@
+{
+  "code": 1,
+  "msg": "success",
+  "result": {
+   "insideDoc": [
+      {
+        "name": "采取技侦措施决定书",
+        "value": 345
+      },{
+        "name": "延长技侦措施期限决定书",
+        "value": 445
+      },{
+        "name": "执行技侦措施通知书",
+        "value": 445
+      },{
+        "name": "解除技侦侦控目标涵",
+        "value": 445
+      }
+    ],
+    "lawDoc": [
+      {
+        "name": "变更技侦侦控目标涵",
+        "value": 345
+      },{
+        "name": "技侦部门通包函",
+        "value": 445
+      },{
+        "name": "解除技侦措施函",
+        "value": 415
+      },{
+        "name": "技侦指定受理通知书",
+        "value": 45
+      }
+    ],
+    "closingTotal": {
+      "total": 800,
+       "xsTotal": 346,
+       "qbTotal": 454,
+       "xingshi": [
+       {
+        "name": "提请案件",
+        "value": 302
+       },{
+        "name": "检察院委托",
+        "value": 32
+       },{
+        "name": "军队委托",
+        "value": 132
+       },{
+        "name": "异地协作",
+        "value": 189
+       }
+      ],
+      "qingbao": [
+        {
+          "name": "情报专案",
+           "value": 402
+        },{
+          "name": "立线侦查",
+          "value": 132
+        },{
+          "name": "异地协作",
+          "value": 45
+        }
+     ]
+    },
+    "transferCase": [
+      {
+        "name": "听阅",
+        "value": 232
+      },{
+        "name": "移送",
+        "value": 42
+      },{
+        "name": "装订证据材料",
+        "value": 342
+      }
+    ]
+
+  }
+}

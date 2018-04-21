@@ -1,0 +1,294 @@
+.vehicle-container {
+  position: relative;
+  font-family: "微软雅黑";
+  
+  background: url(../../images/sheqing/hotel/hotel-bg.jpg);
+  background-size: 100% 100%;
+  transform-origin: 0px 0px 0px;
+  -ms-transform-origin: 0 0;
+  overflow: hidden;
+  width: 3456px;
+  height: 1944px;
+}
+
+.vehicle-container .car-type-count {
+  position: absolute;
+  left: 74px;
+  top: 124px;
+  width: 1772px;
+  height: 805px;
+  overflow: hidden;
+  background: url(../../images/sheqing/vehicle/car-bg.png) no-repeat;
+}
+
+.vehicle-container .count-list {
+  margin: 100px 0 0 40px;
+}
+
+.vehicle-container .count-list li {
+  width: 1655px;
+  height: 115px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  display: flex;
+  background: url(../../images/sheqing/vehicle/count-list-bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.vehicle-container .count-list .count-name {
+  color: #fd9a33;
+  display: inline-block;
+  font-size: 40px;
+  line-height: 115px;
+  width: 560px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.vehicle-container .count-list .count-number {
+  display: inline-block;
+  width: 1007px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+}
+
+.vehicle-container .count-list .count-number em {
+  display: inline-block;
+  font-style: normal;
+  color: #fff;
+  font-family: digifacewide;
+  line-height: 115px;
+  font-size: 58px;
+  width: 98px;
+  text-align: center;
+  margin-left: 14px;
+}
+
+.vehicle-container .count-list .count-number em:nth-last-child(3n) {
+  margin-left: 65px;
+}
+
+.vehicle-container .count-list .count-number:nth-child(5) em,
+.vehicle-container .count-list li:nth-child(6) .count-number em {
+  padding-left: 0;
+}
+
+.vehicle-container .count-list li:nth-child(5),
+.vehicle-container .count-list li:nth-child(6) {
+  width: 696px;
+  height: 271px;
+  background: url(../../images/sheqing/vehicle/count-list-right-bg.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 90px;
+}
+
+.vehicle-container .count-list li:nth-child(5) {
+  top: 100px;
+}
+
+.vehicle-container .count-list li:nth-child(6) {
+  top: 410px;
+}
+
+.vehicle-container .count-list li:nth-child(5):after,
+.vehicle-container .count-list li:nth-child(6):after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  top: 80px;
+  left: 50px;
+}
+
+.vehicle-container .count-list li:nth-child(5):after {
+  background: url(../../images/sheqing/vehicle/cargoShip.png) no-repeat 1px 1px;
+}
+
+.vehicle-container .count-list li:nth-child(6):after {
+  background: url(../../images/sheqing/vehicle/passengerShip.png) no-repeat 1px 1px;
+}
+
+.vehicle-container .count-list li:nth-child(5) .count-name,
+.vehicle-container .count-list li:nth-child(6) .count-name {
+  position: absolute;
+  font-size: 38px;
+  color: #04faec;
+  top: 150px;
+  left: -43px;
+}
+
+.vehicle-container .count-list li:nth-child(5) .count-number,
+.vehicle-container .count-list li:nth-child(6) .count-number {
+  position: absolute;
+  top: 80px;
+  left: 160px;
+}
+
+.vehicle-container .count-list li:nth-child(5) .count-number em,
+.vehicle-container .count-list li:nth-child(6) .count-number em {
+  display: inline-block;
+  width: 60px;
+  height: 88px;
+  border: 1px solid #0fbeff;
+  border-radius: 6px;
+  background: #0c1843;
+  line-height: 88px;
+  margin-right: 20px;
+  text-indent: 0;
+}
+
+.vehicle-container .high-speed-count {
+  position: absolute;
+  right: 74px;
+  top: 123px;
+  width: 1467px;
+  height: 792px;
+  background: url(../../images/sheqing/vehicle/highSpeed-bg.png) no-repeat;
+}
+
+.vehicle-container .high-speed-count .title {
+  position: absolute;
+  left: 115px;
+  top: 65px;
+  width: 256px;
+  height: 49px;
+  color: #00fff8;
+  font-size: 42px;
+  font-family: digifacewide;
+}
+
+.vehicle-container .car-brand-distributed .title,
+.vehicle-container .weigui-count .title,
+.vehicle-container .country-weigui-count .title {
+  position: absolute;
+  left: 90px;
+  top: 65px;
+  width: 256px;
+  height: 49px;
+  color: #00fff8;
+  font-size: 42px;
+  font-family: digifacewide;
+  white-space: nowrap;
+}
+
+.vehicle-container .country-weigui-count .title .bili {
+  font-size: 30px;
+}
+
+.vehicle-container .car-brand-distributed {
+  position: absolute;
+  left: 64px;
+  bottom: 137px;
+  width: 1112px;
+  height: 789px;
+  background: url(../../images/sheqing/vehicle/car-type-bg.png) no-repeat;
+}
+
+.vehicle-container .car-brand-distributed .car-brand-chars {
+  background: url(../../images/sheqing/vehicle/car-circle.png) no-repeat;
+  background-position: center center;
+  
+}
+
+.vehicle-container .weigui-count {
+  position: absolute;
+  left: 1248px;
+  bottom: 137px;
+  width: 1084px;
+  height: 794px;
+  background: url(../../images/sheqing/vehicle/weigui-bg.png) no-repeat;
+}
+
+.vehicle-container .high-speed-chart {
+  width: 1300px;
+  height: 560px;
+  position: absolute;
+  top: 170px;
+  left: 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  opacity: 0;
+}
+
+.y-axis text {
+  font-size: 28px;
+  font-family: sans-serif;
+  fill: #8a9bd4;
+}
+
+.vehicle-container .weigui-count .chart {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1084px;
+  height: 622px;
+}
+
+.vehicle-container .country-weigui-count {
+  position: absolute;
+  right: 72px;
+  bottom: 132px;
+  width: 993px;
+  height: 794px;
+  background: url(../../images/sheqing/vehicle/jiaotong-bg.png) no-repeat;
+}
+
+.vehicle-container .country-weigui-count .legend {
+  position: absolute;
+  top: 130px;
+  font-size: 24px;
+  right: 36px;
+  color: #fff;
+  
+}
+
+.vehicle-container .country-weigui-count .legend span {
+  padding-right: 50px;
+  display: inline-block;
+  line-height: 44px;
+}
+
+.vehicle-container .country-weigui-count .legend i {
+  width: 80px;
+  height: 6px;
+  display: inline-block;
+  background: #f0d223;
+  margin: 0 25px 5px 0;
+}
+
+.vehicle-container .country-weigui-count .legend span:nth-child(2) i {
+  background: #2ea7aa;
+}
+
+.vehicle-container .country-weigui-count .country-weigui-charts {
+  position: absolute;
+  top: 200px;
+}
+
+.country-weigui-charts .axis-y text {
+  fill: #1e75f7;
+}
+
+.country-weigui-charts .inner_line line {
+  stroke: #0d1849;
+  stroke-width: 40px;
+  stroke-opacity: 0.8;
+}
+
+.country-weigui-charts .axis-x path {
+  stroke: #07fffc;
+  stroke-dasharray: 7, 7;
+  stroke-width: 2px;
+  opacity: 1;
+}

@@ -1,0 +1,231 @@
+
+/*左边两块标题样式*/
+.box_header{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 警情数量统计样式 */
+#policeCasesStatistics{
+    position: relative;
+    margin: 0 auto;
+    width:100%;
+    height: 280px;
+    background: url(../image/rightBg.png);
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+}
+
+#policeCasesStatistics > div {
+    margin: 25px auto;
+    width: 90%;
+    height: 70px;
+}
+
+#policeCasesThisYear,#policeCasesLastYear{
+    width: 100%;
+    height: 26px;
+    color: #fff;
+    font-size:24px;
+    line-height: 24px;
+    text-align: left;
+    padding-left: 2%;
+}
+
+#policeCasesThisYear{
+    border-left: 10px solid #69e4fc;
+}
+
+#policeCasesLastYear{
+    border-left: 10px solid #f4b63e;
+}
+
+/*全市平局刻度标志*/
+#policeCasesAverage{
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 200px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    background: url(../image/average_bg.png) no-repeat center;
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+}
+
+/*进度条公共样式*/
+.progressBar{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+    height: 32px;
+    border-radius: 8px;
+    opacity: 1;
+
+}
+
+.progressBar:before{
+    position: absolute;
+    top: -8px;
+    left: -10px;
+    width: 560px;
+    height: 32px;
+    content: url(../image/bar_cover.png);
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    z-index: 20;
+}
+
+/*今年的进度条*/
+#pbThisYear{
+    height: 16px;
+    background-color: #69e4fc; /*#a7fcfe;*/
+    z-index: 9;
+}
+
+/*去年的进度条*/
+#pbLastYear{
+    height: 16px;
+    background-color: #e4913d; /*#ffcc66;*/
+    z-index: 9;
+}
+
+/* 分类数量统计样式 */
+#classificationStatistics{
+    margin: 20px auto 0 auto;
+    height: 640px;
+    background: url(../image/big_box_bg.png);
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    overflow: hidden;
+}
+/*饼图和信息父级盒子*/
+#classificationStatistics .box{
+    position: relative;
+    width:300px;
+    height: 280px;
+    float: left;
+    top:-20px;
+    background:url(../image/pie_bg.png) no-repeat top center;
+    background-size: 160px 160px;
+    zoom:1;
+}
+#classificationStatistics>div{
+    position: relative;
+    margin: 0 auto;
+}
+#classificationStatistics .box:after{
+    clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;
+}
+/*饼图盒子*/
+.cfsEcharts{
+    display: inline-block;
+    margin: 0 auto;
+    width: 90%;
+    height: 160px;
+}
+/*信息盒子*/
+.cfsInfo{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+}
+/*饼图中间总数量*/
+.cfsTotal{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    font-size: 15px;
+    color:#fff;
+    text-align: center;
+    z-index:999;
+}
+/*信息栏目公共样式*/
+.cfsInfo>li{
+    width: auto;
+    margin: 10px auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/*信息栏 - 类型名称*/
+.cfsInfo>li:nth-child(1){
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+/*信息栏 - 同比百分百*/
+.cfsInfo>li:nth-child(2){
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+/*信息栏 - 同比百分百(箭头)*/
+.cfsInfo>li:nth-child(2) p{
+    position: absolute;
+    top:3px;
+    right: 50px;
+    width: 20px;
+    height: 24px;
+}
+.cfsInfo>li:nth-child(2) .up{
+    background: url(../image/icon_up.png) no-repeat center;
+
+}
+.cfsInfo>li:nth-child(2) .down{
+    background: url(../image/icon_down.png) no-repeat center;
+}
+/*信息栏 - 去年/今年/平均数量*/
+
+
+.cfsInfo>li:nth-child(3),
+.cfsInfo>li:nth-child(4),
+.cfsInfo>li:nth-child(5){
+    position: relative;
+    padding: 5px auto;
+    height: 22px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.cfsInfo>li:nth-child(3)>i:nth-child(1),
+.cfsInfo>li:nth-child(4)>i:nth-child(1),
+.cfsInfo>li:nth-child(5)>i:nth-child(1){
+    position: absolute;
+    left: 70px;
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.cfsInfo>li:nth-child(3)>i:nth-child(2),
+.cfsInfo>li:nth-child(4)>i:nth-child(2),
+.cfsInfo>li:nth-child(5)>i:nth-child(2){
+    position: absolute;
+    left:84px ;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+}
+

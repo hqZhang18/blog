@@ -1,0 +1,227 @@
+{
+    "state": true,
+    "message": "请求成功",
+    "data": {
+        "drugCasesType1": {
+            "type": "零包",
+            "ratio": 2.02,
+            "data": [
+                {
+                    "year": "今年",
+                    "number": 838
+                },
+                {
+                    "year": "去年",
+                    "number": 855
+                }
+            ]
+        },
+        "drugCasesType2": {
+            "type": "50克以上毒品",
+            "ratio": -5.01,
+            "data": [
+                {
+                    "year": "今年",
+                    "number": 114
+                },
+                {
+                    "year": "去年",
+                    "number": 120
+                }
+            ]
+        },
+        "drugType": [
+            {
+                "name": "海洛因",
+                "value": 50
+            },
+            {
+                "name": "冰毒(甲基类)",
+                "value": 60
+            },
+            {
+                "name": "K粉",
+                "value": 20
+            }
+        ],
+        "detoxification": [
+            {
+                "type": "首次",
+                "value": 80,
+                "percent": 40
+            },
+            {
+                "type": "多次",
+                "value": 120,
+                "percent": 60
+            }
+        ],
+        "drugRanking": [
+            {
+                "name": "二桥派出所",
+                "value": 300
+            },
+            {
+                "name": "永丰派出所",
+                "value": 290
+            },
+            {
+                "name": "琴断派出所",
+                "value": 290
+            },
+            {
+                "name": "五里派出所",
+                "value": 267
+            },
+            {
+                "name": "翠微派出所",
+                "value": 250
+            },
+            {
+                "name": "建桥派出所",
+                "value": 234
+            },
+            {
+                "name": "晴川派出所",
+                "value": 170
+            },
+            {
+                "name": "月湖派出所",
+                "value": 150
+            },
+            {
+                "name": "鹦鹉派出所",
+                "value": 100
+            },
+            {
+                "name": "洲头派出所",
+                "value": 98
+            },
+            {
+                "name": "江提派出所",
+                "value": 70
+            },
+            {
+                "name": "经开派出所",
+                "value": 50
+            },
+            {
+                "name": "西新派出所",
+                "value": 40
+            },
+            {
+                "name": "鹦鹉派出所",
+                "value": 30
+            },
+            {
+                "name": "鹦鹉派出所",
+                "value": 48
+            }
+        ],
+        "drugValue": 278,
+        "personRanking": [
+            {
+                "name": "永丰派出所",
+                "value": 290
+            },
+            {
+                "name": "琴断派出所",
+                "value": 290
+            },
+            {
+                "name": "五里派出所",
+                "value": 267
+            },
+            {
+                "name": "翠微派出所",
+                "value": 250
+            },
+            {
+                "name": "建桥派出所",
+                "value": 234
+            },
+            {
+                "name": "二桥派出所",
+                "value": 300
+            },
+            {
+                "name": "晴川派出所",
+                "value": 170
+            },
+            {
+                "name": "月湖派出所",
+                "value": 150
+            },
+            {
+                "name": "鹦鹉派出所",
+                "value": 100
+            },
+            {
+                "name": "洲头派出所",
+                "value": 98
+            },
+            {
+                "name": "江提派出所",
+                "value": 70
+            },
+            {
+                "name": "经开派出所",
+                "value": 50
+            },
+            {
+                "name": "西新派出所",
+                "value": 40
+            },
+            {
+                "name": "鹦鹉派出所",
+                "value": 30
+            },
+            {
+                "name": "鹦鹉派出所",
+                "value": 36
+            }
+        ],
+        "personValue": 267,
+        "caseType": [
+            {
+                "name": "毒品罪案数",
+                "ratio": 50,
+                "total": 14700,
+                "mark":true,
+                "value": [
+                    300,
+                    120,
+                    30
+                ]
+            },
+            {
+                "name": "强制隔离戒毒数",
+                "ratio": 30,
+                "total": 1700,
+                "mark":false,
+                "value": [
+                    100,
+                    350,
+                    130
+                ]
+            }
+        ],
+        "personnelAge": {
+          "total":1100,
+          "values":[{
+            "name":"40-50岁",
+            "value":80
+          },{
+            "name":"30-40岁",
+            "value":100
+          },{
+            "name":"其它",
+            "value":600
+          },{
+            "name":"20-30岁",
+            "value":320
+          }]
+
+        }
+    }
+}

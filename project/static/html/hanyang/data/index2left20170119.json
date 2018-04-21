@@ -1,0 +1,189 @@
+{
+	"state": true,
+	"message": "调用成功",
+	"data": {
+		"radarMap": [
+			{
+				"name": "今年",
+				"type": [
+					{
+						"name": "刑事拘留",
+						"value": "0",
+						"tooltip": [
+							{
+								"proposal": "刑事拘留低于全市平均30.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}, {
+								"proposal": "刑事拘留同比连续2周低于50.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}
+						],
+						"realValue": 0
+					}, {
+						"name": "治安行政",
+						"value": "0",
+						"tooltip": [
+							{
+								"proposal": "治安行政低于全市平均30.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}, {
+								"proposal": "治安行政同比连续2周低于50.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}, {
+								"proposal": "加强治安打击力度",
+								"warning": "深度挖掘治安警情与治安行政之间的关系，现行政拘留0人，应拘留2246001人，发现治安打击力度滞后"
+							}
+						],
+						"realValue": 0
+					}, {
+						"name": "警情",
+						"value": "0",
+						"tooltip": [
+							{
+								"proposal": "打击扒窃犯罪滞后",
+								"warning": "加强打击，加强街面防控，及时有效管控重点人员"
+							}
+						],
+						"realValue": 0
+					}, {
+						"name": "破案",
+						"value": "0",
+						"tooltip": [
+							{
+								"proposal": "破案低于全市平均30.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}, {
+								"proposal": "破案同比连续2周低于50.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}
+						],
+						"realValue": 0
+					}, {
+						"name": "强戒",
+						"value": "0",
+						"tooltip": [
+							{
+								"proposal": "强戒低于全市平均30.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}, {
+								"proposal": "强戒同比连续2周低于50.0%",
+								"warning": "加强案件串并，打击违法犯罪人"
+							}
+						],
+						"realValue": 0
+					}
+				]
+			}, {
+				"name": "去年",
+				"type": [
+					{
+						"name": "破案",
+						"value": "548642",
+						"realValue": 0
+					}, {
+						"name": "刑事拘留",
+						"value": "547273",
+						"realValue": 0
+					}, {
+						"name": "治安行政",
+						"value": "546529",
+						"realValue": 0
+					}, {
+						"name": "警情",
+						"value": "440479",
+						"realValue": 0
+					}, {
+						"name": "强戒",
+						"value": "439714",
+						"realValue": 0
+					}
+				]
+			}, 
+			[]
+		],
+		"classifyNum": [
+			{
+				"scale": "0.0000",
+				"map": [
+					{
+						"name": "去年",
+						"value": 0
+					}, {
+						"name": "今年",
+						"value": 0
+					}, {
+						"name": "平均值",
+						"value": 0
+					}
+				],
+				"classifyName": "治安行政类"
+			}, {
+				"scale": "0.0000",
+				"map": [
+					{
+						"name": "去年",
+						"value": 0
+					}, {
+						"name": "今年",
+						"value": 0
+					}, {
+						"name": "平均值",
+						"value": 0
+					}
+				],
+				"classifyName": "破案类"
+			}, {
+				"scale": "0.0000",
+				"map": [
+					{
+						"name": "去年",
+						"value": 0
+					}, {
+						"name": "今年",
+						"value": 0
+					}, {
+						"name": "平均值",
+						"value": 0
+					}
+				],
+				"classifyName": "刑事拘留类"
+			}, {
+				"scale": "0.0000",
+				"map": [
+					{
+						"name": "去年",
+						"value": 0
+					}, {
+						"name": "今年",
+						"value": 0
+					}, {
+						"name": "平均值",
+						"value": 0
+					}
+				],
+				"classifyName": "强戒类"
+			}
+		],
+		"policeCasesNum": {
+			"thisYear": 0,
+			"lastYear": 0,
+			"average": 0
+		},
+		"week": [],
+		"quarter":[],
+		"month":[],
+		"yujing":{
+			"jingq": [{
+				"advise":"建议1",
+				"forecast":"预测1"
+				},{
+				"advise":"建议2",
+				"forecast":"预测2"
+				}],
+			"penal":[],
+			"admin": [],
+			"pa": [],
+			"qj": []
+        }
+	}
+}

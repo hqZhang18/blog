@@ -1,0 +1,30 @@
+/**
+ * @Author:      zhanghq
+ * @DateTime:    2017-09-11 18:09:59
+ * @Description: 警力分布情css
+ * @Last Modified By:   zhanghq
+ * @Last Modified Time:    2017-09-11 18:09:59
+ */
+
+.pop-distribute-body {
+  background: url(../../../images/qinqing/policeDistribution/body-bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.pop-distribute-wap {
+  top: 170px;
+}
+.cqmap-area-city {
+  top: 290px;
+  background: url(../../../images/sheqing/popDistribute/area-city-bg.png) no-repeat 440px 520px;
+  height: auto;
+}
+.distribute-top {
+  top: 155px;
+}
+.distribute-top .list-title {
+  margin-bottom: 20px;
+}
+
+.real path{
+  stroke-width: 2;
+}

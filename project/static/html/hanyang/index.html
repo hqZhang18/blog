@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<title>雷达警情图</title>
+	<link rel="stylesheet"  href="css/radarCharts.css"/>
+	<link rel="stylesheet" href="css/index2.css">
+	<link rel="stylesheet" href="css/indexCss.css" />
+	<link rel="stylesheet" type="text/css" href="css/loading.css">
+	<!--时间轴css-->
+	<link rel="stylesheet" type="text/css" href="css/pandect-time.css"> 
+</head>
+<body>
+	<!-- 头部 -->
+ <div class="header">
+		<div class="headerBg"></div>
+		<div class="selectTime">
+			<div class="year">
+				<p class="bagup">2017年</p>
+				<ul id="year"></ul>
+			</div>
+			<div class="year">
+				<p class="bagdown">季</p>
+				<ul id="quarter"></ul>
+			</div>
+			<div class="year">
+				<p class="bagdown">月</p>
+				<ul id="month"></ul>
+			</div>
+			<div class="year">
+				<p class="bagdown" id="week">本周</p>
+			</div>
+		</div>		
+		<div class="nav">
+			<div class="firstNav">
+				<a href="#" class="cur" >总体概括</a>
+				<a href="#" id="secondMenu" >分析研判</a>
+				<a href="index2.html">预警评估</a>
+			</div>
+			<div class="secondNav">
+				<a href="alarm.html">警情类数据</a>
+				<a href="deten.html">刑事拘留类数据</a>
+				<a href="penal.html">破刑事类案件</a>
+				<a href="admin.html">治安行政类数据</a>
+				<a href="drug.html" style="border: none;">强戒类数据</a>
+			</div>
+		</div>
+</div>
+	<div class="wrap">
+			<!--导航-->
+			<div class="typeNav">
+				<a href="admin.html" class="link1"></a>
+				<a href="drug.html" class="link2"></a>
+				<a href="alarm.html" class="link3"></a>
+				<a href="deten.html" class="link4"></a>
+				<a href="penal.html" class="link5"></a>
+			</div>
+		<!-- 左边 -->
+		<div id="left">
+			<!--警情-->
+			<div class="typeValue jingq" >
+				<div class="title">警情</div>
+			</div>
+			<div class="lines" id="line1">
+				<svg width="450" height="276" viewBox="0 0 450 276">
+					<!--<path d="M305,258 L200,258 L110,186" stroke="none" fill="none"  fill-rule="evenodd" class="cls-1"></path>-->
+					<!--<path d="M305,258 L200,258 L110,186" stroke="none" fill="none"  fill-rule="evenodd" class="cls-2"></path>-->
+					<path d="M305,258 L160,258 L0,186" stroke="none" fill="none"  fill-rule="evenodd" class="cls-1"></path>
+					<path d="M305,258 L160,258 L0,186" stroke="none" fill="none"  fill-rule="evenodd" class="cls-2"></path>
+				</svg>
+			</div>
+			<!--治安行政-->
+			<div class="typeValue admin" >
+				<div class="title">治安行政</div>
+			</div>
+			<div class="lines" id="line2">
+				<svg  width="450" height="286" viewBox="0 0 450 286">
+					<path d="M450,220 L160,220 L0,186" stroke="none" fill="none"  fill-rule="evenodd" class="cls-1"></path>
+					<path d="M450,220 L160,220 L0,186" stroke="none" fill="none"  fill-rule="evenodd" class="cls-2"></path>
+				</svg>
+			</div>
+			
+		</div>
+		<!-- 中间雷达图S -->
+		<div class="center" >
+			<div id="rotate1">
+				 <div class="rotateBg" id="rotate"></div>
+			</div>
+			<div class="radar-wrap">
+				<div id="radarChart" class="radarChart">
+			</div>
+			<div class="notesTooltip"></div>
+			<div class="clear"></div>
+			</div>
+			<!--图例S-->
+			<div id="legend" class="legend">
+				<div class="legend-dynamic">
+					<a id="yearS"><i class="icon-c1"></i><span></span></a>
+					<a id="yearE"><i class="icon-c2"></i><span></span></a>
+				</div>
+				<div class="legend-fixed">
+					<a><i class="icon-c3"></i>最高峰值1.5倍</a>
+					<a><i class="icon-c4"></i>分局历史最高值</a>
+					<a><i class="icon-c5"></i>全市中心城区平均水平</a>
+					<a><i class="icon-c6"></i>近三年平均水平</a>
+					<a><i class="icon-c7"></i>分局历史最低值</a>
+				</div>
+			</div>
+			<!--图例E-->
+		</div>
+		<!-- 中间雷达图E -->
+		<!-- 右侧三个类型-->
+		<div id="right" >
+			<!--毒品罪案-->
+			<div class="lines" id="line3">
+				<svg  width="730" height="200">
+					<path d="M0,127 L600,127 L730,200" stroke="none" fill="none"  fill-rule="evenodd" class="cls-1"></path>
+					<path d="M0,127 L600,127 L730,200" stroke="none" fill="none"  fill-rule="evenodd" class="cls-2"></path>
+				</svg>
+			</div>
+			<div class="typeValue drug" >
+				<div class="title">强戒</div>
+			</div>
+
+			<!--破案-->
+			<div class="lines" id="line4">
+				<svg width="360" height="180">
+					<path d="M25,20 L200,20 L360,180 " stroke="none" fill="none"  fill-rule="evenodd" class="cls-1"></path>
+					<path d="M25,20 L200,20 L360,180 " stroke="none" fill="none"  fill-rule="evenodd" class="cls-2"></path>
+				</svg>
+			</div>
+			<div class="typeValue pa" >
+				<div class="title">破案</div>
+			</div>
+
+			<div class="lines" id="line5">
+				<svg width="500" height="186" >
+					<path d="M15,70 L330,70 L500,180 " stroke="none" fill="none"  fill-rule="evenodd" class="cls-1"></path>
+					<path d="M15,70 L330,70 L500,180" stroke="none" fill="none"  fill-rule="evenodd" class="cls-2"></path>
+				</svg>
+			</div>
+			<div class="typeValue xsjl" >
+				<div class="title">刑事拘留</div>
+			</div>
+
+		</div>
+	<div class="clear"></div>		
+	</div>
+
+	<!--数据加载中的滚动条-->
+	<div class="loading">
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+		<p class="loadingText">加载中... 请稍等</p>
+	</div>
+	<style>
+		#canvas{
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			width: 2688px;
+			height: 1080px;
+			background: none;
+		}
+	</style>
+	<canvas id="canvas"></canvas>
+</body>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.xdomainrequest.min.js"></script>
+	<script src="js/canvas1.js"></script>
+	<script>
+		var x2 = 0
+		var y2 = 0
+		var a = 0
+		var b = 0
+		window.onresize=function(){
+			//页面初始化时两侧显示
+		    scale()
+		};  
+	    var scale=function(){
+	    	
+	    	var x=window.innerWidth/2688
+	    	var y=window.innerHeight/1080
+	    	$("body").css("webkitTransform",'scale('+x+','+y+')')   /* for Chrome || Safari */
+	    	$("body").css("msTransform",'scale('+x+','+y+')')       /* for Firefox */
+	    	$("body").css("mozTransform",'scale('+x+','+y+')')      /* for IE */
+	    	$("body").css("oTransform",'scale('+x+','+y+')')        /* for Opera */	 
+	    	if(x2!=x){
+	    	  a=1;
+          b=x/y;
+	    	}
+	    	if(y2!=y ){
+	    	  a=y/x*0.8 ;
+          b=1*0.8 ;
+	    	}
+	    	x2 = x
+	    	y2 = y
+	    	//雷达图圆形缩放
+	    	$(".radar-wrap").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$(".radar-wrap").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$(".radar-wrap").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$(".radar-wrap").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+	    	
+	    	//雷达图圆形缩放
+	    	$("#rotate1").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$("#rotate1").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$("#rotate1").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$("#rotate1").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+
+	    	//图例圆形缩放
+	    	$("#legend").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$("#legend").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$("#legend").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$("#legend").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+
+
+	    }
+		 scale()
+		var showAll =false;
+
+	</script>
+	<script src="js/config.js"></script>
+	<script src="js/lib/sea.js"></script>
+
+	<script src="js/lib/jQueryRotate.js"></script> 
+	<script src="js/index.js"></script>
+	<script> 
+		seajs.config({
+			base:"./js/"
+		})
+		seajs.use("pandect-time")
+	</script>
+
+
+</html>

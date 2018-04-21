@@ -1,0 +1,68 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "policeOrders": {
+            "zs": 10,
+            "wqs": 5,
+            "list": [
+                {
+                    "title": "标题标题111",
+                    "details": "详情详情详情详情详情详情详情详情",
+                    "state": 3
+                },
+                {
+                    "title": "标题标题222",
+                    "details": "1",
+                    "state": 0
+                },
+                {
+                    "title": "标题标题222",
+                    "details": "1",
+                    "state": 0
+                },
+                {
+                    "title": "标题标题222",
+                    "details": "1",
+                    "state": 0
+                },
+                {
+                    "title": "标题标题222",
+                    "details": "1",
+                    "state": 3
+                }
+            ]
+        },
+        
+        "importantInfo": [
+            {
+                "title": "要情发布1",
+                "details": "1",
+                "state": 3
+            },
+            {
+                "title": "要情发布2",
+                "details": "1",
+                "state": 0
+            },
+            {
+                "title": "要情发布3",
+                "details": "1",
+                "state": 0
+            }
+        ],
+        "dailyOnDuty": {
+            "zbldzh": ["黄予"],
+            "zbldfb": ["黄予"],
+            "zbz": ["舒世财"],
+            "zdzb": ["龙杨","雷万君"],
+            "bgs": ["黄予"],
+            "zdcb": ["月淘"],
+            "zhqb": ["袁亮"],
+            "zfzd": ["袁亮"],
+            "jys": ["赵晓娟"],
+            "yjzdzb": ["赵晓娟"],
+            "yjzdfb": ["袁亮","张欣","李硕焕","赵晓娟"]
+        }
+    }
+}

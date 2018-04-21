@@ -1,0 +1,34 @@
+/*治安行政*/
+/*治安行政*/
+
+.typeValue{
+	margin-bottom: 18px;
+	height: 150px;
+}
+.botIcon{
+	margin-top: 25px;
+}
+.line{
+	height: 38px;
+}
+.right01,.right02,.right03{
+  height: 30%;
+  margin-bottom: 10%;
+}
+.right01{
+	height: 19%;
+}
+.right01 .right01_title{
+	height: 55%;
+	background: rgba(39,90,121,.6);
+	padding-top: 2%;
+	overflow: hidden;
+}
+.right03_bar .span_right p:first-child{
+	background: none;
+}
+.right03_bar .span_right p.cur{
+	background-color:#003a66
+}
+
+

@@ -1,0 +1,321 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+      
+        "closingCount": [
+            {
+                "name": "1",
+                "value": 112
+            },
+            {
+                "name": "2",
+                "value": 222
+            },
+            {
+                "name": "3",
+                "value": 522
+            },
+            {
+                "name": "4",
+                "value": 122
+            },
+            {
+                "name": "5",
+                "value": 202
+            },
+            {
+                "name": "6",
+                "value": 52
+            },
+            {
+                "name": "7",
+                "value": 82
+            },
+            {
+                "name": "8",
+                "value": 562
+            },
+            {
+                "name": "9",
+                "value": 12
+            },
+            {
+                "name": "10",
+                "value": 42
+            },
+            {
+                "name": "11",
+                "value": 89
+            },
+            {
+                "name": "12",
+                "value": 68
+            }
+        ],
+        "materialCount": [
+            {
+                "name": "1月",
+                "value1": "580",
+                "value2": "20",
+                "value3": "0"
+            },
+            {
+                "name": "2月",
+                "value1": "198",
+                "value2": "10",
+                "value3": "2"
+            },
+            {
+                "name": "3月",
+                "value1": "189",
+                "value2": "24",
+                "value3": "1"
+            },
+            {
+                "name": "4月",
+                "value1": "192",
+                "value2": "45",
+                "value3": "1"
+            },
+            {
+                "name": "5月",
+                "value1": "899",
+                "value2": "15",
+                "value3": "2"
+            },
+            {
+                "name": "6月",
+                "value1": "620",
+                "value2": "15",
+                "value3": "1"
+            },{
+                "name": "7月",
+                "value1": "189",
+                "value2": "24",
+                "value3": "1"
+            },
+            {
+                "name": "8月",
+                "value1": "92",
+                "value2": "45",
+                "value3": "1"
+            },
+            {
+                "name": "9月",
+                "value1": "2899",
+                "value2": "15",
+                "value3": "2"
+            },
+            {
+                "name": "10月",
+                "value1": "1620",
+                "value2": "1",
+                "value3": "1"
+            },{
+                "name": "11月",
+                "value1": "2899",
+                "value2": "15",
+                "value3": "2"
+            },
+            {
+                "name": "12月",
+                "value1": "1620",
+                "value2": "15",
+                "value3": "1"
+            }
+        ],
+        "monthCount": [
+          {
+            "name": "17年04月",
+            "value1": 10,
+            "value2": 15,
+            "value3": 15,
+            "value4": 5
+          },{
+            "name": "17年05月",
+            "value1": 10,
+            "value2": 15,
+            "value3": 15,
+            "value4": 5
+          },{
+            "name": "17年05月",
+            "value1": 10,
+            "value2": 15,
+            "value3": 15,
+            "value4": 5
+          },{
+            "name": "17年05月",
+            "value1": 10,
+            "value2": 15,
+            "value3": 15,
+            "value4": 5
+          }
+        ] ,
+        "quarterCount": {
+         "total": 300,
+          "group": [
+              {
+                "name": "17年2季度",
+                "depCount": 30,
+                "zhendiCount": 10
+              },{
+                "name": "17年1季度",
+                "depCount": 30,
+                "zhendiCount": 10
+              },{
+                "name": "17年2季度",
+                "depCount": 30,
+                "zhendiCount": 10
+              },{
+                "name": "17年1季度",
+                "depCount": 30,
+                "zhendiCount": 10
+              }
+          ]
+    } ,
+    "enforceLawBulletin": [
+        {
+          "name": "2017年3月执法通报",
+          "url": "http://120.0.0.1:8081/get"
+        },
+         {
+         "name": "2017年4月执法通报",
+          "url": "http://120.0.0.1:8081/get"
+        },{
+          "name": "2017年3月执法通报",
+          "url": "http://120.0.0.1:8081/get"
+        },
+         {
+         "name": "2017年4月执法通报",
+          "url": "http://120.0.0.1:8081/get"
+        },{
+          "name": "2017年3月执法通报",
+          "url": "http://120.0.0.1:8081/get"
+        }
+     ],
+    "nonstandard": {
+       "total": 1050,
+        "group": [
+          {
+            "name": "一支队",
+            "value": 102
+          },{
+           "name": "二支队",
+            "value": 102
+          },{
+           "name": "三支队",
+            "value": 112
+          },{
+           "name": "四支队",
+            "value": 102
+          },{
+           "name": "五支队",
+            "value": 312
+          },{
+           "name": "三十二支队",
+            "value": 620
+          },{
+           "name": "六支队",
+            "value": 112
+          },{
+           "name": "涪陵支队",
+            "value": 1102
+          },{
+           "name": "黔江支队",
+            "value": 312
+          },{
+           "name": "三十一支队",
+            "value": 120
+          },{
+           "name": "三十二支队",
+            "value": 620
+          },{
+           "name": "六支队",
+            "value": 112
+          },{
+           "name": "涪陵支队",
+            "value": 1102
+          },{
+           "name": "黔江支队",
+            "value": 312
+          },{
+           "name": "三十一支队",
+            "value": 120
+          }
+        ]
+     },
+     "deductCount":{
+      "ajTotal": 2010,
+      "fajTotal": 2010,
+      "ajRate": 50,
+      "fajRate": 50,
+      "group": [
+        {
+        "name": "一支队",
+        "value1": 1202,
+        "value2": 301
+        },{
+          "name": "二支队",
+          "value1": 802,
+          "value2": 51
+        },{
+          "name": "三支队",
+          "value1": 102,
+          "value2": 1301
+        },{
+          "name": "八支队",
+          "value1": 602,
+          "value2": 101
+        },{
+          "name": "十一支队",
+          "value1": 402,
+          "value2": 301
+        },{
+          "name": "十二支队",
+          "value1": 802,
+          "value2": 51
+        },{
+          "name": "十三支队",
+          "value1": 102,
+          "value2": 1301
+        },{
+          "name": "十四支队",
+          "value1": 602,
+          "value2": 101
+        },{
+          "name": "十五支队",
+          "value1": 402,
+          "value2": 301
+        }
+      ]
+    } ,
+    "typeTotal": [
+      {
+        "name": "案件总量",
+         "value": 10613
+       },{
+          "name": "已结案件",
+          "value": 1010
+        },{
+          "name": "待归档",
+          "value": 1010
+        },{
+          "name": "待检查",
+          "value": 110
+        },{
+          "name": "已检查",
+          "value": 350
+        },{
+          "name": "整改中",
+          "value": 450
+        },{
+          "name": "已归档",
+          "value": 200
+        },{
+          "name": "已移交",
+          "value": 120
+        }
+     ]
+    }
+}

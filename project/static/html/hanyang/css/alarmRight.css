@@ -1,0 +1,169 @@
+.right01,.right02,.right03{
+  width: 100%;
+  margin-top: 3%;
+  height: 30%;
+  background: url("../image/alarm/rightTop01.png") no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 5%;
+}
+
+.right01_url,.right03_bar{
+	width: 100%;
+  height: 15%;
+  position: relative;
+  top: 5px;
+}
+#show{
+    cursor: pointer;
+}
+.h20{
+	height: 20%;
+}
+.right01_url .span_left,
+.right03_bar .span_left{
+    float: left;
+    width: 47%;
+    height: 100%;
+    color: #83e6fb;
+    text-align: center;
+    font-size: 27px;
+   /* cursor: pointer;*/
+}
+.right01_url .alterUrl{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    background: #050c19;
+    display: none;
+}
+.right01_url .alterUrl label{
+    display: block;
+    color: #83e6fb;
+    width: 16%;
+    height: 100%;
+    float: left;
+    line-height: 48px;
+    font-size: 15px;
+    text-align: center;
+}
+.right01_url .alterUrl input{
+    width: 57%;
+    height: 72%;
+    border: 1px solid #83e6fb;
+    margin-top: 5px;
+    font-size: 24px;
+    background: transparent;
+    color: #83e6fb;
+}
+.right01_url .alterUrl button{
+    width: 12%;
+    height: 75%;
+    border: 1px solid #83e6fb;
+    background-color: #00476e;
+    margin-top: -21px;
+    color: #afc4d1;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    cursor: pointer;
+}
+.right01_url .span_right{
+    float: right;
+    width: 18%;
+    
+    color: #fff;
+    text-align: center;
+    background: url(../image/alarm/rightTop02.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 18px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.right01_url .span_left p,
+.right03_bar .span_left p{
+	display: block;
+	float: left;
+	margin-left: 5px;
+	font-size: 20px;
+	padding-top: 10px;
+}
+.right01_url .span_left p:first-child,
+.right03_bar .span_left p:first-child{
+    width: 6%;
+    height: 11%;
+    background: #83e6fb;
+    margin-top: 6%;
+}
+.right01 .right01_title{
+	width: 100%;
+    height: 68%;
+    margin-top: 25px;
+    overflow: auto;
+}
+.right01 .right01_title span{
+    display: block;
+    width: 94%;
+/*     height: 45px; */
+    color: #acd7e7;
+    line-height: 45px;
+    font-size: 16px;
+    padding-left: 24px;
+}
+.right01 .right01_title label {
+    color: #ccc;
+    padding-right: 13px;
+}
+.spanOdd{
+     background-color: #1b3b5e;
+}
+/* 各派出所排名 */
+.right03_bar .span_right{
+    float: right;
+    width: 53%;
+    height: 88%;
+    margin-top: 5px;
+}
+.right03_bar .span_right p{
+    display: block;
+    float: left;
+    /*width: 19%;*/
+    padding: 0 5px;
+    color: #ccc;
+    text-align: center;
+    height: 86%;
+    font-size: 16px;
+    border: 1px solid #64afc2;
+    background-color: transparent;
+    padding-top: -1px;
+    line-height: 30px;
+}
+
+.right03_bar .span_right p:first-child{
+     background-color: #003a66;
+}
+
+.right03 .bar{
+    width: 100%;
+    height: 80%;
+    margin-top: 7px;
+    background: rgba(39,90,121,.6);
+}
+#bar{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.right02 .line02 {
+    width: 100%;
+    height: 79%;
+    position: relative;
+    background: rgba(39,90,121,.6);
+    top: 51px;
+}
+.right02 #line02{
+    width: 100%;
+    height: 97%;
+    position: absolute;
+    top: 2px;
+}

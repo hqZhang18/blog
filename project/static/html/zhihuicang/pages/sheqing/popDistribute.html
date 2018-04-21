@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>指挥舱-地区人口分布</title>
+        <link rel="stylesheet" type="text/css" href="../../styles/sheqing/popDistribute.css">
+    </head>
+    <body class="pop-distribute-body">
+        <div class="pop-distribute-wap">
+            <ul class="pop-distribute-nav">
+                <li data-type="all" class="active">全部人口</li>
+                <li data-type="permanent">常住人口</li>
+                <li data-type="temporary">暂住人口</li>
+            </ul>
+            <div class="cqmap-main-city all-main-city">
+                <!--绘制重庆主城地图-->
+            </div>
+            <div class="cqmap-area-city all-area-city">
+                <!--绘制重庆地图-->
+            </div>
+
+            <div class="cqmap-main-city permanent-main-city">
+                <!--绘制重庆常住人口地图-->
+            </div>
+
+            <div class="cqmap-area-city permanent-area-city">
+               <!--绘制重庆主城常住人口地图-->
+            </div>
+
+            <div class="cqmap-main-city temporary-main-city">
+                <!--绘制重庆暂住人口地图-->
+            </div>
+
+            <div class="cqmap-area-city temporary-area-city">
+                <!--绘制重庆主城暂住人口地图-->
+            </div>
+            <div class="distribute-top">
+                <h3 class="list-title">人口地区排行</h3>
+                <ul class="top-list" id="popTopList">
+                </ul>
+            </div>
+
+        </div>
+
+         <script type="text/javascript" src='../../sea-modules/sea.js'></script>
+         <script type="text/javascript" src='../../sea-modules/sea-text.js'></script>
+         <script type="text/javascript" src='../../seajs.config.js'></script>
+         <script type="text/javascript">
+              seajs.use(['../../scripts/sheqing/popDistribute/index.js'], function(index){
+                  index.init()
+              })
+          </script>
+    </body>
+</html>

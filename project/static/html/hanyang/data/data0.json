@@ -1,0 +1,88 @@
+{
+    "code": "200",
+    "message": "请求成功",
+    "data": {
+        "week": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "radarMap": [{
+            "name": "今年",
+            "type": [{
+                "name": "警情",
+                "type": 0,
+                "value": "170",
+                "falg": false,
+                "maxValue": 60,
+                "tooltip": {
+                    "warning": "警情数同比增加20%",
+                    "proposal": "加强强戒"
+                }
+            }, {
+                "name": "治安行政",
+                "type": 1,
+                "value": "678",
+                "falg": true,
+                "maxValue": 60
+            }, {
+                "name": "强戒",
+                "type": 2,
+                "value": "377",
+                "falg": false,
+                "maxValue": 60,
+                "tooltip": {
+                    "warning": "警情数同比增加20%",
+                    "proposal": "加强强戒"
+                }
+
+            }, {
+                "name": "破案",
+                "type": 3,
+                "value": "468",
+                "falg": false,
+                "maxValue": 60,
+                "tooltip": {
+                    "warning": "破案数同比增加20%",
+                    "proposal": "加强破案"
+                }
+            }, {
+                "name": "刑事拘留",
+                "type": 4,
+                "value": "570",
+                "falg": false,
+                "maxValue": 60
+                
+            }]
+        }, {
+            "name": "去年",
+            "type": [{
+                "name": "警情",
+                "value": "160",
+                "falg": true,
+                "maxValue": 100
+
+            }, {
+                "name": "治安行政",
+                "value": "286",
+                "falg": false,
+                "maxValue": 80
+            }, {
+                "name": "强戒",
+                "value": "564",
+                "falg": false,
+                "maxValue": 70
+            }, {
+                "name": "破案",
+                "value": "677",
+                "falg": false,
+                "maxValue": 60
+            }, {
+                "name": "刑事拘留",
+                "value": "177",
+                "falg": false,
+                "maxValue": 69
+            }]
+        }, 
+            [600, 200, 120, 90, 20]
+        ]
+    }
+
+}

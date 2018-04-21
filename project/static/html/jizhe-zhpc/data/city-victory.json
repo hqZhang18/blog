@@ -1,0 +1,59 @@
+{
+  "code": 1,
+  "msg": "success",
+  "result": [
+    {
+      "name": "江北区",
+      "areaId": "500105",
+      "time": "2017年3月20日",
+      "area": "江北区",
+      "detectiveCase": {
+          "name": "电信",
+          "value": 123
+      },
+      "firearms": 63,
+      "capturedNum": 98,
+      "bullet": 1350,
+      "drug": 323,
+      "bullet": 22,
+      "amountInvolved": 234
+    },
+      {
+        "name": "城口县",
+        "areaId": "500229",
+        "area": "渝中区",
+        "time": "2017年3月20日",
+        "detectiveCase": {
+          "name": "电信",
+          "value": 23
+        },
+        "firearms": 163,
+        "capturedNum": 298,
+        "bullet": 1350,
+        "drug": 323,
+        "bullet": 22,
+        "amountInvolved": 234
+    },{
+     "name": "江津区",
+      "areaId": "500116",
+     "time": "2017年3月20日",
+      "area": "渝北区",
+      "detectiveCase": {
+          "name": "电信",
+          "value": 13
+      },
+      "firearms": 163,
+      "capturedNum": 298,
+      "bullet": 1350,
+      "drug": 323,
+      "bullet": 22,
+      "amountInvolved": 234
+    }
+  ],
+  "pageInfo": {
+    "totalPage": 10,
+    "totalCount": 50,
+    "currentPage": 1
+   }
+    
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <title>指挥舱-勤情</title>
+  <link rel="stylesheet" href="../styles/qinqing/index.css">
+</head>
+<body>
+    <div>
+        <iframe src ="qinqing/server.html" width="3456" height="1944" frameborder="no" border="none" ></iframe>
+        <iframe src ="qinqing/policeDistribution.html" width="3456" height="1944" frameborder="no" border="none" ></iframe>
+        <iframe src ="qinqing/case.html" width="3456" height="1944" frameborder="no" border="none"></iframe>
+    </div>
+    <div>
+        <iframe src ="qinqing/police.html" width="3456" height="1944" name="myFrame" frameborder="no" border="none" ></iframe>
+        <iframe src ="qinqing/equipment.html" width="3456" height="1944" frameborder="no" border="none" ></iframe>
+        <iframe src ="qinqing/informationSystem.html" width="3456" height="1944" frameborder="no" border="none" ></iframe>
+    </div>
+    <script type="text/javascript" src='../sea-modules/sea.js'></script>
+    <script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+    <script type="text/javascript" src='../seajs.config.js'></script>
+    <script type="text/javascript">
+        seajs.use('../scripts/index.js', function(index){
+            index.init();
+        })
+    </script>
+</body>
+</html>

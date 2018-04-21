@@ -1,0 +1,136 @@
+.right .right_01{
+	width: 100%;
+	height: 20%;
+	margin-top: 18%;
+  background: url("../image/alarm/rightTop01.png") no-repeat;
+  background-size: 100% 100%;
+}
+.right .right_02{
+	width: 100%;
+	height: 15%;
+	margin-top: 1%;
+	  background: url("../image/alarm/rightTop01.png") no-repeat;
+  background-size: 100% 100%;
+}
+.right .right_03{
+	width: 100%;
+	height: 20%;
+	margin-top: 1%;
+	background: url("../image/alarm/rightTop01.png") no-repeat;
+  background-size: 100% 100%;
+}
+.right .right_04{
+	width: 100%;
+	height: 30%;
+	margin-top: 1%;
+	background: url("../image/alarm/rightTop01.png") no-repeat;
+  background-size: 100% 100%;
+}
+ .right_title p{
+  display: block;
+	float: left;
+	margin-left: 5px;
+} 
+.right_title p:first-child{
+    width: 3%;
+    height: 15px;
+    background: #83e6fb;
+    margin-top: 2%;
+}
+.right_title p:nth-child(2){
+    display: block;
+    width: 46%;
+    height: 25px;
+    color: #83e6fb;
+    line-height: 25px;
+    font-size: 20px;
+     padding-left: 8px; 
+    margin-top: 1%;
+}
+/*
+强戒人员年龄分析
+ */
+.right_03 .right_03_bottom{
+/* 	border: 1px solid red; */
+    width: 100%;
+    height: 78%;
+    float: left;
+    background: #193c55;
+    margin-top:5px;
+}
+.right_03 .right_03_bottom .right_03_left{
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+}
+.right_03 .right_03_bottom .right_03_center{
+    width: 45%;
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+    position: relative;
+}
+.right_03 .right_03_bottom .right_03_right{
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+}
+.bar_title{
+	width: 100%;
+	height: 45%;
+	float: left;
+/* 	border: 1px solid red; */
+	margin-top: 3%;
+}
+.bar_title span{
+    width: 100%;
+    height: 45%;
+    float: left;
+    /* margin-top: 0%; */
+    color: #83abc5;
+    padding-left: 16px;
+}
+.bar_title span p:first-child{
+    width: 10%;
+    height: 13px;
+    margin-top: 10px;
+    display: block;
+    float: left;
+}
+.bar_title span p:nth-child(2){
+    height: 32px;
+    display: block;
+    float: left;
+    padding-left: 2px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+}
+.bar_01{
+    background: #83e6fb;
+}
+.bar_02{
+    background: #adff55;
+}
+.bar_03{
+    background: #fff033;
+}
+.bar_04{
+    background: #ef8b33;
+}
+#pie{
+    width: 100%;
+    height: 100%;
+}
+.total{
+    width: 30%;
+    height: 22%;
+    position: absolute;
+    top: 59px;
+    left: 76px;
+    color: #ccc;
+    text-align: center;
+    line-height: 32px;
+}

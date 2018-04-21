@@ -1,0 +1,202 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "attendance": 22165,
+        "vacation": 907,
+        "duibuTotal": 3068,
+        "map": [
+            {
+                "troopsId": "96c51c7e-4e84-4294-aca6-ad86238c5edf",
+                "troopsName": "十六支队（江北区）",
+                "zqValue": 90,
+                "xjValue": 1,
+                "dists": [
+                    {
+                        "id": 2253,
+                        "value": "江北区"
+                    }
+                ]
+            },
+            {
+                "troopsId": "935e2a7b-0d63-478e-9a1c-3726ccfb4349",
+                "troopsName": "十七支队（沙坪坝区）",
+                "zqValue": 2156,
+                "xjValue": 141,
+                "dists": [
+                    {
+                        "id": 2249,
+                        "value": "沙坪坝区"
+                    }
+                ]
+            },
+            {
+                "troopsId": "9b6b0759-ae5e-4b20-a3e3-549291e8bc58",
+                "troopsName": "十九支队（南岸区）",
+                "zqValue": 337,
+                "xjValue": 30,
+                "dists": [
+                    {
+                        "id": 2255,
+                        "value": "南岸区"
+                    }
+                ]
+            },
+            {
+                "troopsId": "ef14aa62-28b2-4bd8-9c66-0028b29be142",
+                "troopsName": "三十支队（长寿片区）",
+                "zqValue": 179,
+                "xjValue": 2,
+                "dists": [
+                    {
+                        "id": 2262,
+                        "value": "石柱土家族自治县"
+                    },
+                    {
+                        "id": 2273,
+                        "value": "忠县"
+                    },
+                    {
+                        "id": 2272,
+                        "value": "垫江县"
+                    },
+                    {
+                        "id": 2268,
+                        "value": "长寿区"
+                    },
+                    {
+                        "id": 2260,
+                        "value": "丰都县"
+                    },
+                    {
+                        "id": 2270,
+                        "value": "梁平县"
+                    }
+                ]
+            },
+            {
+                "troopsId": "81496e8b-5361-42c1-bdd6-ccde5539bc36",
+                "troopsName": "二十八支队（永川片区）",
+                "zqValue": 3262,
+                "xjValue": 550,
+                "dists": [
+                    {
+                        "id": 2243,
+                        "value": "荣昌县"
+                    },
+                    {
+                        "id": 2245,
+                        "value": "江津区"
+                    },
+                    {
+                        "id": 2246,
+                        "value": "永川区"
+                    }
+                ]
+            },
+            {
+                "troopsId": "fbed496c-2d7e-45eb-8296-52b237f3d2ec",
+                "troopsName": "二十九支队（南川片区）",
+                "zqValue": 4942,
+                "xjValue": 29,
+                "dists": [
+                    {
+                        "id": 2261,
+                        "value": "武隆区"
+                    },
+                    {
+                        "id": 2264,
+                        "value": "彭水苗族土家族自治县"
+                    },
+                    {
+                        "id": 2263,
+                        "value": "酉阳土家族苗族自治县"
+                    },
+                    {
+                        "id": 2244,
+                        "value": "綦江区"
+                    },
+                    {
+                        "id": 2265,
+                        "value": "南川区"
+                    },
+                    {
+                        "id": 2259,
+                        "value": "秀山土家族苗族自治县"
+                    }
+                ]
+            },
+            {
+                "troopsId": "d06acfdd-e240-4f46-a922-06b2bcaebd79",
+                "troopsName": "三十一支队（云阳片区）",
+                "zqValue": 148,
+                "xjValue": 1,
+                "dists": [
+                    {
+                        "id": 2274,
+                        "value": "云阳县"
+                    },
+                    {
+                        "id": 2277,
+                        "value": "巫溪县"
+                    },
+                    {
+                        "id": 2275,
+                        "value": "奉节县"
+                    },
+                    {
+                        "id": 2271,
+                        "value": "城口县"
+                    },
+                    {
+                        "id": 2269,
+                        "value": "开州区"
+                    },
+                    {
+                        "id": 2276,
+                        "value": "巫山县"
+                    }
+                ]
+            },
+            {
+                "troopsId": "4c600fc6-4b6f-413f-a114-d4ace7089840",
+                "troopsName": "二十三支队（巴南区）",
+                "zqValue": 1073,
+                "xjValue": 38,
+                "dists": [
+                    {
+                        "id": 2258,
+                        "value": "巴南区"
+                    }
+                ]
+            },
+            {
+                "troopsId": "7c1db6e6-704b-4909-a25e-8137474a50a8",
+                "troopsName": "二十四支队（双桥区）",
+                "zqValue": 1011,
+                "xjValue": 17,
+                "dists": [
+                    {
+                        "value": "双桥区"
+                    },
+                    {
+                        "id": 2242,
+                        "value": "大足区"
+                    }
+                ]
+            },
+            {
+                "troopsId": "6488728a-468e-4971-9758-1e15149c5b47",
+                "troopsName": "二十支队（北碚区）",
+                "zqValue": 209,
+                "xjValue": 4,
+                "dists": [
+                    {
+                        "id": 2256,
+                        "value": "北碚区"
+                    }
+                ]
+            }
+        ]
+    }
+}

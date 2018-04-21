@@ -1,0 +1,83 @@
+{
+  "code": 1,
+  "msg": "success",
+  "result": {
+    "case": [
+    {
+      "name": "1月",
+      "value1": "580",
+      "value2": "20",
+      "value3": "0"
+    },{
+     "name": "2月",
+      "value1": "198",
+      "value2": "10",
+      "value3": "2"
+    },{
+     "name": "3月",
+      "value1": "189",
+      "value2": "24",
+      "value3": "1"
+    },{
+     "name": "4月",
+      "value1": "192",
+      "value2": "45",
+      "value3": "1"
+    },{
+     "name": "5月",
+      "value1": "899",
+      "value2": "15",
+      "value3": "2"
+    },{
+     "name": "6月",
+      "value1": "620",
+      "value2": "15",
+      "value3": "1"
+    }
+  ],
+
+  "deduction": [
+      {
+        "name": "二十三支队",
+        "value": 20
+      },{
+        "name": "三十三支队",
+        "value": 30
+      },{
+        "name": "四支队",
+        "value": 25
+      },{
+        "name": "十六支队",
+        "value": 15
+      },{
+        "name": "八支队",
+        "value": 28
+      },{
+        "name": "二十二支队",
+        "value": 20
+      },{
+        "name": "三十四支队",
+        "value": 30
+      },{
+        "name": "七支队",
+        "value": 25
+      },{
+        "name": "十九支队",
+        "value": 15
+      },{
+        "name": "一十三支队",
+        "value": 30
+      },{
+        "name": "五支队",
+        "value": 25
+      },{
+        "name": "十五支队",
+        "value": 15
+      },{
+        "name": "一支队",
+        "value": 28
+      }
+   ]
+  }
+  
+}

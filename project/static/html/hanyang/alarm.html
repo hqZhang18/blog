@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>警情类数据</title>
+		<link href="css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/alarmRight.css">
+    <link rel="stylesheet" href="css/pieChart.css">
+    <link href="css/alarm.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="bodyBg"></div>
+		<div class="header">
+			<div class="title">警情类数据</div>
+			<div class="topback"><a href="index.html"></a></div>
+		</div>
+		<div class="left">
+			<div class="totalCount">
+				<div><span class="countName">警情总数</span> <span class="total1"></span>起
+					<span>同比</span><span class="scale" style="font-size:24px"></span><i id="upDown"></i></div>
+				<!--<div><span>行政警情</span> <span class="total1">10230</span>件 
+				<i class="icon_up"></i></div>-->
+			</div>
+			<div class="leftBot"></div>
+		</div>
+		<div class="center">
+			<div id="rotate1">
+				 <div class="rotateBg" id="rotate"></div>
+			</div>
+			<div class="radar-wrap">
+				<div id="radarChart" class="radarChart"></div>
+			</div>
+			<div class="notesTooltip"></div>
+			
+			<!--图例S-->
+			<div id="legend" class="legend">
+				<div class="legend-dynamic">
+					<a id="yearS"><i class="icon-c1"></i><span></span></a>
+					<a id="yearE"><i class="icon-c2"></i><span></span></a>
+				</div>
+				<div class="legend-fixed">
+					<a><i class="icon-c3"></i>最高峰值1.5倍</a>
+					<a><i class="icon-c4"></i>分局历史最高值</a>
+					<a><i class="icon-c5"></i>全市中心城区平均水平</a>
+					<a><i class="icon-c6"></i>近三年平均水平</a>
+					<a><i class="icon-c7"></i>分局历史最低值</a>
+				</div>
+			</div>
+			<!--图例E-->
+			<div class="clear"></div>
+		</div>
+		<div class="right">
+			<div class="right01">
+				<div class="right01_url h20">
+					<span class="span_left" id="show">
+						<p><i></i></p>
+						<p>重大警情</p>
+					</span>
+					<span class="span_right" id="url">领导批示</span>
+					<!--修改地址-->
+					<div class="alterUrl">
+						<label>URL地址：</label><input />
+						<button class="save">保存</button><button class="cancel">取消</button>
+					</div>
+				</div>
+				<div class="right01_title">
+				</div>
+			</div>
+			<div class="right02">
+                <span class="rect"></span><span class="title">各类警情数量占比</span>
+                <p class="total" id="pieChartTotal"></p>
+                <div class="pieBox">
+									<div class="pieChartBg"></div>
+	                <div class="pieChart" id = "policeCases-pieChart"></div>
+                </div>
+            </div>
+			<div class="right03">
+				<div class="right03_bar">
+					<span class="span_left">
+						<p><i></i></p>
+						<p>各派出所警情排名</p>
+					</span>
+					<span class="span_right" id="TAB">
+						<p>总体</p>
+						<p>社会</p>
+						<p>刑事</p>
+						<p>治安</p>
+						<p>黄赌毒</p>
+					</span>
+				</div>
+				<div class="bar"><div id="bar"></div></div>
+			</div>
+		</div>
+		<canvas id="canvas"></canvas>
+		<script src="js/config.js"></script>
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/scale.js"></script>
+		<script src="js/lib/echarts.js"></script>
+		<script src="js/lib/jQueryRotate.js"></script>
+		<script src="js/lib/sea.js"></script>
+		<script type="text/javascript">
+		seajs.use(['./js/second/alarm'], function(alarm){
+			alarm.init()
+		})
+
+		</script>
+	</body>
+</html>

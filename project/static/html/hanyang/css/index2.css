@@ -1,0 +1,85 @@
+/*#left{*/
+    /*position: relative;*/
+    /*margin-left: 148px;*/
+    /*margin-right: -185px ;*/
+    /*width:640px;*/
+    /*height: 990px;*/
+/*}*/
+/*#right{*/
+    /*position: relative;*/
+    /*margin-left: -800px;*/
+    /*width:1340px;*/
+    /*height: 990px;*/
+/*}*/
+/*#left > div ,#right >div{*/
+    /*position: relative;*/
+
+/*}*/
+
+#left .lines {
+    position: absolute;
+    height: 286px;
+    /*background: url("../image/LeftLine.png") no-repeat left 150px;*/
+
+}
+
+#left #line1{
+    left: 570px;
+    top:110px;
+}
+#left #line2{
+    left: 570px;
+    bottom: 20px;
+}
+
+#right .lines{
+    position: absolute;
+    width: 695px;
+    height: 286px;
+    right: 548px;
+    /*background: url("../image/RightLine.png") no-repeat right center;*/
+    z-index: 0;
+}
+
+#right #line3{
+    width: 740px;
+    top:-5px;
+    height: 200px;
+    /*background: url("../image/RightLine.png") no-repeat right bottom;*/
+   
+}
+#right #line4{
+    top:325px;
+    width:360px;
+
+}
+#right #line5{
+    top:652px;
+    width: 500px;
+}
+.cls-1 {
+    stroke: #59c3f6;
+    stroke-width: 5px;
+    fill: none;
+    fill-rule: evenodd;
+    stroke-dasharray: 10;
+    stroke-dashoffset: 200;
+    -webkit-animation: dash 3s linear forwards;
+    animation: dash 3s linear forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+.cls-2 {
+    stroke: #59c3f6;
+    stroke-width: 2px;
+    fill: none;
+    fill-rule: evenodd;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

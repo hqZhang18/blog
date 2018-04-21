@@ -1,0 +1,1831 @@
+
+{
+    "state": true,
+    "message": "调用成功",
+    "data": {
+        "radarMap": [
+            {
+                "name": "今年",
+                "type": [
+                    {
+                        "name": "警情",
+                        "value": "26696",
+                        "falg": true,
+                        "type": 0,
+                        "maxValue": 553
+                    },
+                    {
+                        "name": "刑事拘留",
+                        "value": "26296",
+                        "falg": false,
+                        "type": 4,
+                        "maxValue": 385
+                    },
+                    {
+                        "name": "破案",
+                        "value": "25826",
+                        "falg": false,
+                        "type": 3,
+                        "maxValue": 369
+                    },
+                    {
+                        "name": "治安行政",
+                        "value": "24819",
+                        "falg": false,
+                        "type": 1,
+                        "maxValue": 365
+                    },
+                    {
+                        "name": "强戒",
+                        "value": "23098",
+                        "falg": false,
+                        "type": 2,
+                        "maxValue": 121
+                    }
+                ]
+            },
+            {
+                "name": "去年",
+                "type": [
+                    {
+                        "name": "治安行政",
+                        "value": "26998",
+                        "falg": true,
+                        "type": 1,
+                        "maxValue": 365
+                    },
+                    {
+                        "name": "破案",
+                        "value": "26716",
+                        "falg": false,
+                        "type": 3,
+                        "maxValue": 369
+                    },
+                    {
+                        "name": "警情",
+                        "value": "25816",
+                        "falg": false,
+                        "type": 0,
+                        "maxValue": 553
+                    },
+                    {
+                        "name": "刑事拘留",
+                        "value": "24545",
+                        "falg": false,
+                        "type": 4,
+                        "maxValue": 385
+                    },
+                    {
+                        "name": "强戒",
+                        "value": "24055",
+                        "falg": false,
+                        "type": 2,
+                        "maxValue": 121
+                    }
+                ]
+            },
+            [
+                829,
+                553,
+                522,
+                502,
+                107
+            ]
+        ],
+        "classifyNum": [
+            {
+                "scale": "2481800.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 26998
+                    },
+                    {
+                        "name": "今年",
+                        "value": 24819
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 4136
+                    }
+                ],
+                "classifyName": "治安行政类"
+            },
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 26716
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 4304
+                    }
+                ],
+                "classifyName": "破案类"
+            },
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 24545
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 4382
+                    }
+                ],
+                "classifyName": "刑事拘留类"
+            },
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 24055
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 3849
+                    }
+                ],
+                "classifyName": "强戒类"
+            }
+        ],
+        "policeCasesNum": {
+            "thisYear": 0,
+            "lastYear": 0,
+            "average": 4449
+        },
+        "solveCase": [
+            {
+                "name": "01",
+                "week": "1",
+                "palastYear": "295",
+                "pathisYear": "295",
+                "paaAverage": "0",
+                "qjlastYear": "648",
+                "qjthisYear": "648",
+                "qjaverage": "0"
+            },
+            {
+                "name": "01",
+                "week": "2",
+                "palastYear": "761",
+                "pathisYear": "761",
+                "paaAverage": "0",
+                "qjlastYear": "784",
+                "qjthisYear": "784",
+                "qjaverage": "0"
+            },
+            {
+                "name": "01",
+                "week": "4",
+                "palastYear": "507",
+                "pathisYear": "507",
+                "paaAverage": "0",
+                "qjlastYear": "743",
+                "qjthisYear": "743",
+                "qjaverage": "0"
+            },
+            {
+                "name": "01",
+                "week": "3",
+                "palastYear": "169",
+                "pathisYear": "169",
+                "paaAverage": "0",
+                "qjlastYear": "82",
+                "qjthisYear": "82",
+                "qjaverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "5",
+                "palastYear": "974",
+                "pathisYear": "974",
+                "paaAverage": "0",
+                "qjlastYear": "97",
+                "qjthisYear": "97",
+                "qjaverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "6",
+                "palastYear": "865",
+                "pathisYear": "865",
+                "paaAverage": "0",
+                "qjlastYear": "788",
+                "qjthisYear": "788",
+                "qjaverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "9",
+                "palastYear": "613",
+                "pathisYear": "613",
+                "paaAverage": "0",
+                "qjlastYear": "758",
+                "qjthisYear": "758",
+                "qjaverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "7",
+                "palastYear": "497",
+                "pathisYear": "497",
+                "paaAverage": "0",
+                "qjlastYear": "569",
+                "qjthisYear": "569",
+                "qjaverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "4",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "8",
+                "palastYear": "769",
+                "pathisYear": "769",
+                "paaAverage": "0",
+                "qjlastYear": "191",
+                "qjthisYear": "191",
+                "qjaverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "12",
+                "palastYear": "504",
+                "pathisYear": "504",
+                "paaAverage": "0",
+                "qjlastYear": "536",
+                "qjthisYear": "536",
+                "qjaverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "10",
+                "palastYear": "368",
+                "pathisYear": "368",
+                "paaAverage": "0",
+                "qjlastYear": "44",
+                "qjthisYear": "44",
+                "qjaverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "13",
+                "palastYear": "462",
+                "pathisYear": "462",
+                "paaAverage": "0",
+                "qjlastYear": "282",
+                "qjthisYear": "282",
+                "qjaverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "11",
+                "palastYear": "703",
+                "pathisYear": "703",
+                "paaAverage": "0",
+                "qjlastYear": "136",
+                "qjthisYear": "136",
+                "qjaverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "9",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "14",
+                "palastYear": "216",
+                "pathisYear": "216",
+                "paaAverage": "0",
+                "qjlastYear": "676",
+                "qjthisYear": "676",
+                "qjaverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "16",
+                "palastYear": "439",
+                "pathisYear": "439",
+                "paaAverage": "0",
+                "qjlastYear": "430",
+                "qjthisYear": "430",
+                "qjaverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "15",
+                "palastYear": "852",
+                "pathisYear": "852",
+                "paaAverage": "0",
+                "qjlastYear": "55",
+                "qjthisYear": "55",
+                "qjaverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "13",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "17",
+                "palastYear": "898",
+                "pathisYear": "898",
+                "paaAverage": "0",
+                "qjlastYear": "430",
+                "qjthisYear": "430",
+                "qjaverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "17",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "21",
+                "palastYear": "704",
+                "pathisYear": "704",
+                "paaAverage": "0",
+                "qjlastYear": "311",
+                "qjthisYear": "311",
+                "qjaverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "20",
+                "palastYear": "277",
+                "pathisYear": "277",
+                "paaAverage": "0",
+                "qjlastYear": "365",
+                "qjthisYear": "365",
+                "qjaverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "19",
+                "palastYear": "306",
+                "pathisYear": "306",
+                "paaAverage": "0",
+                "qjlastYear": "433",
+                "qjthisYear": "433",
+                "qjaverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "18",
+                "palastYear": "14",
+                "pathisYear": "14",
+                "paaAverage": "0",
+                "qjlastYear": "777",
+                "qjthisYear": "777",
+                "qjaverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "26",
+                "palastYear": "890",
+                "pathisYear": "890",
+                "paaAverage": "0",
+                "qjlastYear": "18",
+                "qjthisYear": "18",
+                "qjaverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "25",
+                "palastYear": "512",
+                "pathisYear": "512",
+                "paaAverage": "0",
+                "qjlastYear": "105",
+                "qjthisYear": "105",
+                "qjaverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "24",
+                "palastYear": "822",
+                "pathisYear": "822",
+                "paaAverage": "0",
+                "qjlastYear": "905",
+                "qjthisYear": "905",
+                "qjaverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "23",
+                "palastYear": "184",
+                "pathisYear": "184",
+                "paaAverage": "0",
+                "qjlastYear": "233",
+                "qjthisYear": "233",
+                "qjaverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "22",
+                "palastYear": "334",
+                "pathisYear": "334",
+                "paaAverage": "0",
+                "qjlastYear": "118",
+                "qjthisYear": "118",
+                "qjaverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "30",
+                "palastYear": "706",
+                "pathisYear": "706",
+                "paaAverage": "0",
+                "qjlastYear": "479",
+                "qjthisYear": "479",
+                "qjaverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "29",
+                "palastYear": "673",
+                "pathisYear": "673",
+                "paaAverage": "0",
+                "qjlastYear": "256",
+                "qjthisYear": "256",
+                "qjaverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "28",
+                "palastYear": "716",
+                "pathisYear": "716",
+                "paaAverage": "0",
+                "qjlastYear": "942",
+                "qjthisYear": "942",
+                "qjaverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "27",
+                "palastYear": "173",
+                "pathisYear": "173",
+                "paaAverage": "0",
+                "qjlastYear": "31",
+                "qjthisYear": "31",
+                "qjaverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "26",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "32",
+                "palastYear": "858",
+                "pathisYear": "858",
+                "paaAverage": "0",
+                "qjlastYear": "124",
+                "qjthisYear": "124",
+                "qjaverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "30",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "35",
+                "palastYear": "35",
+                "pathisYear": "35",
+                "paaAverage": "0",
+                "qjlastYear": "712",
+                "qjthisYear": "712",
+                "qjaverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "31",
+                "palastYear": "78",
+                "pathisYear": "78",
+                "paaAverage": "0",
+                "qjlastYear": "647",
+                "qjthisYear": "647",
+                "qjaverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "34",
+                "palastYear": "602",
+                "pathisYear": "602",
+                "paaAverage": "0",
+                "qjlastYear": "752",
+                "qjthisYear": "752",
+                "qjaverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "33",
+                "palastYear": "700",
+                "pathisYear": "700",
+                "paaAverage": "0",
+                "qjlastYear": "958",
+                "qjthisYear": "958",
+                "qjaverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "39",
+                "palastYear": "580",
+                "pathisYear": "580",
+                "paaAverage": "0",
+                "qjlastYear": "388",
+                "qjthisYear": "388",
+                "qjaverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "38",
+                "palastYear": "811",
+                "pathisYear": "811",
+                "paaAverage": "0",
+                "qjlastYear": "74",
+                "qjthisYear": "74",
+                "qjaverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "37",
+                "palastYear": "594",
+                "pathisYear": "594",
+                "paaAverage": "0",
+                "qjlastYear": "217",
+                "qjthisYear": "217",
+                "qjaverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "36",
+                "palastYear": "77",
+                "pathisYear": "77",
+                "paaAverage": "0",
+                "qjlastYear": "506",
+                "qjthisYear": "506",
+                "qjaverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "35",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "39",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "43",
+                "palastYear": "877",
+                "pathisYear": "877",
+                "paaAverage": "0",
+                "qjlastYear": "449",
+                "qjthisYear": "449",
+                "qjaverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "42",
+                "palastYear": "420",
+                "pathisYear": "420",
+                "paaAverage": "0",
+                "qjlastYear": "999",
+                "qjthisYear": "999",
+                "qjaverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "41",
+                "palastYear": "676",
+                "pathisYear": "676",
+                "paaAverage": "0",
+                "qjlastYear": "527",
+                "qjthisYear": "527",
+                "qjaverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "40",
+                "palastYear": "81",
+                "pathisYear": "81",
+                "paaAverage": "0",
+                "qjlastYear": "183",
+                "qjthisYear": "183",
+                "qjaverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "48",
+                "palastYear": "161",
+                "pathisYear": "161",
+                "paaAverage": "0",
+                "qjlastYear": "342",
+                "qjthisYear": "342",
+                "qjaverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "47",
+                "palastYear": "750",
+                "pathisYear": "750",
+                "paaAverage": "0",
+                "qjlastYear": "703",
+                "qjthisYear": "703",
+                "qjaverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "46",
+                "palastYear": "371",
+                "pathisYear": "371",
+                "paaAverage": "0",
+                "qjlastYear": "679",
+                "qjthisYear": "679",
+                "qjaverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "45",
+                "palastYear": "76",
+                "pathisYear": "76",
+                "paaAverage": "0",
+                "qjlastYear": "528",
+                "qjthisYear": "528",
+                "qjaverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "44",
+                "palastYear": "604",
+                "pathisYear": "604",
+                "paaAverage": "0",
+                "qjlastYear": "745",
+                "qjthisYear": "745",
+                "qjaverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "52",
+                "palastYear": "42",
+                "pathisYear": "42",
+                "paaAverage": "0",
+                "qjlastYear": "520",
+                "qjthisYear": "520",
+                "qjaverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "51",
+                "palastYear": "79",
+                "pathisYear": "79",
+                "paaAverage": "0",
+                "qjlastYear": "285",
+                "qjthisYear": "285",
+                "qjaverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "50",
+                "palastYear": "171",
+                "pathisYear": "171",
+                "paaAverage": "0",
+                "qjlastYear": "134",
+                "qjthisYear": "134",
+                "qjaverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "49",
+                "palastYear": "980",
+                "pathisYear": "980",
+                "paaAverage": "0",
+                "qjlastYear": "404",
+                "qjthisYear": "404",
+                "qjaverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "48",
+                "palastYear": "0",
+                "pathisYear": "0",
+                "paaAverage": "0",
+                "qjlastYear": "0",
+                "qjthisYear": "0",
+                "qjaverage": "0"
+            }
+        ],
+        "administrative": [
+            {
+                "name": "01",
+                "week": "1",
+                "penalLastYear": "920",
+                "penalThisYear": "920",
+                "penalaAverage": "0",
+                "adminLastYear": "882",
+                "adminThisYear": "882",
+                "adminAverage": "0"
+            },
+            {
+                "name": "01",
+                "week": "2",
+                "penalLastYear": "278",
+                "penalThisYear": "278",
+                "penalaAverage": "0",
+                "adminLastYear": "123",
+                "adminThisYear": "123",
+                "adminAverage": "0"
+            },
+            {
+                "name": "01",
+                "week": "4",
+                "penalLastYear": "360",
+                "penalThisYear": "360",
+                "penalaAverage": "0",
+                "adminLastYear": "203",
+                "adminThisYear": "203",
+                "adminAverage": "0"
+            },
+            {
+                "name": "01",
+                "week": "3",
+                "penalLastYear": "594",
+                "penalThisYear": "594",
+                "penalaAverage": "0",
+                "adminLastYear": "931",
+                "adminThisYear": "931",
+                "adminAverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "5",
+                "penalLastYear": "666",
+                "penalThisYear": "666",
+                "penalaAverage": "0",
+                "adminLastYear": "509",
+                "adminThisYear": "509",
+                "adminAverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "6",
+                "penalLastYear": "348",
+                "penalThisYear": "348",
+                "penalaAverage": "0",
+                "adminLastYear": "110",
+                "adminThisYear": "110",
+                "adminAverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "9",
+                "penalLastYear": "389",
+                "penalThisYear": "389",
+                "penalaAverage": "0",
+                "adminLastYear": "153",
+                "adminThisYear": "153",
+                "adminAverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "7",
+                "penalLastYear": "751",
+                "penalThisYear": "751",
+                "penalaAverage": "0",
+                "adminLastYear": "727",
+                "adminThisYear": "727",
+                "adminAverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "4",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "02",
+                "week": "8",
+                "penalLastYear": "920",
+                "penalThisYear": "920",
+                "penalaAverage": "0",
+                "adminLastYear": "88",
+                "adminThisYear": "88",
+                "adminAverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "12",
+                "penalLastYear": "912",
+                "penalThisYear": "912",
+                "penalaAverage": "0",
+                "adminLastYear": "154",
+                "adminThisYear": "154",
+                "adminAverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "10",
+                "penalLastYear": "308",
+                "penalThisYear": "308",
+                "penalaAverage": "0",
+                "adminLastYear": "213",
+                "adminThisYear": "213",
+                "adminAverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "13",
+                "penalLastYear": "590",
+                "penalThisYear": "590",
+                "penalaAverage": "0",
+                "adminLastYear": "760",
+                "adminThisYear": "760",
+                "adminAverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "11",
+                "penalLastYear": "669",
+                "penalThisYear": "669",
+                "penalaAverage": "0",
+                "adminLastYear": "369",
+                "adminThisYear": "369",
+                "adminAverage": "0"
+            },
+            {
+                "name": "03",
+                "week": "9",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "14",
+                "penalLastYear": "749",
+                "penalThisYear": "749",
+                "penalaAverage": "0",
+                "adminLastYear": "85",
+                "adminThisYear": "85",
+                "adminAverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "16",
+                "penalLastYear": "831",
+                "penalThisYear": "831",
+                "penalaAverage": "0",
+                "adminLastYear": "367",
+                "adminThisYear": "367",
+                "adminAverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "15",
+                "penalLastYear": "44",
+                "penalThisYear": "44",
+                "penalaAverage": "0",
+                "adminLastYear": "595",
+                "adminThisYear": "595",
+                "adminAverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "13",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "04",
+                "week": "17",
+                "penalLastYear": "758",
+                "penalThisYear": "758",
+                "penalaAverage": "0",
+                "adminLastYear": "670",
+                "adminThisYear": "670",
+                "adminAverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "17",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "21",
+                "penalLastYear": "142",
+                "penalThisYear": "142",
+                "penalaAverage": "0",
+                "adminLastYear": "143",
+                "adminThisYear": "143",
+                "adminAverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "20",
+                "penalLastYear": "218",
+                "penalThisYear": "218",
+                "penalaAverage": "0",
+                "adminLastYear": "726",
+                "adminThisYear": "726",
+                "adminAverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "19",
+                "penalLastYear": "79",
+                "penalThisYear": "79",
+                "penalaAverage": "0",
+                "adminLastYear": "172",
+                "adminThisYear": "172",
+                "adminAverage": "0"
+            },
+            {
+                "name": "05",
+                "week": "18",
+                "penalLastYear": "573",
+                "penalThisYear": "573",
+                "penalaAverage": "0",
+                "adminLastYear": "493",
+                "adminThisYear": "493",
+                "adminAverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "26",
+                "penalLastYear": "740",
+                "penalThisYear": "740",
+                "penalaAverage": "0",
+                "adminLastYear": "457",
+                "adminThisYear": "457",
+                "adminAverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "25",
+                "penalLastYear": "62",
+                "penalThisYear": "62",
+                "penalaAverage": "0",
+                "adminLastYear": "459",
+                "adminThisYear": "459",
+                "adminAverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "24",
+                "penalLastYear": "705",
+                "penalThisYear": "705",
+                "penalaAverage": "0",
+                "adminLastYear": "10",
+                "adminThisYear": "10",
+                "adminAverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "23",
+                "penalLastYear": "355",
+                "penalThisYear": "355",
+                "penalaAverage": "0",
+                "adminLastYear": "819",
+                "adminThisYear": "819",
+                "adminAverage": "0"
+            },
+            {
+                "name": "06",
+                "week": "22",
+                "penalLastYear": "705",
+                "penalThisYear": "705",
+                "penalaAverage": "0",
+                "adminLastYear": "129",
+                "adminThisYear": "129",
+                "adminAverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "30",
+                "penalLastYear": "436",
+                "penalThisYear": "436",
+                "penalaAverage": "0",
+                "adminLastYear": "207",
+                "adminThisYear": "207",
+                "adminAverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "29",
+                "penalLastYear": "545",
+                "penalThisYear": "545",
+                "penalaAverage": "0",
+                "adminLastYear": "928",
+                "adminThisYear": "928",
+                "adminAverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "28",
+                "penalLastYear": "702",
+                "penalThisYear": "702",
+                "penalaAverage": "0",
+                "adminLastYear": "763",
+                "adminThisYear": "763",
+                "adminAverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "27",
+                "penalLastYear": "371",
+                "penalThisYear": "371",
+                "penalaAverage": "0",
+                "adminLastYear": "35",
+                "adminThisYear": "35",
+                "adminAverage": "0"
+            },
+            {
+                "name": "07",
+                "week": "26",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "32",
+                "penalLastYear": "505",
+                "penalThisYear": "505",
+                "penalaAverage": "0",
+                "adminLastYear": "779",
+                "adminThisYear": "779",
+                "adminAverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "30",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "35",
+                "penalLastYear": "256",
+                "penalThisYear": "256",
+                "penalaAverage": "0",
+                "adminLastYear": "636",
+                "adminThisYear": "636",
+                "adminAverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "31",
+                "penalLastYear": "328",
+                "penalThisYear": "328",
+                "penalaAverage": "0",
+                "adminLastYear": "852",
+                "adminThisYear": "852",
+                "adminAverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "34",
+                "penalLastYear": "430",
+                "penalThisYear": "430",
+                "penalaAverage": "0",
+                "adminLastYear": "507",
+                "adminThisYear": "507",
+                "adminAverage": "0"
+            },
+            {
+                "name": "08",
+                "week": "33",
+                "penalLastYear": "677",
+                "penalThisYear": "677",
+                "penalaAverage": "0",
+                "adminLastYear": "929",
+                "adminThisYear": "929",
+                "adminAverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "39",
+                "penalLastYear": "20",
+                "penalThisYear": "20",
+                "penalaAverage": "0",
+                "adminLastYear": "105",
+                "adminThisYear": "105",
+                "adminAverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "38",
+                "penalLastYear": "33",
+                "penalThisYear": "33",
+                "penalaAverage": "0",
+                "adminLastYear": "202",
+                "adminThisYear": "202",
+                "adminAverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "37",
+                "penalLastYear": "406",
+                "penalThisYear": "406",
+                "penalaAverage": "0",
+                "adminLastYear": "57",
+                "adminThisYear": "57",
+                "adminAverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "36",
+                "penalLastYear": "791",
+                "penalThisYear": "791",
+                "penalaAverage": "0",
+                "adminLastYear": "512",
+                "adminThisYear": "512",
+                "adminAverage": "0"
+            },
+            {
+                "name": "09",
+                "week": "35",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "39",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "43",
+                "penalLastYear": "625",
+                "penalThisYear": "625",
+                "penalaAverage": "0",
+                "adminLastYear": "642",
+                "adminThisYear": "642",
+                "adminAverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "42",
+                "penalLastYear": "472",
+                "penalThisYear": "472",
+                "penalaAverage": "0",
+                "adminLastYear": "191",
+                "adminThisYear": "191",
+                "adminAverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "41",
+                "penalLastYear": "979",
+                "penalThisYear": "979",
+                "penalaAverage": "0",
+                "adminLastYear": "756",
+                "adminThisYear": "756",
+                "adminAverage": "0"
+            },
+            {
+                "name": "10",
+                "week": "40",
+                "penalLastYear": "741",
+                "penalThisYear": "741",
+                "penalaAverage": "0",
+                "adminLastYear": "90",
+                "adminThisYear": "90",
+                "adminAverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "48",
+                "penalLastYear": "157",
+                "penalThisYear": "157",
+                "penalaAverage": "0",
+                "adminLastYear": "865",
+                "adminThisYear": "865",
+                "adminAverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "47",
+                "penalLastYear": "602",
+                "penalThisYear": "602",
+                "penalaAverage": "0",
+                "adminLastYear": "908",
+                "adminThisYear": "908",
+                "adminAverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "46",
+                "penalLastYear": "837",
+                "penalThisYear": "837",
+                "penalaAverage": "0",
+                "adminLastYear": "256",
+                "adminThisYear": "256",
+                "adminAverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "45",
+                "penalLastYear": "209",
+                "penalThisYear": "209",
+                "penalaAverage": "0",
+                "adminLastYear": "958",
+                "adminThisYear": "958",
+                "adminAverage": "0"
+            },
+            {
+                "name": "11",
+                "week": "44",
+                "penalLastYear": "186",
+                "penalThisYear": "186",
+                "penalaAverage": "0",
+                "adminLastYear": "540",
+                "adminThisYear": "540",
+                "adminAverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "52",
+                "penalLastYear": "579",
+                "penalThisYear": "579",
+                "penalaAverage": "0",
+                "adminLastYear": "469",
+                "adminThisYear": "469",
+                "adminAverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "51",
+                "penalLastYear": "734",
+                "penalThisYear": "734",
+                "penalaAverage": "0",
+                "adminLastYear": "747",
+                "adminThisYear": "747",
+                "adminAverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "50",
+                "penalLastYear": "565",
+                "penalThisYear": "565",
+                "penalaAverage": "0",
+                "adminLastYear": "702",
+                "adminThisYear": "702",
+                "adminAverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "49",
+                "penalLastYear": "444",
+                "penalThisYear": "444",
+                "penalaAverage": "0",
+                "adminLastYear": "836",
+                "adminThisYear": "836",
+                "adminAverage": "0"
+            },
+            {
+                "name": "12",
+                "week": "48",
+                "penalLastYear": "0",
+                "penalThisYear": "0",
+                "penalaAverage": "0",
+                "adminLastYear": "0",
+                "adminThisYear": "0",
+                "adminAverage": "0"
+            }
+        ],
+        "warningConditionTime": [
+            {
+                "name": "01",
+                "week":"1",
+                "lastYear": "978",
+                "thisYear": "1",
+                "average": "0"
+            },
+            {
+                "name": "01",
+                "week":"2",
+                "lastYear": "416",
+                "thisYear": "2",
+                "average": "0"
+            },
+            {
+                "name": "01",
+                "week":"3",
+                "lastYear": "423",
+                "thisYear": "4",
+                "average": "0"
+            },
+            {
+                "name": "01",
+                "week":"4",
+                "lastYear": "976",
+                "thisYear": "3",
+                "average": "0"
+            },
+            {
+                "name": "02",
+                "week":"5",
+                "lastYear": "626",
+                "thisYear": "5",
+                "average": "0"
+            },
+            {
+                "name": "02",
+                "week":"6",
+                "lastYear": "589",
+                "thisYear": "6",
+                "average": "0"
+            },
+            {
+                "name": "02",
+                "week":"7",
+                "lastYear": "443",
+                "thisYear": "9",
+                "average": "0"
+            },
+            {
+                "name": "02",
+                "week":"8",
+                "lastYear": "61",
+                "thisYear": "7",
+                "average": "0"
+            },
+            {
+                "name": "02",
+                "week":"9",
+                "lastYear": "0",
+                "thisYear": "4",
+                "average": "0"
+            },
+            {
+                "name": "02",
+                "week":"10",
+                "lastYear": "327",
+                "thisYear": "8",
+                "average": "0"
+            },
+            {
+                "name": "03",
+                "week":"11",
+                "lastYear": "334",
+                "thisYear": "12",
+                "average": "0"
+            },
+            {
+                "name": "03",
+                "week":"12",
+                "lastYear": "954",
+                "thisYear": "10",
+                "average": "0"
+            },
+            {
+                "name": "03",
+                "week":"13",
+                "lastYear": "110",
+                "thisYear": "13",
+                "average": "0"
+            },
+            {
+                "name": "03",
+                "week":"14",
+                "lastYear": "948",
+                "thisYear": "11",
+                "average": "0"
+            },
+            {
+                "name": "03",
+                "week":"15",
+                "lastYear": "0",
+                "thisYear": "9",
+                "average": "0"
+            },
+            {
+                "name": "04",
+                "week":"16",
+                "lastYear": "3",
+                "thisYear": "14",
+                "average": "0"
+            },
+            {
+                "name": "04",
+                "week":"17",
+                "lastYear": "161",
+                "thisYear": "16",
+                "average": "0"
+            },
+            {
+                "name": "04",
+                "week":"18",
+                "lastYear": "644",
+                "thisYear": "15",
+                "average": "0"
+            },
+            {
+                "name": "04",
+                "week":"19",
+                "lastYear": "0",
+                "thisYear": "13",
+                "average": "0"
+            },
+            {
+                "name": "04",
+                "week":"20",
+                "lastYear": "561",
+                "thisYear": "17",
+                "average": "0"
+            },
+            {
+                "name": "05",
+                "week":"21",
+                "lastYear": "0",
+                "thisYear": "17",
+                "average": "0"
+            },
+            {
+                "name": "05",
+                "week":"22",
+                "lastYear": "796",
+                "thisYear": "21",
+                "average": "0"
+            },
+            {
+                "name": "05",
+                "week":"23",
+                "lastYear": "298",
+                "thisYear": "20",
+                "average": "0"
+            },
+            {
+                "name": "05",
+                "week":"24",
+                "lastYear": "579",
+                "thisYear": "19",
+                "average": "0"
+            },
+            {
+                "name": "05",
+                "week":"25",
+                "lastYear": "332",
+                "thisYear": "18",
+                "average": "0"
+            },
+            {
+                "name": "06",
+                "week":"26",
+                "lastYear": "920",
+                "thisYear": "26",
+                "average": "0"
+            },
+            {
+                "name": "06",
+                "week":"27",
+                "lastYear": "36",
+                "thisYear": "25",
+                "average": "0"
+            },
+            {
+                "name": "06",
+                "week":"28",
+                "lastYear": "148",
+                "thisYear": "24",
+                "average": "0"
+            },
+            {
+                "name": "06",
+                "week":"29",
+                "lastYear": "342",
+                "thisYear": "23",
+                "average": "0"
+            },
+            {
+                "name": "06",
+                "week":"30",
+                "lastYear": "145",
+                "thisYear": "22",
+                "average": "0"
+            },
+            {
+                "name": "07",
+                "week":"31",
+                "lastYear": "531",
+                "thisYear": "30",
+                "average": "0"
+            },
+            {
+                "name": "07",
+                "week":"32",
+                "lastYear": "817",
+                "thisYear": "29",
+                "average": "0"
+            },
+            {
+                "name": "07",
+                "week":"33",
+                "lastYear": "211",
+                "thisYear": "28",
+                "average": "0"
+            },
+            {
+                "name": "07",
+                "week":"34",
+                "lastYear": "932",
+                "thisYear": "27",
+                "average": "0"
+            },
+            {
+                "name": "07",
+                "week":"35",
+                "lastYear": "0",
+                "thisYear": "26",
+                "average": "0"
+            },
+            {
+                "name": "08",
+                "week":"36",
+                "lastYear": "873",
+                "thisYear": "32",
+                "average": "0"
+            },
+            {
+                "name": "08",
+                "week":"37",
+                "lastYear": "0",
+                "thisYear": "30",
+                "average": "0"
+            },
+            {
+                "name": "08",
+                "week":"38",
+                "lastYear": "26",
+                "thisYear": "35",
+                "average": "0"
+            },
+            {
+                "name": "08",
+                "week":"39",
+                "lastYear": "244",
+                "thisYear": "31",
+                "average": "0"
+            },
+            {
+                "name": "08",
+                "week":"40",
+                "lastYear": "203",
+                "thisYear": "34",
+                "average": "0"
+            },
+            {
+                "name": "08",
+                "week":"41",
+                "lastYear": "271",
+                "thisYear": "33",
+                "average": "0"
+            },
+            {
+                "name": "09",
+                "week":"42",
+                "lastYear": "897",
+                "thisYear": "39",
+                "average": "0"
+            },
+            {
+                "name": "09",
+                "week":"43",
+                "lastYear": "702",
+                "thisYear": "38",
+                "average": "0"
+            },
+            {
+                "name": "09",
+                "week":"44",
+                "lastYear": "530",
+                "thisYear": "37",
+                "average": "0"
+            },
+            {
+                "name": "09",
+                "week":"45",
+                "lastYear": "538",
+                "thisYear": "36",
+                "average": "0"
+            },
+            {
+                "name": "09",
+                "week":"46",
+                "lastYear": "0",
+                "thisYear": "35",
+                "average": "0"
+            },
+            {
+                "name": "10",
+                "week":"47",
+                "lastYear": "0",
+                "thisYear": "39",
+                "average": "0"
+            },
+            {
+                "name": "10",
+                "week":"48",
+                "lastYear": "880",
+                "thisYear": "43",
+                "average": "0"
+            },
+            {
+                "name": "10",
+                "week":"49",
+                "lastYear": "752",
+                "thisYear": "42",
+                "average": "0"
+            },
+            {
+                "name": "10",
+                "week":"50",
+                "lastYear": "629",
+                "thisYear": "41",
+                "average": "0"
+            },
+            {
+                "name": "10",
+                "week":"51",
+                "lastYear": "266",
+                "thisYear": "40",
+                "average": "0"
+            },
+            {
+                "name": "11",
+                "week":"52",
+                "lastYear": "570",
+                "thisYear": "48",
+                "average": "0"
+            },
+            {
+                "name": "11",
+                "week":"53",
+                "lastYear": "44",
+                "thisYear": "47",
+                "average": "0"
+            },
+            {
+                "name": "11",
+                "week":"54",
+                "lastYear": "516",
+                "thisYear": "46",
+                "average": "0"
+            },
+            {
+                "name": "11",
+                "week":"55",
+                "lastYear": "757",
+                "thisYear": "45",
+                "average": "0"
+            },
+            {
+                "name": "11",
+                "week":"56",
+                "lastYear": "838",
+                "thisYear": "44",
+                "average": "0"
+            },
+            {
+                "name": "12",
+                "week":"57",
+                "lastYear": "903",
+                "thisYear": "52",
+                "average": "0"
+            },
+            {
+                "name": "12",
+                "week":"58",
+                "lastYear": "320",
+                "thisYear": "51",
+                "average": "0"
+            },
+            {
+                "name": "12",
+                "week":"59",
+                "lastYear": "302",
+                "thisYear": "50",
+                "average": "0"
+            },
+            {
+                "name": "12",
+                "week":"60",
+                "lastYear": "994",
+                "thisYear": "49",
+                "average": "0"
+            },
+            {
+                "name": "12",
+                "week":"61",
+                "lastYear": "0",
+                "thisYear": "48",
+                "average": "0"
+            }
+        ],
+        "brokenLineWarning": {
+        },
+        "week": ""
+    }
+}

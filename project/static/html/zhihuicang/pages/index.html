@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <title>指挥舱-社情</title>
+    <link rel="stylesheet" href="../styles/sheqing/index.css">
+</head>
+<body>
+<div>
+    <iframe src="sheqing/personFlow.html" width="3456" height="1944" name="myFrame" frameborder="no" border="none"></iframe>
+    <iframe src="sheqing/popuMigration.html" width="3456" height="1944" frameborder="no" border="none"></iframe>
+    <iframe src="sheqing/xinjiang.html" width="3456" height="1944" frameborder="no" border="none"></iframe>
+</div>
+<div>
+    <iframe src="sheqing/vehicle.html" width="3456" height="1944" frameborder="no" border="none"></iframe>
+    <iframe src="sheqing/popDistribute.html" width="3456" height="1944" frameborder="no" border="none"></iframe>
+    <iframe src="sheqing/hotel.html" width="3456" height="1944" frameborder="no" border="none"></iframe>
+</div>
+<script type="text/javascript" src='../sea-modules/sea.js'></script>
+<script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+<script type="text/javascript" src='../seajs.config.js'></script>
+<script type="text/javascript">
+    seajs.use('../scripts/index.js', function (index) {
+        index.init()
+    })
+</script>
+</body>
+</html>

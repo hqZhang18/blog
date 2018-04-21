@@ -1,0 +1,435 @@
+html{
+  height:  100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(../images/main-bg.jpg) no-repeat;
+  width: 1920px;
+  height: 1080px;
+  background-size: 100% 100%;              
+  transform-origin: 0px 0px 0px;   
+  -ms-transform-origin:0 0;    
+  overflow: hidden;   
+  font-family: "微软雅黑";
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+.page-header {
+  width: 1920px;
+  height: 125px;
+}
+.page-header .user-center {
+  background: url(../images/user/bg.png) no-repeat;
+  width: 305px;
+  height: 121px;
+  float: right;
+  padding-left: 120px;
+  padding-top: 15px;
+}
+.page-header .user-center li {
+  float: left;
+  color: #fff;
+  font-size: 16px;
+  list-style: none;
+  text-shadow: 2px 2px 10px #00aee0;
+  font-weight: bold;
+  width: 100px;
+  height: 85px;
+  text-align: center;
+  cursor: pointer;
+}
+.page-header .search {
+  background: url(../images/search.png) no-repeat;
+  width: 714px;
+  height: 104px;
+  float: right;
+  margin-right: -165px;
+  padding-top: 48px;
+  padding-left: 105px;
+}
+.page-header .search input {
+  background: none;
+  float: left;
+  outline: none;
+  border: none;
+}
+.page-header .search input[type="text"] {
+  width: 520px;
+  height: 50px;
+  font-size: 32px;
+  color: #fff;
+}
+.page-header .search input[type="button"] {
+  width: 145px;
+  height: 58px;
+  cursor: pointer;
+}
+.page-header .user-center li i {
+  float: left;
+  background: url(../images/user/download.png) center top no-repeat ;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 8px;
+}
+.page-header .user-center li:nth-child(2) i {
+  background: url(../images/user/admin.png) center top no-repeat ;
+}
+.page-header .user-center li:nth-child(3) i {
+  background: url(../images/user/app.png) center top no-repeat ;
+}
+.page-header .user-center li span {
+  display: block;
+  width: 100%;
+
+}
+.page-left {
+  position: absolute;
+  width: 610px;
+  height: 855px;
+  top: 150px;
+  left: 110px;
+}
+.page-left .data-base {
+  float: left;
+}
+.page-left .data-base li {
+  background: url(../images/jck.png) no-repeat;
+  width: 169px;
+  height: 176px;
+  float: left;
+  margin-right: 40px;
+  font-size: 18px;
+}
+.page-left .data-base li:nth-child(2) {
+  background: url(../images/glk.png) no-repeat;
+}
+.page-left .data-base li:nth-child(3) {
+  background: url(../images/ztk.png) no-repeat;
+  margin: 0;
+} 
+.page-left .data-base li .title {
+  padding: 10px 0 0 40px;
+}
+.page-left .data-base li .type {
+  padding: 10px 0 0 40px;
+  color: #66e8ff;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.page-left .data-base li .type span {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-shadow: 3px 3px 10px #00aee0;
+  font-size: 26px;
+}
+.page-left .data-base li .type span em {
+  font-style: normal;
+  font-size: 16px;
+}
+/*图表*/
+.page-left .area-charts,
+.page-left .bar-charts {
+  background: url(../images/charts-bg.png) no-repeat;
+  width: 601px;
+  height: 304px;
+  float: left;
+  margin-top: 30px;
+}
+/*平台数据资源统计*/
+.platform-data{
+  background: url(../images/charts-bg.png) no-repeat;
+  width: 601px;
+  height: 304px;
+  float: left;
+  margin-top: 30px;
+}
+.platform-data .title,
+.page-left .bar-charts .title {
+  box-sizing: border-box;
+  padding-left: 45px;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  color: #9adfff;
+  text-shadow: 0 0 4px #000;
+}
+.page-left .title-2 {
+  font-size: 18px;
+  float: right;
+  padding-right: 15px;
+  margin-top: -5px;
+}
+.page-left .bar-charts .canvas-box {
+  margin-top: 20px;
+  float: left;
+}
+.page-left .title-2 span {
+  font-size: 14px;
+}
+.platform-data .chart{
+  float: left;
+}
+
+/*平台数据资源统计 end*/
+.page-right {
+  position: absolute;
+  top: 130px;
+  width: 1070px;
+  height: 855px;
+  right: 100px;
+  
+}
+.page-right .app-menu {
+  float: left;
+  width: 97%;
+  background: url(../images/right-bg.png) no-repeat;
+  height: 437px;
+  padding-top: 100px;
+  padding-left: 3%;
+  font-size: 18px;
+  text-align: center;
+}
+/*全文应用检索*/
+.page-right .retrieval-app {
+  background: url(../images/menu-bg1.png) no-repeat;
+  background-size: 100% 100%;
+  width: 379px;
+  height: 35px;
+  padding-top: 229px;
+  float: left;
+  cursor: pointer;
+}
+.page-right .retrieval-app:hover {
+  background: url(../images/menu-bg1-hover.png) no-repeat;
+  background-size: 100% 100%;
+}
+/*电子档案*/
+.menu2-box2 {
+  margin: 0 20px;
+  width: 375px;
+  float: left;
+}
+.page-right .menu-bg2 {
+  background: url(../images/menu-bg2.png) no-repeat;
+  background-size: 100% 100%;
+  width: 375px;
+  height: 121px;
+  float: left;
+  cursor: pointer;
+}
+.page-right .menu-bg2:hover {
+  background: url(../images/menu-bg2-hover.png) no-repeat;
+  background-size: 100% 100%;
+}
+.page-right .menu-bg2 span,
+.page-right .menu-bg3 span {
+  margin-top: 19px;
+  display: block;
+  width: 100%;
+  float: left;
+}
+.page-right .menu-bg2 i,
+.page-right .menu-bg3 i {
+  height: 46px;
+  display: block;
+  margin-top: 20px;
+  float: left;
+  width: 100%;
+  margin-left: 38px;
+}
+.page-right .electronic-archives i {
+  background: url(../images/icon/archives.png) no-repeat;
+}
+.page-right .electronic-archives:hover i {
+  background: url(../images/icon/archives-hover.png) no-repeat;
+}
+.page-right .query {
+  margin-top: 15px;
+}
+.page-right .query i {
+  background: url(../images/icon/query.png) no-repeat;
+  height: 53px;
+}
+.page-right .query:hover i {
+  background: url(../images/icon/query-hover.png) no-repeat;
+}
+.page-right .menu-bg3 {
+  background: url(../images/menu-bg3.png) no-repeat;
+  width: 178px;
+  height: 119px;
+  float: left;
+  cursor: pointer;
+}
+.page-right .menu-bg3:hover {
+  background: url(../images/menu-bg3-hover.png) no-repeat;
+}
+.page-right .management-system {
+  margin-bottom: 20px;
+}
+.page-right .management-system i{
+  background: url(../images/icon/system.png) no-repeat 20%;
+}
+.page-right .management-system:hover i{
+  background: url(../images/icon/system-hover.png) no-repeat 20%;
+}
+.page-right .data-resources i{
+  background: url(../images/icon/data.png) no-repeat 20%;
+}
+.page-right .data-resources:hover i {
+  background: url(../images/icon/data-hover.png) no-repeat 20%;
+}
+.page-right .menu-box2 {
+  margin-top: 20px;
+  float: left;
+}
+.page-right .menu-box2 div {
+  margin-right: 20px;
+}
+.page-right .menu-box2 div:nth-child(1) i {
+  background: url(../images/icon/server.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(1):hover i {
+  background: url(../images/icon/server-hover.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(2) i {
+  background: url(../images/icon/person.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(2):hover i {
+  background: url(../images/icon/person-hover.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(3) i {
+  background: url(../images/icon/monitor.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(3):hover i {
+  background: url(../images/icon/monitor-hover.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(4) i {
+  background: url(../images/icon/warning.png) no-repeat 20%;
+}
+.page-right .menu-box2 div:nth-child(4):hover i {
+  background: url(../images/icon/warning-hover.png) no-repeat 20%;
+}
+/*分页*/
+.page-right .page-turning {
+  float: left;
+  width: 160px;
+  height: 60px;
+  margin-top: 68px;
+}
+.page-right .page-turning i {
+  display: block;
+  width: 30px;
+  height: 43px;
+  cursor: pointer;
+}
+.page-right .page-turning span {
+  background: url(../images/icon/dot0.png) no-repeat;
+  width: 50px;
+  height: 50px;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.page-right .page-turning span:hover {
+  background: url(../images/icon/dot.png) no-repeat;
+  /*margin-top: -5px;
+  margin-left: -5px;*/
+}
+.page-right .page-turning span.current {
+  background: url(../images/icon/dot.png) no-repeat;
+ /* margin-top: -5px;*/
+}
+.page-right .page-turning .arrow-left {
+  background: url(../images/icon/arrow-left.png) no-repeat;
+  float: left;
+}
+.page-right .page-turning .arrow-right {
+  background: url(../images/icon/arrow-right.png) no-repeat;
+  float: right;
+}
+
+/*新闻中心*/
+.page-right .news-center {
+  background: url(../images/news-bg.png) no-repeat;
+  width: 496px;
+  height: 304px;
+  float: left;
+  margin-top: 35px;
+  margin-right: 35px;
+}
+.page-right .news-center .title {
+  color: #9adfff;
+/* -webkit-text-stroke-width:0.2px;
+  -webkit-text-stroke-color:#00193c;*/
+  font-size: 20px;
+  text-shadow: 0 0 4px #000;
+  padding-left: 50px;
+  padding-top: 3px;
+}
+.page-right .news-center .more {
+  font-size: 16px;
+  color: #25ffff;
+  float: right;
+  margin-right: 30px;
+  text-shadow: 0 0 4px #000;
+}
+.page-right .news-center .list {
+  width: 100%;
+  margin: 4% 0 0 5%;
+  float: left;
+}
+.page-right .news-center .list a {
+  background: url(../images/list-bg.png) no-repeat;
+  width: 426px;
+  height: 32px;
+  line-height: 32px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: block;
+}
+.page-right .news-center .list a:hover,
+.page-right .news-center .currnet {
+  background: url(../images/list-bg2.png) no-repeat;
+}
+.page-right .news-center .list a:hover i,
+.page-right .news-center .currnet i {
+  background: url(../images/dot3.png) no-repeat;
+}
+.page-right .news-center .list a i{
+  background: url(../images/dot2.png) no-repeat;
+  width: 31px;
+  height: 30px;
+  display: inline-block;
+  float: left;
+}
+.page-right .news-center .list a span {
+  font-size: 14px;
+  color: #00d2ff;
+  float: right;
+}
+/*底部*/
+.page-bottom {
+  background: url(../images/bottom.png) no-repeat;
+  width: 100%;
+  height: 81px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #00d2ff;
+  font-size: 14px;
+  text-align: center;
+}
+.page-bottom p {
+  margin-top: 55px;
+}
+.page-bottom p span {
+  padding: 0 20px;
+}

@@ -1,0 +1,120 @@
+{
+  "code": 1,
+  "msg": "success",
+  "result": {
+    "caseAcceptance": {
+      "total": 800,
+      "xsTotal": 346,
+      "qbTotal": 454,
+      "xingshi": [
+       {
+        "name": "提请案件",
+        "value": 302
+       },{
+        "name": "检察院委托",
+        "value": 32
+       },{
+        "name": "军队委托",
+        "value": 132
+       },{
+        "name": "异地协作",
+        "value": 189
+       }
+      ],
+      "qingbao": [
+        {
+          "name": "情报专案",
+           "value": 302
+        },{
+          "name": "立线侦查",
+          "value": 132
+        },{
+          "name": "异地协作",
+          "value": 45
+        }
+     ]
+    },
+    "objectTotal": {
+      "total": 400,
+       "xsTotal": 146,
+       "qbTotal": 254,
+       "xingshi": [
+       {
+        "name": "提请案件",
+        "value": 302
+       },{
+        "name": "检察院委托",
+        "value": 32
+       },{
+        "name": "军队委托",
+        "value": 132
+       },{
+        "name": "异地协作",
+        "value": 189
+       }
+      ],
+      "qingbao": [
+        {
+          "name": "情报专案",
+           "value": 302
+        },{
+          "name": "立线侦查",
+          "value": 132
+        },{
+          "name": "异地协作",
+          "value": 45
+        }
+     ]
+    },
+    "targetTotal": {
+      "total": 600,
+      "xsTotal": 346,
+      "qbTotal": 254,
+      "xingshi": [
+       {
+        "name": "提请案件",
+        "value": 200
+       },{
+        "name": "检察院委托",
+        "value": 132
+       },{
+        "name": "军队委托",
+        "value": 52
+       },{
+        "name": "异地协作",
+        "value": 289
+       }
+      ],
+      "qingbao": [
+        {
+          "name": "情报专案",
+           "value": 302
+        },{
+          "name": "立线侦查",
+          "value": 132
+        },{
+          "name": "异地协作",
+          "value": 45
+        }
+     ]
+    },
+    "markCode": [
+        {
+         "name": "身份证标识码",
+         "value": 200
+       },{
+         "name": "网络标识码",
+         "value": 1200
+       },{
+         "name": "车牌标识码",
+         "value": 6200
+       },{
+         "name": "电信标识码",
+         "value": 4200
+       },{
+         "name": "其他",
+         "value": 3200
+       }
+     ]
+  }
+}

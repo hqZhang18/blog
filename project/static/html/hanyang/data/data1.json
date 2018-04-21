@@ -1,0 +1,1721 @@
+{
+    "state": true,
+    "message": "调用成功",
+    "data": {
+        "radarMap": [
+            {
+                "name": "今年",
+                "type": [
+                    {
+                        "name": "警情",
+                        "value": "26696",
+                        "falg": true,
+                        "type": 0,
+                       
+                         "maxValue": 553
+                    },
+                    {
+                        "name": "刑事拘留",
+                        "value": "26296",
+                        "falg": false,
+                        "type": 2,
+                        
+                        "tooltip": [
+                            {
+                                "proposal": "治安行政低于全市平均30.0%",
+                                "warning": "加强案件串并，打击违法犯罪人"
+                            },
+                            {
+                                "proposal": "治安行政同比连续2周低于50.0%",
+                                "warning": "加强案件串并，打击违法犯罪人"
+                            },
+                            {
+                                "proposal": "上周治安打击力度滞后",
+                                "warning": "加强治安打击力度"
+                            }
+                        ],
+                        "maxValue": 385
+                    },
+                    {
+                        "name": "破案",
+                        "value": "25826",
+                        "falg": false,
+                        "type": 3,
+                        
+                        "tooltip": [
+                            {
+                                "proposal": "打击扒窃犯罪滞后",
+                                "warning": "加强打击，加强街面防控，及时有效管控重点人员"
+                            }
+                        ],
+                        "maxValue": 369
+                    },
+                    {
+                        "name": "治安行政",
+                        "value": "24819",
+                        "falg": false,
+                        "type": 1,
+                        
+                       
+                        "maxValue": 365
+                    },
+                    {
+                        "name": "强戒",
+                        "value": "23098",
+                        "falg": false,
+                        "type": 2,
+                        
+                        "tooltip": [
+                            {
+                                "proposal": "强戒低于全市平均30.0%",
+                                "warning": "加强案件串并，打击违法犯罪人"
+                            },
+                            {
+                                "proposal": "强戒同比连续2周低于50.0%",
+                                "warning": "加强案件串并，打击违法犯罪人"
+                            }
+                        ],
+                        "maxValue": 121
+                    }
+                ]
+            },
+            {
+                "name": "去年",
+                "type": [
+                    {
+                        "name": "警情",
+                        "value": "26696",
+                        "falg": true,
+                        "type": 0,
+                        "maxValue": 0
+                    },
+                    {
+                        "name": "刑事拘留",
+                        "value": "26296",
+                        "falg": false,
+                        "type": 4,
+                        "maxValue": 0
+                    },
+                    {
+                        "name": "破案",
+                        "value": "25826",
+                        "falg": false,
+                        "type": 3,
+                        "maxValue": 0
+                    },
+                    {
+                        "name": "治安行政",
+                        "value": "24819",
+                        "falg": false,
+                        "type": 1,
+                        "maxValue": 0
+                    },
+                    {
+                        "name": "强戒",
+                        "value": "23098",
+                        "falg": false,
+                        "type": 2,
+                        "maxValue": 0
+                    }
+                ]
+            },
+            [
+                829,
+                553,
+                522,
+                502,
+                107
+            ]
+        ],
+        "classifyNum": [
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 24819
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 0
+                    }
+                ],
+                "classifyName": "治安行政类"
+            },
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 25826
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 0
+                    }
+                ],
+                "classifyName": "破案类"
+            },
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 26296
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 0
+                    }
+                ],
+                "classifyName": "刑事拘留类"
+            },
+            {
+                "scale": "-100.0000",
+                "map": [
+                    {
+                        "name": "去年",
+                        "value": 23098
+                    },
+                    {
+                        "name": "今年",
+                        "value": 0
+                    },
+                    {
+                        "name": "平均值",
+                        "value": 0
+                    }
+                ],
+                "classifyName": "强戒类"
+            }
+        ],
+        "policeCasesNum": {
+            "thisYear": 0,
+            "lastYear": 0,
+            "average": 0
+        },
+        "solveCase": [
+            {
+                "yearName": "2015",
+                "name": "12",
+                "week": "1",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2015",
+                "name": "12",
+                "week": "2",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2015",
+                "name": "12",
+                "week": "3",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2015",
+                "name": "12",
+                "week": "4",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "01",
+                "week": "5",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "01",
+                "week": "6",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "01",
+                "week": "7",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "01",
+                "week": "8",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "02",
+                "week": "9",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "02",
+                "week": "10",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "02",
+                "week": "11",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "02",
+                "week": "12",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "02",
+                "week": "13",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "03",
+                "week": "14",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "03",
+                "week": "15",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "03",
+                "week": "16",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "03",
+                "week": "17",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "04",
+                "week": "18",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "04",
+                "week": "19",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "04",
+                "week": "20",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "04",
+                "week": "21",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "05",
+                "week": "22",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "05",
+                "week": "23",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "05",
+                "week": "24",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "05",
+                "week": "25",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "05",
+                "week": "26",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "06",
+                "week": "27",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "06",
+                "week": "28",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "06",
+                "week": "29",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "06",
+                "week": "30",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "07",
+                "week": "31",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "07",
+                "week": "32",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "07",
+                "week": "33",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "07",
+                "week": "34",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "08",
+                "week": "35",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "08",
+                "week": "36",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "08",
+                "week": "37",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "08",
+                "week": "38",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "08",
+                "week": "39",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "09",
+                "week": "40",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "09",
+                "week": "41",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "09",
+                "week": "42",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "09",
+                "week": "43",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "10",
+                "week": "44",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "10",
+                "week": "45",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "10",
+                "week": "46",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "10",
+                "week": "47",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "10",
+                "week": "48",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "11",
+                "week": "49",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "11",
+                "week": "50",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "11",
+                "week": "51",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "11",
+                "week": "52",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "12",
+                "week": "53",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "12",
+                "week": "54",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "12",
+                "week": "55",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2016",
+                "name": "12",
+                "week": "56",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2017",
+                "name": "01",
+                "week": "57",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2017",
+                "name": "01",
+                "week": "58",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2017",
+                "name": "01",
+                "week": "59",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2017",
+                "name": "01",
+                "week": "60",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2017",
+                "name": "01",
+                "week": "61",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            },
+            {
+                "yearName": "2017",
+                "name": "02",
+                "week": "62",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjtimeValue": "0",
+                "qjforecastValue": "0"
+            }
+        ],
+        "administrative": [
+            {
+                "name": "12",
+                "week": "1",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "2",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "3",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "4",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "5",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "6",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "7",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "8",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "02",
+                "week": "9",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "02",
+                "week": "10",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "02",
+                "week": "11",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "02",
+                "week": "12",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "02",
+                "week": "13",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "03",
+                "week": "14",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "03",
+                "week": "15",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "03",
+                "week": "16",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "03",
+                "week": "17",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "04",
+                "week": "18",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "04",
+                "week": "19",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "04",
+                "week": "20",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "04",
+                "week": "21",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "05",
+                "week": "22",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "05",
+                "week": "23",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "05",
+                "week": "24",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "05",
+                "week": "25",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "05",
+                "week": "26",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "06",
+                "week": "27",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "06",
+                "week": "28",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "06",
+                "week": "29",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "06",
+                "week": "30",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "07",
+                "week": "31",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "07",
+                "week": "32",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "07",
+                "week": "33",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "07",
+                "week": "34",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "08",
+                "week": "35",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "08",
+                "week": "36",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "08",
+                "week": "37",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "08",
+                "week": "38",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "08",
+                "week": "39",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "09",
+                "week": "40",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "09",
+                "week": "41",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "09",
+                "week": "42",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "09",
+                "week": "43",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "10",
+                "week": "44",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "10",
+                "week": "45",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "10",
+                "week": "46",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "10",
+                "week": "47",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "10",
+                "week": "48",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "11",
+                "week": "49",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "11",
+                "week": "50",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "11",
+                "week": "51",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "11",
+                "week": "52",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "53",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "54",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "55",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "week": "56",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "57",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "58",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "59",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "60",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "01",
+                "week": "61",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "02",
+                "week": "62",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            }
+        ],
+        "warningConditionTime": [
+            {
+                "name": "12",
+                "week": "1",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2015"
+            },
+            {
+                "name": "12",
+                "week": "2",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2015"
+            },
+            {
+                "name": "12",
+                "week": "3",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2015"
+            },
+            {
+                "name": "12",
+                "week": "4",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2015"
+            },
+            {
+                "name": "01",
+                "week": "5",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "01",
+                "week": "6",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "01",
+                "week": "7",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "01",
+                "week": "8",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "02",
+                "week": "9",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "02",
+                "week": "10",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "02",
+                "week": "11",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "02",
+                "week": "12",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "02",
+                "week": "13",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "03",
+                "week": "14",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "03",
+                "week": "15",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "03",
+                "week": "16",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "03",
+                "week": "17",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "04",
+                "week": "18",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "04",
+                "week": "19",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "04",
+                "week": "20",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "04",
+                "week": "21",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "05",
+                "week": "22",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "05",
+                "week": "23",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "05",
+                "week": "24",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "05",
+                "week": "25",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "05",
+                "week": "26",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "06",
+                "week": "27",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "06",
+                "week": "28",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "06",
+                "week": "29",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "06",
+                "week": "30",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "07",
+                "week": "31",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "07",
+                "week": "32",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "07",
+                "week": "33",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "07",
+                "week": "34",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "08",
+                "week": "35",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "08",
+                "week": "36",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "08",
+                "week": "37",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "08",
+                "week": "38",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "08",
+                "week": "39",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "09",
+                "week": "40",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "09",
+                "week": "41",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "09",
+                "week": "42",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "09",
+                "week": "43",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "10",
+                "week": "44",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "10",
+                "week": "45",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "10",
+                "week": "46",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "10",
+                "week": "47",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "10",
+                "week": "48",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "11",
+                "week": "49",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "11",
+                "week": "50",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "11",
+                "week": "51",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "11",
+                "week": "52",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "12",
+                "week": "53",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "12",
+                "week": "54",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "12",
+                "week": "55",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "12",
+                "week": "56",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2016"
+            },
+            {
+                "name": "01",
+                "week": "57",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2017"
+            },
+            {
+                "name": "01",
+                "week": "58",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2017"
+            },
+            {
+                "name": "01",
+                "week": "59",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2017"
+            },
+            {
+                "name": "01",
+                "week": "60",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2017"
+            },
+            {
+                "name": "01",
+                "week": "61",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2017"
+            },
+            {
+                "name": "02",
+                "week": "62",
+                "timeValue": "0",
+                "forecastValue": "0",
+                "yearName": "2017"
+            }
+        ],
+        "brokenLineWarning": {
+            "list": [
+                {
+                    "penalDdvise": "加强刑事工作，打击违法犯罪人",
+                    "penalForecast": "刑事工作滞后"
+                },
+                {
+                    "adminDdvise": "加强治安工作，打击违法犯罪人",
+                    "adminForecast": "治安工作滞后"
+                }
+            ],
+            "date": {
+                "NAME": "12",
+                "VALUE": 1
+            }
+        },
+        "week": ""
+    }
+}

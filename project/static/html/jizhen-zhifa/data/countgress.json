@@ -1,0 +1,187 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": [
+        {
+            "name": "一支队",
+            "value": 78,
+            "endRate": 0.56,
+            "returnRote": 0.45
+        }, 
+        {
+            "name": "二支队",
+            "value": 89,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "三支队",
+            "value": 54,
+            "endRate": 0.34,
+            "returnRote": 0.66
+        },
+        {
+            "name": "四支队",
+            "value": 25,
+            "endRate": 0.56,
+            "returnRote": 0.44
+        },
+        {
+            "name": "五支队",
+            "value": 92,
+            "endRate": 0.54,
+            "returnRote": 0.46
+        },
+        {
+            "name": "六支队",
+            "value": 46,
+            "endRate": 0.36,
+            "returnRote": 0.64
+        },
+        {
+            "name": "七支队",
+            "value": 44,
+            "endRate": 0.26,
+            "returnRote": 0.74
+        },
+        {
+            "name": "八支队",
+            "value": 56,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "九支队",
+            "value": 82,
+            "endRate": 0.78,
+            "returnRote": 0.22
+        },
+        {
+            "name": "十支队",
+            "value": 22,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "一支队",
+            "value": 78,
+            "endRate": 0.56,
+            "returnRote": 0.45
+        }, 
+        {
+            "name": "二支队",
+            "value": 89,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "三支队",
+            "value": 54,
+            "endRate": 0.34,
+            "returnRote": 0.66
+        },
+        {
+            "name": "四支队",
+            "value": 25,
+            "endRate": 0.56,
+            "returnRote": 0.44
+        },
+        {
+            "name": "五支队",
+            "value": 92,
+            "endRate": 0.54,
+            "returnRote": 0.46
+        },
+        {
+            "name": "六支队",
+            "value": 46,
+            "endRate": 0.36,
+            "returnRote": 0.64
+        },
+        {
+            "name": "七支队",
+            "value": 44,
+            "endRate": 0.26,
+            "returnRote": 0.74
+        },
+        {
+            "name": "八支队",
+            "value": 56,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "九支队",
+            "value": 82,
+            "endRate": 0.78,
+            "returnRote": 0.22
+        },
+        {
+            "name": "十支队",
+            "value": 22,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "一支队",
+            "value": 78,
+            "endRate": 0.56,
+            "returnRote": 0.45
+        }, 
+        {
+            "name": "二支队",
+            "value": 89,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "三支队",
+            "value": 54,
+            "endRate": 0.34,
+            "returnRote": 0.66
+        },
+        {
+            "name": "四支队",
+            "value": 25,
+            "endRate": 0.56,
+            "returnRote": 0.44
+        },
+        {
+            "name": "五支队",
+            "value": 92,
+            "endRate": 0.54,
+            "returnRote": 0.46
+        },
+        {
+            "name": "六支队",
+            "value": 46,
+            "endRate": 0.36,
+            "returnRote": 0.64
+        },
+        {
+            "name": "七支队",
+            "value": 44,
+            "endRate": 0.26,
+            "returnRote": 0.74
+        },
+        {
+            "name": "八支队",
+            "value": 56,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        },
+        {
+            "name": "九支队",
+            "value": 82,
+            "endRate": 0.78,
+            "returnRote": 0.22
+        },
+        {
+            "name": "十支队",
+            "value": 22,
+            "endRate": 0.27,
+            "returnRote": 0.73
+        }
+    ]
+
+}

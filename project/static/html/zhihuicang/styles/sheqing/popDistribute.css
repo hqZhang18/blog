@@ -1,0 +1,248 @@
+/**
+ * @Author:       lee
+ * @Email:        liwei@hiynn.com
+ * @DateTime:     2017-09-01 09:09:53
+ * @Description:  地区人口分布样式文件
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.pop-distribute-body {
+  font-family: "微软雅黑";
+  background: url(../../images/sheqing/popDistribute/bg.jpg);
+  background-size: 100% 100%;
+  transform-origin: 0px 0px 0px;
+  -ms-transform-origin: 0 0;
+  overflow: hidden;
+  width: 3456px;
+  height: 1944px;
+  position: relative;
+}
+
+.pop-distribute-wap {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.pop-distribute-nav {
+  position: absolute;
+  left: 1692px;
+  top: 220px;
+}
+
+.pop-distribute-nav li {
+  display: inline-block;
+  width: 272px;
+  height: 84px;
+  background: url(../../images/sheqing/popDistribute/nav-bg.png) no-repeat;
+  background-size: 100% 100%;
+  font-size: 24px;
+  color: rgba(0, 255, 248, .5);
+  user-select: none;
+  cursor: pointer;
+  line-height: 60px;
+  text-indent: 80px;
+  margin-right: 36px;
+}
+
+.pop-distribute-nav li.active {
+  background: url(../../images/sheqing/popDistribute/nav-bg-on.png) no-repeat;
+  background-size: 100% 100%;
+  color: rgba(0, 255, 248, 1);
+}
+
+.cqmap-main-city {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  top: 260px;
+  left: 180px;
+  background: url(../../images/sheqing/popDistribute/main-city-bg.png) no-repeat 0 375px;
+  background-size: 80% auto;
+  perspective: 200px;
+}
+
+.cqmap-area-city {
+  position: absolute;
+  width: 1700px;
+  height: 1000px;
+  top: 430px;
+  left: 975px;
+  background: url(../../images/sheqing/popDistribute/area-city-bg.png) no-repeat 440px 320px;
+  background-size: 60% auto;  /*transform-style: preserve-3d;*/
+  perspective: 200px;
+}
+
+.permanent-main-city,
+.permanent-area-city,
+.temporary-main-city,
+.temporary-area-city {
+  display: none;
+}
+
+.cqmap-area-city g[class^="group"] {
+
+  /*transform:rotateX(45deg)*/
+}
+
+.distribute-top {
+  position: absolute;
+  top: 180px;
+  right: 130px;
+  width: 646px;
+}
+
+.distribute-top .list-title {
+  font-size: 42px;
+  color: #00fff8;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.top-list {
+  width: 646px;
+  overflow: hidden;
+  height: 1380px;
+  position: relative;
+}
+/*添加过渡*/
+.top-list.active li{
+  left: 650px;
+}
+.top-list li {
+  width: 100%;
+  height: 99px;
+  overflow: hidden;
+  background: url(../../images/sheqing/popDistribute/top-list-back-bg.png) no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 40px;
+  padding: 0 24px 0 34px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  transition-property:left;
+  transition-duration:1s;
+}
+.top-list li:nth-child(1){
+  transition-delay:0s
+}
+.top-list li:nth-child(2){
+  transition-delay:0.04s
+}
+.top-list li:nth-child(3){
+  transition-delay:0.08s
+}
+.top-list li:nth-child(4){
+  transition-delay:0.12s
+}
+.top-list li:nth-child(5){
+  transition-delay:0.16s
+}
+.top-list li:nth-child(6){
+  transition-delay:0.2s
+}
+.top-list li:nth-child(7){
+  transition-delay:0.24s
+}
+.top-list li:nth-child(8){
+  transition-delay:0.28s
+}
+.top-list li:nth-child(9){
+  transition-delay:0.32s
+}
+.top-list li:nth-child(10){
+  transition-delay:0.36s
+}
+.top-list li .area-name {
+  display: block;
+  font-size: 38px;
+  line-height: 1.6;
+  color: #00fff8;
+  margin-top: 6px;
+}
+
+.top-list li .progress {
+  display: inline-block;
+  height: 20px;
+  width: 0;
+  background: linear-gradient(to right, #2752ff, #02ebff);
+  transform: skew(45deg)
+}
+
+.top-list li em {
+  font-style: normal;
+}
+
+.top-list li[data-top="1"],
+.top-list li[data-top="2"],
+.top-list li[data-top="3"] {
+  background: url(../../images/sheqing/popDistribute/top-list-front-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.top-list li[data-top="1"] .area-name,
+.top-list li[data-top="2"] .area-name,
+.top-list li[data-top="3"] .area-name {
+  color: #ee5a24;
+}
+
+.top-list li[data-top="1"] .progress,
+.top-list li[data-top="2"] .progress,
+.top-list li[data-top="3"] .progress {
+  background: linear-gradient(to right, #4d0fcb, #f65c2a);
+}
+
+.ball-scale {
+  pointer-events: none;
+  fill: #fff;
+  animation-fill-mode: both;
+  animation: ball-scale 2s 0s ease-in-out infinite;
+}
+
+@keyframes ball-scale {
+  0% {
+    transform: scale(0)
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0
+  }
+
+}
+
+ /*勤情警力分布情况*/
+.police-dis-total {
+  position: absolute;
+  font-size: 42px;
+  color: #00fff8;
+  top: 160px;
+  left: 200px;
+  line-height: 60px;
+  height: 60px;
+}
+.police-dis-total i {
+  display: inline-block;
+  width: 4px;
+  height: 42px;
+  background: #00fff8;
+  margin-right: 15px;
+  margin-top: 20px;
+  float: left;
+}
+
+.police-dis-total span {
+  font-size: 60px;
+  padding: 0 10px;
+}

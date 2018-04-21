@@ -1,0 +1,12 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "pageInfo": {
+            "totalPage": 0,
+            "totalCount": 0,
+            "currentPage": 0
+        },
+        "result": []
+    }
+}

@@ -1,0 +1,36 @@
+/*毒品种类分析-仪表盘图样式*/
+
+.gaugeChartBox{
+    position: relative;
+}
+
+.gaugeChartBox .gaugeChartBg{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 130px;
+    background: rgba(39,90,121,.5);
+}
+
+#drugTypeGauge{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 130px;
+}
+.gaugeChartBox .rect{
+    float: left;
+    margin: 17px 10px;
+    width: 16px;
+    height: 16px;
+    line-height: 50px;
+    background-color: rgb(131, 230, 251);
+}
+.gaugeChartBox .title{
+    float: left;
+    width: 40%;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    color: rgb(131, 230, 251);
+}

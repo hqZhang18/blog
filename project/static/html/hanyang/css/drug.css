@@ -1,0 +1,229 @@
+/*治安行政*/
+ 
+.bodyBg{
+	background: url(../image/bg2.png) no-repeat;
+}
+.left{
+	margin-top:60px;
+	width: 482px;
+}
+
+.left03{
+	height: 320px;
+	width: 100%;
+	background: url(../image/leftBg.png) no-repeat;
+	background-size: 100% 100%;
+	margin-top: 40px;
+}
+.left03 .title{
+	float: left;
+	padding:8px 0 0 6%;
+	width: 92%
+}
+.left03 .title span{
+	font-size: 20px;
+	color: #83e6fb;
+	float: left;
+}
+.left03 .title b{
+	font-weight: normal;
+	float: right;
+	color: #fff
+}
+.left03 .charts{
+	float: left;
+	padding-top: 10px;
+	position: relative;
+}
+.right_04 .barCharts{
+	background: #193c55;
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+	position: relative;
+}
+.center{
+	width: 1200px;
+}
+.center .totalCount{
+	width: 100%;
+	height: 80px;
+	margin:20px 0 0 40px;
+}
+.contenBox {
+	width: 750px;
+	height: 750px;
+	position: absolute;
+	top: 100px;
+}
+.leftChrts{
+	left:  -150px;
+	background: url('../image/centerBg01.png') no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.rightChrts{
+	right: -50px;
+	background: url('../image/centerBg02.png') no-repeat center center;
+	background-size: 100% 100%;
+}
+.contenBox .title{
+	width: 201px;
+	height: 155px;
+	position: absolute;
+	
+	padding-left: 20px;
+	top: 92px;
+}
+.leftChrts .title{
+	left: 160px;
+}
+.rightChrts .title{
+	right: 165px;
+	width: 220px;
+}
+.contenBox .title i{
+	width: 8px;	
+	height: 8px;
+	background: #59e9fe;
+	display: block;
+	float: left;
+	margin: 22px 10px 0 10px;
+}
+.contenBox .title span{
+	float: left;
+	color: #59e9fe;
+	font-size: 23px;
+	margin-top: 10px;
+}
+.contenBox .percentage{
+	position: absolute;
+	top: 385px;
+
+	width: 100%;
+	text-align: center;
+}
+.contenBox .percentage .txt{
+	color: #59e9fe;
+	font-size: 20px;
+	width: 100%;
+
+}
+.contenBox .percentage .ratio2{
+    color: #fff;
+    font-size: 42px;
+    width: 131px;
+    text-align: center;
+    height: 35px;
+    margin: 10px 0 0 42%;
+    float: left;
+}
+.contenBox .percentage .ratio2 span{
+	float: left;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    width: 100px;
+    height: 35px;
+}
+.contenBox .percentage .icon{
+ 	width: 25px;
+ 	height: 35px;
+ 	float: left; 
+ 	margin-top: 5px;
+ }
+ .contenBox .percentage .icon_up{
+ 	background: url(../image/icon_up2.png) no-repeat;
+ }
+  .contenBox .percentage .icon_down{
+ 	background: url(../image/icon_down2.png) no-repeat;
+ }
+
+.contenBox .centerPie{	
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	left: 78px;
+	top: 124px;
+}
+
+/*件数统计*/
+.contenBox .count{
+	position: absolute;
+	font-size: 20px;
+	width: 307px;
+	height: 260px;
+	top: 23px;
+	text-align: center;
+	
+
+}
+.contenBox .count span{
+	display: block;
+	margin: 8px 0 40px 0;
+	width: 85px;
+}
+.contenBox .count .thisYear{
+	color: #ff8f00;
+}
+.contenBox .count .lastYear{
+	color: #fcea4f;
+}
+.contenBox .count .average{
+	color: #c87fff
+}
+.leftChrts .count{
+	right: 75px;
+	background: url(../image/countBg01.png) no-repeat;
+	background-size: 100% 100%;
+}
+.rightChrts .count{
+	left: 80px;
+	right: 0;
+	background: url(../image/countBg02.png) no-repeat;
+	background-size: 100% 100%;
+}
+.rightChrts .count span{
+	margin-right: 130px;
+}
+.leftChrts .count span{
+	margin-left: 220px;
+}
+/*图例*/
+.center .legend{
+	height: 41px;
+	border: 1px solid #50b3f2;
+	position: absolute;
+	bottom: 150px;
+	left: 390px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 41px;
+	font-family: "微软雅黑";
+	padding: 0  10px;
+	z-index: 0;
+	width: 311px;
+}
+.legend a{
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+.legend i{
+	width: 15px;
+	height: 15px;
+	display: block;
+	float: left;
+	margin: 13px 5px 0 ;
+	border: none;
+}
+.legend .icon-c1{
+	background: #fbe84c;
+}
+.legend .icon-c2{
+	background: #ed6e2b;
+}
+.legend .icon-c3{
+	background: #bd67fe;
+}

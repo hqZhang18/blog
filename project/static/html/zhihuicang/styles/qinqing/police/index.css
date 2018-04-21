@@ -1,0 +1,130 @@
+body {
+  background: url(../../../images/qinqing/server/bg.jpg) no-repeat;
+}
+
+.police-pages {
+  padding: 150px 0px 0 65px;
+  width: 3391px;
+  height: 1744px;
+}
+.police-pages .page-top {
+  float: left;
+}
+
+/**/
+.police-pages .police-pie-box {
+  background: url(../../../images/qinqing/police/pie-bg.png) no-repeat;
+  background-size: 100% 100%;
+  width: 1064px;
+  height: 763px;
+  float: left;
+  margin-right: 65px;
+  position: relative;
+}
+
+.police-pages .police-pie-box div:nth-child(4) {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+.police-pie-box .legend {
+  position: absolute;
+  right: 5px;
+  bottom: 120px;
+  font-size: 32px;
+  color: #00d4db
+}
+.police-pie-box .legend i {
+  display: inline-block;
+  width: 32px;
+  height: 12px;
+  background: #38f3ff;
+  float: left;
+  margin: 22px 15px 0 0;
+}
+
+.police-pie-box .legend li {
+  line-height: 54px;
+}
+.police-pie-box .legend span {
+  color: #fff;
+  padding-right: 10px;
+}
+
+.police-pages .police-total {
+  background: url(../../../images/qinqing/police/total-bg.png) no-repeat;
+  width: 1058px;
+  height: 120px;
+  float: left;
+  margin: 30px 135px 30px 0;
+  font-size: 46px;
+  color: #75fbfd;
+  line-height: 100px;
+/*  padding-left: 50px;*/
+  text-align: center;
+}
+.police-pages .police-total b {
+  color: #fef974;
+}
+.police-pages .police-total span {
+  font-family: digifacewide;
+  font-size: 72px;
+  color: #fef974;
+  padding: 0 30px 0 55px;
+/*  line-height: 140px;*/
+}
+.police-pages .page-bottom {
+  float: left;
+}
+.police-pages .district-statistics {
+  background: url(../../../images/qinqing/police/districtStatistics-bg.png) no-repeat;
+  width: 3321px;
+  height: 754px;
+  float: left;
+}
+
+/*饼图旋转背景*/
+.police-pages .pie-rotate-bg {
+  background: url(../../../images/sheqing/personFlow/circle3.png) no-repeat;
+  background-size: 100% 100%;
+  width: 409px;
+  height: 394px;
+  position: absolute;
+  animation: rotate 10s infinite linear;
+  -webkit-animation: rotate 10s infinite linear;
+  transform-origin: 52.5% 52.3%;
+  left: 300px;
+  top: 216px;
+  z-index: 0;
+}
+.police-pages .charts-icon {
+  background: url(../../../images/qinqing/police/icon1.png) no-repeat;
+  width: 140px;
+  height: 77px;
+  position: absolute;
+  top: 387px;
+  left: 444px;
+}
+.police-pages .car-icon {
+  background: url(../../../images/qinqing/police/icon2.png) no-repeat;
+  width: 110px;
+  height: 100px;
+  top: 368px;
+  left: 458px;
+}
+.police-pages .age-icon {
+  background: url(../../../images/qinqing/police/icon3.png) no-repeat;
+  width: 88px;
+  height: 100px;
+  top: 374px;
+  left: 470px;
+}
+.district-statistics-charts .inner_line line {
+  stroke: #888;
+}
+.district-statistics-charts .axis-y text {
+  fill: #888;
+}
+.district-statistics-charts .axis-x .domain {
+  stroke: none;
+}

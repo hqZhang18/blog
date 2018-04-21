@@ -1,0 +1,683 @@
+/*
+* @Author: lee
+* @Date:   2017-05-22
+* @Email: liwei@hiynn.com
+* @describ: 过程监督页面样式
+*/
+*{
+    margin:0;
+    padding: 0;
+}
+body {
+  width: 2475px;
+  height: 928px;  
+  background: url(../images/prgv-bg.jpg) repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow:hidden;
+  position: relative;
+}
+.lawCheck, 
+.lawModel{
+    cursor: pointer;
+}
+.step{
+    font-size: 30px;
+    color: #5e98cd;
+    padding-bottom: 6px;
+    height: 60px;
+    line-height: 60px;
+    background: url(../images/mark2.png) no-repeat 0px 22px;
+    background-size: 15px auto;
+    text-indent: 28px;
+
+}
+.chart-foot .step{
+    margin-top: 10px;
+}
+.side-left{
+    width: 580px;
+    position: absolute;
+    overflow:hidden;
+    top:0;
+    left: 0;
+    box-sizing: border-box;
+    padding-left: 30px;
+    margin: 30px 0;
+    border-right: 1px solid #6db9ff;
+}
+.checkgress{
+    width: 100%;
+} 
+.checkgress ul{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+.checkgress li{
+    float: left;
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+}
+.checkgress i[class^="state-"]{
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    float: left;
+}
+.checkgress .state-wait{
+    background: url(../images/prgv-state-wait.png) no-repeat;
+}
+.checkgress .state-til{
+    background: url(../images/prgv-state-til.png) no-repeat;
+}
+.checkgress .state-back{
+    background: url(../images/prgv-state-back.png) no-repeat;
+}
+.checkgress .state-stop{
+    background: url(../images/prgv-state-stop.png) no-repeat;
+}
+.checkgress li p{
+    height: 66px;
+    line-height: 33px;
+    padding-left: 85px;
+}
+.checkgress li span{
+    display: block;
+    line-height: 33px;
+    font-size: 26px;
+    color: #006cff;
+}
+.checkgress li span:last-child{
+    font-size: 32px;
+    color: #4af9ff;
+}
+.countgress{
+    width: 100%;
+}
+.countgress ul{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+.countgress li{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    zoom:1;
+}
+
+.countgress ul .countgress-list-til span{
+    font-size: 24px;
+    color: #6db9ff;
+    cursor: pointer;
+}
+.countgress .countgress-list-til span:nth-child(2){
+    text-align: left;
+}
+.countgress ul .countgress-list-til span:hover{
+    color: #fff;
+}
+.countgress li:after{
+    content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.countgress span{
+    color: #5e98cd;
+    font-size:22px;
+    display: inline-block;
+    float:left;
+    width: 20%;
+    position: relative;
+    max-height: 38px;
+    overflow: hidden;
+}
+.countgress-list{
+    height: 500px;
+    overflow:hidden;
+    width: 100%;
+}
+.countgress-list .groove{
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 68%;
+    height: 20px;
+    background:rgba(168,0,255,0.2);
+     margin-right: 15px;
+}
+.countgress-list .groove em{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:-webkit-gradient(linear, 0 100%,100% 100%, from(#2204a3), to(#831ee1));  
+    border-right: 6px solid #a545ff;
+
+}
+.countgress li span:nth-child(1){
+
+    width: 22%;
+}
+.countgress li span:nth-child(2){
+    text-align: right;
+    width: 35%;
+}
+.countgress li span:nth-child(3){
+    color: #5c8aff;
+    text-align: center;
+}
+.countgress li span:last-child{
+    color: #2ed5fe;
+}
+.side-right{
+    width: 409px;/*1像素间距问题*/
+    position: absolute;
+    overflow:hidden;
+    top: 0;
+    right: 0;
+    padding: 30px 30px 30px 0;
+}
+/*执法分析模型*/
+.state-value{
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 30px;
+
+}
+.state-value span{
+    color: #5e98cd;
+}
+.state-value span:last-child{
+    float: right;
+}
+.state-value span em{
+    font-weight: normal;
+    color: #fed64b;
+}
+.alz-model{
+    margin-bottom: 30px;
+}
+.alz-model ul{
+    width: 100%;
+}
+.alz-model li{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    box-sizing: border-box;
+    zoom:1;
+    margin-bottom: 20px;
+   /* margin:20px 0;*/
+}
+.alz-model li:before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 25px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    background: #006cff;
+}
+.alz-model li:after{
+    content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.alz-model li span{
+    display: inline-block;
+    float: left;
+    line-height: 35px;
+    box-sizing: border-box;
+}
+.alz-model li span:first-child{
+    width: 35%;
+    font-size: 26px;
+    color: #5774f1;
+    padding-left: 24px;
+}
+.alz-model li span:last-child{
+    width: 10%;
+    font-size: 28px;
+    color: #fed64b;
+}
+.alz-model li span:nth-child(2){
+    width: 49%;
+    height: 20px;
+    position: relative;
+    margin: 10px 10px 0 0;
+}
+.alz-model li span:nth-child(2) em{
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/prgv-progress-bar.png) no-repeat left center;
+    background-size: cover;
+}
+.module-list{
+    margin-top: 10px;
+    height: 560px;/*展示10条-行高56*/
+    overflow:hidden;
+}
+.item-wrap{
+    background: url(../images/prgv-item-bg.png) no-repeat left center;
+    background-size: cover;
+    height: 620px;/*让背景盖度撑满，溢出不影响的*/
+}
+.item-wrap li{
+    width: 100%;
+    line-height: 56px;
+    box-sizing: border-box;
+    position: relative;
+    color: #5e98cd;
+    cursor: pointer;
+    height: 56px;
+}
+.item-wrap li:hover, .item-wrap li.cur{
+    background: url(../images/prgv-item-active.png) no-repeat left center;
+    background-size: 100% 100%;
+}
+.item-wrap li:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.module-list li:before{
+    content: "";
+    height: 24px;
+    width: 6px;
+    background: #5e98cd;
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+.item-wrap li span{
+    display: inline-block;
+    float: left;
+    font-size: 24px;
+    width: 52%;
+    overflow: hidden;
+    max-height: 56px;
+}
+.item-wrap ul li:first-child span{
+    color: #6db9ff;
+}
+.item-wrap li span:first-child{
+    width: 16%;
+    text-align: center;
+    font-weight: bold;
+}
+.item-wrap li:first-child span:first-child{
+    font-weight: normal;
+}
+.item-wrap li span:last-child{
+    width: 32%;
+    text-align: right;
+    color: #2ed5fe;
+}
+.item-wrap li span:last-child b{
+    font-weight: normal;
+    color: #5c8aff;
+}
+/*页面中间图表*/
+.center{
+    width: 1457px;
+    height: 928px;
+    position: absolute;
+    top: 0;
+    left: 580px;
+}
+.module-wrap{
+    width: 100%;
+    height: 100%;
+    padding:0 30px 0 40px;
+    background: url(../images/prgv-centerBg.png) no-repeat top right;
+    background-size: auto 100%;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.chart-top{
+    padding-top: 30px;
+    width: 100%;
+}
+.center-til{
+    font-size: 26px;
+    color: #fff;
+    font-weight: normal;
+}
+.statistics{
+    height: 440px;
+    background: url(../images/sourceControll/system-controll-bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+.statistics .axis-x path {
+  stroke: #ac2ed3;
+  stroke-width: 2;
+}
+
+.statistics .axis-x path, .statistics .axis-x line{
+  stroke: #ac2ed3;
+  shape-rendering: crispEdges;
+  opacity: 0.5;
+}
+.statistics .axis-x text {
+  font-family: 微软雅黑;
+  font-size: 22px;
+  stroke: 2;
+  fill: #5e98cd;
+}
+.chart-foot {
+    overflow:hidden;
+   
+}
+.foot-left{
+    float: left;
+    width: 50%;
+    height: 370px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+.foot-right{
+    float: left;
+    width: 50%;
+    height: 370px;
+    overflow:hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+.case-top .axis text {
+  font-size: 22px;
+}
+.case-top .charts-tooltip{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 8px;
+  /*display: none;*/
+  font-size: 20px;
+  border-radius: 5px;
+}
+.case-top .charts-tooltip p{
+  line-height: 24px;
+}
+/*中间部分--详情页*/
+.detail-wrap{
+    width: 1417px;
+    height: 868px;
+    overflow:hidden;
+    margin-top: 30px;
+    border-right: 1px solid #6db9ff;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+.skill{
+    height: 640px;
+    width: 800px;
+    float: left;
+}
+.business{
+    height: 640px;
+    width: 560px;
+    float: left;
+    position: relative;
+    background: url(../images/prgv-business-bg.png) no-repeat top left;
+}
+.total-list{
+    zoom:1;
+}
+.total-list:after{
+    content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.total-list li{
+    float: left;
+    width: 261px;
+    height: 101px;
+    box-sizing: border-box;
+    padding:0 30px;
+    background: url(../images/prgv-cyan-total.png) no-repeat center;
+    color: #cde0f1;/*后续优化--文字描边阴影*/
+}
+.total-list li:first-child{
+    background: url(../images/prgv-blue-total.png) no-repeat center;
+}
+.total-list li:last-child{
+    background: url(../images/prgv-purple-total.png) no-repeat center;
+}
+.total-list li span{
+    display: block;
+}
+.total-list li span:first-child{
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 26px;
+}
+.total-list li span:last-child{
+    height: 60px;
+    line-height: 60px;
+    font-size: 36px;
+}
+.skill-detail{
+    position: relative;
+    width: 800px;
+    height: 420px;
+    background: url(../images/prgv-skill-bg.png) no-repeat right center;
+}
+.skill-detail li{
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    z-index: 2;
+}
+.skill-detail li span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    bottom: 50%;
+}
+.skill-detail li span:last-child{
+    top: 50%;
+    font-size: 20px;
+    color: #7dd3ff;
+}
+
+.skill-detail li:nth-child(1),
+.skill-detail li:nth-child(2){
+    width: 152px;
+    height: 132px;
+    top: 20px;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;/*delay放在后面*/
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+
+.skill-detail li:nth-child(1){
+    /*background: url(../images/prgv-six1.png) no-repeat center;*/
+    /*background: url(../images/skillList/list1.svg) no-repeat center;*/
+    left: 190px;
+}
+.skill-detail li:nth-child(2){
+    /*background: url(../images/prgv-six2.png) no-repeat center;*/
+    /*background: url(../images/skillList/list2.svg) no-repeat center;*/
+    left: 551px;
+}
+.skill-detail li:nth-child(3){
+    width: 258px;
+    height: 221px;
+    /*background: url(../images/prgv-six3.png) no-repeat center;*/
+    /*background: url(../images/skillList/list3.svg) no-repeat center;*/
+    left: 317px;
+    top: 44px;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+.skill-detail li:nth-child(3) span{
+    font-size: 24px;
+}
+.skill-detail li:nth-child(3) span:first-child{
+    font-size: 60px;
+}
+.skill-detail li:nth-child(4){
+    width: 157px;
+    height: 136px;
+    /*background: url(../images/prgv-six4.png) no-repeat center;*/
+    /*background: url(../images/skillList/list4.svg) no-repeat center;*/
+    left: 60px;
+    top: 90px;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 2.5s;
+    -webkit-transition-delay: 2.5s;
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+.skill-detail li:nth-child(5){
+    width: 185px;
+    height: 159px;
+    top: 164px;
+    left: 176px;
+    /*background: url(../images/prgv-six5.png) no-repeat center;*/
+    /*background: url(../images/skillList/list5.svg) no-repeat center;*/
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+.skill-detail li:nth-child(6){
+    width: 216px;
+    height: 192px;
+    top: 155px;
+    left: 526px;
+    /*background: url(../images/prgv-six6.png) no-repeat center;*/
+    /*background: url(../images/skillList/list6.svg) no-repeat center;*/
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+.skill-detail li:nth-child(7){
+    width: 187px;
+    height: 161px;
+    top: 242px;
+    left: 24px;
+    /*background: url(../images/prgv-six7.png) no-repeat center;*/
+    /*background: url(../images/skillList/list7.svg) no-repeat center;*/
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 3.5s;
+    -webkit-transition-delay: 3.5s;
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+.path8{
+    margin-left: 540px;
+}
+.skill-detail li:nth-child(8){
+    width: 187px;
+    height: 161px;
+    top: 242px;
+    left: 354px;
+    /*background: url(../images/prgv-six7.png) no-repeat center;*/
+    /*background: url(../images/skillList/list7.svg) no-repeat center;*/
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition-delay: 3.5s;
+    -webkit-transition-delay: 3.5s;
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+}
+.operation{
+    position: absolute;
+    top: 640px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding:0 30px;
+}
+.czxwCount{
+    height: 220px;/*折线图高度只有228px*/
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.six-animate{
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.circle-chart{
+    margin-top: 100px;
+}
+.business-circle{
+    position: absolute;
+    height: 640px;
+    width: 560px;
+    top: 0px;
+    left: 0px;
+}
+.circle-chart-inbg{
+    background: url(../images/prgv-business-circlein-bg.png);
+}
+.circle-chart-outbg{
+    background: url(../images/prgv-business-circleout-bg.png);
+}
+
+/*执法支队审核查看全部*/
+.allZhidui-bg .title {
+    padding-bottom: 0;
+    width: 795px;
+}
+
+.all-zhidui b{
+    font-weight: normal;
+    cursor: pointer;
+}
+.all-zhidui b:hover{
+    color: #fff;
+}
+.all-zhidui li{
+    float: left;
+}
+.all-enforceLaw.all-zhidui li span {
+    float: left;
+    width: 25%;
+}

@@ -1,0 +1,40 @@
+.totalCount .total_01
+{
+	width: 45%;
+	height: 100%;
+	float: left;
+}
+.totalCount .total_02{
+		width: 45%;
+	height: 100%;
+	float: right;
+}
+.totalCount span{
+    height: 50px;
+    color: #ffffff;
+    font-size: 25.26px;
+    float: left;
+    margin-top: 18px
+}
+.totalCount .total_01 p{
+    color: #82e6fb;
+    font-size: 45.75px;
+    float: left;
+}
+.totalCount .total_02 p{
+    color: #fcea4f;
+    font-size: 45.75px;
+    float: left;
+}
+.arrows{
+    width: 25px;
+    height: 35px;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+.arrows_up{
+	background: url(../image/icon_up2.png);
+}
+.arrows_down{
+	background: url(../image/icon_down2.png);
+}

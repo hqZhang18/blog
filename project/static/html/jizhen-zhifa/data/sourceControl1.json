@@ -1,0 +1,67 @@
+{
+    "code": 1,
+    "message": "调用成功",
+    "result": {
+        "typeTotal": [
+            {
+                "name": "红名单",
+                "value": 32447
+            },
+            {
+                "name": "标识码库",
+                "value": 1742
+            },
+            {
+                "name": "测试号码",
+                "value": 0
+            },
+            {
+                "name": "非侦控库",
+                "value": 34377
+            },
+            {
+                "name": "侦控库",
+                "value": 36119
+            }
+        ],
+        "caseAcceptance": {
+            "total": 287,
+            "group": [
+                {
+                    "total": "38",
+                    "name": "情报",
+                    "local": 0.29,
+                    "nonlocal": 0.72
+                },
+                {
+                    "total": "249",
+                    "name": "刑事",
+                    "local": 0.29,
+                    "nonlocal": 0.72
+                }
+            ]
+        },
+        "objTar": [
+            {
+                "xingshi": "100",
+                "name": "对象受理",
+                "qingbao": "10"
+            },
+            {
+                "xingshi": "80",
+                "name": "对象变更",
+                "qingbao": "56"
+            },
+            {
+                "xingshi": "58",
+                "name": "延长期限",
+                "qingbao": "100"
+            },
+            {
+                "xingshi": "94",
+                "name": "目标变更",
+                "qingbao": "69"
+            }
+        ]
+    }
+}

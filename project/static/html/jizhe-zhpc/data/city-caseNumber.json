@@ -1,0 +1,50 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "incidenceNumber": [
+            {
+                "name": "九龙坡区",
+                "value": 4706
+            },
+            {
+                "name": "江北区",
+                "value": 4551
+            },
+            {
+                "name": "南岸区",
+                "value": 3590
+            },
+            {
+                "name": "沙坪坝区",
+                "value": 3392
+            },
+            {
+                "name": "渝北区",
+                "value": 3391
+            }
+        ],
+        "burstRatio": [
+            {
+                "name": "沙坪坝区",
+                "value": 0.6047
+            },
+            {
+                "name": "黔江区",
+                "value": 0.5676
+            },
+            {
+                "name": "城口县",
+                "value": 0.5631
+            },
+            {
+                "name": "武隆区",
+                "value": 0.4975
+            },
+            {
+                "name": "巫溪县",
+                "value": 0.4774
+            }
+        ]
+    }
+}

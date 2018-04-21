@@ -1,0 +1,26 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": [
+        {
+            "name": "全部状态",
+            "value": 37036,
+            "type": "0"
+        },
+        {
+            "name": "正常",
+            "value": 37032,
+            "type": "1"
+        },
+        {
+            "name": "维修",
+            "value": 3,
+            "type": "2"
+        },
+        {
+            "name": "损坏",
+            "value": 1,
+            "type": "3"
+        }
+    ]
+}

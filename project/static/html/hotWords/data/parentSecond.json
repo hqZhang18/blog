@@ -1,0 +1,19 @@
+{
+   "status": true,
+   "message": "调用成功",
+   "data": [
+     {
+     "id": 1,
+     "zd_name": "SJXQ",
+     "ssb_child": "事件单详情"
+     }, {
+     "id": 2,
+     "zd_name": "SJXQ",
+     "ssb_child": "事件单详情2"
+     }, {
+     "id": 3,
+     "zd_name": "SJXQ",
+     "ssb_child": "事件单详情3"
+     }
+   ]
+ }

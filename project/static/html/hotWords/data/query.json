@@ -1,0 +1,55 @@
+{
+    "status": true,
+    "message": "调用成功",
+    "data": {
+        "pageNo": 1,
+        "pageSize": 12,
+        "totalRecord": 4,
+        "totalPage": 1,
+        "countKey": "1",
+        "results": [
+            {
+                "fps": 2,
+                "name": "九公里",
+                "weight": 0,
+                "ssb": "搜索数据-地理系统地理系统地理系统",
+                "ssbFlag": "null",
+                "time": "2017-02-08 05:14:31",
+                "state": "1"
+            },
+            {
+                "fps": 1,
+                "name": "七公里",
+                "weight": 0,
+                "ssb": "搜索数据-地理系统",
+                "ssbFlag": "null",
+                "time": "2017-02-08 05:14:31",
+                "state": "1"
+            },
+            {
+                "fps": 1,
+                "name": "六公里",
+                "weight": 0,
+                "ssb": "搜索数据-地理系统",
+                "ssbFlag": "null",
+                "time": "2017-02-08 05:14:31",
+                "state": "1"
+            },
+            {
+                "fps": 1,
+                "name": "八公里",
+                "weight": 0,
+                "ssb": "搜索数据-地理系统",
+                "ssbFlag": "null",
+                "time": "2017-02-08 05:14:31",
+                "state": "1"
+            }
+        ],
+        "params": {
+            "updateEndTime": null,
+            "beginTime": 1455009271289,
+            "updateBeginTime": null,
+            "endTime": 1486545271289
+        }
+    }
+}

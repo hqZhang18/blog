@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>强戒类数据页面</title>
+		<link href="css/common.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/alarmRight.css">
+  	<link rel="stylesheet" href="css/pieChart.css">
+    <link href="css/drug.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/drug-right.css">
+		<link rel="stylesheet" href="css/progressChart.css">
+		<link rel="stylesheet" href="css/drug-top.css">
+		<link rel="stylesheet" href="css/gaugeChart.css">
+		<link rel="stylesheet" href="css/detoxification.css">
+	</head>
+	<body>
+		<div class="bodyBg"></div>
+		<div class="header">
+			<div class="title">强戒类数据页面</div>
+			<div class="topback"><a href="index.html"></a></div>
+		</div>
+		<div class="left">
+			<!--进度条图表-->
+			<div class="progressChartBox" id="progressChart-1">
+			</div>
+			<div class="progressChartBox" id="progressChart-2">
+			</div>
+			<div class="left03">
+				<div class="title"><span>各派出所毒品罪案数排名</span><b>*标红为超标</b></div>
+				<div class="charts" id="charts"></div>
+			</div>
+		</div>
+		<!--end left-->
+		<!-- 中间饼图 -->
+		<div class="center">
+			<div class="totalCount">
+				<div class="total_01">
+					<span>毒品罪案数</span>
+					<p id="drugTotal"></p>
+					<div class="arrows" ></div>
+				</div>
+				<div class="total_02">
+					<span>强制隔离戒毒人员</span>
+					<p id="strongTotal"></p>
+					<div class="arrows"></div>
+				</div>
+			</div>
+			<div class="contenBox leftChrts">
+				<div class="title">
+					<i></i><span>毒品罪案数</span><i></i>
+				</div>
+				<div class="percentage">
+					<div class="txt">同比</div>
+					<div class="ratio2" id='drugRatio'><span></span><i class="icon"></i></div>
+				</div>
+				
+				<!-- 饼图 -->
+				<div class="centerPie" id="drugCase"></div> 
+				<div class="count" id="drugCount">
+					<span class="thisYear"></span>
+					<span class="lastYear"></span>
+					<span class="average"></span>
+				</div>
+			</div>
+
+			<div class="contenBox rightChrts">
+				<div class="title">
+					<i></i><span>强制隔离戒毒数</span><i></i>
+				</div>
+				<!--玫瑰图中间的同比-->
+				<div class="percentage">
+					<div class="txt">同比</div>
+					<div class="ratio2" id="strongRatio"><span></span><i class="icon"></i></div>
+				</div>
+				<!-- 饼图 -->
+				<div class="centerPie" id="strongCase"></div>
+				<div class="count" id="strongCount">
+					<span class="thisYear"></span>
+					<span class="lastYear"></span>
+					<span class="average"></span>
+				</div>
+			</div>
+			<div class="legend">
+				<a><i class="icon-c2"></i><span id="thisyear">2017</span></a>
+				<a><i class="icon-c1"></i><span id="lastyear">2016</span></a>
+				<a><i class="icon-c3"></i>全市中心城区平均水平</a>
+			</div>
+		</div>
+		<!--end center-->
+		<div class="right">
+<!-- 			毒品种类分析 -->
+			<div class="right_01 gaugeChartBox">
+				<span class="rect"></span><span class="title">毒品种类分析</span>
+				<div class="gaugeChartBg"></div>
+				<div class="gaugeChart" id="drugTypeGauge"></div>
+			</div>
+<!-- 			强戒次数分析 -->
+			<div class="right_02 detoxificationBox" >
+				<span class="rect"></span><span class="title">强戒次数分析</span>
+				<div class="detoxificationChart" id="detoxification">
+					<!--<ul>-->
+					<!--<li><span class="leftBarValue">30人20%</span><span class="rightBarValue">120人80%</span></li>-->
+					<!--<li><span class="leftBarText">首次</span><span class="rightBarText">多次</span></li>-->
+					<!--<li><span class="leftBarLength"></span><span class="rightBarLength"></span></li>-->
+					<!--</ul>-->
+				</div>
+			</div>
+<!-- 			强戒人员年龄分析 -->
+			<div class="right_03">
+				<div class="right_title">
+					<p></p>
+					<p>强戒人员年龄分析</p>
+				</div>
+				<div class="right_03_bottom">
+					<div class="right_03_left">
+						<div class="bar_title">
+						</div>
+						<div class="bar_title">
+						</div>
+					</div>
+					<div class="right_03_center">
+						<div class="total"></div>
+						<div id="pie" class="strongPie"></div>
+					</div>
+					<div class="right_03_right">
+						<div class="bar_title">
+
+						</div>
+						<div class="bar_title">
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 			各派出所强戒人员排名 -->
+			<div class="right_04">
+				<div class="right_title">
+					<p></p>
+					<p>各派出所强戒人员排名</p>
+					<div id="barCharts" class="barCharts"></div>
+				</div>
+			</div>
+
+		</div>
+		<canvas id="canvas"></canvas>
+		<script src="js/config.js"></script>
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/scale.js"></script>
+		<script src="js/lib/echarts.js"></script>
+		<script src="js/lib/jQueryRotate.js"></script>
+		<script src="js/lib/sea.js"></script>
+		<script type="text/javascript">
+		seajs.use(['./js/second/drug'], function(drug){
+			drug.init()
+		})
+
+		</script>
+	</body>
+</html>

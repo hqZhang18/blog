@@ -1,0 +1,150 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "objectChange": {
+            "case": [
+                {
+                    "name": "七.二六案",
+                    "value": "150"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                },
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "198"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "398"
+                }
+            ],
+            "department": [
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                }
+            ]
+        },
+        "specificChange": {
+            "case": [
+                {
+                    "name": "七.二六案",
+                    "value": "150"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                },
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "198"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "398"
+                }
+            ],
+            "department": [
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                }
+            ]
+        },
+        "analysisChange": {
+            "case": [
+                {
+                    "name": "七.二六案",
+                    "value": "150"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                },
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "198"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "398"
+                }
+            ],
+            "department": [
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                },
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                },
+                {
+                    "name": "五.二六案",
+                    "value": "98"
+                },
+                {
+                    "name": "七.二六案",
+                    "value": "60"
+                }
+            ]
+        },
+        "numPperationChart": {
+            "buxiang": "1382939444",
+            "zaikong": "20170201-20122",
+            "group": [
+                {
+                    "name": "20160415",
+                    "value": 346
+                },
+                {
+                    "name": "0425",
+                    "value": 454
+                },
+                {
+                    "name": "0426",
+                    "value": 346
+                },
+                {
+                    "name": "0427",
+                    "value": 454
+                },
+                {
+                    "name": "0428",
+                    "value": 346
+                },
+                {
+                    "name": "20170427",
+                    "value": 454
+                }
+            ]
+        }
+    }
+}

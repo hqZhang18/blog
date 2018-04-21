@@ -1,0 +1,31 @@
+.typeValue{
+	margin-bottom: 18px;
+	height: 150px;
+}
+.botIcon{
+	margin-top: 25px;
+}
+.line{
+	height: 38px;
+}
+.right02 .pieChartBg{
+	 background: url("../image/alarm/pieChartBg2.png") center no-repeat ;
+	 background-size: 229px 229px;
+}
+
+.right02 .ladderLineChartBg{
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	height: 220px;
+	background: rgba(39,90,121,.6);
+	background-size: 180px 180px;
+
+}
+.right02 #ladderLineChart{
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	height: 260px;
+	background-color: rgba(39,90,121,.6);
+}

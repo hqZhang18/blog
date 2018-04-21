@@ -1,0 +1,42 @@
+/*轴线*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: none;
+  /*shape-rendering: crispEdges;*/
+}
+
+/* X轴 */
+.axis-x {
+  fill: #8cffff;
+  stroke-width: 1px;
+}
+
+.axis-x path, .axis-x line {
+  fill: none;
+  stroke: none;
+  /*shape-rendering: crispEdges;*/
+  /*opacity: 0.5;*/
+}
+
+.axis-x path, .axis-y path {
+  stroke: #285c81;
+}
+
+.axis text {
+  font-size: 30px;
+  stroke: none;
+  fill: #8cffff;
+}
+.out-land-charts .axis text {
+  font-size: 22px;
+}
+/* 网格线 */
+.inner_line path, .inner_line line {
+  fill: none;
+  stroke: #285c81;
+  /*shape-rendering: crispEdges;*/
+  opacity: 0.5;
+}
+
+

@@ -1,0 +1,134 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-size: 1em;
+	cursor: default;
+	user-select: none;
+}
+
+.box-model{
+	padding: 135px 0;
+}
+
+.equip-banner{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 75px;
+}
+.equip-banner:first-of-type{
+	margin-top: 0;
+}
+
+.bayonet-box{
+	display: inline-block;
+	width: 770px;
+	height: 655px;
+	background: url('../../../images/qinqing/equipment/bannerBayonet.png');
+	background-size: cover;
+}
+.source-box{
+	display: inline-block;
+	width: 1650px;
+	height: 655px;
+	background: url('../../../images/qinqing/equipment/bannerSource.png');
+	background-size: cover;
+}
+.spread-box{
+	display: inline-block;
+	width: 3325px;
+	height: 945px;
+	background: url('../../../images/qinqing/equipment/bannerSpread.png');
+	background-size: cover;
+}
+.visitor-box{
+	display: inline-block;
+	width: 770px;
+	height: 655px;
+	background: url('../../../images/qinqing/equipment/bannerVisitor.png');
+	background-size: cover;
+}
+
+.text-tap{
+	padding: 100px 0;
+}
+.text-tap:last-of-type{
+	padding: 65px 0;
+}
+.text-tap .text-num{
+	display: block;
+	font-size: 70px;
+	color: #04bcca;
+	text-shadow: 3px 0 3px;
+	text-align: center;
+	margin-top: 15px;
+	font-family: digifacewide;
+}
+.text-tap .text-text{
+	display: block;
+	font-size: 25px;
+	color: #c2c4c8;
+	text-align: center;
+	font-family: digifacewide;
+}
+
+.title-sp{
+	font-size: 40px;
+	color: #00fff8;
+	padding-left: 90px;
+	margin-top: 55px;
+}
+.title-sp .left-line:before{
+	font-size: 40px;
+	content: '|';
+	color: #00fff8;
+	margin-right: 18px;
+}
+
+.source-box .item-box{
+	width: 49%;
+	display: inline-block;
+	float: left;
+	position: relative;
+}
+.source-box .item-box .rotate-bg {
+	background: url(../../../images/qinqing/equipment/pie-rotate-bg.png) no-repeat;
+	width: 409px;
+	height: 399px;
+	position: absolute;
+	left: 210px;
+	top: 135px;
+	  animation: rotate 10s infinite linear;
+  -webkit-animation: rotate 10s infinite linear;
+  transform-origin: 50% 50%;
+}
+.source-box .item-box .legend {
+	position: absolute;
+	color: #fff;
+	font-size: 24px;
+	bottom: 50px;
+	left: 50px;
+	width: 20%;
+}
+.source-box .item-box:nth-child(2) .legend {
+	left: 700px;
+ 
+}
+.item-box .legend span {
+	line-height: 24px;
+/*	width: 100%;*/
+	display: inline-block;
+	margin-bottom: 20px;
+
+}
+.item-box .legend i {
+	width: 8px;
+	height: 23px;
+	display: inline-block;
+	background: #ff6022;
+	margin-right: 10px;
+}
+.item-box .legend span:nth-child(2) i{
+	background: #9b25ef;
+}

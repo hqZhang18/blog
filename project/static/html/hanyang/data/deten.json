@@ -1,0 +1,457 @@
+{
+  "state": true,
+  "message": "请求成功",
+  "data": {
+    "bjTooltip": [],
+    "yjTooltip": [],
+    "count": {
+      "total": 1030,
+      "falg": false
+    },
+    "mark":false,
+    "radarMap": [{
+        "name": "今年",
+        "type": [{
+          "name": "刑事警情",
+          "value": 0.509,
+          "realValue": 32696
+        }, {
+          "name": "治安警情",
+          "value": 0.213,
+          "realValue": 7279
+        }, {
+          "name": "黄赌毒（举报）",
+          "value": 0.475,
+          "realValue": 629
+
+        }, {
+          "name": "黄赌毒（举报）",
+          "value": 0.475,
+          "realValue": 629
+
+        }, {
+          "name": "社会（求助&其他）",
+          "value": 0.625,
+          "realValue": 1273
+        }]
+      }, {
+        "name": "去年",
+        "type": [{
+          "name": "刑事警情",
+          "value": 0.667,
+          "realValue": 35470
+
+        }, {
+          "name": "治安警情",
+          "value": 0.268,
+          "realValue": 3071
+        }, {
+          "name": "黄赌毒（举报）",
+          "value": 0.564,
+          "realValue": 532
+        }, {
+          "name": "黄赌毒（举报）",
+          "value": 0.564,
+          "realValue": 532
+        }, {
+          "name": "社会（求助&其他）",
+          "value": 0.648,
+          "realValue": 1259
+        }]
+      },
+      [
+        1,
+        0.667,
+        0.612,
+        0.566,
+        0.492
+      ]
+    ],
+
+    "typeValue": [{
+      "name": "盗窃",
+      "values": [1000, 120, 500, 22, 121, 454],
+      "scale": "55.16",
+      "mark": false
+    }, {
+      "name": "伤害",
+      "values": [900, 120, 500, 22, 121, 454],
+      "scale": "45.56",
+      "mark": true
+    }, {
+      "name": "诈骗",
+      "values": [700, 120, 500, 22, 121, 454],
+      "scale": "45.56",
+      "mark": true
+    }, {
+      "name": "抢夺抢劫",
+      "values": [600, 120, 500, 22, 121, 454],
+      "scale": "45.56",
+      "mark": true
+    }, {
+      "name": "其他",
+      "values": [600, 120, 500, 22, 121, 454],
+      "scale": "45.56",
+      "mark": true
+    }],
+    "week": [1, 2, 3, 4, 5],
+    "proportion": {
+      "title": "各类警情数量占比",
+      "total": "2255",
+      "map": [{
+        "name": "追逃",
+        "value": 792,
+        "ratio": 23
+      }, {
+        "name": "抢盗",
+        "value": 2325,
+        "ratio": 23
+      }, {
+        "name": "经济",
+        "value": 571,
+        "ratio": 23
+      }, {
+        "name": "扒窃",
+        "value": 571,
+        "ratio": 23
+      }]
+    },
+    "textList": [
+      "竟日上as大大和地区污染了空气污染技巧我",
+      "按实际地哦啊是地球own的气温可千万雄厚",
+      "家穷温江区噢IE就请我IE获取为IE过去个"
+    ],
+      "ranking": [
+        {
+          "name": "总体",
+          "values": [
+            {
+            "name": "二桥派出所",
+            "value": 300
+          },{
+            "name": "永丰派出所",
+            "value": 290
+          },{
+            "name": "琴断派出所",
+            "value": 290
+          },{
+            "name": "五里派出所",
+            "value": 267
+          },{
+            "name": "翠微派出所",
+            "value": 250
+          },{
+            "name": "建桥派出所",
+            "value": 234
+          },{
+            "name": "晴川派出所",
+            "value": 170
+          },{
+            "name": "月湖派出所",
+            "value": 150
+          },{
+            "name": "鹦鹉派出所",
+            "value": 100
+          },{
+            "name": "洲头派出所",
+            "value": 98
+          },{
+            "name": "江提派出所",
+            "value": 70
+          },{
+            "name": "经开派出所",
+            "value": 50
+          },{
+            "name": "西新派出所",
+            "value": 40
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          }
+          ]
+        },{
+          "name": "违法",
+          "values": [
+            {
+            "name": "二桥派出所",
+            "value": 200
+          },{
+            "name": "永丰派出所",
+            "value": 290
+          },{
+            "name": "琴断派出所",
+            "value": 290
+          },{
+            "name": "五里派出所",
+            "value": 267
+          },{
+            "name": "翠微派出所",
+            "value": 250
+          },{
+            "name": "建桥派出所",
+            "value": 234
+          },{
+            "name": "晴川派出所",
+            "value": 170
+          },{
+            "name": "月湖派出所",
+            "value": 150
+          },{
+            "name": "鹦鹉派出所",
+            "value": 100
+          },{
+            "name": "洲头派出所",
+            "value": 98
+          },{
+            "name": "江提派出所",
+            "value": 70
+          },{
+            "name": "经开派出所",
+            "value": 50
+          },{
+            "name": "西新派出所",
+            "value": 40
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          }
+          ]
+        },{
+          "name": "刑事",
+          "values": [
+            {
+            "name": "二桥派出所",
+            "value": 200
+          },{
+            "name": "永丰派出所",
+            "value": 290
+          },{
+            "name": "琴断派出所",
+            "value": 290
+          },{
+            "name": "五里派出所",
+            "value": 267
+          },{
+            "name": "翠微派出所",
+            "value": 250
+          },{
+            "name": "建桥派出所",
+            "value": 234
+          },{
+            "name": "晴川派出所",
+            "value": 170
+          },{
+            "name": "月湖派出所",
+            "value": 150
+          },{
+            "name": "鹦鹉派出所",
+            "value": 100
+          },{
+            "name": "洲头派出所",
+            "value": 98
+          },{
+            "name": "江提派出所",
+            "value": 70
+          },{
+            "name": "经开派出所",
+            "value": 50
+          },{
+            "name": "西新派出所",
+            "value": 40
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          }
+          ]
+        },{
+          "name": "治安",
+          "values": [
+            {
+            "name": "二桥派出所",
+            "value": 450
+          },{
+            "name": "永丰派出所",
+            "value": 230
+          },{
+            "name": "琴断派出所",
+            "value": 290
+          },{
+            "name": "五里派出所",
+            "value": 267
+          },{
+            "name": "翠微派出所",
+            "value": 250
+          },{
+            "name": "建桥派出所",
+            "value": 234
+          },{
+            "name": "晴川派出所",
+            "value": 140
+          },{
+            "name": "月湖派出所",
+            "value": 150
+          },{
+            "name": "鹦鹉派出所",
+            "value": 60
+          },{
+            "name": "洲头派出所",
+            "value": 98
+          },{
+            "name": "江提派出所",
+            "value": 70
+          },{
+            "name": "经开派出所",
+            "value": 50
+          },{
+            "name": "西新派出所",
+            "value": 40
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          }
+          ]
+        },{
+          "name": "黄赌毒",
+          "values": [
+            {
+            "name": "二桥派出所",
+            "value": 450
+          },{
+            "name": "永丰派出所",
+            "value": 230
+          },{
+            "name": "琴断派出所",
+            "value": 290
+          },{
+            "name": "五里派出所",
+            "value": 267
+          },{
+            "name": "翠微派出所",
+            "value": 250
+          },{
+            "name": "建桥派出所",
+            "value": 234
+          },{
+            "name": "晴川派出所",
+            "value": 140
+          },{
+            "name": "月湖派出所",
+            "value": 150
+          },{
+            "name": "鹦鹉派出所",
+            "value": 60
+          },{
+            "name": "洲头派出所",
+            "value": 98
+          },{
+            "name": "江提派出所",
+            "value": 70
+          },{
+            "name": "经开派出所",
+            "value": 50
+          },{
+            "name": "西新派出所",
+            "value": 40
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          },{
+            "name": "鹦鹉派出所",
+            "value": 30
+          }
+          ]
+        }
+      ],
+    "criminalCustodyTrend": {
+      "ratio":4.8,
+      "thisYear": [{
+        "name":1,
+        "value":220
+      },{
+        "name":2,
+        "value":282
+      },{
+        "name":3,
+        "value":201
+      },{
+        "name":4,
+        "value":50
+      },{
+        "name":5,
+        "value":332
+      },{
+        "name":6,
+        "value":401
+      },{
+        "name":7,
+        "value":454
+      },{
+        "name":8,
+        "value":234
+      },{
+        "name":9,
+        "value":290
+      },{
+        "name":10,
+        "value":240
+      },{
+        "name":11,
+        "value":230
+      },{
+        "name":12,
+        "value":210
+      }],
+      "lastYear":
+      [{
+        "name":1,
+        "value":120
+      },{
+        "name":2,
+        "value":132
+      },{
+        "name":3,
+        "value":101
+      },{
+        "name":4,
+        "value":134
+      },{
+        "name":5,
+        "value":90
+      },{
+        "name":6,
+        "value":230
+      },{
+        "name":7,
+        "value":210
+      },{
+        "name":8,
+        "value":120
+      },{
+        "name":9,
+        "value":132
+      },{
+        "name":10,
+        "value":101
+      },{
+        "name":11,
+        "value":134
+      },{
+        "name":12,
+        "value":90
+      }]
+    }
+
+  }
+}

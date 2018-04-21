@@ -1,0 +1,263 @@
+{
+
+    "state": true,
+    "message": "调用成功",
+    "data":{
+        "mark":false,
+        "solveCase":[{
+                "name": "01",
+                "qjlastYear": "37",
+                "pathisYear": "149",
+                "paaAverage": "0",
+                "palastYear": "119",
+                "qjthisYear": "62",
+                "qjaverage": "0"
+            },{
+                "name": "02",
+                "qjlastYear": "31",
+                "pathisYear": "78",
+                "paaAverage": "0",
+                "palastYear": "151",
+                "qjthisYear": "19",
+                "qjaverage": "0"
+            },{
+                "name": "03",
+                "qjlastYear": "43",
+                "pathisYear": "321",
+                "paaAverage": "0",
+                "palastYear": "204",
+                "qjthisYear": "67",
+                "qjaverage": "0"
+            },{
+                "name": "04",
+                "qjlastYear": "52",
+                "pathisYear": "206",
+                "paaAverage": "0",
+                "palastYear": "154",
+                "qjthisYear": "34",
+                "qjaverage": "0"
+            },{
+                "name": "05",
+                "qjlastYear": "55",
+                "pathisYear": "287",
+                "paaAverage": "0",
+                "palastYear": "156",
+                "qjthisYear": "57",
+                "qjaverage": "0"
+            },{
+                "name": "06",
+                "qjlastYear": "50",
+                "pathisYear": "288",
+                "paaAverage": "0",
+                "palastYear": "296",
+                "qjthisYear": "40",
+                "qjaverage": "0"
+            },{
+                "name": "07",
+                "qjlastYear": "24",
+                "pathisYear": "210",
+                "paaAverage": "0",
+                "palastYear": "138",
+                "qjthisYear": "28",
+                "qjaverage": "0"
+            },{
+                "name": "08",
+                "qjlastYear": "27",
+                "pathisYear": "220",
+                "paaAverage": "0",
+                "palastYear": "183",
+                "qjthisYear": "48",
+                "qjaverage": "0"
+            },{
+                "name": "09",
+                "qjlastYear": "58",
+                "pathisYear": "283",
+                "paaAverage": "0",
+                "palastYear": "241",
+                "qjthisYear": "35",
+                "qjaverage": "0"
+            },{
+                "name": "10",
+                "qjlastYear": "36",
+                "pathisYear": "210",
+                "paaAverage": "0",
+                "palastYear": "263",
+                "qjthisYear": "26",
+                "qjaverage": "0"
+            },{
+                "name": "11",
+                "qjlastYear": "58",
+                "pathisYear": "573",
+                "paaAverage": "0",
+                "palastYear": "616",
+                "qjthisYear": "26",
+                "qjaverage": "0"
+            },{
+                "name": "12",
+                "qjlastYear": "67",
+                "pathisYear": "351",
+                "paaAverage": "0",
+                "palastYear": "596",
+                "qjthisYear": "29",
+                "qjaverage": "0"
+            }],
+        "warningConditionTime":[{
+                "name": "01",
+                "lastYear": "4089",
+                "thisYear": "2658",
+                "average": "0"
+            },{
+                "name": "02",
+                "lastYear": "3773",
+                "thisYear": "1974",
+                "average": "0"
+            },{
+                "name": "03",
+                "lastYear": "2874",
+                "thisYear": "2411",
+                "average": "0"
+            },{
+                "name": "04",
+                "lastYear": "4095",
+                "thisYear": "2897",
+                "average": "0"
+            },{
+                "name": "05",
+                "lastYear": "4065",
+                "thisYear": "2874",
+                "average": "0"
+            },{
+                "name": "06",
+                "lastYear": "4345",
+                "thisYear": "2844",
+                "average": "0"
+            },{
+                "name": "07",
+                "lastYear": "4279",
+                "thisYear": "3254",
+                "average": "0"
+            },{
+                "name": "08",
+                "lastYear": "3799",
+                "thisYear": "2796",
+                "average": "0"
+            },{
+                "name": "09",
+                "lastYear": "3319",
+                "thisYear": "3423",
+                "average": "0"
+            },{
+                "name": "10",
+                "lastYear": "3218",
+                "thisYear": "3485",
+                "average": "0"
+            },{
+                "name": "11",
+                "lastYear": "3150",
+                "thisYear": "3764",
+                "average": "0"
+            },{
+                "name": "12",
+                "lastYear": "2768",
+                "thisYear": "3388",
+                "average": "0"
+            }],
+        "administrative":[{
+                "name": "01",
+                "penalLastYear": "106",
+                "penalThisYear": "116",
+                "penalaAverage": "0",
+                "adminLastYear": "235",
+                "adminThisYear": "217",
+                "adminAverage": "0"
+            },{
+                "name": "02",
+                "penalLastYear": "91",
+                "penalThisYear": "57",
+                "penalaAverage": "0",
+                "adminLastYear": "237",
+                "adminThisYear": "110",
+                "adminAverage": "0"
+            },{
+                "name": "03",
+                "penalLastYear": "72",
+                "penalThisYear": "131",
+                "penalaAverage": "0",
+                "adminLastYear": "200",
+                "adminThisYear": "274",
+                "adminAverage": "0"
+            },{
+                "name": "04",
+                "penalLastYear": "121",
+                "penalThisYear": "114",
+                "penalaAverage": "0",
+                "adminLastYear": "276",
+                "adminThisYear": "184",
+                "adminAverage": "0"
+            },{
+                "name": "05",
+                "penalLastYear": "90",
+                "penalThisYear": "151",
+                "penalaAverage": "0",
+                "adminLastYear": "218",
+                "adminThisYear": "290",
+                "adminAverage": "0"
+            },{
+                "name": "06",
+                "penalLastYear": "144",
+                "penalThisYear": "118",
+                "penalaAverage": "0",
+                "adminLastYear": "237",
+                "adminThisYear": "210",
+                "adminAverage": "0"
+            },{
+                "name": "07",
+                "penalLastYear": "98",
+                "penalThisYear": "81",
+                "penalaAverage": "0",
+                "adminLastYear": "157",
+                "adminThisYear": "156",
+                "adminAverage": "0"
+            },{
+                "name": "08",
+                "penalLastYear": "106",
+                "penalThisYear": "93",
+                "penalaAverage": "0",
+                "adminLastYear": "197",
+                "adminThisYear": "254",
+                "adminAverage": "0"
+            },{
+                "name": "09",
+                "penalLastYear": "103",
+                "penalThisYear": "105",
+                "penalaAverage": "0",
+                "adminLastYear": "307",
+                "adminThisYear": "216",
+                "adminAverage": "0"
+            },{
+                "name": "10",
+                "penalLastYear": "88",
+                "penalThisYear": "88",
+                "penalaAverage": "0",
+                "adminLastYear": "238",
+                "adminThisYear": "167",
+                "adminAverage": "0"
+            },{
+                "name": "11",
+                "penalLastYear": "125",
+                "penalThisYear": "125",
+                "penalaAverage": "0",
+                "adminLastYear": "405",
+                "adminThisYear": "233",
+                "adminAverage": "0"
+            },{
+                "name": "12",
+                "penalLastYear": "58",
+                "penalThisYear": "72",
+                "penalaAverage": "0",
+                "adminLastYear": "342",
+                "adminThisYear": "247",
+                "adminAverage": "0"
+            }]
+    }
+}

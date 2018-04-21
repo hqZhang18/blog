@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(../../../images/sheqing/popuMigration/map-bg.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  /*background: #fff;*/
+}
+.popu-migration-pages {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.popu-migration-pages .drawMap {
+  background: url(../../../images/sheqing/popuMigration/china-map2.png) no-repeat;
+  background-size: 96% 91%;
+  background-position: 78px 45px;
+  width: 2126px;
+  height: 1718px;
+  position: absolute;
+  left: 520px;
+  top: 360px;
+}
+.popu-migration-pages .legend {
+  position: absolute;
+  bottom: 387px;
+  right: 200px;
+  font-size: 32px;
+  color: #ffc602;
+}
+ .popu-migration-pages .legend span{
+   display: block;
+  margin-bottom: 84px;
+ }
+.popu-migration-pages .legend span:last-child {
+  color: #00fbff;
+}
+.map-tooltip {
+  position: absolute;
+  background: rgba(18, 46, 124, 0.5);
+  color: #fff;
+  padding: 8px;
+  font-size: 32px;
+  border-radius: 5px;
+  z-index: 99;
+  line-height: 42px;
+}
+.outerCircle1, 
+.outerCircle2 {
+  animation:outerCircle1 3s infinite linear;
+  -webkit-animation:outerCircle1 3s infinite linear; 
+  transform-origin:50% 50%;
+}
+.outerCircle0 {
+  animation:outerCircle0 3s infinite linear;
+  -webkit-animation:outerCircle0 3s infinite linear; 
+  transform-origin:50% 50%;
+}
+@keyframes outerCircle1 {
+  0% {
+    transform :  scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform :  scale(1.8);
+    opacity: 1;
+  }
+  100% {
+    transform :  scale(1);
+    opacity: 0;
+  } 
+}
+
+@keyframes outerCircle0 {
+  0% {
+   
+    opacity: 0.8;
+    transform :  scale(0.7);
+  }
+  50% {
+   
+    opacity: 1;
+    transform :  scale(1);
+  }
+  100% {
+    
+    opacity: 0.8;
+    transform :  scale(0.7);
+  } 
+}
+.enter-line {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 200;
+  -webkit-animation: dash 6s linear forwards;
+  animation: dash 6s linear forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.out-line {
+  stroke-dasharray: 10;
+  stroke-dashoffset: -200;
+  -webkit-animation: dash 6s linear forwards;
+  animation: dash 6s linear forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+g.out-line-group {
+  opacity: 0;
+}
+g.qianchu-marker-group {
+  opacity: 0;
+}

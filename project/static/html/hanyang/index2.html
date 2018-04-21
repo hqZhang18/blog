@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<title>警情雷达图</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/leftBody.css">
+	<link rel="stylesheet"  href="css/radarCharts.css"/>
+	<link rel="stylesheet" href="css/rightEcharts.css">
+	<!--时间轴css-->
+	<link rel="stylesheet" type="text/css" href="css/time.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<div id="showClick" class="showClick">隐藏详情</div>
+		<div class="title">警情雷达图
+			<div class="time">
+				<div class="year bagup" >
+					<p>年</p>
+					<ul>
+					<li>2017</li>
+					<li>2016</li>
+					</ul>
+				</div>
+				<div class="quarter">
+						<p>季</p>
+						<ul>
+						</ul>
+				</div>
+				<div class="month">
+						<p>月</p>
+						<ul>
+						</ul>
+				</div>	
+				<div class="week">
+						<p>本周</p>
+				</div>
+						<div id="back">返回</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+		<!-- 左边 -->
+		<div id="left">
+			<!-- 警情数量统计 Start -->
+			<div id="policeCasesStatistics">
+				<p class="box_header">警情数量统计( 刑事 + 治安警情 ）</p>
+				<div>
+					<p id="policeCasesThisYear"></p>
+					<div class="progressBar" id= "pbThisYear"></div>
+				</div>
+				<div>
+					<p id="policeCasesLastYear"></p>
+					<div class="progressBar" id = "pbLastYear"></div>
+				</div>
+				<!--强制不自动换行元素-->
+				<nobr id="policeCasesAverage"></nobr>
+
+			</div>
+			<!-- 警情数量统计 End -->
+			<!-- 分类数量统计 Start -->
+			<div id="classificationStatistics">
+				<p class="box_header">分类数量统计(同比)</p>
+				<div class="box">
+					<div class="cfsEcharts" id="pie1"></div>
+					<p class="cfsTotal"></p>
+					<ul class="cfsInfo" id="cfsInfo1">
+					</ul>
+				</div>
+				<div class="box">
+					<div class="cfsEcharts" id="pie2"></div>
+					<p class="cfsTotal"></p>
+					<ul class="cfsInfo"  id="cfsInfo2"></ul>
+				</div>
+				<div class="box">
+					<div class="cfsEcharts" id="pie3"></div>
+					<p class="cfsTotal"></p>
+					<ul class="cfsInfo"  id="cfsInfo3"></ul>
+				</div>
+				<div class="box">
+					<div class="cfsEcharts" id="pie4"></div>
+					<p class="cfsTotal"></p>
+					<ul class="cfsInfo"  id="cfsInfo4"></ul>
+				</div>
+			</div>
+
+			<!-- 分类数量统计 End -->
+		</div>
+		<!-- 中间雷达图S -->
+		<div class="center" style="margin-left:40px">
+			<div id="rotate1">
+				 <div class="rotateBg" id="rotate"></div>
+			</div>
+			<div class="radar-wrap">
+				<div id="radarChart" class="radarChart">
+					<div class="warTooltip" >
+							<div class="warCont"></div>
+					</div>
+					<div class="yujTooltip" >
+							<div class="warCont"></div>
+					</div>
+			</div>
+			<div class="notesTooltip"></div>
+			<div class="clear"></div>
+			</div>
+			<!--图例S-->
+			<div id="legend" class="legend">
+				<div class="legend-dynamic">
+					<a id="yearS"><i class="icon-c1"></i><span></span></a>
+					<a id="yearE"><i class="icon-c2"></i><span></span></a>
+				</div>
+				<div class="legend-fixed">
+					<a><i class="icon-c3"></i>最高峰值1.5倍</a>
+					<a><i class="icon-c4"></i>分局历史最高值</a>
+					<a><i class="icon-c5"></i>全市中心城区平均水平</a>
+					<a><i class="icon-c6"></i>近三年平均水平</a>
+					<a><i class="icon-c7"></i>分局历史最低值</a>
+				</div>
+			</div>
+			<!--图例E-->
+		</div>
+		<!-- 中间雷达图E -->
+		<!-- 右侧三个列表 -->
+		<div id="right" >
+			<!-- 警情实时和预测 -->
+			<div class="rightEcharts" >
+				<div class="rightFirstTop">
+					警情实时和预测	
+				</div>
+				<div id="firstEcharts"></div>
+			</div>
+			<!-- 治安行政、刑事拘留实时和预测 -->
+			<div class="rightEcharts" id="second">
+				<div class="rightFirstTop">
+					治安行政、刑事拘留实时和预测
+				</div>
+				<div class="switchEcharts">
+					<p class="switchTitle01 second_01">刑事拘留</p>
+					<p class="switchTitle02 second_02">治安行政</p>
+				</div>
+				<div id="secondEcarts"></div>
+			</div>
+			<!-- 破案、强戒数量实时和预测 -->
+			<div class="rightEcharts" id="third">
+				<div class="rightFirstTop">
+					破案、强戒数量实时和预测	
+				</div>
+				<div class="switchEcharts">
+					<p class="switchTitle01 third_01">破案</p>
+					<p class="switchTitle02 third_02">强戒</p>
+				</div>
+				<div id="thirdEcharts"></div>
+			</div>
+		</div>
+	<div class="clear"></div>		
+	</div>
+
+	<!--数据加载中的滚动条-->
+	<div class="loading">
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+		<p class="loadingText">加载中... 请稍等</p>
+	</div>
+	<style>
+		#canvas{
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			width: 2688px;
+			height: 1080px;
+			background: none;
+		}
+	</style>
+	<canvas id="canvas"></canvas>
+</body>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.xdomainrequest.min.js"></script>
+	<script src="js/canvas1.js"></script>
+	<script>
+		var x2 = 0
+		var y2 = 0
+		var a = 0
+		var b = 0
+		window.onresize=function(){
+			//页面初始化时两侧显示
+		    scale()
+		};  
+	    var scale=function(){
+	    	var x=window.innerWidth/2688
+	    	var y=window.innerHeight/1080
+	    	$("body").css("webkitTransform",'scale('+x+','+y+')')   /* for Chrome || Safari */
+	    	$("body").css("msTransform",'scale('+x+','+y+')')       /* for Firefox */
+	    	$("body").css("mozTransform",'scale('+x+','+y+')')      /* for IE */
+	    	$("body").css("oTransform",'scale('+x+','+y+')')        /* for Opera */	 
+	    	if(x2!=x){
+	    	  a=1;
+          b=x/y;
+	    	}
+	    	if(y2!=y ){
+	    	  a=y/x*0.8 ;
+          b=1*0.8 ;
+	    	}
+	    	x2 = x
+	    	y2 = y
+	    	//雷达图圆形缩放
+	    	$(".radar-wrap").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$(".radar-wrap").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$(".radar-wrap").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$(".radar-wrap").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+	    	
+	    	//雷达图圆形缩放
+	    	$("#rotate1").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$("#rotate1").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$("#rotate1").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$("#rotate1").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+	    	
+	    	//图例圆形缩放
+	    	$("#legend").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$("#legend").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$("#legend").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$("#legend").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+	    	
+	    	//饼图圆形缩放
+	    	$(".box").css("webkitTransform",'scale('+a+','+b+')')   /* for Chrome || Safari */
+	    	$(".box").css("msTransform",'scale('+a+','+b+')')       /* for Firefox */
+	    	$(".box").css("mozTransform",'scale('+a+','+b+')')      /* for IE */
+	    	$(".box").css("oTransform",'scale('+a+','+b+')')        /* for Opera */
+
+	    }
+		 scale()
+		var showAll =false;
+
+		//点击显示详情
+		$('#showClick').on('click', function(){
+			if (showAll) {
+				$(this).css('opacity', 1).text("隐藏详情")
+				$('#right').css('visibility', 'visible')
+				$('#left').css('visibility', 'visible')
+				$('.time').show()
+			}else{
+				$(this).css('opacity', 1).text("显示详情")
+				$('#right').css('visibility', 'hidden')
+				$('#left').css('visibility', 'hidden')
+				$('.time').hide()
+			}
+			showAll=!showAll
+		})
+		
+/*		$(document).on('click','#closeId1', function(e){
+			$('.warTooltip').css('display', 'none')
+		})
+		$(document).on('click','#closeId2', function(e){
+			$('.yujTooltip').css('display', 'none')
+		})*/
+
+	</script>
+	<script src="js/config.js"></script>
+	<script src="js/lib/sea.js"></script>
+	<script src="js/lib/echarts.js"></script>
+	
+	<script src="js/lib/d3.v3.min.js"></script>
+	<script src="js/classificationStatistics.js"></script>
+	<script src="js/policeCasesStatistics.js"></script>
+	
+	<script src="js/radar.js"></script>
+	<script src="js/radarChart.js"></script>
+	<script src="js/lib/jQueryRotate.js"></script> 
+	<!--<script src="js/test.js"></script>-->
+	
+	<script>
+		seajs.config({
+			base:"./js/"
+		})
+		seajs.use("time")
+	</script>
+
+</html>

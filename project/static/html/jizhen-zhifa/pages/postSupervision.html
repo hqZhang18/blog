@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>事后监督</title>
+  <link rel="stylesheet" type="text/css" href="../styles/common.css">
+  <link rel="stylesheet" type="text/css" href="../styles/postSupervision.css">
+  <link rel="stylesheet" type="text/css" href="../styles/datePicker.css">
+  <!-- <style>
+    .axis text {
+      font-size: 20px;
+    }
+  </style> -->
+</head>
+<body>
+    <!-- 页面顶部 -->
+   <div class="show-time"></div>
+   <div class="header"></div>
+  <!-- 页面左边部分 -->
+  <div class="page-left">
+  	<h4 class="title"><i></i>已结案件变量统计<span></span></h4>
+		<!--已结案件变量统计-->
+		<div class="closed-page" id="closingCount">
+			
+		</div>
+		<!--按月份统计-->
+		<ul class="time-month month-count" id="monthCount">
+			
+		</ul>
+		<!--按季度统计-->
+		<div class="clearfix time-quarter" id="quarterCount">
+			
+		</div>
+  </div>
+  	
+  <!-- 页面中间部分 -->
+  <div class="page-center">
+    <!-- 各类型总数 -->
+    <div class="typeTotal"> 
+      <div id="chartsBg"></div>
+      
+     
+      <div id="typeTotal" class="type-charts"></div>
+    </div>
+    <div class="material-count" id="materialCount">
+    <div class="materialbg"></div>
+    <div class="no-data">暂无数据</div>
+      <div class="legend">
+        <span>装订证据案件</span>
+        <span>听阅案件</span>
+        <span>移送案件</span>
+      </div>
+    </div>
+  	<!--各部门执法扣分统计-->
+  	<div class="deduct-page deductCount" id="deductCount">
+
+  		<h4 class="title"><i></i>各部门执法扣分统计</h4>
+  		<div class="legend">
+        <div class="legend-type">
+          <i class="anjuan"></i>
+          <span class="name">案卷</span>
+          <span class="number"></span>
+          <span class="rate"></span>
+        </div>
+        <div class="legend-type">
+          <i></i>
+          <span class="name">非案卷</span>
+          <span class="number"></span>
+          <span class="rate"></span>
+        </div>    
+      </div>
+  	</div>
+  </div>
+  <!-- 页面右边部分 -->
+  <div class="page-right">
+  	<!--执法通报-->
+  	<div class="informed">
+  		<h4 class="title"><i></i>执法通报
+        <span class="fr tit-more" id="zftbMore"><b class="icon-more"></b></span>
+      </h4>
+  		<ul id="enforceLaw">
+  		</ul>
+  	</div>
+  	<!--非规范操作行为-->
+  	<div>
+  		<h4 class="title"><i></i>非规范操作行为
+        <span class="nonstandard-total"></span>
+        <span class="fr tit-more" id="czxwMore">
+          <b class="icon-more"></b>
+        </span>
+      </h4>
+  		<div id ="nonstandard" class="nonstandard">
+  			
+  		</div>
+  	</div>
+  </div>
+  <!--时间选择器-->
+  <div class="datePicker-container"></div>
+  <!-- 查看全部 -->
+  <div class="all-model-dialog"></div>
+  <!-- 错误提示 -->
+  <div class="error-dialog"></div>
+  <!--引入JS文件，并且页面上最多只引入这三个JS文件，sea-text可根据实际情况而定，当需要解析handlebars模板时才需引入-->
+  <script type="text/javascript" src='../sea-modules/sea.js'></script>
+	<script type="text/javascript" src='../sea-modules/sea-text.js'></script>
+	<script type="text/javascript" src='../seajs.config.js'></script>
+ 
+  <script type="text/javascript">
+    seajs.use(['../scripts/postSupervision.js'], function(post){
+      post.init()
+    })
+  </script>
+</body>
+</html>

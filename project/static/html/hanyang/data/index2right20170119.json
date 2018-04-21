@@ -1,0 +1,241 @@
+{
+    "state": true,
+    "massage": "请求成功",
+    "data": {
+        "mark": true,
+        "warningConditionTime": [
+            {
+                "name": "01",
+                "timeValue": "50",
+                "forecastValue": "60"
+            },
+            {
+                "name": "02",
+                "timeValue": "150",
+                "forecastValue": "90"
+            },
+            {
+                "name": "03",
+                "timeValue": "90",
+                "forecastValue": "45"
+            },
+            {
+                "name": "04",
+                "timeValue": "50",
+                "forecastValue": "90"
+            },
+            {
+                "name": "05",
+                "timeValue": "21",
+                "forecastValue": "160"
+            },
+            {
+                "name": "06",
+                "timeValue": "30",
+                "forecastValue": "50"
+            },
+            {
+                "name": "07",
+                "timeValue": "98",
+                "forecastValue": "46"
+            },
+            {
+                "name": "08",
+                "timeValue": "55",
+                "forecastValue": "60"
+            },
+            {
+                "name": "09",
+                "timeValue": "67",
+                "forecastValue": "95"
+            },
+            {
+                "name": "10",
+                "timeValue": "66",
+                "forecastValue": "88"
+            },
+            {
+                "name": "11",
+                "timeValue": "79",
+                "forecastValue": "31"
+            },
+            {
+                "name": "12",
+                "timeValue": "45",
+                "forecastValue": "49"
+            }
+        ],
+        "solveCase": [
+            {
+                "name": "01",
+                "patimeValue": "0",
+                "paforecastValue": "53",
+                "qjforecastValue": "26",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "02",
+                "patimeValue": "0",
+                "paforecastValue": "66",
+                "qjforecastValue": "13",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "03",
+                "patimeValue": "0",
+                "paforecastValue": "69",
+                "qjforecastValue": "19",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "04",
+                "patimeValue": "0",
+                "paforecastValue": "52",
+                "qjforecastValue": "16",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "05",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "06",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "07",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "08",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "09",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "10",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "11",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            },
+            {
+                "name": "12",
+                "patimeValue": "0",
+                "paforecastValue": "0",
+                "qjforecastValue": "0",
+                "qjtimeValue": "0"
+            }
+        ],
+        "administrative": [
+            {
+                "name": "01",
+                "penalTimeValue": "0",
+                "penalForecastValue": "24",
+                "adminTimeValue": "0",
+                "adminForecastValue": "142"
+            },
+            {
+                "name": "02",
+                "penalTimeValue": "0",
+                "penalForecastValue": "20",
+                "adminTimeValue": "0",
+                "adminForecastValue": "121"
+            },
+            {
+                "name": "03",
+                "penalTimeValue": "0",
+                "penalForecastValue": "8",
+                "adminTimeValue": "0",
+                "adminForecastValue": "154"
+            },
+            {
+                "name": "04",
+                "penalTimeValue": "0",
+                "penalForecastValue": "4",
+                "adminTimeValue": "0",
+                "adminForecastValue": "91"
+            },
+            {
+                "name": "05",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "06",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "07",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "08",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "09",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "10",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "11",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            },
+            {
+                "name": "12",
+                "penalTimeValue": "0",
+                "penalForecastValue": "0",
+                "adminTimeValue": "0",
+                "adminForecastValue": "0"
+            }
+        ]
+    }
+}

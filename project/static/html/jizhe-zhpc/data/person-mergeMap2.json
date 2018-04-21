@@ -1,0 +1,44 @@
+{
+  "code": 1,
+  "msg": "success",
+  "result": {
+    "attendance": 129,
+    "vacation": 9,
+     "duibuTotal": 882,
+    "map": [
+        {
+            "troopsId": "abad0555-0753-4158-8934-e728513a2aec",
+            "troopsName": "二十一支队",
+            "value": "135",
+            "dists": [
+                {
+                    "id": null,
+                    "value": "万盛区"
+                }
+            ]
+        },
+        {
+            "troopsId": "6488728a-468e-4971-9758-1e15149c5b47",
+            "troopsName": "二十支队",
+            "value": "890",
+            "dists": [
+                {
+                    "id": "2256",
+                    "value": "北碚区"
+                }
+            ]
+        },
+        {
+            "troopsId": "c99f6924-1087-42b1-b825-96b7a81f97eb",
+            "troopsName": "涪陵支队",
+            "value": "667",
+            "dists": [
+                {
+                    "id": "2266",
+                    "value": "涪陵区"
+                }
+            ]
+        }
+      ]
+    }
+}

@@ -1,0 +1,478 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+        "enforceLawCheck":[
+            {
+                "name": "待审核",
+                "value": 3200
+            }, {
+                "name": "已审核",
+                "value": 3300
+            },{
+                "name": "退回整改",
+                "value": 3400
+            },{
+                "name": "终止",
+                "value": 3500
+            }
+        ],
+        "enforceLawCount":[
+            {
+                "name": "一支队",
+                "value": 78,
+                "endRate": 0.56,
+                "returnRote": 0.45
+            }, 
+            {
+                "name": "二支队",
+                "value": 89,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "三支队",
+                "value": 54,
+                "endRate": 0.34,
+                "returnRote": 0.66
+            },
+            {
+                "name": "四支队",
+                "value": 25,
+                "endRate": 0.56,
+                "returnRote": 0.44
+            },
+            {
+                "name": "五支队",
+                "value": 92,
+                "endRate": 0.54,
+                "returnRote": 0.46
+            },
+            {
+                "name": "六支队",
+                "value": 46,
+                "endRate": 0.36,
+                "returnRote": 0.64
+            },
+            {
+                "name": "七支队",
+                "value": 44,
+                "endRate": 0.26,
+                "returnRote": 0.74
+            },
+            {
+                "name": "八支队",
+                "value": 56,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "九支队",
+                "value": 82,
+                "endRate": 0.78,
+                "returnRote": 0.22
+            },
+            {
+                "name": "十支队",
+                "value": 22,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "一支队",
+                "value": 78,
+                "endRate": 0.56,
+                "returnRote": 0.45
+            }, 
+            {
+                "name": "二支队",
+                "value": 89,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "三支队",
+                "value": 54,
+                "endRate": 0.34,
+                "returnRote": 0.66
+            },
+            {
+                "name": "四支队",
+                "value": 25,
+                "endRate": 0.56,
+                "returnRote": 0.44
+            },
+            {
+                "name": "五支队",
+                "value": 92,
+                "endRate": 0.54,
+                "returnRote": 0.46
+            },
+            {
+                "name": "六支队",
+                "value": 46,
+                "endRate": 0.36,
+                "returnRote": 0.64
+            },
+            {
+                "name": "七支队",
+                "value": 44,
+                "endRate": 0.26,
+                "returnRote": 0.74
+            },
+            {
+                "name": "八支队",
+                "value": 56,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "九支队",
+                "value": 82,
+                "endRate": 0.78,
+                "returnRote": 0.22
+            },
+            {
+                "name": "十支队",
+                "value": 22,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "一支队",
+                "value": 78,
+                "endRate": 0.56,
+                "returnRote": 0.45
+            }, 
+            {
+                "name": "二支队",
+                "value": 89,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "三支队",
+                "value": 54,
+                "endRate": 0.34,
+                "returnRote": 0.66
+            },
+            {
+                "name": "四支队",
+                "value": 25,
+                "endRate": 0.56,
+                "returnRote": 0.44
+            },
+            {
+                "name": "五支队",
+                "value": 92,
+                "endRate": 0.54,
+                "returnRote": 0.46
+            },
+            {
+                "name": "六支队",
+                "value": 46,
+                "endRate": 0.36,
+                "returnRote": 0.64
+            },
+            {
+                "name": "七支队",
+                "value": 44,
+                "endRate": 0.26,
+                "returnRote": 0.74
+            },
+            {
+                "name": "八支队",
+                "value": 56,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            },
+            {
+                "name": "九支队",
+                "value": 82,
+                "endRate": 0.78,
+                "returnRote": 0.22
+            },
+            {
+                "name": "十支队",
+                "value": 22,
+                "endRate": 0.27,
+                "returnRote": 0.73
+            }
+        ],
+        "zffxmx":{
+            "jgTotal": 500,
+            "mxTotal": 250,
+            "processed": 51,
+            "pending": 451,
+            "group":[
+                {
+                    "name": "一对象多号码",
+                    "type": "type1",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一用户多机",
+                    "type": "type2",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一对象多号码",
+                    "type": "type1",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一用户多机",
+                    "type": "type2",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一对象多号码",
+                    "type": "type1",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一用户多机",
+                    "type": "type2",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一对象多号码",
+                    "type": "type1",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一用户多机",
+                    "type": "type2",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一对象多号码",
+                    "type": "type1",
+                    "pending": 5,
+                    "total": 98
+                },
+                {
+                    "name": "一用户多机",
+                    "type": "type2",
+                    "pending": 5,
+                    "total": 98
+                }
+            ]
+        },
+        "caseNumTop10":[
+            {
+                "name":"抢劫",
+                "value":100
+            },
+            {
+                "name":"诈骗",
+                "value":200
+            },
+            {
+                "name":"强奸",
+                "value":300
+            },
+            {
+                "name":"盗窃",
+                "value":400
+            },
+            {
+                "name":"吸毒",
+                "value":500
+            },
+            {
+                "name":"防火",
+                "value":600
+            },
+            {
+                "name":"爆炸",
+                "value":700
+            },
+            {
+                "name":"投毒",
+                "value":800
+            },
+            {
+                "name":"杀人",
+                "value":900
+            },
+            {
+                "name":"暴力",
+                "value":1000
+            }
+        ],
+        "departmentNumTop10":[
+            {
+                "name": "一支队",
+                "value": 100
+            },
+            {
+                "name": "二支队",
+                "value": 200
+            },
+            {
+                "name": "三支队",
+                "value": 300
+            },
+            {
+                "name": "四支队",
+                "value": 400
+            },
+            {
+                "name": "五支队",
+                "value": 500
+            },
+            {
+                "name": "六支队",
+                "value": 600
+            },
+            {
+                "name": "七支队",
+                "value": 700
+            },
+            {
+                "name": "八支队",
+                "value": 800
+            },
+            {
+                "name": "九支队",
+                "value": 900
+            },
+            {
+                "name": "十支队",
+                "value": 1000
+            }
+        ],
+        "typeTotal":[
+            {
+                "name": "通用类",
+                "value": 320000
+            },
+            {
+                "name": "手段类",
+                "value": 864368
+            },
+            {
+                "name": "提请总量",
+                "value": 412368
+            }
+        ],
+        "meansCount":[
+            {
+                "name": "931手段",
+                "value": 1200
+            },
+            {
+                "name": "932手段",
+                "value": 1300
+            },
+            {
+                "name": "933手段",
+                "value": 14200
+            },
+            {
+                "name": "934手段",
+                "value": 1520
+            },
+            {
+                "name": "935手段",
+                "value": 16200
+            },
+            {
+                "name": "936手段",
+                "value": 17200
+            },
+            {
+                "name": "937手段",
+                "value": 18200
+            }
+        ],
+        "ywwdCount":[
+            {
+                "name": "办理",
+                "value": 78
+            },
+            {
+                "name": "结案",
+                "value": 65
+            },
+            {
+                "name": "归档",
+                "value": 32
+            },
+            {
+                "name": "受理",
+                "value": 25
+            },
+            {
+                "name": "打印",
+                "value": 20
+            }
+        ],
+        "czxwCount":[
+            {
+                "name": "查询",
+                "value": 100,
+                "rate": 0.05
+            },
+            {
+                "name": "听音",
+                "value": 200,
+                "rate": 0.12
+            },
+            {
+                "name": "布撒空",
+                "value": 300,
+                "rate": 0.16
+            },
+            {
+                "name": "定位",
+                "value": 250,
+                "rate": 0.13
+            },
+            {
+                "name": "分析",
+                "value": 280,
+                "rate": 0.14
+            },
+            {
+                "name": "审批",
+                "value": 250,
+                "rate": 0.13
+            },
+            {
+                "name": "其他",
+                "value": 300,
+                "rate": 0.16
+            },
+            {
+                "name": "业务管理",
+                "value": 200,
+                "rate": 0.12
+            }
+        ],
+        "moduleCount": [
+           {
+                "name": "一支队",
+                "value": 1200
+            },{
+                "name": "二支队",
+                "value": 2000
+            } ,{
+                "name": "三支队",
+                "value": 890
+            } ,{
+                "name": "四支队",
+                "value": 789
+            }  
+        ]
+    }
+}

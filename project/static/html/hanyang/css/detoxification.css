@@ -1,0 +1,118 @@
+
+.right .detoxificationBox{
+    position: relative;
+    width: 100%;
+    height: 130px;
+}
+
+.detoxificationBox .rect{
+    float: left;
+    margin: 17px 10px;
+    width: 16px;
+    height: 16px;
+    line-height: 50px;
+    background-color: rgb(131, 230, 251);
+}
+.detoxificationBox .title{
+    float: left;
+    width: 40%;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    color: rgb(131, 230, 251);
+}
+
+.detoxificationBox .detoxificationChart{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px ;
+    background: rgba(39,90,121,.6)
+}
+
+.detoxificationChart > ul{
+    width: 80%;
+    margin-top:10px;
+    margin-left:10%;
+}
+.detoxificationChart ul li{
+    position: relative;
+    height: 20px;
+}
+.detoxificationChart .leftBarValue{
+    width: 50%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    color: rgb(255, 240, 50);
+}
+
+.detoxificationChart .rightBarValue{
+    float: right;
+    width: 50%;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    color: rgb(255, 139, 36);
+}
+
+.detoxificationChart ul li:nth-child(2){
+    height: 18px;
+    line-height: 18px;
+}
+.detoxificationChart .leftBarText{
+    float: left;
+    font-size: 14px;
+    color: rgb(158, 201, 226);
+    text-align: left;
+}
+
+.detoxificationChart .rightBarText{
+    position: absolute;
+    right:0;
+    font-size: 14px;
+    color: rgb(158, 201, 226);
+    text-align: right;
+}
+
+.detoxificationChart ul li:nth-child(3){
+    position: relative;
+    height: 8px;
+    border: 1px solid rgb(131, 230, 251);
+    padding: 1px;
+    /*line-height: 8px;*/
+    box-shadow: 0 0 10px rgba(131, 230, 251,0.8);
+    /*background:rgb(255, 240, 50);*/
+
+}
+
+.detoxificationChart .leftBarLength{
+    display: block;
+    position: relative;
+    top: 1px;
+    /*width: 20%;*/
+    height: 6px;
+    background-color: rgb(255, 240, 50);
+    z-index: 19;
+}
+
+.detoxificationChart .leftBarLength:after{
+    position: absolute;
+    top:-18px;
+    right: -12px ;
+    content: url("../image/divideIcon.png");
+    width: 24px;
+    height: 8px;
+}
+
+.detoxificationChart .rightBarLength{
+    display: block;
+    position: absolute;
+    right: 0;
+    top:2px;
+    height: 6px;
+    /*width: 80%;*/
+    background-color: rgb(255, 139, 36);
+}

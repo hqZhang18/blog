@@ -1,0 +1,11 @@
+{
+    "code": 1,
+    "msg": "success",
+    "result": {
+            "daishenhe": 200,
+            "yishenhe": 300,
+            "tuihui": 590,
+            "zhongzhi": 73
+    }
+    
+}

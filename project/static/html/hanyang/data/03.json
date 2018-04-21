@@ -1,0 +1,104 @@
+{
+  "state":true,
+  "message":"请求成功",
+  "data":{
+        "radarMap": [
+            {
+                "name": "今年",
+                "type": [
+                    {
+                        "realValue": 32696,
+                        "name": "警情",
+                        "value": 0.509
+                    },
+                    {
+                        "realValue": 7279,
+                        "name": "治安行政",
+                        "value": 0.213
+                    },
+                    {
+                        "realValue": 629,
+                        "name": "强戒",
+                        "value": 0.475
+                    },
+                    {
+                        "realValue": 3023,
+                        "name": "破案",
+                        "value": 0.636
+                    },
+                    {
+                        "realValue": 1273,
+                        "name": "刑拘",
+                        "value": 0.625
+                    }
+                ]
+            },
+            {
+                "name": "去年",
+                "type": [
+                    {
+                        "realValue": 35470,
+                        "name": "警情",
+                        "value": 0.667
+                    },
+                    {
+                        "realValue": 3071,
+                        "name": "治安行政",
+                        "value": 0.268
+                    },
+                    {
+                        "realValue": 532,
+                        "name": "强戒",
+                        "value": 0.564
+                    },
+                    {
+                        "realValue": 2836,
+                        "name": "破案",
+                        "value": 0.644
+                    },
+                    {
+                        "realValue": 1259,
+                        "name": "刑拘",
+                        "value": 0.648
+                    }
+                ]
+            },
+            [
+                1,
+                0.667,
+                0.612,
+                0.566,
+                0.492
+            ]
+        ],
+        "typeValue": [
+          {
+            "name": "警情",
+            "values": [1000, 120, 500, 22, 121, 454],
+            "scale":"45.56",
+            "mark":false
+          },{
+            "name": "治安行政",
+            "values": [900, 120, 500, 22, 121, 454],
+            "scale":"45.56",
+            "mark":true
+          },{
+            "name": "毒品罪案",
+            "values": [700, 120, 500, 22, 121, 454],
+            "scale":"45.56",
+            "mark":true
+          },{
+            "name": "破案",
+            "values": [600, 120, 500, 22, 121, 454],
+            "scale":"45.56",
+            "mark":true
+          },{
+            "name": "刑事拘留",
+            "values": [100, 120, 500, 22, 121, 454],
+            "scale":"45.56",
+            "mark":true
+          }
+        ],
+        "week":[1,2,3,4,5]
+  }
+}

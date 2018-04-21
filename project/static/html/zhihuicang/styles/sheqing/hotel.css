@@ -1,0 +1,156 @@
+.hotel-container {
+    position: relative;
+    font-family: "微软雅黑";
+    background: url(../../images/sheqing/hotel/hotel-bg.jpg);
+    background-size: 100% 100%;
+    transform-origin: 0px 0px 0px;
+    -ms-transform-origin: 0 0;
+    overflow: hidden;
+    width: 3456px;
+    height: 1944px;
+}
+
+.hotel-container .about-stay-person {
+    position: absolute;
+    left: 2113px;
+    top: 108px;
+    width: 1249px;
+    height: 1696px;
+    background: url(../../images/sheqing/hotel/about-stay-person.png) no-repeat;
+}
+
+.hotel-container .about-stay-person .hotel-source {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 1160px;
+    height: 42%;
+}
+
+.hotel-container .about-stay-person .hotel-source:last-child {
+    top: 780px;
+    height: 46%;
+}
+
+.hotel-container .about-stay-person .hotel-source .title {
+    position: absolute;
+    left: 46px;
+    top: 49px;
+    width: 100%;
+    height: 49px;
+    color: #00fff8;
+    font-size: 42px;
+    font-family: digifacewide;
+}
+
+.hotel-container .about-stay-person .hotel-source .title:before {
+    content: '';
+    width: 10px;
+    height: 31px;
+    display: inline-block;
+    margin-right: 15px;
+    background: #00fff8;
+}
+
+.hotel-container .about-stay-person .hotel-source .source {
+    position: absolute;
+    left: 6px;
+    top: 112px;
+    width: 100%;
+    height: 100%;
+}
+
+.hotel-container .about-stay-person .hotel-source:last-child .source{
+    top: 140px;
+}
+
+.hotel-container .person-total-count {
+    position: absolute;
+    top: 108px;
+    left: 95px;
+    width: 1918px;
+    height: 504px;
+    background: url(../../images/sheqing/hotel/person-total-count.png) no-repeat;
+}
+
+.hotel-container .person-total-count .count {
+    position: absolute;
+    bottom: 134px;
+    width: 718px;
+    height: 158px;
+    background: url(../../images/sheqing/hotel/person-count.png) no-repeat;
+    text-align: center;
+}
+
+.hotel-container .person-total-count .count .person-count {
+    position: absolute;
+    top: -65px;
+    width: 718px;
+    height: 158px;
+    line-height: 158px;
+    text-align: center;
+    color: #00f3ff;
+    font-size: 90px;
+    font-family: digifacewide;
+}
+
+.hotel-container .person-total-count .count .title {
+    position: absolute;
+    top: 90px;
+    width: 718px;
+    height: 58px;
+    line-height: 58px;
+    color: #fff;
+    font-size: 32px;
+}
+
+.hotel-container .person-total-count .current-hotel {
+    left: 144px;
+}
+
+.hotel-container .person-total-count .current-internet {
+    right: 133px;
+}
+
+.hotel-container .activity-list {
+    position: absolute;
+    left: 95px;
+    top: 684px;
+    width: 1919px;
+    height: 1119px;
+    background: url(../../images/sheqing/hotel/activity-bg.png) no-repeat;
+}
+
+.hotel-container .activity-list .title {
+    position: absolute;
+    left: 836px;
+    top: 54px;
+    width: 265px;
+    height: 58px;
+    color: #00fff8;
+    font-size: 42px;
+}
+
+.hotel-container .activity-list .list {
+    position: absolute;
+    left: 81px;
+    top: 154px;
+    width: 1700px;
+    height: 890px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.hotel-container .activity-list .list li {
+    background: url(../../images/sheqing/hotel/li-bg.png) no-repeat;
+    width: 1700px;
+    height: 115px;
+    line-height: 115px;
+    color: #fff;
+    font-size: 32px;
+    text-indent: 5em;
+    padding-bottom: 70px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
