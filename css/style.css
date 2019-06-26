@@ -127,16 +127,20 @@ body {
   font: 14px Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei Light", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
+#container > .outer,
 .outer {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
 }
+#container > .outer:before,
 .outer:before,
+#container > .outer:after,
 .outer:after {
   content: "";
   display: table;
 }
+#container > .outer:after,
 .outer:after {
   clear: both;
 }
@@ -309,7 +313,8 @@ body {
 }
 #header {
   height: 248px;
-  position: relative;
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid #ddd;
 }
 #header:before,

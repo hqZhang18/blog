@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vue-cli脚手架config目录下index.js配置文件详解 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="此文章介绍vue-cli脚手架config目录下index.js配置文件1.此配置文件是用来定义开发环境和生产环境中所需要的参数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli脚手架config目录下index.js配置文件详解">
+<meta property="og:url" content="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html">
+<meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:description" content="此文章介绍vue-cli脚手架config目录下index.js配置文件1.此配置文件是用来定义开发环境和生产环境中所需要的参数">
+<meta property="og:updated_time" content="2018-08-08T01:04:34.065Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-cli脚手架config目录下index.js配置文件详解">
+<meta name="twitter:description" content="此文章介绍vue-cli脚手架config目录下index.js配置文件1.此配置文件是用来定义开发环境和生产环境中所需要的参数">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+     		保持学习的习惯，努力的姿态！<br/>
+     		享受生命的成长过程，创造美好未来送给自己<br/>
+     		人生仅此一次，唯努力过方无悔
+      
+        <h2 id="subtitle-wrap" style="display: none;">
+          <a href="/" id="subtitle">前端的那点事 前端笔记 es6 javascript es6 基础 react</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/categories/conding">学无止境</a>
+        
+          <a class="main-nav-link" href="/categories/life">碎言碎语</a>
+        
+          <a class="main-nav-link" href="/about">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+          <a class="nav-icon" href="https://github.com/jodyzhq" title="GitHub" target="_blank"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue-cli脚手架config目录下index.js配置文件详解" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue-cli脚手架config目录下index.js配置文件详解
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html" class="article-date">
+  <time datetime="2018-08-08T00:49:56.000Z" itemprop="datePublished">2018-08-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/Webpack/">Webpack</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <h5 id="此文章介绍vue-cli脚手架config目录下index-js配置文件"><a href="#此文章介绍vue-cli脚手架config目录下index-js配置文件" class="headerlink" title="此文章介绍vue-cli脚手架config目录下index.js配置文件"></a>此文章介绍vue-cli脚手架config目录下index.js配置文件</h5><p>1.此配置文件是用来定义开发环境和生产环境中所需要的参数<br> <a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// path是node.js的路径模块，用来处理路径统一的问题</span></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">// 开发环境配置项</span></div><div class="line">  dev: &#123;</div><div class="line">    <span class="comment">// 引入当前目录下的dev.env.js，用来指明开发环境</span></div><div class="line">    env: <span class="built_in">require</span>(<span class="string">'./dev.env'</span>),</div><div class="line">    <span class="comment">// Paths</span></div><div class="line">    assetsSubDirectory: <span class="string">'static'</span>,</div><div class="line">    <span class="attr">assetsPublicPath</span>: <span class="string">'/'</span>,</div><div class="line">    <span class="comment">// 跨域代理设置代理表，建一个虚拟api服务器用来代理本机的请求，只能用于开发模式</span></div><div class="line">    proxyTable: &#123;</div><div class="line">      <span class="string">'/backendApi'</span>: &#123;</div><div class="line">        <span class="attr">target</span>: <span class="string">'http://58.83.189.150:18888/'</span>,</div><div class="line">        <span class="attr">changeOrigin</span>: <span class="literal">true</span>, <span class="comment">//如果接口跨域，需要进行这个参数配置</span></div><div class="line">        secure: <span class="literal">false</span>,  <span class="comment">// 如果是https接口，需要配置这个参数</span></div><div class="line">      &#125;,</div><div class="line">      <span class="string">'/weather-web/resources'</span>: &#123;</div><div class="line">        <span class="attr">target</span>: <span class="string">'http://58.83.189.150:18888/'</span>,</div><div class="line">        <span class="attr">changeOrigin</span>: <span class="literal">true</span>, <span class="comment">// // 如果接口跨域，需要进行这个参数配置</span></div><div class="line">        secure: <span class="literal">false</span>,  <span class="comment">// 如果是https接口，需要配置这个参数</span></div><div class="line">      &#125;,</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// dev-server的端口号，可以自行更改</span></div><div class="line">    port: <span class="number">8086</span>,  </div><div class="line">    <span class="attr">devtool</span>: <span class="string">'cheap-module-eval-source-map'</span>,</div><div class="line">    <span class="comment">// 是否生成css，map文件，</span></div><div class="line">    cssSourceMap: <span class="literal">false</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 线上环境配置项</span></div><div class="line">  build: &#123;</div><div class="line">    <span class="comment">// 导入prod.env.js配置文件，只要用来指定当前环境</span></div><div class="line">    env: <span class="built_in">require</span>(<span class="string">'./prod.env'</span>),</div><div class="line">    <span class="comment">// Template for index.html</span></div><div class="line">    <span class="comment">// 相对路径的拼接，假如当前跟目录是config，那么下面配置的index属性的属性值就是dist/index.html</span></div><div class="line">    index: path.resolve(__dirname, <span class="string">'../../dist/index.html'</span>), <span class="comment">// html入口文件</span></div><div class="line">    <span class="comment">// 定义的是静态资源的根目录 也就是dist目录</span></div><div class="line">    assetsRoot: path.resolve(__dirname, <span class="string">'../../dist/'</span>), <span class="comment">// 打包后的目录设置</span></div><div class="line">    <span class="comment">// 定义的是静态资源根目录的子目录static，也就是dist目录下面的static</span></div><div class="line">    assetsSubDirectory: <span class="string">'static'</span>, <span class="comment">// 打后的静态资源</span></div><div class="line">    <span class="comment">// 下面定义的是静态资源的公开路径，也就是真正的引用路径(服务器路径)</span></div><div class="line">    assetsPublicPath: <span class="string">'http://58.83.189.150:18888/'</span>,</div><div class="line">    <span class="comment">// 是否生成生产环境的sourcmap，sourcmap是用来debug编译后文件的，通过映射到编译前文件来实现</span></div><div class="line">    productionSourceMap: <span class="literal">false</span>, </div><div class="line">    <span class="comment">// 下面是是否在生产环境中压缩代码，如果要压缩必须安装compression-webpack-plugin</span></div><div class="line">    productionGzip: <span class="literal">true</span>,</div><div class="line">    <span class="comment">// 下面定义要压缩哪些类型的文件</span></div><div class="line">    productionGzipExtensions: [<span class="string">'js'</span>, <span class="string">'css'</span>],</div><div class="line">    <span class="comment">// 下面是用来开启编译完成后的报告，可以通过设置值为true和false来开启或关闭</span></div><div class="line">    <span class="comment">// 下面的process.env.npm_config_report表示定义的一个npm_config_report环境变量，可以自行设置</span></div><div class="line">    bundleAnalyzerReport: process.env.npm_config_report</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>)下面是prod.env.js的配置内容</div><div class="line">    <span class="built_in">module</span>.exports = &#123;</div><div class="line">        <span class="comment">// 作用很明显，就是导出一个对象，NODE_ENV是一个环境变量，指定production环境</span></div><div class="line">        NODE_ENV: <span class="string">'"production"'</span></div><div class="line">    &#125;</div><div class="line">(<span class="number">2</span>)下面是dev.env.js的配置内容</div><div class="line">    <span class="comment">// 首先引入的是webpack的merge插件，该插件是用来合并对象，也就是配置文件用的，相同的选项会被覆盖，至于这里为什么多次一举，可能另有他图吧</span></div><div class="line">    <span class="keyword">var</span> merge = <span class="built_in">require</span>(<span class="string">'webpack-merge'</span>)</div><div class="line">    <span class="comment">// 导入prod.env.js配置文件</span></div><div class="line">    <span class="keyword">var</span> prodEnv = <span class="built_in">require</span>(<span class="string">'./prod.env'</span>)</div><div class="line">    <span class="comment">// 将两个配置对象合并，最终结果是 NODE_ENV: '"development"'</span></div><div class="line">    <span class="built_in">module</span>.exports = merge(prodEnv, &#123;</div><div class="line">        <span class="attr">NODE_ENV</span>: <span class="string">'"development"'</span></div><div class="line">    &#125;)</div><div class="line">(<span class="number">3</span>)下面是proxyTable的一般用法</div><div class="line">    vue-cli使用这个功能是借助http-proxy-middleware插件，一般解决跨域请求api</div><div class="line">    proxyTable: &#123;</div><div class="line">        <span class="string">'/list'</span>: &#123;</div><div class="line">            <span class="attr">target</span>: <span class="string">'http://api.xxxxxxxx.com'</span>, -&gt; 目标url地址</div><div class="line">            changeOrigin: <span class="literal">true</span>, -&gt; 指示是否跨域</div><div class="line">            pathRewrite: &#123;</div><div class="line">            <span class="string">'^/list'</span>: <span class="string">'/list'</span> -&gt; 可以使用 /list 等价于 api.xxxxxxxx.com/list</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          vue-cli脚手架引入element UI的正确打开方式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/conding/Webpack/20180808/webpack踩的那些坑.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">webpack踩的那些坑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-vue-cli脚手架config目录下index.js配置文件详解" data-title="vue-cli脚手架config目录下index.js配置文件详解" data-url="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类 ● category</h3>
+    <div class="widget tag">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">61</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/yarn/">yarn</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章 ● Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html">vue-cli脚手架引入element UI的正确打开方式</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html">vue-cli脚手架config目录下index.js配置文件详解</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/webpack踩的那些坑.html">webpack踩的那些坑</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/webpack4.x中对css的几种处理总结.html">webpack4.x中对css的几种处理总结（css分离，消除冗余的css代码，自动添加浏览器内核前缀）</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180409/JS中常用数据转换方法.html">JS中常用数据转换方法</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180403/redux-saga.html">redux-saga</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180318/react子组件向父组件通信.html">react子组件向父组件通信</a>
+          </li>
+        
+          <li>
+            <a href="/conding/yarn/20180306/yarn更改为淘宝镜像.html">yarn更改为淘宝镜像</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180304/前端经验总结.html">前端经验总结(CSS)</a>
+          </li>
+        
+          <li>
+            <a href="/life/20171226/2017年又结束了.html">2017年又结束了</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云 ● Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 15.2px; color: #5189ab">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.2px; color: #5189ab">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Echarts/" style="font-size: 14px; color: #258fb8">Echarts</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.8px; color: #d37986">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17.6px; color: #a87e92">React</a> <a href="/tags/SVG/" style="font-size: 14px; color: #258fb8">SVG</a> <a href="/tags/Webpack/" style="font-size: 17.6px; color: #a87e92">Webpack</a> <a href="/tags/console/" style="font-size: 14px; color: #258fb8">console</a> <a href="/tags/element-UI/" style="font-size: 14px; color: #258fb8">element UI</a> <a href="/tags/javascript/" style="font-size: 16.4px; color: #7c849f">javascript</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/redux-saga/" style="font-size: 14px; color: #258fb8">redux-saga</a> <a href="/tags/yarn/" style="font-size: 14px; color: #258fb8">yarn</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.2px; color: #5189ab">友谊</a> <a href="/tags/循环遍历/" style="font-size: 16.4px; color: #7c849f">循环遍历</a> <a href="/tags/总结/" style="font-size: 14px; color: #258fb8">总结</a> <a href="/tags/旅途/" style="font-size: 16.4px; color: #7c849f">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.2px; color: #5189ab">闭包</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档 ● archive</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 08月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 04月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 03月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 12月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 08月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 04月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接 ● Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://baizn.github.io" target="_BLANK">●&emsp;baizn</a></li>
+    
+    <li><a href="http://init.funlee.cn" target="_BLANK">●&emsp;ClassRun</a></li>
+    
+    <li><a href="https://wxxtqk.github.io" target="_BLANK">●&emsp;tangqk</a></li>
+    
+    <li><a href="http://zy380196088.github.io" target="_BLANK">●&emsp;zy380196088</a></li>
+    
+    <li><a href="https://erikison18.github.io/" target="_BLANK">●&emsp;Erik</a></li>
+    
+  </ul>
+</div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zillah<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>
+
+    </div>
+  </div>
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?204bdccab804777b4dcd9eefa8ceb91b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/categories/conding" class="mobile-nav-link">学无止境</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">碎言碎语</a>
+  
+    <a href="/about" class="mobile-nav-link">关于我</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jody';
+  
+  var disqus_url = '/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+<script src="/js/totop.js"></script>
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:999; display:none">
+<a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!--- Baidu Share End --->
+
+
+
+
+
+
+  </div>
+</body>
+</html>

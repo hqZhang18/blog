@@ -5,25 +5,16 @@
   
   <title>redux-saga | 小乔的博客[学习笔记]|[生活随笔]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="createSagaMiddleware(…sagas)`创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立
-
-sagas: Array - Generator 函数列表
-123456789101112import createSagaMiddleware from &amp;apos;redux-saga&amp;apos;import reducer from &amp;apos;./pa">
+  <meta name="description" content="createSagaMiddleware(…sagas)`创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redux-saga">
 <meta property="og:url" content="/conding/20180403/redux-saga.html">
 <meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
-<meta property="og:description" content="createSagaMiddleware(…sagas)`创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立
-
-sagas: Array - Generator 函数列表
-123456789101112import createSagaMiddleware from &amp;apos;redux-saga&amp;apos;import reducer from &amp;apos;./pa">
-<meta property="og:updated_time" content="2018-04-03T14:15:55.177Z">
+<meta property="og:description" content="createSagaMiddleware(…sagas)`创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立">
+<meta property="og:updated_time" content="2018-07-09T05:28:36.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redux-saga">
-<meta name="twitter:description" content="createSagaMiddleware(…sagas)`创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立
-
-sagas: Array - Generator 函数列表
-123456789101112import createSagaMiddleware from &amp;apos;redux-saga&amp;apos;import reducer from &amp;apos;./pa">
+<meta name="twitter:description" content="createSagaMiddleware(…sagas)`创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -111,7 +102,7 @@ sagas: Array - Generator 函数列表
       	 
         <!-- Table of Contents -->
         
-        <h3 id="createSagaMiddleware-…sagas"><a href="#createSagaMiddleware-…sagas" class="headerlink" title="createSagaMiddleware(…sagas)`"></a>createSagaMiddleware(…sagas)`</h3><p>创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立</p>
+        <h3 id="createSagaMiddleware-…sagas"><a href="#createSagaMiddleware-…sagas" class="headerlink" title="createSagaMiddleware(…sagas)`"></a>createSagaMiddleware(…sagas)`</h3><p>创建一个 Redux 中间件，将 Sagas 与 Redux Store 建立<br><a id="more"></a></p>
 <ul>
 <li><p><code>sagas: Array</code> - Generator 函数列表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import createSagaMiddleware from &apos;redux-saga&apos;</div><div class="line">import reducer from &apos;./path/to/reducer&apos;</div><div class="line">import sagas from &apos;./path/to/sagas&apos;</div><div class="line"></div><div class="line">export default function configureStore(initialState) &#123;</div><div class="line">  // 注意：redux@&gt;=3.1.0 的版本才支持把 middleware 作为 createStore 方法的最后一个参数</div><div class="line">  return createStore(</div><div class="line">    reducer,</div><div class="line">    initialState,</div><div class="line">    applyMiddleware(/* other middleware, */createSagaMiddleware(...sagas))</div><div class="line">  )</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
@@ -188,7 +179,7 @@ sagas: Array - Generator 函数列表
   <div class="widget-wrap">
     <h3 class="widget-title">分类 ● category</h3>
     <div class="widget tag">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">57</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/yarn/">yarn</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">61</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/yarn/">yarn</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -199,6 +190,22 @@ sagas: Array - Generator 函数列表
     <h3 class="widget-title">最新文章 ● Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html">vue-cli脚手架引入element UI的正确打开方式</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html">vue-cli脚手架config目录下index.js配置文件详解</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/webpack踩的那些坑.html">webpack踩的那些坑</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/webpack4.x中对css的几种处理总结.html">webpack4.x中对css的几种处理总结（css分离，消除冗余的css代码，自动添加浏览器内核前缀）</a>
+          </li>
         
           <li>
             <a href="/conding/20180409/JS中常用数据转换方法.html">JS中常用数据转换方法</a>
@@ -224,22 +231,6 @@ sagas: Array - Generator 函数列表
             <a href="/life/20171226/2017年又结束了.html">2017年又结束了</a>
           </li>
         
-          <li>
-            <a href="/uncategorized/20170824/svg动画（多个元素绕同一路径匀速运动）.html">svg动画（多个元素绕同一路径匀速运动）</a>
-          </li>
-        
-          <li>
-            <a href="/conding/20170818/node版本管理.html">node版本管理</a>
-          </li>
-        
-          <li>
-            <a href="/conding/JavaScript/20170404/你真的了解-console-吗.html">你真的了解 console 吗</a>
-          </li>
-        
-          <li>
-            <a href="/uncategorized/20170314/echarts-总结.html">echarts 总结</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -249,7 +240,7 @@ sagas: Array - Generator 函数列表
   <div class="widget-wrap">
     <h3 class="widget-title">标签云 ● Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 15.2px; color: #5189ab">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.2px; color: #5189ab">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Echarts/" style="font-size: 14px; color: #258fb8">Echarts</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.8px; color: #d37986">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17.6px; color: #a87e92">React</a> <a href="/tags/SVG/" style="font-size: 14px; color: #258fb8">SVG</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #258fb8">Webpack</a> <a href="/tags/console/" style="font-size: 14px; color: #258fb8">console</a> <a href="/tags/javascript/" style="font-size: 16.4px; color: #7c849f">javascript</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/redux-saga/" style="font-size: 14px; color: #258fb8">redux-saga</a> <a href="/tags/yarn/" style="font-size: 14px; color: #258fb8">yarn</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.2px; color: #5189ab">友谊</a> <a href="/tags/循环遍历/" style="font-size: 16.4px; color: #7c849f">循环遍历</a> <a href="/tags/总结/" style="font-size: 14px; color: #258fb8">总结</a> <a href="/tags/旅途/" style="font-size: 16.4px; color: #7c849f">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.2px; color: #5189ab">闭包</a>
+      <a href="/tags/CSS/" style="font-size: 15.2px; color: #5189ab">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.2px; color: #5189ab">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Echarts/" style="font-size: 14px; color: #258fb8">Echarts</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.8px; color: #d37986">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17.6px; color: #a87e92">React</a> <a href="/tags/SVG/" style="font-size: 14px; color: #258fb8">SVG</a> <a href="/tags/Webpack/" style="font-size: 17.6px; color: #a87e92">Webpack</a> <a href="/tags/console/" style="font-size: 14px; color: #258fb8">console</a> <a href="/tags/element-UI/" style="font-size: 14px; color: #258fb8">element UI</a> <a href="/tags/javascript/" style="font-size: 16.4px; color: #7c849f">javascript</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/redux-saga/" style="font-size: 14px; color: #258fb8">redux-saga</a> <a href="/tags/yarn/" style="font-size: 14px; color: #258fb8">yarn</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.2px; color: #5189ab">友谊</a> <a href="/tags/循环遍历/" style="font-size: 16.4px; color: #7c849f">循环遍历</a> <a href="/tags/总结/" style="font-size: 14px; color: #258fb8">总结</a> <a href="/tags/旅途/" style="font-size: 16.4px; color: #7c849f">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.2px; color: #5189ab">闭包</a>
     </div>
   </div>
 
@@ -258,7 +249,7 @@ sagas: Array - Generator 函数列表
   <div class="widget-wrap">
     <h3 class="widget-title">归档 ● archive</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 04月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 03月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 12月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 08月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 04月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 08月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 04月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 03月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 12月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 08月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 04月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -291,7 +282,7 @@ sagas: Array - Generator 函数列表
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 zillah<br>
+      &copy; 2019 zillah<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     <span id="busuanzi_container_site_pv">
         总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vue-cli脚手架引入element UI的正确打开方式 | 小乔的博客[学习笔记]|[生活随笔]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="element UI官网教程：http://element-cn.eleme.io/#/zh-CN/component/quickstart
+1、完整引入,直接了当，但是组件文件不是按需加载，造成多余，不够优雅在 main.js 中写入以下内容：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli脚手架引入element UI的正确打开方式">
+<meta property="og:url" content="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html">
+<meta property="og:site_name" content="小乔的博客[学习笔记]|[生活随笔]">
+<meta property="og:description" content="element UI官网教程：http://element-cn.eleme.io/#/zh-CN/component/quickstart
+1、完整引入,直接了当，但是组件文件不是按需加载，造成多余，不够优雅在 main.js 中写入以下内容：">
+<meta property="og:updated_time" content="2018-08-08T01:04:07.201Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-cli脚手架引入element UI的正确打开方式">
+<meta name="twitter:description" content="element UI官网教程：http://element-cn.eleme.io/#/zh-CN/component/quickstart
+1、完整引入,直接了当，但是组件文件不是按需加载，造成多余，不够优雅在 main.js 中写入以下内容：">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+     		保持学习的习惯，努力的姿态！<br/>
+     		享受生命的成长过程，创造美好未来送给自己<br/>
+     		人生仅此一次，唯努力过方无悔
+      
+        <h2 id="subtitle-wrap" style="display: none;">
+          <a href="/" id="subtitle">前端的那点事 前端笔记 es6 javascript es6 基础 react</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/categories/conding">学无止境</a>
+        
+          <a class="main-nav-link" href="/categories/life">碎言碎语</a>
+        
+          <a class="main-nav-link" href="/about">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+          <a class="nav-icon" href="https://github.com/jodyzhq" title="GitHub" target="_blank"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue-cli脚手架引入element UI的正确打开方式" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue-cli脚手架引入element UI的正确打开方式
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html" class="article-date">
+  <time datetime="2018-08-08T00:49:56.000Z" itemprop="datePublished">2018-08-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/Vue/">Vue</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <p>element UI官网教程：<a href="http://element-cn.eleme.io/#/zh-CN/component/quickstart" target="_blank" rel="external">http://element-cn.eleme.io/#/zh-CN/component/quickstart</a></p>
+<h5 id="1、完整引入-直接了当，但是组件文件不是按需加载，造成多余，不够优雅"><a href="#1、完整引入-直接了当，但是组件文件不是按需加载，造成多余，不够优雅" class="headerlink" title="1、完整引入,直接了当，但是组件文件不是按需加载，造成多余，不够优雅"></a>1、完整引入,直接了当，但是组件文件不是按需加载，造成多余，不够优雅</h5><p>在 main.js 中写入以下内容：<a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> Element <span class="keyword">from</span> <span class="string">'element-ui'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</div><div class="line"> </div><div class="line">Vue.use(Element);</div><div class="line"> </div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>以上代码便完成了 Element 的引入。需要注意的是，样式文件需要单独引入。</p>
+<h5 id="2、按需引入，需要配置babel文件-babelrc"><a href="#2、按需引入，需要配置babel文件-babelrc" class="headerlink" title="2、按需引入，需要配置babel文件 .babelrc"></a>2、按需引入，需要配置babel文件 .babelrc</h5><p>借助 babel-plugin-component，我们可以只引入需要的组件，以达到减小项目体积的目的。</p>
+<p>首先，安装 <code>babel-plugin-component</code> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [[<span class="string">"es2015"</span>, &#123; <span class="string">"modules"</span>: <span class="literal">false</span> &#125;]],</div><div class="line">  <span class="string">"plugins"</span>: [</div><div class="line">    [</div><div class="line">      <span class="string">"component"</span>,</div><div class="line">      &#123;</div><div class="line">        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,</div><div class="line">        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>此时，vue-cli项目中.babelrc文件长这样子　</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [</div><div class="line">    [<span class="string">"env"</span>, &#123;</div><div class="line">      <span class="string">"modules"</span>: <span class="literal">false</span>,</div><div class="line">      <span class="string">"targets"</span>: &#123;</div><div class="line">        <span class="string">"browsers"</span>: [<span class="string">"&gt; 1%"</span>, <span class="string">"last 2 versions"</span>, <span class="string">"not ie &lt;= 8"</span>]</div><div class="line">      &#125;</div><div class="line">    &#125;],</div><div class="line">    <span class="string">"stage-2"</span></div><div class="line">  ],</div><div class="line">  <span class="string">"plugins"</span>: [<span class="string">"transform-vue-jsx"</span>, <span class="string">"transform-runtime"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>接下来就要配置了，先来了解下各配置项用途<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">　　<span class="comment">// 此项指明，转码的规则</span></div><div class="line">  <span class="string">"presets"</span>: [</div><div class="line">    [<span class="string">"es2015"</span>, &#123;<span class="string">"modules"</span>: <span class="literal">false</span> &#125;],  <span class="comment">//需要npm install babel-preset-es2015 --save-dev</span></div><div class="line"><span class="comment">// env项是借助插件babel-preset-env，下面这个配置说的是babel对es6,es7,es8进行转码，并且设置amd,commonjs这样的模块化文件，不进行转码</span></div><div class="line"><span class="comment">// compiles ES2015+ down to ES5 具体见babel-preset-env官网：https://www.npmjs.com/package/babel-preset-env</span></div><div class="line">    [<span class="string">"env"</span>, &#123; <span class="string">"modules"</span>: <span class="literal">false</span> &#125;],  <span class="comment">// 下面这个是不同阶段出现的es语法，包含不同的转码插件//可参考babel官网</span></div><div class="line">    <span class="string">"stage-2"</span></div><div class="line">  ],</div><div class="line">  <span class="string">"plugins"</span>: [<span class="comment">//// 下面这个选项是引用插件来处理代码的转换，transform-runtime用来处理全局函数和优化babel编译</span></div><div class="line">     <span class="string">"transform-runtime"</span>,</div><div class="line">     <span class="comment">//需要npm install babel-plugin-component -D//官网：http://element-cn.eleme.io/#/zh-CN/component/quickstart</span></div><div class="line">     [<span class="string">"component"</span>, [&#123;</div><div class="line">        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,           <span class="comment">//按需引用element-ui插件</span></div><div class="line">        <span class="comment">//"styleLibraryName": "theme-default"   //按需引用element-ui主题</span></div><div class="line">     &#125;]]  </div><div class="line">  ],<span class="comment">// 下面指的是在生成的文件中，不产生注释</span></div><div class="line">  <span class="string">"comments"</span>: <span class="literal">false</span>,<span class="comment">// 下面这段是在特定的环境中所执行的转码规则，当环境变量是下面的test就会覆盖上面的设置</span></div><div class="line">  <span class="string">"env"</span>: &#123;<span class="comment">// test 是提前设置的环境变量，如果没有设置BABEL_ENV则使用NODE_ENV，如果都没有设置默认就是development</span></div><div class="line">    <span class="string">"test"</span>: &#123;</div><div class="line">      <span class="string">"presets"</span>: [<span class="string">"env"</span>, <span class="string">"stage-2"</span>],<span class="comment">// instanbul是一个用来测试转码后代码的工具</span></div><div class="line">      <span class="string">"plugins"</span>: [ <span class="string">"istanbul"</span> ]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>OK，到这步已经配完了?</p>
+<p>但是你会发现在npm install babel-preset-es2015 时，你会发现有如下的 Deprecated警告：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deprecate babel-preset-es2015@* ????  Thanks for using Babel: we recommend using</div><div class="line"> babel-preset-env now: please read babeljs.io/env to update!</div><div class="line">√ All packages installed (1 packages installed from npm registry, used 44s, spe</div><div class="line">ed 1.84kB/s, json 25(80.05kB), tarball 0B)</div></pre></td></tr></table></figure></p>
+<p>原因是Babel 的官网上在2017年9月宣布 ES2015 / ES2016/ ES2017 等等 ES20xx 时代的 presets 通通被废弃（deprecated），取而代之的是 babel-preset-env，并且承诺它将成为“未来不会过时的（future-proof）”解决方案。</p>
+<ul>
+<li>在过去，Babel 将 babel-preset-es2015 放在 babel/babel 的主仓库中进行维护，而 babel-preset-env 则独立为一级项目，这从某种程度上也显示出 Babel 官方对这款 preset 的重视程度和更长远的规划。</li>
+</ul>
+<h4 id="如何迁移"><a href="#如何迁移" class="headerlink" title="如何迁移"></a>如何迁移</h4><h6 id="首先卸载原来的-preset，然后安装-babel-preset-env"><a href="#首先卸载原来的-preset，然后安装-babel-preset-env" class="headerlink" title="首先卸载原来的 preset，然后安装 babel-preset-env"></a>首先卸载原来的 preset，然后安装 <code>babel-preset-env</code></h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm uninstall --save-dev babel-preset-es2015</div><div class="line">npm install --save-dev babel-preset-env@next</div></pre></td></tr></table></figure>
+<p>好了，恭喜你，就这么简单，你已经可以与 ES2015+ 保持更新了！</p>
+<p>vue-cli脚手架环境中，已经采用了最新的babel-preset-env，所以可以忽略 “presets”: [[“es2015”, { “modules”: false }]]  es2015 这项</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [</div><div class="line">    [<span class="string">"env"</span>, &#123;</div><div class="line">      <span class="string">"modules"</span>: <span class="literal">false</span>,</div><div class="line">      <span class="string">"targets"</span>: &#123;</div><div class="line">        <span class="string">"browsers"</span>: [<span class="string">"&gt; 1%"</span>, <span class="string">"last 2 versions"</span>, <span class="string">"not ie &lt;= 8"</span>]</div><div class="line">      &#125;</div><div class="line">    &#125;],</div><div class="line">   <span class="comment">// ["es2015", &#123; "modules": false &#125;],   //需要先cnpm install babel-preset-es2015 --save-dev ,下载es5的babel转码插件，些处是多余，已配置env</span></div><div class="line">    <span class="string">"stage-2"</span></div><div class="line">  ],</div><div class="line">  <span class="string">"plugins"</span>: [</div><div class="line">    <span class="string">"transform-vue-jsx"</span>,</div><div class="line">    <span class="string">"transform-runtime"</span>,</div><div class="line">    [</div><div class="line">      <span class="string">"component"</span>,</div><div class="line">      &#123;</div><div class="line">        <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,</div><div class="line">        <span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>接下来，就可以欢快的实现按需加载啦　　</p>
+<p>如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> &#123; Button, Select &#125; <span class="keyword">from</span> <span class="string">'element-ui'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</div><div class="line"> </div><div class="line">Vue.component(Button.name, Button);</div><div class="line">Vue.component(Select.name, Select);</div><div class="line"><span class="comment">/* 或写为</span></div><div class="line"> * Vue.use(Button)</div><div class="line"> * Vue.use(Select)</div><div class="line"> */</div><div class="line"> </div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h5 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h5><p>在引入 Element 时，可以传入一个全局配置对象。该对象目前仅支持 size 字段，用于改变组件的默认尺寸。按照引入 Element 的方式，具体操作如下：</p>
+<h6 id="完整引入-Element："><a href="#完整引入-Element：" class="headerlink" title="完整引入 Element："></a>完整引入 Element：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mport Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> Element <span class="keyword">from</span> <span class="string">'element-ui'</span>;</div><div class="line">Vue.use(Element, &#123; <span class="attr">size</span>: <span class="string">'small'</span> &#125;);</div></pre></td></tr></table></figure>
+<h6 id="按需引入-Element："><a href="#按需引入-Element：" class="headerlink" title="按需引入 Element："></a>按需引入 Element：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">'element-ui'</span>;</div><div class="line"> </div><div class="line">Vue.prototype.$ELEMENT = &#123; <span class="attr">size</span>: <span class="string">'small'</span> &#125;;</div><div class="line">Vue.use(Button);</div></pre></td></tr></table></figure>
+<p>按照以上设置，项目中所有拥有 size 属性的组件的默认尺寸均为 ‘small’。</p>
+
+        
+        
+      
+    </div>
+    <footer class="article-footer">
+    	
+        <a href="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      <div class="bdsharebuttonbox"><span >分享到：</span><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["qzone","weixin","fbook","tqq","twi","sqq","tsina","tieba","linkedin"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","weixin","tsina","twi","fbook"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","weixin","tsina","twi","fbook"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element-UI/">element UI</a></li></ul>
+
+ 
+     
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">vue-cli脚手架config目录下index.js配置文件详解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-vue-cli脚手架引入element UI的正确打开方式" data-title="vue-cli脚手架引入element UI的正确打开方式" data-url="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'undefined'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类 ● category</h3>
+    <div class="widget tag">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">61</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/yarn/">yarn</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章 ● Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html">vue-cli脚手架引入element UI的正确打开方式</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/vue-cli脚手架config目录下index.js配置文件详解.html">vue-cli脚手架config目录下index.js配置文件详解</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/webpack踩的那些坑.html">webpack踩的那些坑</a>
+          </li>
+        
+          <li>
+            <a href="/conding/Webpack/20180808/webpack4.x中对css的几种处理总结.html">webpack4.x中对css的几种处理总结（css分离，消除冗余的css代码，自动添加浏览器内核前缀）</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180409/JS中常用数据转换方法.html">JS中常用数据转换方法</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180403/redux-saga.html">redux-saga</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180318/react子组件向父组件通信.html">react子组件向父组件通信</a>
+          </li>
+        
+          <li>
+            <a href="/conding/yarn/20180306/yarn更改为淘宝镜像.html">yarn更改为淘宝镜像</a>
+          </li>
+        
+          <li>
+            <a href="/conding/20180304/前端经验总结.html">前端经验总结(CSS)</a>
+          </li>
+        
+          <li>
+            <a href="/life/20171226/2017年又结束了.html">2017年又结束了</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云 ● Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 15.2px; color: #5189ab">CSS</a> <a href="/tags/CSS3/" style="font-size: 15.2px; color: #5189ab">CSS3</a> <a href="/tags/D3/" style="font-size: 20px; color: #ff7379">D3</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Echarts/" style="font-size: 14px; color: #258fb8">Echarts</a> <a href="/tags/Github/" style="font-size: 14px; color: #258fb8">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.8px; color: #d37986">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17.6px; color: #a87e92">React</a> <a href="/tags/SVG/" style="font-size: 14px; color: #258fb8">SVG</a> <a href="/tags/Webpack/" style="font-size: 17.6px; color: #a87e92">Webpack</a> <a href="/tags/console/" style="font-size: 14px; color: #258fb8">console</a> <a href="/tags/element-UI/" style="font-size: 14px; color: #258fb8">element UI</a> <a href="/tags/javascript/" style="font-size: 16.4px; color: #7c849f">javascript</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/redux-saga/" style="font-size: 14px; color: #258fb8">redux-saga</a> <a href="/tags/yarn/" style="font-size: 14px; color: #258fb8">yarn</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/友谊/" style="font-size: 15.2px; color: #5189ab">友谊</a> <a href="/tags/循环遍历/" style="font-size: 16.4px; color: #7c849f">循环遍历</a> <a href="/tags/总结/" style="font-size: 14px; color: #258fb8">总结</a> <a href="/tags/旅途/" style="font-size: 16.4px; color: #7c849f">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15.2px; color: #5189ab">闭包</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档 ● archive</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 08月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 04月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 03月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 12月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 08月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 04月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">友情链接 ● Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://baizn.github.io" target="_BLANK">●&emsp;baizn</a></li>
+    
+    <li><a href="http://init.funlee.cn" target="_BLANK">●&emsp;ClassRun</a></li>
+    
+    <li><a href="https://wxxtqk.github.io" target="_BLANK">●&emsp;tangqk</a></li>
+    
+    <li><a href="http://zy380196088.github.io" target="_BLANK">●&emsp;zy380196088</a></li>
+    
+    <li><a href="https://erikison18.github.io/" target="_BLANK">●&emsp;Erik</a></li>
+    
+  </ul>
+</div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zillah<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>
+
+    </div>
+  </div>
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?204bdccab804777b4dcd9eefa8ceb91b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/categories/conding" class="mobile-nav-link">学无止境</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">碎言碎语</a>
+  
+    <a href="/about" class="mobile-nav-link">关于我</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jody';
+  
+  var disqus_url = '/conding/Vue/20180808/vue-cli脚手架引入element UI的正确打开方式.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+<script src="/js/totop.js"></script>
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:999; display:none">
+<a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1714312189"},"bdWbuid":3904642734,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdPic":"http://www.devchen.com/SharePic.png","bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!--- Baidu Share End --->
+
+
+
+
+
+
+  </div>
+</body>
+</html>
