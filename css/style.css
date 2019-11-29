@@ -312,9 +312,13 @@ body {
   position: fixed;
   width: 100%;
   border-bottom: 1px solid #ddd;
-  background: #fff;
+  background: url("images/blog-bg.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
   -webkit-box-shadow: 0px 0px 3px #ddd;
   box-shadow: 0px 0px 3px #ddd;
+  z-index: 1;
 }
 #header-outer {
   height: 100%;
@@ -323,7 +327,6 @@ body {
 #header-inner {
   position: relative;
   overflow: hidden;
-  margin-top: 100px;
   z-index: 2;
 }
 #banner {
@@ -332,16 +335,15 @@ body {
   left: 0;
   width: 100%;
   height: 158px;
-  background: url("images/banner.jpg");
+  background: url("images/blog-bg.jpg");
   background-position: 0 -90px;
   z-index: -1;
 }
 #header-title {
   position: absolute;
-  top: 10%;
-  left: 45px;
+  top: 27%;
   text-align: right;
-  color: #555553;
+  color: #000;
   text-shadow: 0 1px #fff;
   line-height: 30px;
   font-size: 14px;
@@ -374,7 +376,7 @@ body {
 .nav-icon,
 .main-nav-link {
   float: left;
-  color: #000;
+  color: #fff;
   opacity: 0.9;
   text-decoration: none;
   text-shadow: 0 1px rgba(0,0,0,0.2);
@@ -395,7 +397,7 @@ body {
   font-size: 16px;
   width: 14px;
   height: 14px;
-  padding: 22px 15px;
+  padding: 8px 15px;
   position: relative;
   cursor: pointer;
 }
@@ -403,7 +405,7 @@ body {
   font-size: 18px;
   letter-spacing: 1px;
   font-family: "微软雅黑";
-  padding: 17px 30px;
+  padding: 15px 30px;
 }
 @media screen and (max-width: 479px) {
   .main-nav-link {
@@ -614,10 +616,14 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-all blockquote {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.4em;
-  margin: 1.8em 20px;
-  text-align: center;
+  padding: 20px;
+  background-color: #fafafa;
+  border-left: 6px solid #e6e6e6;
+  word-break: break-word;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+  margin: 0 0 20px;
 }
 .article-all blockquote footer {
   font-size: 14px;
