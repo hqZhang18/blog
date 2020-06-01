@@ -69,6 +69,191 @@
       <div class="outer app_main">
         <section id="main">
   
+    <article id="post-react入门05-复合组件" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/React/20161217/react入门05-复合组件.html">react入门05-复合组件</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/React/20161217/react入门05-复合组件.html" class="article-date">
+  <time datetime="2016-12-17T14:06:00.000Z" itemprop="datePublished">2016-12-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/React/">React</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+        <p>复合组件也被称为组合组件，创建多个组件合成一个组件<br>定义一个组件WebShow。功能：输出网站的名字和网址，网址是一个可以点击的链接<br>分析：定义一个组件WebName负责输出网站名字，定义组件WebLink显示网站的网址，并且可以点击
+        
+
+    <a href="/conding/React/20161217/react入门05-复合组件.html#more" class="article-more-link">阅读全文</a>
+
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-react入门07-属性设置-children" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/React/20161217/react入门07-属性设置-children.html">react入门07-属性设置-children</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/React/20161217/react入门07-属性设置-children.html" class="article-date">
+  <time datetime="2016-12-17T14:06:00.000Z" itemprop="datePublished">2016-12-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/React/">React</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+        <p>this.props.children<br>children是一个例外，不是跟组件的属性对应的<br>表示组件的所有子节点<br>HTML中有一种标签：列表 &lt; ul &gt; &lt; ol &gt; &lt; li &gt;<br>定义一个列表组件，列表项中显示的内容，以及列表项的数量都由外部决定
+        
+
+    <a href="/conding/React/20161217/react入门07-属性设置-children.html#more" class="article-more-link">阅读全文</a>
+
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript_验证码倒计时" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/JavaScript/20160720/JavaScript_验证码倒计时.html">验证码倒计时</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/JavaScript/20160720/JavaScript_验证码倒计时.html" class="article-date">
+  <time datetime="2016-07-20T13:58:16.000Z" itemprop="datePublished">2016-07-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"免费获取验证码"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var wait=60; </div><div class="line">function time(o) &#123; </div><div class="line">  if (wait == 0) &#123; </div><div class="line">    o.removeAttribute(&quot;disabled&quot;); </div><div class="line">    o.value=&quot;免费获取验证码&quot;; </div><div class="line">    wait = 60; </div><div class="line">  &#125;else&#123; </div><div class="line">    o.setAttribute(&quot;disabled&quot;, true); </div><div class="line">    o.value=&quot;重新发送(&quot; + wait + &quot;)&quot;; </div><div class="line">    wait--; </div><div class="line">    setTimeout(function() &#123; </div><div class="line">      time(o) </div><div class="line">    &#125;,1000) </div><div class="line">  &#125; </div><div class="line">&#125; </div><div class="line">document.getElementById(&quot;btn&quot;).onclick=function()&#123;time(this);&#125;</div></pre></td></tr></table></figure>
+        
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript_js返回上一页并刷新的几种方法" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/conding/JavaScript/20160720/JavaScript_js返回上一页并刷新的几种方法.html">js返回上一页并刷新的几种方法</a>
+    </h1>
+  
+
+      </header>
+    
+ <div class="article-meta">
+    <a href="/conding/JavaScript/20160720/JavaScript_js返回上一页并刷新的几种方法.html" class="article-date">
+  <time datetime="2016-07-20T13:58:16.000Z" itemprop="datePublished">2016-07-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/JavaScript/">JavaScript</a>
+  </div>
+
+   
+  </div>
+    <div class="article-entry article-all" itemprop="articleBody">
+
+      
+      	 
+        <!-- Table of Contents -->
+        
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">href=&quot;javascript:history.go(-1)&quot; 返回上一页</div><div class="line">href=&quot;javascript:location.reload()&quot; 刷新当前页面</div><div class="line">&lt;!-- more --&gt;</div><div class="line">href=&quot;javascript:&quot; onclick=&quot;history.go(-2); &quot; 返回前两页</div><div class="line">href=&quot;javascript:&quot; onclick=&quot;self.location=document.referrer;&quot; 返回上一页并刷新</div><div class="line">href=&quot;javascript:&quot; onclick=&quot;history.back(); &quot; 返回上一页</div></pre></td></tr></table></figure>
+        
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript_apply call bind" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -162,204 +347,6 @@
 
 
   
-    <article id="post-HTML_HTMLCSS的一些总结" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/CSS/20160625/HTML_HTMLCSS的一些总结.html">HTMLCSS的一些总结</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/CSS/20160625/HTML_HTMLCSS的一些总结.html" class="article-date">
-  <time datetime="2016-06-25T13:58:16.000Z" itemprop="datePublished">2016-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/CSS/">CSS</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-        <h4 id="1、什么是盒子模型？"><a href="#1、什么是盒子模型？" class="headerlink" title="1、什么是盒子模型？"></a>1、什么是盒子模型？</h4><p>在网页中，一个元素占有空间的大小由四个部分构成</p>
-<p>其中包括元素的内容（content），元素的内边距（padding）元素的边框（border），元素的外边距（margin）四部分。<br>
-        
-
-    <a href="/conding/CSS/20160625/HTML_HTMLCSS的一些总结.html#more" class="article-more-link">阅读全文</a>
-
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript_网页中常用Jquery效果" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/Jquery/20160611/JavaScript_网页中常用Jquery效果.html">网页中常用Jquery效果</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/Jquery/20160611/JavaScript_网页中常用Jquery效果.html" class="article-date">
-  <time datetime="2016-06-11T15:03:57.000Z" itemprop="datePublished">2016-06-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>►<a class="article-category-link" href="/categories/conding/Jquery/">Jquery</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <h4 id="下拉菜单"><a href="#下拉菜单" class="headerlink" title="下拉菜单"></a>下拉菜单</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  $(<span class="string">".s-weather"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">      $(<span class="string">".s-wShow"</span>).show(); </div><div class="line">      &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">      $(<span class="string">".s-wShow"</span>).hide();   </div><div class="line">  &#125;)</div><div class="line">&lt;!-- more --&gt;</div><div class="line">  $(<span class="string">".s-wShow"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      $(<span class="string">".s-wShow"</span>).show(); </div><div class="line">      &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">   $(<span class="string">".s-wShow"</span>).hide(); </div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h4 id="导航菜单切换1"><a href="#导航菜单切换1" class="headerlink" title="导航菜单切换1"></a>导航菜单切换1</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">".tabs-nav a:first"</span>).addClass(<span class="string">"current"</span>)</div><div class="line">        $(<span class="string">".tabs-nav a"</span>).on(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> index=$(<span class="keyword">this</span>).index();</div><div class="line">        $(<span class="keyword">this</span>).addClass(<span class="string">"current"</span>);</div><div class="line">        $(<span class="keyword">this</span>).siblings().removeClass(<span class="string">"current"</span>);</div><div class="line">        $(<span class="string">".wrap"</span>).find(<span class="string">".tabs-box"</span>).hide().eq(index).show();</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h4 id="导航菜单切换2"><a href="#导航菜单切换2" class="headerlink" title="导航菜单切换2"></a>导航菜单切换2</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       $(<span class="string">".sel-tabs-nemu li"</span>).on(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> i=$(<span class="keyword">this</span>).index();</div><div class="line">        $(<span class="string">".sel-tabs-nemu li"</span>).children().removeClass(<span class="string">"cur"</span>);</div><div class="line">        $(<span class="keyword">this</span>).children().addClass(<span class="string">"cur"</span>);</div><div class="line">        $(<span class="string">".con_center"</span>).find(<span class="string">".sel-tabs-content"</span>).hide().eq(i).show();</div><div class="line">    &#125;);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h4 id="a标签点击跳转页面后怎么给当前点击的a标签用jquery添加一个样式。"><a href="#a标签点击跳转页面后怎么给当前点击的a标签用jquery添加一个样式。" class="headerlink" title="a标签点击跳转页面后怎么给当前点击的a标签用jquery添加一个样式。"></a>a标签点击跳转页面后怎么给当前点击的a标签用jquery添加一个样式。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.tag_sort a'</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> ($($(<span class="keyword">this</span>))[<span class="number">0</span>].href == <span class="built_in">String</span>(<span class="built_in">window</span>.location))</div><div class="line">    $(<span class="keyword">this</span>).addClass(<span class="string">'cur'</span>).attr(<span class="string">'href'</span>, <span class="string">'javascript:void(0);'</span>);</div><div class="line">&#125;);</div><div class="line">A 标签target属性必须是_parent 在父框架集中打开被链接文档</div></pre></td></tr></table></figure>
-<h4 id="点击按钮回到顶部"><a href="#点击按钮回到顶部" class="headerlink" title="点击按钮回到顶部"></a>点击按钮回到顶部</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.gotop</span>&#123; </div><div class="line">  <span class="attribute">position</span>:fixed; </div><div class="line">  <span class="attribute">right</span>:<span class="number">10px</span>; </div><div class="line">  <span class="attribute">bottom</span>:<span class="number">20px</span>; </div><div class="line">  <span class="attribute">display</span>:block; </div><div class="line">  <span class="attribute">background</span>:<span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">font-size</span>:<span class="number">24px</span>; </div><div class="line">  <span class="attribute">color</span>:<span class="number">#222</span>; <span class="attribute">width</span>:<span class="number">40px</span>; </div><div class="line">  <span class="attribute">height</span>:<span class="number">40px</span>; </div><div class="line">  <span class="attribute">line-height</span>:<span class="number">40px</span>; </div><div class="line">  <span class="attribute">text-align</span>:center; </div><div class="line">  <span class="attribute">cursor</span>:pointer; </div><div class="line">  <span class="attribute">display</span>:none;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> wh=$(<span class="built_in">window</span>).scrollTop();</div><div class="line">    <span class="keyword">if</span>(wh&gt;<span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">      $(<span class="string">"#gotop"</span>).fadeIn()</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">      $(<span class="string">"#gotop"</span>).fadeOut();</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  $(<span class="string">"#gotop"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"body,html"</span>).animate(&#123;<span class="attr">scrollTop</span>:<span class="number">0</span>&#125;,<span class="number">300</span>);</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"height:; background:#eee;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"gotop"</span> <span class="attr">id</span>=<span class="string">"gotop"</span>&gt;</span>^<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="禁止右键点击"><a href="#禁止右键点击" class="headerlink" title="禁止右键点击"></a>禁止右键点击</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">  $(<span class="built_in">document</span>).bind(<span class="string">"contextmenu"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123; </div><div class="line">   <span class="keyword">return</span> <span class="literal">false</span></div><div class="line"> &#125;); </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="隐藏搜索文本框文字"><a href="#隐藏搜索文本框文字" class="headerlink" title="隐藏搜索文本框文字"></a>隐藏搜索文本框文字</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">   $(<span class="string">"input.text1"</span>).val(<span class="string">"Enter your search text here"</span>); </div><div class="line">    textFill($(<span class="string">'input.text1'</span>))</div><div class="line">&#125;); </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">textFill</span>(<span class="params">input</span>)</span>&#123; <span class="comment">//input focus text function </span></div><div class="line">  <span class="keyword">var</span> originalvalue = input.val(); </div><div class="line">  input.focus( <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">if</span>( $.trim(input.val()) == originalvalue )</div><div class="line">  &#123; input.val(<span class="string">''</span>); &#125; &#125;); </div><div class="line">  input.blur( <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">if</span>( $.trim(input.val()) == <span class="string">''</span> )</div><div class="line">  &#123; input.val(originalvalue); &#125; </div><div class="line">&#125;); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="在新窗口中打开链接"><a href="#在新窗口中打开链接" class="headerlink" title="在新窗口中打开链接"></a>在新窗口中打开链接</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line"><span class="comment">//Example 1: Every link will open in a new window </span></div><div class="line">         $(<span class="string">'a[href^="http://"]'</span>).attr(<span class="string">"target"</span>, <span class="string">"_blank"</span>);</div><div class="line"><span class="comment">//Example 2: Links with the rel="external" attribute will only open in a new window  </span></div><div class="line">           $(<span class="string">'a[@rel$='</span>external<span class="string">']'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">               <span class="keyword">this</span>.target = <span class="string">"_blank"</span>; &#125;); </div><div class="line">&#125;); </div><div class="line"><span class="string">`</span></div></pre></td></tr></table></figure>
-<h4 id="让两个-DIV-高度相同"><a href="#让两个-DIV-高度相同" class="headerlink" title="让两个 DIV 高度相同"></a>让两个 DIV 高度相同</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $columns = $(<span class="string">'.column'</span>); </div><div class="line"><span class="keyword">var</span> height = <span class="number">0</span>; $columns.each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">    <span class="keyword">if</span> ($(<span class="keyword">this</span>).height() &gt; height) &#123; </div><div class="line">    height = $(<span class="keyword">this</span>).height(); &#125; &#125;);</div><div class="line">    $columns.height(height);</div></pre></td></tr></table></figure>
-<h4 id="Jquery判断当前屏幕分辨率并加载不同的css样式"><a href="#Jquery判断当前屏幕分辨率并加载不同的css样式" class="headerlink" title="Jquery判断当前屏幕分辨率并加载不同的css样式"></a>Jquery判断当前屏幕分辨率并加载不同的css样式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> ((screen.width == <span class="number">1024</span>) &amp;&amp; (screen.height == <span class="number">768</span>)) &#123;</div><div class="line">    $(<span class="string">"#xx"</span>).height(<span class="number">500</span>);<span class="comment">//此分辨率下你需要的操作</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((screen.width == <span class="number">1360</span>) &amp;&amp; (screen.height == <span class="number">900</span>)) &#123;</div><div class="line">    $(<span class="string">"#xx"</span>).height(<span class="number">700</span>);<span class="comment">//这个分辨率下你的操作</span></div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">    $(<span class="string">"#xx"</span>).height(<span class="number">500</span>);<span class="comment">//默认操作</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="jQ判断IE版本"><a href="#jQ判断IE版本" class="headerlink" title="jQ判断IE版本"></a>jQ判断IE版本</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> ($.browser.msie &amp;&amp; ($.browser.version == <span class="string">"7.0"</span> </div><div class="line">    || $.browser.version == <span class="string">"8.0"</span>) &amp;&amp; !$.support.style) &#123;</div><div class="line">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">    $(<span class="string">"#chartContainer"</span>).css(<span class="string">"width"</span>, <span class="number">435</span>); </div><div class="line">    $(<span class="string">".highcharts-container"</span>).css(&#123; <span class="string">"position"</span>: <span class="string">"absolute"</span>, <span class="string">"left"</span>: <span class="number">-420</span>, <span class="string">"top"</span>: <span class="number">5</span> ;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript_截取地址栏参数" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/20160611/JavaScript_截取地址栏参数.html">获取地址栏参数</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/20160611/JavaScript_截取地址栏参数.html" class="article-date">
-  <time datetime="2016-06-11T06:11:32.000Z" itemprop="datePublished">2016-06-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-      	 
-        <!-- Table of Contents -->
-        
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">获取地址栏参数(谷歌<span class="number">49</span>以上版本才支持)</div><div class="line">url: https:<span class="comment">//www.baidu.com/?name=xiqoao&amp;age=23</span></div><div class="line"><span class="keyword">var</span> search = location.search</div><div class="line"><span class="string">"?name=xiqoao&amp;age=23"</span></div><div class="line">search = search.slice(<span class="number">1</span>)</div><div class="line"><span class="string">"name=xiqoao&amp;age=23"</span></div><div class="line">parms = <span class="keyword">new</span> URLSearchParams(search)</div><div class="line">parms.get(<span class="string">'name'</span>)</div><div class="line"><span class="string">"xiqoao"</span></div><div class="line">parms.get(<span class="string">'age'</span>)</div><div class="line"><span class="string">"23"</span></div></pre></td></tr></table></figure>
-
-        
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-
-    
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/conding/20160611/git常用命令.html">git常用命令</a>
-    </h1>
-  
-
-      </header>
-    
- <div class="article-meta">
-    <a href="/conding/20160611/git常用命令.html" class="article-date">
-  <time datetime="2016-06-11T06:11:32.000Z" itemprop="datePublished">2016-06-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/conding/">技术</a>
-  </div>
-
-   
-  </div>
-    <div class="article-entry article-all" itemprop="articleBody">
-
-      
-        <p>隔一断时间不提交代码就忘记命名了，<br>好记性不如敲敲键盘，做做笔记<br>
-        
-
-    <a href="/conding/20160611/git常用命令.html#more" class="article-more-link">阅读全文</a>
-
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -373,7 +360,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类 ● category</h3>
     <div class="widget tag">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">75</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/GIS/">GIS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Openlayers/">Openlayers</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Redux/">Redux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/yarn/">yarn</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/网络通信/">网络通信</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">8</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/">技术</a><span class="category-list-count">78</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/conding/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/D3-js/">D3.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/GIS/">GIS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/JavaScript/">JavaScript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Jquery/">Jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/MongoDB/">MongoDB</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Openlayers/">Openlayers</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/React/">React</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Redux/">Redux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/Webpack/">Webpack</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/npm/">npm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/yarn/">yarn</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conding/网络通信/">网络通信</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -384,6 +371,22 @@
     <h3 class="widget-title">最新文章 ● Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/conding/Git/20200601/git提交代码规范管理.html">git提交代码规范管理</a>
+          </li>
+        
+          <li>
+            <a href="/uncategorized/20200103/视频实时播放_flvjs.html">视频实时播放</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20191203/JavaScript-MV-模式.html">JavaScript_MV* 模式</a>
+          </li>
+        
+          <li>
+            <a href="/conding/JavaScript/20191202/JavaScript-设计模式系列-观察者模式.html">JavaScript_设计模式系列 - 观察者模式</a>
+          </li>
         
           <li>
             <a href="/conding/JavaScript/20191129/JavaScript_设计模式-工厂模式.html">JavaScript设计模式-工厂模式</a>
@@ -409,22 +412,6 @@
             <a href="/conding/Openlayers/20191014/map_高德WMTS规则.html">高德WMTS规则</a>
           </li>
         
-          <li>
-            <a href="/conding/Node/20190920/Node-js-基础.html">Node.js 基础</a>
-          </li>
-        
-          <li>
-            <a href="/conding/Node/20190920/Node_NodeJS的优缺点.html">NodeJS的优缺点</a>
-          </li>
-        
-          <li>
-            <a href="/conding/Node/20190903/Node_Node.js express 模板的简单使用、如何设置修改代码后自动重启服务.html">Node.js express 模板的简单使用、如何设置修改代码后自动重启服务（解决 “频繁修改代码手动重启服务器” 问题）</a>
-          </li>
-        
-          <li>
-            <a href="/conding/JavaScript/20190722/vue和react的区别之我见.html">vue和react的区别之我见</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -434,7 +421,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云 ● Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 15px; color: #498aae">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px; color: #498aae">CSS3</a> <a href="/tags/D3/" style="font-size: 19px; color: #db7884">D3</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Echarts/" style="font-size: 14px; color: #258fb8">Echarts</a> <a href="/tags/Github/" style="font-size: 15px; color: #498aae">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #b67c8e">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17px; color: #928199">React</a> <a href="/tags/SVG/" style="font-size: 14px; color: #258fb8">SVG</a> <a href="/tags/Webpack/" style="font-size: 16px; color: #6e86a3">Webpack</a> <a href="/tags/console/" style="font-size: 14px; color: #258fb8">console</a> <a href="/tags/devTools/" style="font-size: 14px; color: #258fb8">devTools</a> <a href="/tags/element-UI/" style="font-size: 14px; color: #258fb8">element UI</a> <a href="/tags/javascript/" style="font-size: 15px; color: #498aae">javascript</a> <a href="/tags/node/" style="font-size: 16px; color: #6e86a3">node</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/react-router/" style="font-size: 14px; color: #258fb8">react-router</a> <a href="/tags/redux-saga/" style="font-size: 14px; color: #258fb8">redux-saga</a> <a href="/tags/vue/" style="font-size: 14px; color: #258fb8">vue</a> <a href="/tags/yarn/" style="font-size: 14px; color: #258fb8">yarn</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/工厂模式/" style="font-size: 14px; color: #258fb8">工厂模式</a> <a href="/tags/循环遍历/" style="font-size: 15px; color: #498aae">循环遍历</a> <a href="/tags/旅途/" style="font-size: 14px; color: #258fb8">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 15px; color: #498aae">闭包</a>
+      <a href="/tags/CSS/" style="font-size: 14.86px; color: #448baf">CSS</a> <a href="/tags/CSS3/" style="font-size: 14.86px; color: #448baf">CSS3</a> <a href="/tags/D3/" style="font-size: 19.14px; color: #e07782">D3</a> <a href="/tags/ES6/" style="font-size: 14px; color: #258fb8">ES6</a> <a href="/tags/Echarts/" style="font-size: 14px; color: #258fb8">Echarts</a> <a href="/tags/Github/" style="font-size: 15.71px; color: #6387a6">Github</a> <a href="/tags/JSX/" style="font-size: 14px; color: #258fb8">JSX</a> <a href="/tags/JS兼容性/" style="font-size: 14px; color: #258fb8">JS兼容性</a> <a href="/tags/JS刷新/" style="font-size: 14px; color: #258fb8">JS刷新</a> <a href="/tags/JavaScript/" style="font-size: 18.29px; color: #c17b8b">JavaScript</a> <a href="/tags/MV-模式/" style="font-size: 14px; color: #258fb8">MV* 模式</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #258fb8">MongoDB</a> <a href="/tags/React/" style="font-size: 17.43px; color: #a27f94">React</a> <a href="/tags/SVG/" style="font-size: 14px; color: #258fb8">SVG</a> <a href="/tags/Webpack/" style="font-size: 16.57px; color: #82839d">Webpack</a> <a href="/tags/console/" style="font-size: 14px; color: #258fb8">console</a> <a href="/tags/devTools/" style="font-size: 14px; color: #258fb8">devTools</a> <a href="/tags/element-UI/" style="font-size: 14px; color: #258fb8">element UI</a> <a href="/tags/javascript/" style="font-size: 14.86px; color: #448baf">javascript</a> <a href="/tags/node/" style="font-size: 16.57px; color: #82839d">node</a> <a href="/tags/npm/" style="font-size: 14px; color: #258fb8">npm</a> <a href="/tags/props/" style="font-size: 14px; color: #258fb8">props</a> <a href="/tags/react/" style="font-size: 20px; color: #ff7379">react</a> <a href="/tags/react-router/" style="font-size: 14px; color: #258fb8">react-router</a> <a href="/tags/redux-saga/" style="font-size: 14px; color: #258fb8">redux-saga</a> <a href="/tags/vue/" style="font-size: 14px; color: #258fb8">vue</a> <a href="/tags/yarn/" style="font-size: 14px; color: #258fb8">yarn</a> <a href="/tags/作用域/" style="font-size: 14px; color: #258fb8">作用域</a> <a href="/tags/单位/" style="font-size: 14px; color: #258fb8">单位</a> <a href="/tags/原型链/" style="font-size: 14px; color: #258fb8">原型链</a> <a href="/tags/工厂模式/" style="font-size: 14px; color: #258fb8">工厂模式</a> <a href="/tags/循环遍历/" style="font-size: 14.86px; color: #448baf">循环遍历</a> <a href="/tags/旅途/" style="font-size: 14px; color: #258fb8">旅途</a> <a href="/tags/比例尺/" style="font-size: 14px; color: #258fb8">比例尺</a> <a href="/tags/生命周期/" style="font-size: 14px; color: #258fb8">生命周期</a> <a href="/tags/观察者模式/" style="font-size: 14px; color: #258fb8">观察者模式</a> <a href="/tags/解构赋值/" style="font-size: 14px; color: #258fb8">解构赋值</a> <a href="/tags/跨域/" style="font-size: 14px; color: #258fb8">跨域</a> <a href="/tags/键盘事件/" style="font-size: 14px; color: #258fb8">键盘事件</a> <a href="/tags/闭包/" style="font-size: 14.86px; color: #448baf">闭包</a>
     </div>
   </div>
 
@@ -443,7 +430,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档 ● archive</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 11月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 10月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 07月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 06月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 08月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 04月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 03月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 04月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020年 06月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 11月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 10月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 07月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年 06月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 08月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 04月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018年 03月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 04月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 02月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017年 01月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 12月</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016年 01月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 08月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015年 05月</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -476,7 +463,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 Alysa<br>
+      &copy; 2020 Alysa<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     <span id="busuanzi_container_site_pv">
         总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
